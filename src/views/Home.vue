@@ -1,6 +1,6 @@
 <template>
   <Hero>
-    <h1 class="text-4xl tracking-wide leading-10 text-white font-semibold">Dynamic Solutions</h1>
+    <h1 class="text-4xl tracking-wide leading-10 text-white font-semibold">Dynamic End-to-End IPTV/OTT Solutions</h1>
     
   </Hero >
 
