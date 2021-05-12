@@ -1,0 +1,397 @@
+<template>
+  <Hero>
+    <h1 class="text-4xl tracking-wide leading-10 text-white font-semibold">Monetize Your Content</h1>
+  </Hero >
+
+  <Slider />
+
+  
+  <div class="">
+    <section class="iptv">
+      <div  class="tag grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-col lg:grid-flow-row gap-8 content-center justify-center mt-6">
+          <div v-for="price in pricing" :key="price.id" class="top group py-6 px-4 shadow-lg hover:bg-blue">
+            <router-link :to="{name: 'Pricing', params: {id: price.id}}">
+            <p class="text-center text-base font-semibold group-hover:text-white text-deep-gray py-3">{{price.desc}}</p>
+
+            <h3 class="text-center text-5xl text-blue group-hover:text-white py-3 px-6 mb-3 break-all"> {{price.price}}</h3>
+            <p class="text-center text-sm text-deep-gray group-hover:text-white mb-3">{{price.duration}}</p>
+            <p class="text-center text-sm text-deep-gray group-hover:text-white mb-6">{{price.details}}</p>
+            <button class="bg-blue rounded-lg group-hover:text-blue text-white group-hover:bg-white text-sm ml-18 focus:outline-none ml-20 py-2 px-2">GET STARTED</button>
+            </router-link>
+            </div>
+           </div>
+
+           <div class="flex">
+
+  <div class="grid gap-72 grid-cols-4 mt-36">
+    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 76.37 83.323">
+  <g id="Icon_ionic-logo-android" data-name="Icon ionic-logo-android" transform="translate(-5.625 -4.497)">
+    <g id="Group_4" data-name="Group 4" transform="translate(5.625 28.807)">
+      <path id="Path_3" data-name="Path 3" d="M10.125,30.076v19.44c0,1.5.976,3.037,2.473,3.037H18.8V63.835a5.207,5.207,0,1,0,10.414,0V52.553H39.849V63.835a5.184,5.184,0,0,0,1.909,4.035,4.847,4.847,0,0,0,3.189,1.172h.108a5.2,5.2,0,0,0,5.207-5.207V52.553h5.988c1.519,0,2.473-1.54,2.473-3.016V13.5h-48.6Z" transform="translate(3.76 -10.029)" fill="#707070"/>
+      <path id="Path_4" data-name="Path 4" d="M32.207,12.375A5.2,5.2,0,0,0,27,17.582V38.41a5.207,5.207,0,0,0,10.414,0V17.582A5.2,5.2,0,0,0,32.207,12.375Z" transform="translate(38.956 -12.375)" fill="#707070"/>
+      <path id="Path_5" data-name="Path 5" d="M10.832,12.375a5.2,5.2,0,0,0-5.207,5.207V38.41a5.207,5.207,0,0,0,10.414,0V17.582A5.2,5.2,0,0,0,10.832,12.375Z" transform="translate(-5.625 -12.375)" fill="#707070"/>
+    </g>
+    <path id="Path_6" data-name="Path 6" d="M46.4,9.953,50.414,5.2c.087-.108-.043-.347-.282-.542-.239-.174-.521-.217-.586-.087L45.381,9.519A29.474,29.474,0,0,0,34.4,7.61,29.725,29.725,0,0,0,23.381,9.454l-4.122-4.86c-.087-.108-.347-.087-.586.087s-.369.391-.282.542l3.97,4.686C11.9,14.444,10.342,25.574,10.125,28.828H58.637C58.442,25.552,56.9,14.574,46.4,9.953ZM23.75,20.757a2.886,2.886,0,1,1,2.929-2.886A2.922,2.922,0,0,1,23.75,20.757Zm21.349,0a2.886,2.886,0,1,1,2.929-2.886A2.922,2.922,0,0,1,45.1,20.757Z" transform="translate(9.385)" fill="#707070"/>
+  </g>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 74.494 91.486">
+  <path id="Icon_metro-apple" data-name="Icon metro-apple" d="M67.653,50.538C67.538,38.952,77.1,33.4,77.529,33.12A21.365,21.365,0,0,0,60.8,24.054c-7.124-.721-13.9,4.194-17.517,4.194s-9.186-4.088-15.094-3.98A22.383,22.383,0,0,0,9.266,35.738c-8.068,14-2.066,34.74,5.8,46.094,3.842,5.557,8.424,11.8,14.44,11.577,5.793-.231,7.984-3.749,14.988-3.749s8.972,3.749,15.1,3.634c6.234-.116,10.183-5.664,14-11.239a50.428,50.428,0,0,0,6.336-13.01c-.138-.063-12.156-4.667-12.276-18.506Zm-11.519-34a20.162,20.162,0,0,0,4.76-14.609c-4.6.187-10.174,3.064-13.474,6.928-2.961,3.429-5.552,8.9-4.858,14.155C47.7,23.412,52.938,20.4,56.134,16.537Z" transform="translate(-5.435 -1.928)" fill="#707070"/>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="170" height="50.778" viewBox="0 0 337.287 51.543">
+  <path id="Icon_simple-samsung" data-name="Icon simple-samsung" d="M278.5,16.86l.645,37.852h-.323L267.865,16.86H249.824V64.537h11.919L261.1,25.4h.323L273.18,64.537h17.235V16.86Zm-226.952,0-9.02,48.162H55.571l6.6-43.812H62.5L68.94,65.02H81.826L72.966,16.86Zm72.8,0-5.959,36.725h-.323L112.107,16.86H92.456l-.967,48.162h12.08l.323-43.33h.16l8.053,43.329h12.242L132.4,21.693h.323l.32,43.327h12.08L144,16.86ZM22.229,51.329a6.759,6.759,0,0,1,.16,3.544c-.322,1.611-1.449,3.221-4.671,3.221-3.059,0-4.832-1.771-4.832-4.35v-4.67H0v3.7C0,63.571,8.536,66.792,17.557,66.792c8.7,0,15.945-3.061,17.074-10.953a23.592,23.592,0,0,0,0-7.893C32.375,37.8,14.014,34.9,12.724,29.262a6.911,6.911,0,0,1,0-2.577c.323-1.611,1.45-3.221,4.35-3.221s4.511,1.771,4.511,4.35v2.9H33.664V27.33c0-10.47-9.5-12.08-16.268-12.08-8.536,0-15.623,2.9-16.912,10.63a14.6,14.6,0,0,0,.16,6.444C2.577,42.31,19.813,45.209,22.227,51.329m156.726,0a6.723,6.723,0,0,1,.16,3.544c-.323,1.611-1.45,3.221-4.671,3.221-3.061,0-4.832-1.771-4.832-4.35v-4.67H156.723v3.7c0,10.63,8.376,13.853,17.4,13.853,8.7,0,15.785-2.9,16.912-10.953a23.742,23.742,0,0,0,0-7.893C189.1,37.8,170.9,34.739,169.61,29.264a6.86,6.86,0,0,1,0-2.579c.322-1.611,1.449-3.221,4.348-3.221a4.188,4.188,0,0,1,4.511,4.35v2.9h11.917V27.33c0-10.47-9.341-12.08-16.105-12.08-8.538,0-15.465,2.738-16.752,10.63a17.467,17.467,0,0,0,.16,6.444c1.934,9.987,18.846,12.724,21.263,19.006m40.59,6.444a4.387,4.387,0,0,0,4.67-3.544,6.577,6.577,0,0,0,.162-1.771V16.86h12.241V51.491a18.646,18.646,0,0,1-.16,3.221c-.805,9.021-7.893,11.92-16.752,11.92s-15.945-2.9-16.752-11.92c0-.483-.16-2.254-.16-3.221V16.86h12.241v35.6a6.015,6.015,0,0,0,.162,1.771c0,1.289.967,3.544,4.35,3.544m100.509-.483c3.544,0,4.671-2.256,4.993-3.544a6.578,6.578,0,0,0,.162-1.771V45.047h-4.993V37.96h17.074V50.847a26.272,26.272,0,0,1-.162,3.221c-.805,8.858-8.376,11.919-16.912,11.919S304.106,62.926,303.3,54.068a26.281,26.281,0,0,1-.162-3.222V30.552c0-.807.162-2.417.162-3.222,1.127-9.021,8.376-11.92,16.912-11.92s15.947,2.9,16.912,11.92c.162,1.449.162,3.221.162,3.221v1.611H325.206V29.424a9.535,9.535,0,0,0-.162-1.772c-.16-1.127-1.127-3.543-4.832-3.543-3.543,0-4.511,2.254-4.832,3.543a9.875,9.875,0,0,0-.162,2.256V51.974a6.015,6.015,0,0,0,.162,1.771c0,1.289,1.289,3.544,4.67,3.544" transform="translate(0 -15.249)" fill="#707070"/>
+</svg>
+
+
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 77.404 75.92" class="ml-8">
+  <path id="Icon_awesome-xbox" data-name="Icon awesome-xbox" d="M57.042,48.039c6.914,8.31,10.1,15.12,8.49,18.166C64.3,68.516,56.683,73.031,51.08,74.76a43.287,43.287,0,0,1-15.67,1.561,39.318,39.318,0,0,1-17.184-5.969c-4.354-2.785-5.338-3.933-5.338-6.213,0-4.576,5.135-12.6,13.922-21.747C31.8,37.2,38.75,31.113,39.515,31.281c1.467.321,13.157,11.493,17.527,16.758Zm-28.3-26.69c-4.635-4.117-9.068-8.249-13.485-9.7-2.372-.781-2.544-.735-4.479,1.24A37.651,37.651,0,0,0,1.37,31.618c-.843,5.234-.952,6.7-.656,9.259.874,7.728,2.7,13.07,6.321,18.5,1.483,2.234,1.888,2.648,1.451,1.515C7.832,59.211,8.44,55.156,9.97,51.1c2.232-5.969,8.412-17.278,18.776-29.751Zm48.633,9.718C74.741,18.824,66.843,11.126,65.735,11.126a14.744,14.744,0,0,0-5.619,2.127c-3.637,2.219-6.4,4.805-10.036,8.08,6.618,8.157,15.951,21.334,19.181,30.96,1.061,3.168,1.514,6.29,1.155,8-.265,1.3-.265,1.3.218.7A46.189,46.189,0,0,0,74.6,54.344a44.292,44.292,0,0,0,2.9-8.983,48.758,48.758,0,0,0-.125-14.294ZM21.363,5.923C28.808,5.54,38.485,11.2,39.2,11.34a31.378,31.378,0,0,0,3.371-1.484C52.547,5.1,57.245,5.908,59.336,6A39.313,39.313,0,0,0,22.83,4.209c-3.652,1.7-3.746,1.821-1.467,1.714Z" transform="translate(-0.566 -0.559)" fill="#707070"/>
+</svg>
+
+
+</div>
+
+
+           </div>
+    </section>
+
+
+
+    <section class="podcast">
+    <div class="tag grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 grid-flow-col lg:grid-flow-row gap-x-16 content-center mt-40">
+          <div class="">
+            <h2 class="text-blue font-semibold text-2xl text-4xl mt-4 mb-6">Share Your Channel</h2>
+            <div v-for="spec in specs" :key="spec.id" class="grid grid-cols-3 gap-2">
+                
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 64.884 45.419">
+                  <path id="Icon_material-playlist-add" data-name="Icon material-playlist-add" d="M41.93,21.977H3v6.488H41.93ZM41.93,9H3v6.488H41.93ZM54.907,34.954V21.977H48.419V34.954H35.442v6.488H48.419V54.419h6.488V41.442H67.884V34.954ZM3,41.442H28.954V34.954H3Z" transform="translate(-3 -9)" fill="#707070"/>
+                    </svg>
+
+                <p class="text-deep-gray text-xs mb-4 mt-2">Scalable<br>IPTV Solution</p>
+                </div>
+
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="15" viewBox="0 0 45.419 45.419">
+                <path id="Icon_open-grid-three-up" data-name="Icon open-grid-three-up" d="M0,0V11.355H11.355V0ZM17.032,0V11.355H28.387V0ZM34.064,0V11.355H45.419V0ZM0,17.032V28.387H11.355V17.032Zm17.032,0V28.387H28.387V17.032Zm17.032,0V28.387H45.419V17.032ZM0,34.064V45.419H11.355V34.064Zm17.032,0V45.419H28.387V34.064Zm17.032,0V45.419H45.419V34.064Z" fill="#707070"/></svg>
+                <p class="text-deep-gray text-xs mb-4 mt-2">Multi-screen<br>app</p>
+
+                </div>
+
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 25.646 45.42">
+  <path id="Icon_metro-money" data-name="Icon metro-money" d="M24.5,26.361c-5.716-1.489-7.554-3.015-7.554-5.413,0-2.75,2.531-4.681,6.8-4.681,4.482,0,6.144,2.145,6.3,5.3H35.6a10.04,10.04,0,0,0-8.083-9.614V6.427H19.967v5.45c-4.885,1.072-8.813,4.227-8.813,9.109,0,5.829,4.822,8.731,11.835,10.421,6.308,1.514,7.554,3.722,7.554,6.094,0,1.729-1.221,4.5-6.8,4.5-5.187,0-7.239-2.334-7.5-5.3H10.688c.315,5.526,4.432,8.617,9.279,9.664v5.476h7.554V46.422c4.9-.946,8.813-3.785,8.813-8.97,0-7.141-6.119-9.589-11.835-11.09Z" transform="translate(-10.688 -6.427)" fill="#707070"/>
+</svg>
+
+                <p class="text-deep-gray text-xs mb-4 mt-2">Monetize your<br>work</p>
+
+                </div>
+
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 51.907 45.419">
+  <path id="Icon_awesome-headphones" data-name="Icon awesome-headphones" d="M25.954,2.25A25.94,25.94,0,0,0,0,28.2V33.07a3.244,3.244,0,0,0,1.793,2.9l1.458.729A11.354,11.354,0,0,0,14.6,47.669h2.433a2.433,2.433,0,0,0,2.433-2.433V27.392a2.433,2.433,0,0,0-2.433-2.433H14.6a11.32,11.32,0,0,0-8.11,3.409V28.2a19.465,19.465,0,1,1,38.93,0v.165a11.32,11.32,0,0,0-8.11-3.409H34.875a2.433,2.433,0,0,0-2.433,2.433V45.236a2.433,2.433,0,0,0,2.433,2.433h2.433A11.354,11.354,0,0,0,48.656,36.7l1.458-.729a3.244,3.244,0,0,0,1.793-2.9V28.2A25.94,25.94,0,0,0,25.954,2.25Z" transform="translate(0 -2.25)" fill="#707070"/>
+</svg>
+
+
+                <p class="text-deep-gray text-xs mb-4 mt-2">Everyday<br>support</p>
+                </div>
+
+                <div>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="15" viewBox="0 0 48.419 40.349">
+                <path id="Icon_material-perm-media" data-name="Icon material-perm-media" d="M4.035,11.07H0V21.157H.02L0,39.314a4.047,4.047,0,0,0,4.035,4.035H40.349V39.314H4.035ZM44.384,7.035H28.244L24.209,3H12.1A4.03,4.03,0,0,0,8.09,7.035L8.07,31.244A4.047,4.047,0,0,0,12.1,35.279H44.384a4.047,4.047,0,0,0,4.035-4.035V11.07A4.047,4.047,0,0,0,44.384,7.035ZM14.122,29.227l9.079-12.1,7.061,9.1,5.044-6.073,7.061,9.079Z" transform="translate(0 -3)" fill="#707070"/></svg>
+                <p class="text-deep-gray text-xs mb-4 mt-2">General <br>compatibility</p>
+                </div>
+
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="15" viewBox="0 0 38.36 38.36">
+                <g id="Icon_ionic-md-remove-circle-outline" data-name="Icon ionic-md-remove-circle-outline" transform="translate(-3.375 -3.375)">
+            <path id="Path_1" data-name="Path 1" d="M22.555,7.248a15.3,15.3,0,1,1-10.826,4.481A15.244,15.244,0,0,1,22.555,7.248m0-3.873a19.18,19.18,0,1,0,19.18,19.18,19.177,19.177,0,0,0-19.18-19.18Z" fill="#707070"/>
+            <path id="Path_2" data-name="Path 2" d="M30.21,20.4H10.477V16.523H30.21Z" transform="translate(2.212 4.095)" fill="#707070"/></g></svg>
+                <p class="text-deep-gray text-xs mb-4 mt-2">Zero<br>Downtime</p>
+                </div>
+
+            </div>
+            <button class="bg-yellow  rounded-full py-3 px-6 mt-6 text-white font-semibold text-sm ">SEE PRICING</button>
+          </div>
+
+        <div class="">
+              <div class="top">
+                <div class="overlay"></div>
+                <img class="bg-gblue bg-blend-overlay" src="https://i.ibb.co/m9T6F3C/i-Stock-000038064546-Small-1260x840.jpg" alt="">
+                </div>
+          </div> 
+      </div>
+    </section>
+
+
+
+  <section class="podcast">
+    <div class="tag grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 grid-flow-col lg:grid-flow-row gap-x-16 content-center mt-40">
+          <div class="">
+            <h2 class="text-blue font-semibold text-2xl text-4xl mt-4 mb-6">Earn<br>Revenue</h2>
+            <div v-for="spec in specs" :key="spec.id" class="grid grid-rows-3 gap-2">
+                
+                <div class="flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="31.731" height="31.731" viewBox="0 0 31.731 31.731">
+  <path id="Icon_awesome-check-circle" data-name="Icon awesome-check-circle" d="M32.294,16.428A15.866,15.866,0,1,1,16.428.563,15.866,15.866,0,0,1,32.294,16.428Zm-17.7,8.4L26.364,13.058a1.024,1.024,0,0,0,0-1.448l-1.448-1.448a1.024,1.024,0,0,0-1.448,0l-9.6,9.6L9.387,15.28a1.024,1.024,0,0,0-1.448,0L6.492,16.728a1.024,1.024,0,0,0,0,1.448l6.653,6.653A1.024,1.024,0,0,0,14.593,24.829Z" transform="translate(-0.563 -0.563)" fill="#707070"/>
+</svg>
+
+
+                <p class="text-deep-gray text-base mb-2 ml-6">Scalable<br>IPTV Solution</p>
+                </div>
+
+                <div class="flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="31.731" height="31.731" viewBox="0 0 31.731 31.731">
+  <path id="Icon_awesome-check-circle" data-name="Icon awesome-check-circle" d="M32.294,16.428A15.866,15.866,0,1,1,16.428.563,15.866,15.866,0,0,1,32.294,16.428Zm-17.7,8.4L26.364,13.058a1.024,1.024,0,0,0,0-1.448l-1.448-1.448a1.024,1.024,0,0,0-1.448,0l-9.6,9.6L9.387,15.28a1.024,1.024,0,0,0-1.448,0L6.492,16.728a1.024,1.024,0,0,0,0,1.448l6.653,6.653A1.024,1.024,0,0,0,14.593,24.829Z" transform="translate(-0.563 -0.563)" fill="#707070"/>
+</svg>
+
+                <p class="text-deep-gray text-base mb-2 ml-6">Multi-screen<br>app</p>
+
+                </div>
+
+                <div class="flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="31.731" height="31.731" viewBox="0 0 31.731 31.731">
+  <path id="Icon_awesome-check-circle" data-name="Icon awesome-check-circle" d="M32.294,16.428A15.866,15.866,0,1,1,16.428.563,15.866,15.866,0,0,1,32.294,16.428Zm-17.7,8.4L26.364,13.058a1.024,1.024,0,0,0,0-1.448l-1.448-1.448a1.024,1.024,0,0,0-1.448,0l-9.6,9.6L9.387,15.28a1.024,1.024,0,0,0-1.448,0L6.492,16.728a1.024,1.024,0,0,0,0,1.448l6.653,6.653A1.024,1.024,0,0,0,14.593,24.829Z" transform="translate(-0.563 -0.563)" fill="#707070"/>
+</svg>
+
+
+                <p class="text-deep-gray text-base mb-2 ml-6">Monetize your<br>work</p>
+
+                </div>
+
+                <div class="flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="31.731" height="31.731" viewBox="0 0 31.731 31.731">
+                    <path id="Icon_awesome-check-circle" data-name="Icon awesome-check-circle" d="M32.294,16.428A15.866,15.866,0,1,1,16.428.563,15.866,15.866,0,0,1,32.294,16.428Zm-17.7,8.4L26.364,13.058a1.024,1.024,0,0,0,0-1.448l-1.448-1.448a1.024,1.024,0,0,0-1.448,0l-9.6,9.6L9.387,15.28a1.024,1.024,0,0,0-1.448,0L6.492,16.728a1.024,1.024,0,0,0,0,1.448l6.653,6.653A1.024,1.024,0,0,0,14.593,24.829Z" transform="translate(-0.563 -0.563)" fill="#707070"/>
+                    </svg>
+                      <p class="text-deep-gray text-base mb-2 ml-6">Everyday<br>support</p>
+                </div>
+
+                <div class="flex">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="31.731" height="31.731" viewBox="0 0 31.731 31.731">
+                <path id="Icon_awesome-check-circle" data-name="Icon awesome-check-circle" d="M32.294,16.428A15.866,15.866,0,1,1,16.428.563,15.866,15.866,0,0,1,32.294,16.428Zm-17.7,8.4L26.364,13.058a1.024,1.024,0,0,0,0-1.448l-1.448-1.448a1.024,1.024,0,0,0-1.448,0l-9.6,9.6L9.387,15.28a1.024,1.024,0,0,0-1.448,0L6.492,16.728a1.024,1.024,0,0,0,0,1.448l6.653,6.653A1.024,1.024,0,0,0,14.593,24.829Z" transform="translate(-0.563 -0.563)" fill="#707070"/>
+                  </svg>
+
+                <p class="text-deep-gray text-xbase mb-2 ml-6">General <br>compatibility</p>
+                </div>
+
+                <div class="flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="31.731" height="31.731" viewBox="0 0 31.731 31.731">
+                  <path id="Icon_awesome-check-circle" data-name="Icon awesome-check-circle" d="M32.294,16.428A15.866,15.866,0,1,1,16.428.563,15.866,15.866,0,0,1,32.294,16.428Zm-17.7,8.4L26.364,13.058a1.024,1.024,0,0,0,0-1.448l-1.448-1.448a1.024,1.024,0,0,0-1.448,0l-9.6,9.6L9.387,15.28a1.024,1.024,0,0,0-1.448,0L6.492,16.728a1.024,1.024,0,0,0,0,1.448l6.653,6.653A1.024,1.024,0,0,0,14.593,24.829Z" transform="translate(-0.563 -0.563)" fill="#707070"/>
+                  </svg>
+
+                <p class="text-deep-gray text-base mb-2 ml-6">Zero<br>Downtime</p>
+                </div>
+
+            </div>
+            <button class="bg-yellow  rounded-full py-3 px-6 mt-6 text-white font-semibold text-sm ">GET STARTED</button>
+          </div>
+
+        <div class="">
+              <div class="top">
+                <div class="overlay"></div>
+                <img class="bg-gblue bg-blend-overlay" src="https://i.ibb.co/m9T6F3C/i-Stock-000038064546-Small-1260x840.jpg" alt="">
+                </div>
+          </div> 
+      </div>
+    </section>
+
+
+
+
+    <section class="w-full contact ml-0 h-64 mt-24 pl-0 ">
+      <div>
+        <div class="w-full contact-bar flex space-x-96">
+          <div class="bg-no-repeat rounded-full  bg-left-top h-24 w-24 contact-bar"></div>
+          <div class="bg-no-repeat rounded-full mt-56 ml-48 bg-bottom h-16 w-16 contact-bar"></div>
+          <div class="bg-no-repeat rounded-full mt-24 ml-56 bg-right-top h-8 w-8 contact-bar"></div>
+          <div class="bg-no-repeat rounded-full mt-60 ml-60 bg-bottom-right h-16 w-16 contact-bar"></div>
+        </div>
+        </div>
+
+         <div class="grid grid-rows-3 gap-4 ml-72 -mt-40">
+          <div class="flex space-x-6">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20">
+        <g id="noun_880089_cc" transform="translate(0)">
+          <path id="Shape" d="M19.91,15.946l-.1-.3a2.8,2.8,0,0,0-1.711-1.628L15.463,13.3a2.558,2.558,0,0,0-2.247.591l-.959.948a10.085,10.085,0,0,1-7.091-7.1l.947-.951A2.6,2.6,0,0,0,6.7,4.537l-.72-2.624A2.835,2.835,0,0,0,4.364.188l-.3-.1a2.359,2.359,0,0,0-2.22.525L.41,2.041A2.725,2.725,0,0,0,0,3.017,16.8,16.8,0,0,0,16.937,20a2.7,2.7,0,0,0,1.029-.415l1.419-1.422A2.37,2.37,0,0,0,19.91,15.946Z" fill="#fff"/>
+        </g>
+        </svg>
+
+        <p class="text-sm text-white">+31 0123 4567</p>
+        </div>
+
+        <div class="flex space-x-6">
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="14.728" viewBox="0 0 23 14.728">
+            <g id="Group" transform="translate(0 -0.099)">
+              <path id="Shape" d="M20.125,14.728H2.875a2.981,2.981,0,0,1-1.58-.452L8.58,8.693l1.662,1.483a1.919,1.919,0,0,0,2.516,0L14.42,8.693l7.286,5.583A2.987,2.987,0,0,1,20.125,14.728Zm2.4-1.228h0l-.026-.016L15.265,7.943l7.358-6.563A2.638,2.638,0,0,1,23,2.727V12a2.629,2.629,0,0,1-.475,1.5ZM.476,13.5h0A2.633,2.633,0,0,1,0,12V2.727A2.636,2.636,0,0,1,.377,1.381L7.736,7.943.5,13.483.477,13.5ZM11.5,9.532a.721.721,0,0,1-.467-.149L1.132.563A2.964,2.964,0,0,1,2.875,0h17.25a2.958,2.958,0,0,1,1.743.563l-9.9,8.821A.721.721,0,0,1,11.5,9.532Z" transform="translate(0 0.099)" fill="#fff"/>
+            </g>
+          </svg>
+
+          <p class="text-sm text-white">info@wego.io</p>
+
+        </div>
+
+        <div class="flex space-x-6">
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 26 22">
+            <g id="telegram" transform="translate(0 0)">
+            <path id="XMLID_497_" d="M20.879,22a.712.712,0,0,1-.413-.132l-6.023-4.25a1.02,1.02,0,0,0-1.215.033L9.889,20.3a.714.714,0,0,1-1.12-.328L6.45,12.722.459,10.549A.68.68,0,0,1,.452,9.265L25.039.047a.715.715,0,0,1,.811.219.659.659,0,0,1,.135.562L21.572,21.453A.7.7,0,0,1,20.879,22ZM20.213,4.525a.211.211,0,0,0-.109.032L8.4,11.565a1.135,1.135,0,0,0-.515,1.289l1.265,4.324a.3.3,0,0,0,.591-.042l.329-2.371a1.935,1.935,0,0,1,.621-1.165L20.35,4.871A.186.186,0,0,0,20.4,4.66.208.208,0,0,0,20.213,4.525Z" fill="#fff"/>
+            </g>
+        </svg>
+
+
+          <p class="text-sm text-white">Join us on Telegram</p>
+
+        </div>
+
+      </div>
+  </section>
+
+  <section class="flex  flex-row-reverse">
+
+     <div class="bg-none py-8  mx-auto my-auto  -mt-56 rounded-lg">
+    <section class="flex ml-48 ">
+  <div class="bg-white py-8 px-20 mx-auto my-auto shadow-lg">
+    <h1 class="text-blue text-2xl">Get in touch</h1>
+    <form class="">
+    <div class="focus-within:none">
+    <input type="text" v-model="name" class="focus:outline-none focus:ring-2 focus:ring-opacity-50 mt-6 text-sm mb-6 focus:ring-blue-600 border-2 border-light-gray rounded-lg py-3 px-6 w-full" placeholder="Your name">
+  </div>
+
+  <div class="focus-within:none">
+    <input type="email" v-model="email" class="focus:outline-none focus:ring-2 focus:ring-opacity-50 border-2 text-sm text-gray-400 mb-6 border-light-gray rounded-lg py-3 px-6 w-full" placeholder="Your e-mail">
+  </div>
+
+  <div class="">
+      <textarea name="message" v-model="message" id="" cols="30" rows="5" placeholder="Your message" class="border-2 border-light-gray text-gray-400 text-sm mb-6 rounded-lg py-3 px-6 focus:outline-none focus:ring-2 focus:ring-opacity-50"></textarea>
+  </div>
+  <button class="form-btn rounded-lg bg-blue py-3 px-4 text-sm text-white">SUBMIT</button>
+</form>
+  </div>
+  </section>
+
+  </div>
+  </section>
+</div>
+</template>
+
+<script>
+// @ is an alias to /src
+
+import Contact from '@/views/Contact.vue'
+import Hero from '@/components/Hero.vue'
+import Slider from '@/components/Slider.vue'
+
+export default {
+  name: 'Home',
+  components: {
+    Contact, Hero,
+    Slider
+  },
+  data(){
+    return{
+      name: '',
+      email: '',
+      message: '',
+      pricing: [
+        {
+          id: 125,
+          desc: 'STARTER',
+          price: '$1',
+          duration: 'Per Month',
+          details: 'Starter features for \n your business to grow'
+        },
+        {
+          id: 250,
+          desc: 'REGULAR',
+          price: '$25',
+          duration: 'Per Month',
+          details: 'Professional features for your business to grow'
+        },
+        {
+          id: 500,
+          desc: 'PLUS',
+          price: '$59',
+          duration: 'Per Month',
+          details: 'Advanced features for your business to grow'
+        },
+       
+      ],
+
+      specs: [
+          {
+              id: 1,
+              text: 'Scalable<br>IPTV Solution'
+          }
+      ],
+
+    }
+  },
+}
+</script>
+
+<style scoped>
+.ott > div {
+  max-width: 640px;
+  max-height: 405px;
+  margin: 20px auto;
+}
+.iptv, .podcast {
+  margin: 10px auto;
+  max-width: 1000px;
+}
+
+.iptv > .tag {
+        max-width: 100%;
+         max-height: 100%;
+         object-fit: fill;
+}
+
+.iptv > img {
+  max-width: 100%;
+  height: 100%;
+
+}
+
+.top {
+  position: relative;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-image:linear-gradient(to right bottom, #0080FF, #0080FF);
+    opacity: 0.4;
+    z-index: 1;
+    position: absolute;
+}
+
+.contact-bar {
+  background-image:linear-gradient(to right bottom, #1B3BD8, #1B3BD8, #176CE0, #0B92E7, #0BB6EB, #00E0F2, #00E0F2);
+ 
+}
+
+.form-btn {
+    background-image:linear-gradient(to right bottom, #1B3BD8, #176CE0, #0B92E7, #0BB6EB, #00E0F2);
+  } 
+
+  textarea:focus, input:focus {
+    border: none;
+    color:  #0BB6EB;
+  }
+
+ 
+
+/* .morph > img { */
+  /* width: 100%;
+  height: 100%; */
+  /* border-radius: 20px;
+background: #e0e0e0; */
+/* box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff; */
+/* } */
+
+
+</style>
