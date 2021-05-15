@@ -12,9 +12,27 @@
       <div class="w-24 pl-8 pt-5">
           <img src="../assets/logo.png" alt="">
       </div>
-      </router-link>
+</router-link>
       <nav class="flex space-x-10 py-6 px-6 mr-20">
         <router-link :to="{name: 'Home'}">Home</router-link>
+
+        
+     
+    <div class="navbar md:hidden">
+      <div class="dropdown1">
+    <button class="dropbtn"><svg xmlns="http://www.w3.org/2000/svg" fill="#0080FF" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg> 
+    </button>
+    <div class="dropdown-content1">
+      <router-link :to="{name: 'Iptv'}">IPTV</router-link>
+      <router-link :to="{name: 'Ott'}">OTT</router-link>
+      <router-link :to="{name: 'Podcast'}">Podcast</router-link>
+    </div>
+  </div> 
+</div>
+
+      
 
     <div class="navbar">
       <div class="dropdown1">
