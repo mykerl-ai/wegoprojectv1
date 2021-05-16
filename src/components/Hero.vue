@@ -13,25 +13,12 @@
           <img src="../assets/logo.png" alt="">
       </div>
 </router-link>
-      <nav class="flex space-x-10 py-6 px-6 mr-20">
+      <nav class="flex space-x-10 py-6 px-6 mr-20 hidden md:block lg:block">
         <router-link :to="{name: 'Home'}">Home</router-link>
 
         
      
-    <div class="navbar">
-      <div class="dropdown1">
-    <button class="dropbtn"><svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg> 
-    </button>
-    <div class="dropdown-content1">
-      <router-link :to="{name: 'Iptv'}">IPTV</router-link>
-      <router-link :to="{name: 'Ott'}">OTT</router-link>
-      <router-link :to="{name: 'Podcast'}">Podcast</router-link>
-    </div>
-  </div> 
-</div>
-
+   
       
 
     <div class="navbar">
@@ -64,6 +51,22 @@
            <router-link :to="{name: 'Signup'} " class="bt">SIGN UP</router-link> 
         </div>  
       </nav>
+
+
+       <div class="navbar md:hidden lg:hidden">
+      <div class="dropdown1">
+    <button class="dropbtn"><svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg> 
+    </button>
+    <div class="dropdown-content1 transition-all duration-300">
+      <router-link :to="{name: 'Iptv'}">Home</router-link>
+      <router-link :to="{name: 'Ott'}">Platform</router-link>
+      <router-link :to="{name: 'Podcast'}">About</router-link>
+    </div>
+  </div> 
+</div>
+
     </Navbar>
 
     <div class="fwd mt-32 ml-60 w-50 max-w-xl">
