@@ -55,11 +55,11 @@
 
        <div class="navbar mt-1 md:hidden lg:hidden">
       <div class="dropdown2 transition-all duration-300">
-    <button class="dropbtn focus:outline-none"><svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+    <button @click="showMenu" class="dropbtn focus:outline-none"><svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg> 
     </button>
-    <div class="dropdown-content2 transition-all duration-300">
+    <div v-show="menu" class="dropdown-content2 transition-all duration-300">
       <router-link :to="{name: 'Iptv'}">Home</router-link>
       <router-link :to="{name: 'Ott'}">Platform</router-link>
       <router-link :to="{name: 'Podcast'}">About</router-link>
@@ -84,10 +84,18 @@
 <script>
 import Navbar from './Navbar.vue'
 export default {
+    data(){
+      return{
+        menu: false
+      }
+    },
     components: {Navbar},
     methods: {
       handleClick(){
         this.$router.push({name: 'Contact'})
+      },
+      showMenu(){
+        this.menu = !this.menu
       }
     },
    
@@ -246,8 +254,5 @@ nav>a, div>a {
   display: block;
 }
 
-.dropbtn:active .dropdown-content2 {
-  display: block;
-}
 
 </style>
