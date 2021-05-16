@@ -53,13 +53,13 @@
       </nav>
 
 
-       <div class="navbar md:hidden lg:hidden">
+       <div class="navbar -mt-2 md:hidden lg:hidden">
       <div class="dropdown2 transition-all duration-300">
-    <button class="dropbtn"><svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+    <button class="dropbtn focus:outline-none"><svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg> 
     </button>
-    <div class="dropdown-content1 transition-all duration-300">
+    <div class="dropdown-content2 transition-all duration-300">
       <router-link :to="{name: 'Iptv'}">Home</router-link>
       <router-link :to="{name: 'Ott'}">Platform</router-link>
       <router-link :to="{name: 'Podcast'}">About</router-link>
@@ -245,4 +245,9 @@ nav>a, div>a {
 .dropdown1:hover .dropdown-content1 {
   display: block;
 }
+
+.dropdown2:active .dropdown-content2 {
+  display: block;
+}
+
 </style>
