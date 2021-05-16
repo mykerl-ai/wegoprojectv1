@@ -54,12 +54,12 @@
 
 
        <div class="navbar mt-1 md:hidden lg:hidden">
-      <div class="dropdown2 transition-all duration-300">
+      <div class="dropdown1 transition-all duration-300">
     <button @click="showMenu" class="dropbtn focus:outline-none"><svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg> 
     </button>
-    <div v-show="menu" class="dropdown-content2 transition-all duration-300">
+    <div v-show="menu" class="dropdown-content1 transition-all duration-300">
       <router-link :to="{name: 'Iptv'}">Home</router-link>
       <router-link :to="{name: 'Ott'}">Platform</router-link>
       <router-link :to="{name: 'Podcast'}">About</router-link>
@@ -71,7 +71,7 @@
 
     <div class="fwd mt-32 ml-60 w-50 max-w-xl">
       <slot></slot>
-      <p class="mt-4 tracking-widest leading-9 text-sm text-white font-regular sm:text-center sm:tracking-normal">Build or Upgrade to a top-notch IPTV/OTT solution that is modern, and offers a High-end user experience across all major platforms..</p>
+      <p class="mt-4 tracking-widest leading-9 text-sm text-white font-regular">Build or Upgrade to a top-notch IPTV/OTT solution that is modern, and offers a High-end user experience across all major platforms..</p>
       <div class="mt-6">
           <button class="bg-yellow  py-3 px-6  text-white font-semibold text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-opacity-50">Join now</button>
            <button @click="handleClick" class="border border-yellow-400 py-2 px-6 ml-6  text-white font-semibold text-sm rounded-full focus:outline-none">TALK TO US</button>
