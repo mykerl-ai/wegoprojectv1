@@ -53,7 +53,7 @@
       </nav>
 
 
-       <div class="navbar -mt-2 md:hidden lg:hidden">
+       <div class="navbar mt-1 md:hidden lg:hidden">
       <div class="dropdown2 transition-all duration-300">
     <button class="dropbtn focus:outline-none"><svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -246,7 +246,7 @@ nav>a, div>a {
   display: block;
 }
 
-.dropdown2:active .dropdown-content2 {
+.dropbtn:active .dropdown-content2 {
   display: block;
 }
 
