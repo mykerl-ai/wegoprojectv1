@@ -13,7 +13,7 @@
           <img src="../assets/logo.png" alt="">
       </div>
 </router-link>
-      <nav class="flex space-x-10 py-6 px-6 mr-20 hidden md:block lg:block">
+      <nav class="md:flex space-x-10 py-6 px-6 mr-20 hidden">
         <router-link :to="{name: 'Home'}">Home</router-link>
 
         
@@ -54,7 +54,7 @@
 
 
        <div class="navbar md:hidden lg:hidden">
-      <div class="dropdown1">
+      <div class="dropdown2 transition-all duration-300">
     <button class="dropbtn"><svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg> 
@@ -71,7 +71,7 @@
 
     <div class="fwd mt-32 ml-60 w-50 max-w-xl">
       <slot></slot>
-      <p class="mt-4 tracking-widest leading-9 text-sm text-white font-regular">Build or Upgrade to a top-notch IPTV/OTT solution that is modern, and offers a High-end user experience across all major platforms..</p>
+      <p class="mt-4 tracking-widest leading-9 text-sm text-white font-regular sm:text-center sm:tracking-normal">Build or Upgrade to a top-notch IPTV/OTT solution that is modern, and offers a High-end user experience across all major platforms..</p>
       <div class="mt-6">
           <button class="bg-yellow  py-3 px-6  text-white font-semibold text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-opacity-50">Join now</button>
            <button @click="handleClick" class="border border-yellow-400 py-2 px-6 ml-6  text-white font-semibold text-sm rounded-full focus:outline-none">TALK TO US</button>
@@ -190,12 +190,22 @@ nav>a, div>a {
   text-decoration: none;
 }
 
-.dropdown1 {
+.dropdown1, .dropdown2 {
   float: left;
   overflow: hidden;
 }
 
 .dropdown1 .dropbtn {
+  font-size: 14px;  
+  border: none;
+  outline: none;
+  color: white;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown2 {
   font-size: 14px;  
   border: none;
   outline: none;
