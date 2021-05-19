@@ -1,7 +1,7 @@
 <template>
   
    
-  <div class="">
+  <div class="w-full">
   <router-view/>
   </div>
   <Footer />

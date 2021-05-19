@@ -1,16 +1,16 @@
 <template>
   <Hero>
-    <h1 class="text-4xl tracking-wide leading-10 text-white font-semibold">Dynamic End-to-End IPTV/OTT Solutions</h1>
+    <h1 class="md:text-4xl tracking-wide leading-10 text-3xl -mt-12 text-white font-semibold">Dynamic End-to-End IPTV/OTT Solutions</h1>
     
   </Hero >
 
   <Slider />
-  <div class="home">
+  <div class="home w-full">
     
-    <section class="ott">
+    <section class="ott w-full">
       <h2 class="text-center text-blue font-semibold text-lg mt-24">OUR OTT PLATFORM</h2>
 
-      <div class="embed-responsive ">
+      <div class="embed-responsive px-4 md:px-0 lg:px-0">
         <video controls autoplay muted loop>
           <source src="../assets/videos/trail2.mp4" type="video/mp4">
         </video>
@@ -20,7 +20,7 @@
 
     <section class="iptv">
       <h2 class="text-center text-blue font-semibold  text-lg mt-24 mb-6">OUR IPTV PLATFORM</h2>
-      <div class="tag grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-col lg:grid-flow-row gap-4 content-center">
+      <div class="tag px-4 md:px-0 lg:px-0 grid md:grid-cols-1 grid-cols-1 lg:grid-cols-3 grid-flow-row gap-4 content-center">
           <div class="top">
             <div class="overlay"><p class="my-20 mx-20 font-bold text-white z-40">End to End solution</p></div>
             <img class="bg-gblue bg-blend-overlay" src="../assets/images/iptv.png" alt="">
@@ -49,24 +49,24 @@
     </section>
 
     <section class="podcast">
-      <h2 class="text-center text-blue font-semibold  text-lg mt-24 mb-12">OUR PODCAST PLATFORM</h2>
-      <div class="tag grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 grid-flow-col lg:grid-flow-row gap-4 content-center">
-          <div class="grid grid-cols-2 row-span-3 gap-2">
-              <div class="top">
+      <h2 class="text-center text-blue font-semibold  text-lg mt-24 mb-8 md:mb-12">OUR PODCAST PLATFORM</h2>
+      <div class="tag grid grid-cols-1  lg:grid-cols-2 grid-flow-row lg:grid-flow-row gap-6 md:gap-4 content-center px-4 md:px-4 lg:px-0">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
+              <div class="top lg:grid hidden">
                 <div class="overlay"></div>
                 <img class="bg-gblue bg-blend-overlay" src="../assets/images/podcast2.jpg" alt="">
                 </div>
-              <div class="top">
+              <div class="top lg:grid hidden">
                    <div class="overlay"></div>
                 <img class="bg-gblue bg-blend-overlay" src="../assets/images/podcast1.jpg" alt="">
                 </div>
-              <div class="col-span-2 top">
+              <div class="lg:col-span-2 col-span-1 top">
                   <div class="overlay"></div>
                 <img class="bg-gblue bg-blend-overlay" src="../assets/images/podcast.jpg" alt="">
                 </div>
           </div>
-          <div class="ml-16">
-            <ul class="leading-10 list-inside list-disc text-gray">
+          <div class="lg:ml-16 lg:mt-0 md:mt-2 ml-8">
+            <ul class="leading-10  list-inside list-disc text-gray">
                 <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, nulla!</li>
                 <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, nulla!</li>
                 <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, nulla!</li>
@@ -75,20 +75,18 @@
                 
             </ul>
 
-            <button class="bg-yellow mt-6 text-white font-semibold text-sm rounded-full py-3 focus:outline-none px-6">GET STARTED</button>
+            <button class="bg-yellow mt-10 md:mt-6 text-white md:mx-0 lg:mx-0 mx-20 font-semibold text-sm rounded-full py-3 focus:outline-none px-6">GET STARTED</button>
           </div>
       </div>
     </section>
 
     <section class="podcast">
       
-
-      
-      <div class="tag grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 grid-flow-col lg:grid-flow-row gap-x-16 content-center mt-48">
-          <div class="">
-            <h2 class="text-blue font-semibold text-2xl text-lg mb-6">WeGo Client Benefits</h2>
+    <div class="tag grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 grid-flow-row lg:grid-flow-row gap-x-16 content-center px-4 md:px-4 lg:px-0 mt-20 md:mt-48">
+          <div class="md:order-none lg:order-none order-last">
+            <h2 class="text-blue font-semibold text-center md:text-left mt-8 md:mt-0 text-2xl text-lg mb-6">WeGo Client Benefits</h2>
             <p class="text-gray leading-10">Developed to be managed under one roof, our OTT platform provides all you need to manage channels, customers, and billing. We are heavily invested in R&D, constantly updating our apps to provide you the best UX/UI for your customers. We also provide 24/7 support, so we're always by your side.</p>
-            <button class="bg-yellow  rounded-full py-3 px-6 mt-6 text-white focus:outline-none font-semibold text-sm ">CONTACT US</button>
+            <button class="bg-yellow md:mx-0 lg:mx-0 mx-24 rounded-full py-3 px-6 mt-6 text-white focus:outline-none font-semibold text-sm ">CONTACT US</button>
           </div>
 
         <div class="">
@@ -151,12 +149,16 @@
       </div>
   </section>
 
+  
+  <!-- form -->
+
   <section class="flex  flex-row-reverse">
 
-     <div class="bg-none py-8  mx-auto my-auto  -mt-56 rounded-lg">
-    <section class="flex ml-48 ">
-  <div class="bg-white py-8 px-20 mx-auto my-auto shadow-lg">
-    <h1 class="text-blue text-2xl">Get in touch</h1>
+     <div class="bg-none py-8  mx-auto my-auto -mt-56 rounded-lg">
+  
+  <section class="flex ml-48 lg:ml-48 lg:mx-0 md:mt-12 lg:mt-0 md:mx-24">
+  <div class="bg-white py-8 md:px-20 md:mx-auto mx-4 px-10 my-auto shadow-lg">
+    <h1 class="text-blue mt-6 md:mt-0 text-center md:text-left text-2xl">Get in touch</h1>
     <form class="">
     <div class="focus-within:none">
     <input type="text" v-model="name" class="focus:outline-none focus:ring-2 focus:ring-opacity-50 mt-6 text-sm mb-6 focus:ring-blue-600 border-2 border-light-gray rounded-lg py-3 px-6 w-full" placeholder="Your name">
@@ -169,18 +171,13 @@
   <div class="">
       <textarea name="message" v-model="message" id="" cols="30" rows="5" placeholder="Your message" class="border-2 border-light-gray text-gray-400 text-sm mb-6 rounded-lg py-3 px-6 focus:outline-none focus:ring-2 focus:ring-opacity-50"></textarea>
   </div>
-  <button class="form-btn focus:outline-none rounded-lg bg-blue py-3 px-4 text-sm text-white">SUBMIT</button>
+  <button class="form-btn focus:outline-none rounded-lg bg-blue py-3 px-4 text-sm text-white mx-20 md:mx-0">SUBMIT</button>
 </form>
   </div>
   </section>
 
   </div>
   </section>
-
- 
-  
-  
-
   </div>
 </template>
 
@@ -253,6 +250,18 @@ export default {
   textarea:focus, input:focus {
     border: none;
     color:  #0BB6EB;
+  }
+
+  @media (max-width: 640px) { 
+      .contact-bar {
+          display: none; 
+}
+   }
+
+  @media (max-width: 768px ) {
+    .contact-bar {
+          display: none; 
+}
   }
 
 /* .morph > img { */

@@ -1,5 +1,5 @@
 <template>
-  <header class="flex justify-around">
+  <header class="flex justify-between md:justify-between lg:justify-around">
       <slot></slot>
   </header>
 </template>

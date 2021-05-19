@@ -6,7 +6,7 @@
           <img src="../assets/logo.png" alt="">
       </div>
       </router-link>
-      <nav class="flex space-x-10 py-6 px-6 mr-20">
+      <nav class="lg:flex space-x-10 py-6 px-6 mr-20 hidden md:hidden">
         <router-link :to="{name: 'Home'}">Home</router-link>
 
     <div class="navbar">
@@ -28,17 +28,32 @@
            <router-link :to="{name: 'Signup'} " class="bt">SIGN UP</router-link> 
         </div>  
       </nav>
+
+
+<div class="navbar mt-8 lg:hidden">
+    <div class="dropdown1 transition-all duration-300">
+    <button @click="showMenu" class="dropbtn focus:outline-none"><svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg> 
+    </button>
+    <div v-show="menu" class="dropdown-content1 transition-all duration-300">
+      <router-link :to="{name: 'Iptv'}">Home</router-link>
+      <router-link :to="{name: 'Ott'}">Platform</router-link>
+      <router-link :to="{name: 'Podcast'}">About</router-link>
+    </div>
+  </div> 
+</div>
     </Navbar>
 
     <h4 class="text-center text-gray font-bold text-2xl mt-8 border-b-2 shadow-xl tracking-wider py-6 border-blue">Pricing/Plan</h4>
 
   
-    <div class="grid grid-cols-6 my-20 mx-10 gap-4">
+    <div class="grid grid-cols-2 md:grid-cols-6 grid-flow-row my-20 mx-5 md:mx-10 gap-4">
 
         <!--podcast -->
 
         <div class="col-span-4 w-full" v-if="currentRoute === '100' ||currentRoute === '236' || currentRoute === '439'">
-            <h1 class="text-left text-blue text-lg font-semibold">Your plan includes</h1>
+            <h1 class="md:text-left text-center text-blue text-lg font-semibold">Your plan includes</h1>
             <div class="flex gap-x-2 mt-10">
                 <div class="flex-grow">
                     <h2 class="text-deep-gray text-xl font-semibold mb-0.5 text-left">Server</h2>
@@ -181,7 +196,7 @@
 
                     <p class="text-lg font-bold text-gray mt-6">Total due today: <span class="ml-28">$ {{total}}</span></p>
 
-                    <button type="button" class="bg-yellow rounded rounded-lg py-1 px-2 font-bold text-sm text-white my-6 ml-60 " @click="handleForm">CONTINUE</button>
+                    <button type="button" class="bg-yellow rounded rounded-lg py-1 px-2 font-bold text-sm text-white my-6 ml-24 md:ml-60 " @click="handleForm">CONTINUE</button>
                     </form>
 
                     
@@ -197,6 +212,7 @@ export default {
     props: ['id'],
     data(){
         return{
+            menu: false,
             currentRoute: 0,
             price: this.$route.params.id,
             total: 0,
@@ -217,7 +233,10 @@ export default {
     methods: {
         handleForm(){
             this.$router.push({name: 'Signup'})
-        }
+        },
+        showMenu(){
+        this.menu = !this.menu
+      }
     },
     computed: {
         calculateTotal(){

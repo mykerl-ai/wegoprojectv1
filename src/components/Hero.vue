@@ -1,26 +1,22 @@
 <template>
     
-  <div id="hero" ref="hit" class="bg-hero-pattern  bg-contain h-screen bg-blue bg-blend-overlay">
+  <div id="hero" ref="hit" class="bg-hero-pattern w-full mx-0 px-0 sticky md:bg-contain md:h-screen h-screen bg-blue bg-blend-overlay">
         <figure></figure>
         <figure></figure>
         <figure></figure>
         <figure></figure>
         <figure></figure>
        
-    <Navbar>
+    <Navbar class="w-full">
       <router-link :to="{name: 'Home'}">
-      <div class="w-24 pl-8 pt-5">
+      <div class="w-16 md:w-20 -pl-16 md:pl-8 pt-5">
           <img src="../assets/logo.png" alt="">
       </div>
 </router-link>
-      <nav class="md:flex space-x-10 py-6 px-6 mr-20 hidden">
+      <nav class="lg:flex space-x-10 py-6 px-6 mr-20 hidden md:hidden">
         <router-link :to="{name: 'Home'}">Home</router-link>
 
         
-     
-   
-      
-
     <div class="navbar">
       <div class="dropdown1">
     <button class="dropbtn">Platforms 
@@ -46,14 +42,14 @@
 
         
         <router-link :to="{name: 'About'}">About us</router-link>
-        <div class="space-x-6 pl-96">
+        <div class="space-x-6 lg:pl-96">
            <router-link :to="{name: 'Login'}">LOGIN</router-link>
            <router-link :to="{name: 'Signup'} " class="bt">SIGN UP</router-link> 
         </div>  
       </nav>
 
 
-       <div class="navbar mt-1 md:hidden lg:hidden">
+       <div class="navbar mt-8 lg:hidden">
       <div class="dropdown1 transition-all duration-300">
     <button @click="showMenu" class="dropbtn focus:outline-none"><svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -69,10 +65,11 @@
 
     </Navbar>
 
-    <div class="fwd mt-32 ml-60 w-50 max-w-xl">
-      <slot></slot>
-      <p class="mt-4 tracking-widest leading-9 text-sm text-white font-regular">Build or Upgrade to a top-notch IPTV/OTT solution that is modern, and offers a High-end user experience across all major platforms..</p>
-      <div class="mt-6">
+    <div class="fwd mt-32 lg:mt-40 lg:ml-60 md:ml-32 md:mt-40 px-12 w-50 max-w-xl">
+      <slot class="text-center"></slot>
+      <p class="lg:mt-4 md:mt-10 mt-12 tracking-widest leading-9 text-sm  text-white font-regular">Build or Upgrade to a top-notch IPTV/OTT solution that is modern, and offers a High-end user experience across all major platforms..</p>
+
+      <div class="lg:mt-6 md:mt-10 mt-12">
           <button class="bg-yellow  py-3 px-6  text-white font-semibold text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-opacity-50">Join now</button>
            <button @click="handleClick" class="border border-yellow-400 py-2 px-6 ml-6  text-white font-semibold text-sm rounded-full focus:outline-none">TALK TO US</button>
       </div>
@@ -213,15 +210,7 @@ nav>a, div>a {
   margin: 0;
 }
 
-.dropdown2 {
-  font-size: 14px;  
-  border: none;
-  outline: none;
-  color: white;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
+
 
 /* .navbar a:hover, .dropdown:hover .dropbtn {
   background-color: red;
@@ -255,4 +244,33 @@ nav>a, div>a {
 }
 
 
+@media (min-width: 768px) { 
+/* .dropdown-content1 {
+  display: none;
+  position: absolute;
+  
+  background-color: #0080FF;
+  border-radius: 6px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+} */
+
+ #hero > figure {
+  animation: imageAnimation 30s linear infinite 0s;
+  backface-visibility: hidden;
+  background-size: cover;
+  background-position: center center;
+  color: transparent;
+  max-height: 100%;
+  left: 0px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  max-width: 100%;
+  z-index: 1;
+}
+
+
+ }
 </style>

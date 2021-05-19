@@ -31,7 +31,7 @@
 
     <section class="iptv">
       <h2 class="text-center text-blue font-semibold  text-lg mt-24 mb-6">OUR TEAM</h2>
-      <div  class="tag grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-col lg:grid-flow-row gap-4 content-center">
+      <div  class="tag grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row lg:grid-flow-row gap-4 content-center">
           <div v-for="team in teams" :key="team.id" class="top">
             <img class="bg-gblue bg-blend-overlay" :src="team.image" alt="">
             <h3 class="text-center font-semibold text-deep-gray py-3"> {{team.name}}</h3>
@@ -44,14 +44,14 @@
 
 
     <section class="podcast">
-    <div class="tag grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 grid-flow-col lg:grid-flow-row gap-x-16 content-center mt-48">
+    <div class="tag grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 grid-flow-row lg:grid-flow-row gap-x-16 content-center mt-48">
           <div class="">
-            <h2 class="text-blue font-semibold text-2xl text-lg mb-6">WeGo Client Benefits</h2>
+            <h2 class="text-blue font-semibold text-2xl text-center md:text-left pt-6 text-lg mb-6">WeGo Client Benefits</h2>
             <p class="text-gray leading-10">Developed to be managed under one roof, our OTT platform provides all you need to manage channels, customers, and billing. We are heavily invested in R&D, constantly updating our apps to provide you the best UX/UI for your customers. We also provide 24/7 support, so we're always by your side.</p>
             <button class="bg-yellow focus:outline-none rounded-full py-3 px-6 mt-6 text-white font-semibold text-sm ">CONTACT US</button>
           </div>
 
-        <div class="">
+        <div class="order-first">
               <div class="top">
                 <div class="overlay"></div>
                 <img class="bg-gblue bg-blend-overlay" src="../assets/images/help.jpg" alt="">
