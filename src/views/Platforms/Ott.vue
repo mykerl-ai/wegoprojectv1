@@ -247,7 +247,7 @@
         </div>
         </div>
 
-         <div class="grid grid-rows-3 gap-4 ml-72 -mt-40">
+         <div class="lg:grid grid-rows-3 hidden gap-4 ml-72 -mt-40">
           <div class="flex space-x-6">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20">
         <g id="noun_880089_cc" transform="translate(0)">
@@ -425,11 +425,11 @@ export default {
 }
    }
 
-  @media (max-width: 768px ) {
+  /* @media (max-width: 768px ) {
     .contact-bar {
           display: none; 
 }
-  }
+  } */
 
 /* .morph > img { */
   /* width: 100%;

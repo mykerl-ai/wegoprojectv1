@@ -83,7 +83,7 @@ import Navbar from './Navbar.vue'
 export default {
     data(){
       return{
-        menu: false
+        menu: false,
       }
     },
     components: {Navbar},

@@ -2,7 +2,7 @@
   <div class="w-full shadow-lg py-2 px-2 mt-4">
       <h1 class="text-lg text-deep-gray">Statistics</h1>
       
-        <div class="flex mt-6 gap-16">
+        <div class="flex flex-wrap mt-6 gap-16">
             <button @click="checkId(icon.id)"  class="flex focus:outline-none mb-6  py-2 px-6 focus:text-blue text-sm text-deep-gray focus:border-t-2 focus:border-blue" v-for="icon in icons" :key="icon.id" data-id="icon.id">
                         {{icon.title}}
             </button>

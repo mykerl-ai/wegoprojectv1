@@ -1,7 +1,7 @@
 <template>
-<div class="grid grid-cols-2 ">
+<div class="grid md:grid-cols-2 grid-cols-1 grid-flow-row">
 <section class="flex mx-auto">
-  <div class=" py-8 px-20 mx-auto my-auto shadow-lg">
+  <div class=" py-8 md:px-20 md:mx-auto my-auto shadow-lg">
     <h1 class="text-blue text-2xl">Get in touch</h1>
     <form class="">
     <div class="focus-within:none">
@@ -15,7 +15,7 @@
   <div class="">
       <textarea name="message" v-model="message" id="" cols="30" rows="5" placeholder="Your message" class="border-2 border-light-gray text-gray-400 text-sm mb-6 rounded-lg py-3 px-6 focus:outline-none focus:ring-2 focus:ring-opacity-50"></textarea>
   </div>
-  <button class="form-btn rounded-full focus:outline-none py-3 px-12 bg-blue py-3 px-4 text-sm text-white">SUBMIT</button>
+  <button class="form-btn rounded-full bg-blue ml-20 md:ml-0 py-3 px-6 text-sm text-white focus:outline-none">SUBMIT</button>
 </form>
   </div>
   </section>

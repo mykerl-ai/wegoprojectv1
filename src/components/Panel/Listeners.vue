@@ -1,6 +1,6 @@
 <template>
   <div class="w-full shadow-lg py-2 px-2 mt-4">
-      <div class="warning w-full text-sm text-white my-5 py-10 px-32">By adding the block, no listener originating from this IP will be able to listen to your radio.</div>
+      <div class="warning w-full text-sm text-white my-5 lg:py-10 py-2 px-4 lg:px-32">By adding the block, no listener originating from this IP will be able to listen to your radio.</div>
       <h1 class="text-lg text-deep-gray">Block Listener</h1>
       
         <div class="mt-6 gap-16">

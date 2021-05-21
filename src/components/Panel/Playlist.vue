@@ -5,7 +5,7 @@
           <button @click="showModal" class="bg-blue text-white rounded  focus:outline-none rounded-lg py-2 px-2 mb-4 text-sm">Create Playlists</button>
         </div>
 
-        <div class="mt-12 mx-80">
+        <div class="mt-12 mx-16  lg:mx-80">
 
             <svg xmlns="http://www.w3.org/2000/svg" width="56.625" height="39.638" viewBox="0 0 56.625 39.638">
   <path id="Icon_material-playlist-add" data-name="Icon material-playlist-add" d="M36.975,20.325H3v5.663H36.975ZM36.975,9H3v5.663H36.975ZM48.3,31.65V20.325H42.638V31.65H31.313v5.663H42.638V48.638H48.3V37.313H59.625V31.65ZM3,37.313H25.65V31.65H3Z" transform="translate(-3 -9)" fill="#0080ff"/>

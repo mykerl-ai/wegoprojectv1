@@ -5,7 +5,7 @@
           <button  @click="showModal" class="bg-blue focus:outline-none text-white rounded rounded-lg py-2 px-2">Upload File</button>
           <button class="bg-blue text-white rounded rounded-lg py-2 px-2">Create Directory</button></div>
 
-          <div class="flex mt-6 gap-4">
+          <div class="flex flex-wrap mt-6 gap-4">
             <button @click="checkId(icon.id)"  class="flex focus:outline-none mb-6 focus:bg-light-gray py-2 px-6 focus:text-white text-sm text-deep-gray" v-for="icon in icons" :key="icon.id" data-id="icon.id">
                 <svg class=" mx-2" :id="icon.id" :xmlns="icon.url" :width="icon.width" :height="icon.height" :viewBox="icon.viewBox">
                     <path :id="icon.pathId" :data-name="icon.dataName" :d="icon.d" :transform="icon.transform" :fill="icon.fill"/>

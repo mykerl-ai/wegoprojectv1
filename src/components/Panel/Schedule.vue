@@ -5,7 +5,7 @@
           <button @click="showModal" class="bg-blue text-white rounded focus:outline-none rounded-lg py-3 px-2 mb-4 text-sm">New playlist schedule</button>
         </div>
 
-        <div class="flex mt-12 gap-6 mx-40">
+        <div class="flex flex-wrap mt-12 gap-4 md:mx-12 lg:mx-40">
             <button v-for="day in days" :key="day.id" @click="checkId(day.id)" class="focus:bg-blue focus:outline-none focus:text-white bg-none text-deep-gray hover:bg-blue hover:text-white  text-sm px-2 py-2 rounded rounded-full">{{day.day}}</button>
             
         </div>

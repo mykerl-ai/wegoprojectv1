@@ -1,6 +1,6 @@
 <template>
   <h1 class="text-3xl text-left font-medium text-deep-gray">Set subscription fee</h1>
-  <div  class="w-full cards grid grid-cols-3">
+  <div  class="w-full cards grid grid-cols-1 md:grid-cols-3">
       <div class="shadow-lg py-6 px-4">
           <form action="">
               <label for="amount" class="text-gray pb-4">Set Amount</label>

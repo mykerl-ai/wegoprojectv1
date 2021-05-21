@@ -98,7 +98,7 @@
       </div>
     </section>
 
-    <section class="w-full contact ml-0 h-64 mt-24 pl-0 ">
+    <section class="w-full contact ml-0 h-64  mt-24 pl-0 ">
       <div>
         <div class="w-full contact-bar flex space-x-96">
           <div class="bg-no-repeat rounded-full  bg-left-top h-24 w-24 contact-bar"></div>
@@ -108,7 +108,7 @@
         </div>
         </div>
 
-         <div class="grid grid-rows-3 gap-4 ml-72 -mt-40">
+         <div class="lg:grid grid-rows-3 gap-4 ml-72 hidden -mt-40">
            
 
         <div class="flex space-x-6">
@@ -258,11 +258,11 @@ export default {
 }
    }
 
-  @media (max-width: 768px ) {
+  /* @media (max-width: 768px ) {
     .contact-bar {
           display: none; 
 }
-  }
+  } */
 
 /* .morph > img { */
   /* width: 100%;

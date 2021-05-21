@@ -2,17 +2,17 @@
   <h1 class="text-3xl text-left font-medium text-deep-gray">Overview</h1>
   <div  class="w-full cards grid grid-cols-3">
       <div v-for="card in cards" :key="card.id" class="shadow-lg py-6 px-4">
-          <p class="text-sm text-deep-gray mb-12 ">{{card.title}}</p>
-          <h2 class="text-2xl font-semibold text-blue ">{{card.figure}}</h2>
+          <p class="text-xs md:text-sm text-deep-gray mb-12 ">{{card.title}}</p>
+          <h2 class="md:text-2xl text-base font-semibold text-blue ">{{card.figure}}</h2>
       </div>
      </div>
 
-     <div class="table grid grid-cols-6">
+     <div class="table grid grid-cols-6 grid-flow-row">
 
-         <div class="topV col-span-4 shadow-xl py-6 px-4">
+         <div class="topV col-span-6 md:col-span-4 shadow-xl py-6 px-4">
             <p class="text-sm text-deep-gray mb-12 ">Top videos</p>
             <div class="w-90">
-              <table class="table-fixed w-full">
+    <table class="table-fixed w-full">
     <thead class="text-blue text-xs">
     <tr>
       <th class="w-1/2 py-2 px-2 text-left">VIDEOS</th>
@@ -39,7 +39,7 @@
             </div>
          </div>
 
-         <div class="details col-span-2 py-6 px-4 shadow-xl">
+         <div class="details col-span-6 md:col-span-2 py-6 px-4 shadow-xl">
               <p class="text-sm text-deep-gray mb-12 ">Quick details</p>
               <div class="bg-yellow w-full py-0.5"></div>
               <div class="flex py-6">

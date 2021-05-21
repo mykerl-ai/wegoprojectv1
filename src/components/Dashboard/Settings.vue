@@ -1,7 +1,7 @@
 <template>
-  <h1 class="text-base text-left font-medium text-deep-gray">Customize your platform</h1>
+  <h1 class="text-base text-left font-medium mb-6 md:mb-0 text-deep-gray">Customize your platform</h1>
   <div  class="w-full cards grid grid-cols-3">
-      <div class="shadow-lg py-6 px-6 col-span-1">
+      <div class="shadow-lg py-6 px-6 md:col-span-1 col-span-3">
           <p class="text-sm text-deep-gray mb-8 ">{{title}}</p>
           <h2 class="text-2xl font-semibold text-blue ">{{figure}}</h2>
           <p class="text-xs text-deep-gray my-4" :class="{ activeClass: status===true, errorClass: status===false }">Status: {{status ? 'active' : 'inactive'}}</p>
@@ -10,8 +10,10 @@
 
        <!--channel-->
 
-   <div class="shadow-lg py-6 px-6 col-span-1">
-          <h2 class="text-2xl font-semibold text-center text-blue mx-24"><svg xmlns="http://www.w3.org/2000/svg" width="46.908" height="38.379" viewBox="0 0 46.908 38.379">
+   <div class="shadow-lg py-6 px-6 md:col-span-1 col-span-3">
+          <h2 class="text-2xl font-semibold text-center text-blue mx-32 mt-4 md:mt-0 md:mx-24">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" width="46.908" height="38.379" viewBox="0 0 46.908 38.379">
             <path id="Icon_material-cast-connected" data-name="Icon material-cast-connected" d="M1.5,36.483v6.4H7.9A6.388,6.388,0,0,0,1.5,36.483Zm0-8.529v4.264A10.665,10.665,0,0,1,12.161,42.879h4.264A14.914,14.914,0,0,0,1.5,27.954ZM39.879,13.029H10.029V16.5A27.79,27.79,0,0,1,27.875,34.351h12ZM1.5,19.425V23.69a19.191,19.191,0,0,1,19.19,19.19h4.264A23.454,23.454,0,0,0,1.5,19.425ZM44.144,4.5H5.764A4.277,4.277,0,0,0,1.5,8.764v6.4H5.764v-6.4H44.144V38.615H29.218v4.264H44.144a4.277,4.277,0,0,0,4.264-4.264V8.764A4.277,4.277,0,0,0,44.144,4.5Z" transform="translate(-1.5 -4.5)" fill="#0080ff"/>
           </svg>
 </h2>
@@ -26,35 +28,35 @@
 
     
 
-     <div class="table grid grid-cols-6">
+  <div class="table grid grid-cols-6 grid-flow-row">
 
-         <div class="topV col-span-6 shadow-xl py-6 px-4">
-            <p class="text-sm text-deep-gray mb-12 ">Top videos</p>
-            <div class="w-90">
-              <table class="table-fixed w-full">
+ <div class="topV col-span-6 shadow-xl py-6 px-4">
+      <p class="text-sm text-deep-gray mb-12 ">Top videos</p>
+      <div class="w-90">
+      <table class="md:table-fixed table-auto w-full">
     <thead class="text-blue text-xs">
     <tr>
-      <th class="w-1/4 py-2 px-2 text-left">CHANNEL(S)</th>
-      <th class="w-1/4 text-center">CREATED</th>
-      <th class="w-1/4 text-left">SUBSCRIBERS</th>
-      <th class="w-1/4 text-left">LINK</th>
-      <th class="w-1/4 text-left">Action</th>
+      <th class="md:w-1/4 px-6 md:px-0 py-2 px-2 text-center">CHANNEL(S)</th>
+      <th class="md:w-1/4 px-6 md:px-0 text-center">CREATED</th>
+      <th class="md:w-1/4 px-3 md:px-0 text-left">SUBSCRIBERS</th>
+      <th class="md:w-1/4 px-6 md:px-0 text-left invisible md:visible">LINK</th>
+      <th class="md:w-1/4 px-6 md:px-0 text-left invisible md:visible">Action</th>
     </tr>
   </thead>
   <tbody>
     <tr v-for="movie in movies" :key="movie.id">
       <td class="flex">
-        <div class="my-3 w-12 h-12 rounded-full  overflow-hidden">
+        <div class="my-3 w-6 h-6 md:w-12 md:h-12 rounded-full  overflow-hidden">
             <img :src="`${movie.image}`" alt="">
             
         </div>
-        <p class="text-xs my-8 ml-4">{{movie.title}}</p>
+        <p class="text-xs my-4 ml-2 md:my-8 md:ml-4">{{movie.title}}</p>
       
       </td>
-      <td class="text-xs text-center">{{movie.time}}</td>
-      <td class="text-xs">{{movie.views}}</td>
-      <td class="text-xs">wego.com/{{movie.title}}</td>
-      <td class="text-xs"><button @click="deleteChannel" class="bg-none focus:outline-none text-xs text-blue text-left"><p :class="{ activeClass: channel===true, errorClass: channel===false }">Delete</p> </button></td>
+      <td class="text-xs text-center mx-12">{{movie.time}}</td>
+      <td class="text-xs px-4 md:px-0">{{movie.views}}</td>
+      <td class="text-xs invisible md:visible">wego.com/<br>{{movie.title}}</td>
+      <td class="text-xs invisible md:visible"><button @click="deleteChannel" class="bg-none focus:outline-none text-xs text-blue text-left"><p :class="{ activeClass: channel===true, errorClass: channel===false }">Delete</p> </button></td>
     </tr>
     
   </tbody>

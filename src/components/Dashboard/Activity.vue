@@ -1,6 +1,6 @@
 <template>
   <h1 class="text-3xl text-left font-medium text-deep-gray">Activity</h1>
-  <div  class="w-full cards grid grid-cols-3">
+  <div  class="w-full cards grid grid-cols-1 md:grid-cols-3">
       <div v-for="icon in icons" :key="icon.id" class="shadow-lg py-6 px-4">
           <svg class="mx-auto my-6" :id="icon.id" :xmlns="icon.url" :width="icon.width" :height="icon.height" :viewBox="icon.viewBox">
                 <path :id="icon.pathId" :data-name="icon.dataName" :d="icon.d" :transform="icon.transform" :fill="icon.fill"/>
@@ -12,7 +12,7 @@
 
      <div class="table grid grid-cols-6">
 
-         <div class="topV col-span-4 shadow-xl py-6 px-4">
+         <div class="topV md:col-span-4 col-span-6 shadow-xl py-6 px-4">
             <p class="text-sm text-deep-gray mb-12 ">Recent videos</p>
             <div class="w-90">
               <table class="table-fixed w-full">
@@ -42,7 +42,7 @@
             </div>
          </div>
 
-         <div class="details col-span-2 py-6 px-4 shadow-xl">
+         <div class="details md:col-span-2 col-span-6 py-6 px-4 shadow-xl">
               <p class="text-sm text-deep-gray mb-12 ">Playlists</p>
               <div class="bg-yellow w-full py-0.5"></div>
               <div class="flex py-6">

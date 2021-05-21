@@ -1,36 +1,83 @@
 <template>
-<Navbar>
-    <router-link :to="{name: 'Home'}">
-      <div class="w-24 pl-8 pt-5">
+<Navbar class="w-full">
+      <router-link :to="{name: 'Home'}">
+      <div class="w-16 md:w-20 -pl-16 md:pl-8 pt-5">
           <img src="@/assets/logo.png" alt="">
       </div>
-      </router-link>
-      <nav class="flex space-x-10 py-6 px-6 mr-20">
-        <router-link :to="{name: 'Home'}">Home</router-link> 
+</router-link>
+      <nav class="lg:flex space-x-10 py-6 px-6 mr-20 hidden md:hidden">
+        <router-link :to="{name: 'Home'}">Home</router-link>
 
-<div class="navbar">
-    <div class="dropdown">
+        
+    <div class="navbar">
+      <div class="dropdown1">
     <button class="dropbtn">Platforms 
     </button>
-    <div class="dropdown-content">
+    <div class="dropdown-content1">
       <router-link :to="{name: 'Iptv'}">IPTV</router-link>
       <router-link :to="{name: 'Ott'}">OTT</router-link>
       <router-link :to="{name: 'Podcast'}">Podcast</router-link>
     </div>
   </div> 
 </div>
+
+ <div class="navbar">
+      <div class="dropdown1">
+    <button class="dropbtn">Resources 
+    </button>
+    <div class="dropdown-content1">
+      <router-link :to="{name: 'Iptv'}">FAQ</router-link>
+      <router-link :to="{name: 'Ott'}">Help & Support</router-link>
+    </div>
+  </div> 
+</div>
+
+        
         <router-link :to="{name: 'About'}">About us</router-link>
-        <div class="space-x-6 pl-96">
+        <div class="space-x-6 lg:pl-96">
            <router-link :to="{name: 'Login'}">LOGIN</router-link>
            <router-link :to="{name: 'Signup'} " class="bt">SIGN UP</router-link> 
         </div>  
       </nav>
-</Navbar>
+
+
+       <div class="navbar mt-8 lg:hidden">
+      <div class="dropdown1 transition-all duration-300">
+    <button @click="showMenu" class="dropbtn focus:outline-none"><svg xmlns="http://www.w3.org/2000/svg" fill="#0080FF" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg> 
+    </button>
+    <div v-show="menu" class="dropdown-content1 transition-all duration-300">
+      <router-link :to="{name: 'Iptv'}">Home</router-link>
+      <router-link :to="{name: 'Ott'}">Platform</router-link>
+      <router-link :to="{name: 'Podcast'}">About</router-link>
+    </div>
+  </div> 
+</div>
+
+<div class="navbar mt-8 lg:hidden mr-12">
+      <div class="dropdown1 transition-all duration-300">
+    <button @click="showMenu" class="dropbtn focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 16">
+        <path id="Icon_material-menu" data-name="Icon material-menu" d="M4.5,25h24V22.333H4.5Zm0-6.667h24V15.667H4.5ZM4.5,9v2.667h24V9Z" transform="translate(-4.5 -9)" fill="#0080ff"/>
+        </svg>
+
+    </button>
+    <div v-show="menu" class="dropdown-content1 transition-all duration-300">
+      <router-link :to="{name: 'Iptv'}">Home</router-link>
+      <router-link :to="{name: 'Ott'}">Platform</router-link>
+      <router-link :to="{name: 'Podcast'}">About</router-link>
+    </div>
+  </div> 
+</div>
+
+    </Navbar>
 <section class="flex  ">
   <div class="bg-white py-24 px-20 mx-auto my-auto shadow-lg">
     <h1 v-show="!recovery" class="text-blue text-2xl">Login</h1>
     <h1 v-show="recovery" class="text-blue text-2xl">Reset password</h1>
-    <form class="w-80">
+
+    <form class="w-100 md:w-80">
     <div class="focus-within:none">
     <input type="email" required v-show="!recovery" v-model="email" class="focus:outline-none focus:ring-2 focus:ring-opacity-50 mt-6 text-sm mb-6 focus:ring-blue-600 border-b-2 border-light-gray  py-3 px-6 w-full" placeholder="Your email address">
   </div>
@@ -60,6 +107,7 @@ import Navbar from '@/components/Navbar.vue'
 export default {
   data(){
     return{
+      menu: false,
       email: '',
       password: '',
       recovery: false,
@@ -73,6 +121,9 @@ export default {
       },
       handleSignUp(){
           this.$router.push({name: 'Signup'})
+      },
+      showMenu(){
+        this.menu = !this.menu
       }
   },
   components: {Navbar}
@@ -135,7 +186,7 @@ export default {
   background-color: red;
 } */
 
-.dropdown-content {
+.dropdown-content1 {
   display: none;
   position: absolute;
   background-color: #0080FF;
@@ -145,7 +196,7 @@ export default {
   z-index: 1;
 }
 
-.dropdown-content a {
+.dropdown-content1 a {
   float: none;
   color: white;
   padding: 12px 16px;
@@ -154,12 +205,43 @@ export default {
   text-align: left;
 }
 
-.dropdown-content a:hover {
-  background-color: #1B3BD8;
+.dropdown-content1 a:hover {
+  background-color: #0072E4;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown1:hover .dropdown-content1 {
   display: block;
 }
+
+
+@media (min-width: 768px) { 
+/* .dropdown-content1 {
+  display: none;
+  position: absolute;
+  
+  background-color: #0080FF;
+  border-radius: 6px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+} */
+
+ #hero > figure {
+  animation: imageAnimation 30s linear infinite 0s;
+  backface-visibility: hidden;
+  background-size: cover;
+  background-position: center center;
+  color: transparent;
+  max-height: 100%;
+  left: 0px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  max-width: 100%;
+  z-index: 1;
+}
+
+
+ }
 
 </style>

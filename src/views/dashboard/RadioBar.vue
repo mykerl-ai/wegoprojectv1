@@ -1,7 +1,7 @@
 <template>
  <div  class="flex overflow-x-hidden h-screen relative">
-  <aside class="flex-shrink-0 w-64 flex flex-col border-r border-blue h-screen transition-all duration-300 sticky top-0 bottom-0" :class="{ '-ml-64': !sidebarOpen }">
-    <div class="h-64 bg-blue"></div>
+  <aside class="flex-shrink-0 w-80 md:w-64 flex flex-col border-r border-blue h-screen transition-all duration-300 sticky top-0 bottom-0" :class="{ '-ml-80 md:-ml-64' : !sidebarOpen }">
+    <div class="lg:h-64 bg-blue h-1"></div>
     <nav class="flex-1 flex flex-col bg-blue pb-12 text-white">
 
         <div v-show="sidebarOpen" class="flex px-0 mt-2 mb-0">
@@ -42,7 +42,7 @@
       <Settings v-else-if="id==='settings-gear-64'"/>
       <Profile v-else-if="id==='profile'"/>
       <Website v-else-if="id==='website'"/>
-      <h1 v-else class="text-4xl text-gray text-center">Welcome to your control panel</h1>
+      <h1 v-else class=" text-blue text-center" :class="sidebarOpen ? 'text-sm' : 'text-2xl'">Welcome to your control panel</h1>
     </main>
   </div>
 </div>

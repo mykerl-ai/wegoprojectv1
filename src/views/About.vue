@@ -4,7 +4,7 @@
   </Hero >
 
  
-  <div class="home">
+  <div class="about">
     
     <section class="ott ">
       <div class="embed-responsive ">
@@ -17,21 +17,21 @@
       <h2 class="text-center text-blue font-semibold text-lg mt-24">OUR BACKGROUND</h2>
 
       <div class="my-6 mx-auto w-auto">
-      <p class="text-base text-deep-gray leading-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla eos, minus, rem consequatur facere ex illo, minima et unde perspiciatis mollitia distinctio laudantium est tempora! Veritatis voluptates asperiores perferendis iste reiciendis, nostrum magnam alias perspiciatis corporis sint rerum sunt obcaecati accusantium placeat consequatur tempora at facilis cumque, minima iusto adipisci repellendus soluta earum eius! Quos delectus rem quaerat optio! Exercitationem iusto dolores itaque impedit blanditiis molestiae atque debitis expedita. Quas et optio amet harum natus ratione tempore nisi illo ut?</p>
+      <p class="text-base mx-4 md:mx-0 text-justify text-deep-gray leading-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla eos, minus, rem consequatur facere ex illo, minima et unde perspiciatis mollitia distinctio laudantium est tempora! Veritatis voluptates asperiores perferendis iste reiciendis, nostrum magnam alias perspiciatis corporis sint rerum sunt obcaecati accusantium placeat consequatur tempora at facilis cumque, minima iusto adipisci repellendus soluta earum eius! Quos delectus rem quaerat optio! Exercitationem iusto dolores itaque impedit blanditiis molestiae atque debitis expedita. Quas et optio amet harum natus ratione tempore nisi illo ut?</p>
       </div>
     </section>
 
     <section class="ott ">
-      <h2 class="text-center text-blue font-semibold text-lg mt-24">WHAT WE DO</h2>
+      <h2 class="text-center text-blue font-semibold text-lg mt-48 md:mt-24">WHAT WE DO</h2>
 
       <div class="my-6 mx-auto">
-      <p class="text-base text-deep-gray tracking-4 leading-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla eos, minus, rem consequatur facere ex illo, minima et unde perspiciatis mollitia distinctio laudantium est tempora! Veritatis voluptates asperiores perferendis iste reiciendis, nostrum magnam alias perspiciatis corporis sint rerum sunt obcaecati accusantium placeat consequatur tempora at facilis cumque, minima iusto adipisci repellendus soluta earum eius! Quos delectus rem quaerat optio! Exercitationem iusto dolores itaque impedit blanditiis molestiae atque debitis expedita. Quas et optio amet harum natus ratione tempore nisi illo ut?</p>
+      <p class="text-base mx-4 md:mx-4 text-justify text-deep-gray tracking-4 leading-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla eos, minus, rem consequatur facere ex illo, minima et unde perspiciatis mollitia distinctio laudantium est tempora! Veritatis voluptates asperiores perferendis iste reiciendis, nostrum magnam alias perspiciatis corporis sint rerum sunt obcaecati accusantium placeat consequatur tempora at facilis cumque, minima iusto adipisci repellendus soluta earum eius! Quos delectus rem quaerat optio! Exercitationem iusto dolores itaque impedit blanditiis molestiae atque debitis expedita. Quas et optio amet harum natus ratione tempore nisi illo ut?</p>
       </div>
     </section>
 
     <section class="iptv">
-      <h2 class="text-center text-blue font-semibold  text-lg mt-24 mb-6">OUR TEAM</h2>
-      <div  class="tag grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row lg:grid-flow-row gap-4 content-center">
+      <h2 class="text-center text-blue font-semibold  text-lg mt-48 md:mt-24 mb-6">OUR TEAM</h2>
+      <div  class="tag grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row lg:grid-flow-row gap-4 content-center mx-4 md:mx-0">
           <div v-for="team in teams" :key="team.id" class="top">
             <img class="bg-gblue bg-blend-overlay" :src="team.image" alt="">
             <h3 class="text-center font-semibold text-deep-gray py-3"> {{team.name}}</h3>
@@ -44,11 +44,11 @@
 
 
     <section class="podcast">
-    <div class="tag grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 grid-flow-row lg:grid-flow-row gap-x-16 content-center mt-48">
+    <div class="tag grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 grid-flow-row lg:grid-flow-row gap-x-16 content-center mt-48 mx-4 md:mx-2 lg:mx-0">
           <div class="">
             <h2 class="text-blue font-semibold text-2xl text-center md:text-left pt-6 text-lg mb-6">WeGo Client Benefits</h2>
             <p class="text-gray leading-10">Developed to be managed under one roof, our OTT platform provides all you need to manage channels, customers, and billing. We are heavily invested in R&D, constantly updating our apps to provide you the best UX/UI for your customers. We also provide 24/7 support, so we're always by your side.</p>
-            <button class="bg-yellow focus:outline-none rounded-full py-3 px-6 mt-6 text-white font-semibold text-sm ">CONTACT US</button>
+            <button class="bg-yellow focus:outline-none rounded-full py-3 px-6 mt-6 text-white font-semibold text-sm ml-24">CONTACT US</button>
           </div>
 
         <div class="order-first">
@@ -70,7 +70,7 @@
         </div>
         </div>
 
-         <div class="grid grid-rows-3 gap-4 ml-72 -mt-40">
+         <div class="lg:grid grid-rows-3 gap-4 ml-72 hidden -mt-40">
           <div class="flex space-x-6">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20">
         <g id="noun_880089_cc" transform="translate(0)">
@@ -112,9 +112,9 @@
   <section class="flex  flex-row-reverse">
 
      <div class="bg-none py-8  mx-auto my-auto  -mt-56 rounded-lg">
-    <section class="flex ml-48 ">
-  <div class="bg-white py-8 px-20 mx-auto my-auto shadow-lg">
-    <h1 class="text-blue text-2xl">Get in touch</h1>
+    <section class="flex ml-48 lg:ml-48 lg:mx-0 md:mt-12 lg:mt-0 md:mx-24">
+  <div class="bg-white py-8 md:px-20 md:mx-auto mx-4 px-10 my-auto shadow-lg">
+    <h1 class="text-blue mt-6 md:mt-0 text-center md:text-left text-2xl">Get in touch</h1>
     <form class="">
     <div class="focus-within:none">
     <input type="text" v-model="name" class="focus:outline-none focus:ring-2 focus:ring-opacity-50 mt-6 text-sm mb-6 focus:ring-blue-600 border-2 border-light-gray rounded-lg py-3 px-6 w-full" placeholder="Your name">
@@ -127,7 +127,7 @@
   <div class="">
       <textarea name="message" v-model="message" id="" cols="30" rows="5" placeholder="Your message" class="border-2 border-light-gray text-gray-400 text-sm mb-6 rounded-lg py-3 px-6 focus:outline-none focus:ring-2 focus:ring-opacity-50"></textarea>
   </div>
-  <button class="form-btn rounded-lg bg-blue py-3 px-4 text-sm text-white">SUBMIT</button>
+  <button class="form-btn focus:outline-none rounded-lg bg-blue py-3 px-4 text-sm text-white mx-20 md:mx-0">SUBMIT</button>
 </form>
   </div>
   </section>
@@ -249,6 +249,17 @@ export default {
     color:  #0BB6EB;
   }
 
+    @media (max-width: 640px) { 
+      .contact-bar {
+          display: none; 
+}
+   }
+
+  /* @media (max-width: 768px ) {
+    .contact-bar {
+          display: none; 
+}
+  } */
 /* .morph > img { */
   /* width: 100%;
   height: 100%; */

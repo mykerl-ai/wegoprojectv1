@@ -1,7 +1,7 @@
 <template>
   <h1 class="text-xl text-left font-medium text-deep-gray">My Profile</h1>
   <div  class="w-full cards grid grid-cols-6">
-      <div class="shadow-xl py-6 px-4 col-span-3 w-full">
+      <div class="shadow-xl py-6 px-4 lg:col-span-3 col-span-6 w-full">
           <form class="w-full" action="">
               <label for="name" class="text-gray text-sm py-4 block">Name</label>
               <input name="name" type="text" v-model="name" class="border border-gray w-full px-8 block focus:outline-none py-2">
@@ -13,8 +13,8 @@
           </form>
       </div>
 
-      <div class="shadow-xl py-2 px-10 col-span-3">
-          <p class="text-xs text-deep-gray mb-4">Profile Image</p>
+      <div class="shadow-xl py-2 px-10 lg:col-span-3 col-span-6">
+          <p class="text-xs text-deep-gray mt-10 lg:mt-0 mb-4">Profile Image</p>
           
             <div class="border-2 border-light-gray py-6 px-6 w-72 h-72"> <svg xmlns="http://www.w3.org/2000/svg" width="253" height="253" viewBox="0 0 253 253">
   <path id="Icon_material-person" data-name="Icon material-person" d="M132.5,132.5A63.25,63.25,0,1,0,69.25,69.25,63.233,63.233,0,0,0,132.5,132.5Zm0,31.625C90.281,164.125,6,185.314,6,227.375V259H259V227.375C259,185.314,174.719,164.125,132.5,164.125Z" transform="translate(-6 -6)" fill="#4d4f5c"/>

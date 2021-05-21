@@ -2,7 +2,7 @@
   <div class="w-full shadow-lg py-2 px-2 mt-2">
       <h1 class="text-lg text-deep-gray">Settings</h1>
       
- <form class="mx-40 my-2 w-80">
+ <form class="lg:mx-40 my-2 w-80">
 
 <div class="focus-within:none">
     <label class="text-xs text-gray" for="">Time zone</label>
