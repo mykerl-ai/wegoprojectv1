@@ -59,17 +59,19 @@
                     <h2 class="text-deep-gray text-xl font-semibold mb-0.5 text-left">Server</h2>
                     <ul class="leading-8 list-inside list-disc text-gray text-sm">
                         <li>Unlimited Traffic</li>
-                        <li>Unlimited Listeners</li>
-                        <li>Unlimited Audio DJ Disc Space</li>
+                        <li>Unlimited Viewers</li>
+                        <li>Analytics</li>
                     </ul>
                 
             </div>
                 <div class="flex-grow">
                     <h2 class="text-deep-gray text-xl font-semibold mb-0.5 text-left">Features</h2>
                     <ul class="leading-8 list-inside list-disc text-gray text-sm">
-                        <li>Online Radio Control Panel</li>
-                        <li>AutoDJ Stream Automation</li>
-                        <li>Easy Live Stream Connection</li>
+                        <li>Easy Subscription Settings</li>
+                        <li>Online Radio Station Automation</li>
+                        <li>Live Video Stream</li>
+                        <li>Simultaneously stream to multiple endpoints</li>
+                        <li>Radio Player</li>
                     </ul>
                 
                 </div>
@@ -77,9 +79,8 @@
                 <div class="flex-auto">
                     <h2 class="text-deep-gray text-xl font-semibold mb-0.5 text-left">Add-ons</h2>
                     <ul class="leading-8 list-inside list-disc text-gray text-sm">
-                        <li>WebPlayer Page & Radio Player</li>
                         <li>Server Downtime Monitoring</li>
-                        <li>Twitter and Tunein Addons</li>
+                        <li>Twitter and Tunein , Alexa  Addons</li>
                     </ul>
                 
                 </div>
@@ -94,36 +95,65 @@
 
 <!-- IPTV -->
 
-<div class="col-span-4 w-full" v-else-if="currentRoute === '225' ||currentRoute === '350' || currentRoute === '600'">
+<div class="col-span-4 w-full" v-else-if="currentRoute === '9.1' ||currentRoute === '199' || currentRoute === '499'">
             <h1 class="text-left text-blue text-lg font-semibold">Your plan includes</h1>
             <div class="flex gap-x-2 mt-10">
-                <div class="flex-grow">
-                    <h2 class="text-deep-gray text-xl font-semibold mb-0.5 text-left">Server</h2>
+                <div v-show="currentRoute==='9.1'" class="flex-grow">
+                    <h2 class="text-deep-gray text-xl font-semibold mb-0.5 text-left">PRO</h2>
                     <ul class="leading-8 list-inside list-disc text-gray text-sm">
-                        <li>Unlimited Traffic</li>
-                        <li>Unlimited Viewers</li>
-                        <li>Analytics</li>
+                        <li>Base Player HD</li>
+                        <li>Player calls-to-action</li>
+                        <li>Privacy protection</li>
+                        <li>Video embed control</li>
+                        <li>1 Channel</li>
+                        <li>Channel branding and password protection</li>
+                        <li>Manage recorded video content</li>
+                        <li>Mulit-cross Platform link</li>
+                        <li>User Management </li>
                     </ul>
-                
-            </div>
-                <div class="flex-grow">
-                    <h2 class="text-deep-gray text-xl font-semibold mb-0.5 text-left">Features</h2>
+                  </div>
+
+
+                <div v-show="currentRoute==='199'" class="flex-grow">
+                    <h2 class="text-deep-gray text-xl font-semibold mb-0.5 text-left">PREMIUM</h2>
                     <ul class="leading-8 list-inside list-disc text-gray text-sm">
-                        <li>Easy subscription settings</li>
-                        <li>Live video Stream Automation</li>
-                        <li>Easy Live Stream Connection</li>
+                        <li>Everything in Pro +</li>
+                        <li>Video creation with custom branding</li>
+                        <li>Player calls-to-action</li>
+                        <li>Lead generation</li>
+                        <li>Showcase SEO</li>
+                        <li>Google Analytics</li>
+                        <li>Live stream to multiple destination</li>
+                        <li>3 channels</li>
+                        <li>VOD , AVOD</li>
+                        <li>Manage recorded video content</li>
+                        <li>Base Apps branding option</li>
                     </ul>
-                
                 </div>
 
-                <div class="flex-auto">
-                    <h2 class="text-deep-gray text-xl font-semibold mb-0.5 text-left">Add-ons</h2>
+                <div v-show="currentRoute==='499'" class="flex-auto">
+                    <h2 class="text-deep-gray text-xl font-semibold mb-0.5 text-left">BUSINESS</h2>
                     <ul class="leading-8 list-inside list-disc text-gray text-sm">
-                        <li>WebPlayer Page & Radio Player</li>
-                        <li>Server Downtime Monitoring</li>
-                        <li>Twitter and Tunein Addons</li>
+                       <li>Everything in Premium +</li>
+                        <li>5 channels</li>
+                        <li>Channel customization and password protection</li>
+                        <li>custom branding</li>
+                        <li>Podcasting live</li>
+                        <li>Bases App branding</li>
                     </ul>
-                
+                </div>
+
+                 <div class="flex-grow">
+                    <h2 class="text-deep-gray text-xl font-semibold mb-0.5 text-left">Stream To Any Platform</h2>
+                    <p class="text-sm mt-4 text-deep-gray">Studio lets you send your stream to any player that supports RTMP.</p>
+                    <ul class="leading-8 list-inside list-disc text-gray text-sm">
+                       <li>Full HD streaming and cloud recording</li>
+                        <li>Stream to any virtual event platform</li>
+                        <li>Simultaneously stream to multiple endpoints</li>
+                        <li>Custom RTMP settings</li>
+                        <li>WebPlayer</li>
+                    </ul> 
+
                 </div>
                
             </div>
@@ -185,14 +215,11 @@
 
                     <h3 class="text-deep-gray text-sm font-semibold my-4 mx-2">Billing Cycle</h3>
                     <form action="">
-                    <input type="radio" @change="calculateTotal"  value=1 name="monthly" id="monthly"  class="active:text-blue rounded mx-3 text-yellow" v-model="billingForm.cycle">
+                    <input type="radio" @change="calculateTotal"  value=1 name="monthly" id="monthly"  class="active:text-blue rounded mx-6 text-yellow" v-model="billingForm.cycle">
                     <label for="monthly" class="text-deep-gray font-semibold text-sm">Monthly</label>
 
-                    <input type="radio" @change="calculateTotal" value="12" name="yearly" id="yearly"  class="active:text-blue rounded mx-3 text-yellow" v-model="billingForm.cycle">
+                    <input type="radio" @change="calculateTotal" value="12" name="yearly" id="yearly"  class="active:text-blue rounded mx-6 text-yellow" v-model="billingForm.cycle">
                     <label for="yearly" class="text-deep-gray font-semibold text-sm">12 Months</label>
-
-                    <input type="radio" @change="calculateTotal" value="24" name="bi-yearly" id="bi-yearly"  class="active:text-blue rounded mx-3 text-yellow" v-model="billingForm.cycle">
-                    <label for="bi-yearly" class="text-deep-gray font-semibold text-sm">24 Months</label>
 
                     <p class="text-lg font-bold text-gray mt-6">Total due today: <span class="ml-28">$ {{total}}</span></p>
 

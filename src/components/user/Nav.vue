@@ -1,6 +1,6 @@
 <template>
-  <div class="md:container md:py-8 md:mx-auto">
-      <div class="flex space-x-20 w-full mx-20">
+  <div class="md:container md:py-8 mt-6 md:mx-auto">
+      <div class="flex flex-wrap space-x-2 w-full mx-20">
           <form method="GET">
     <div class="relative text-gray-600 focus-within:text-gray-400">
       <span class="absolute inset-y-0 left-0 flex items-center pl-2">
@@ -14,7 +14,7 @@
 
         </button>
       </span>
-      <input type="search" name="q" class="py-1 px-3 text-sm text-gray pr-4  rounded-md pl-10 focus:outline-none focus:border-blue rounded-full focus:text-gray-900" placeholder="Search..." autocomplete="off">
+      <input type="search" name="q" class="ordr-last py-1 px-3 text-sm text-gray pr-4  rounded-md pl-10 focus:outline-none focus:border-blue rounded-full focus:text-gray-900" placeholder="Search..." autocomplete="off">
     </div>
           </form>
 

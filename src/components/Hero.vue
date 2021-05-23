@@ -1,6 +1,6 @@
 <template>
     
-  <div id="hero" ref="hit" class="bg-hero-pattern w-full mx-0 px-0 sticky md:bg-contain md:h-screen h-screen bg-blue bg-blend-overlay">
+  <div id="hero" ref="hit" class="bg-hero-pattern w-full mx-0 px-0 sticky md:bg-contain md:h-screen fixed h-screen bg-blue bg-blend-overlay">
         <figure></figure>
         <figure></figure>
         <figure></figure>
@@ -49,7 +49,7 @@
       </nav>
 
 
-       <div class="navbar mt-8 lg:hidden">
+       <div class="navbar mt-8 lg:hidden mr-12 md:mr-24">
       <div class="dropdown1 transition-all duration-300">
     <button @click="showMenu" class="dropbtn focus:outline-none"><svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -66,12 +66,14 @@
     </Navbar>
 
     <div class="fwd mt-32 lg:mt-40 lg:ml-60 md:ml-32 md:mt-40 px-12 w-50 max-w-xl">
-      <slot class="text-center"></slot>
-      <p class="lg:mt-4 md:mt-10 mt-12 tracking-widest leading-9 text-sm  text-white font-regular">Build or Upgrade to a top-notch IPTV/OTT solution that is modern, and offers a High-end user experience across all major platforms..</p>
+      <slot name="header" class="text-center"></slot>
 
-      <div class="lg:mt-6 md:mt-10 mt-12">
-          <button class="bg-yellow  py-3 px-6  text-white font-semibold text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-opacity-50">Join now</button>
-           <button @click="handleClick" class="border border-yellow-400 py-2 px-6 ml-6  text-white font-semibold text-sm rounded-full focus:outline-none">TALK TO US</button>
+       <slot name="paragraph"></slot>
+      
+      
+      <div class="lg:mt-6 md:mt-10 absolute mt-4">
+          <button class="bg-yellow  py-3 px-6  text-white font-semibold text-xs md:text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-opacity-50">Join now</button>
+           <button @click="handleClick" class="border border-yellow-400 py-2 px-6 ml-6  text-white font-semibold text-xs md:text-sm rounded-full focus:outline-none">TALK TO US</button>
       </div>
     </div>
   </div>

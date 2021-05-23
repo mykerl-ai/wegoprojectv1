@@ -1,6 +1,15 @@
 <template>
   <Hero>
-    <h1 class="text-4xl tracking-wide leading-10 text-white font-semibold">Reach more people with our IPTV solution</h1>
+    <template v-slot:header>
+    <h1 class="md:text-3xl tracking-wide leading-10 text-3xl -mt-20 md:-mt-12 text-white font-semibold">Reach more people with our combined IPTV/OTT solution</h1>
+     </template>
+
+    <template v-slot:paragraph>
+      <p class="lg:mt-4 md:mt-10 mt-10 tracking-widest leading-9 text-sm  text-white font-regular">OTT provides your viewers access to movies and Tv shows, by sending signals directly through the internet.</p>
+
+      <p class="lg:mt-4 md:mt-10 mt-4 tracking-widest leading-9 text-sm  text-white font-regular">Build or Upgrade to a top-notch IPTV/OTT solution that is modern, and offers a High-end user experience across all major platforms..</p>
+
+    </template>
   </Hero >
 
   
@@ -251,23 +260,23 @@ export default {
       message: '',
       pricing: [
         {
-          id: 225,
-          desc: 'STARTER',
-          price: '$225',
+          id: 99.1,
+          desc: 'PRO',
+          price: '$99',
           duration: 'Per Month',
           details: 'Starter features for \n your business to grow'
         },
         {
-          id: 350,
-          desc: 'REGULAR',
-          price: '$350',
+          id: 199,
+          desc: 'PREMIUM',
+          price: '$199',
           duration: 'Per Month',
           details: 'Professional features for your business to grow'
         },
         {
-          id: 600,
-          desc: 'PLUS',
-          price: '$600',
+          id: 499,
+          desc: 'BUSINESS',
+          price: '$499',
           duration: 'Per Month',
           details: 'Advanced features for your business to grow'
         },

@@ -1,6 +1,15 @@
 <template>
   <Hero>
-    <h1 class="md:text-4xl tracking-wide leading-10 text-3xl -mt-12 text-white font-semibold">Dynamic End-to-End IPTV/OTT Solutions</h1>
+    <template v-slot:header>
+    <h1 class="md:text-3xl tracking-wide leading-10 text-3xl -mt-20 md:-mt-12 text-white font-semibold">Revolutionary End-to-End IPTV/OTT Combined Platform</h1>
+    </template>
+
+    <template v-slot:paragraph>
+      <p class="lg:mt-4 md:mt-10 mt-10 tracking-widest leading-9 text-sm  text-white font-regular">OTT provides your viewers access to movies and Tv shows, by sending signals directly through the internet.</p>
+
+      <p class="lg:mt-4 md:mt-10 mt-4 tracking-widest leading-9 text-sm  text-white font-regular">Build or Upgrade to a top-notch IPTV/OTT solution that is modern, and offers a High-end user experience across all major platforms..</p>
+
+    </template>
     
   </Hero >
 
@@ -8,9 +17,9 @@
   <div class="home w-full">
     
     <section class="ott w-full">
-      <h2 class="text-center text-blue font-semibold text-lg mt-24">OUR OTT PLATFORM</h2>
+      <!-- <h2 class="text-center text-blue font-semibold text-lg mt-24">OUR OTT PLATFORM</h2> -->
 
-      <div class="embed-responsive px-4 md:px-0 lg:px-0">
+      <div class="embed-responsive px-4 mt-32 md:px-0 lg:px-0">
         <video controls autoplay muted loop>
           <source src="../assets/videos/trail2.mp4" type="video/mp4">
         </video>
@@ -19,37 +28,83 @@
     </section>
 
     <section class="iptv">
-      <h2 class="text-center text-blue font-semibold  text-lg mt-24 mb-6">OUR IPTV PLATFORM</h2>
-      <div class="tag px-4 md:px-0 lg:px-0 grid md:grid-cols-1 grid-cols-1 lg:grid-cols-3 grid-flow-row gap-4 content-center">
-          <div class="top">
-            <div class="overlay"><p class="my-20 mx-20 font-bold text-white z-40">End to End solution</p></div>
+      <h2 class="text-center text-blue font-semibold  text-lg mt-24 mb-2">OUR COMBINED PLATFORM</h2>
+       <p class="lg:mt-4 md:mt-4 mt-2 tracking-normal mx-4 leading-7  text-sm text-center mb-6 text-deep-gray font-regular">Over- The –Top intuitive way to create your own tv channel or revenue making Streaming Network. </p>
+
+      <div class="tag mx-4 px-4 md:mx-4 lg:px-0 lg:mx-0 grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 grid-flow-row gap-2 content-center">
+          <div  class="flip-card">
+            <div class="flip-card-inner overlay">
+            <div class="flip-card-front">
             <img class="bg-gblue bg-blend-overlay" src="../assets/images/iptv.png" alt="">
             </div>
-           <div class="top">
-             <div class="overlay"></div>
-             <img class="bg-gblue bg-blend-overlay" src="../assets/images/network.jpg" alt="">
-             </div>
-           <div class="top">
-             <div class="overlay"></div>
-             <img class="bg-gblue bg-blend-overlay" src="../assets/images/screen.jpg" alt="">
-             </div>
-           <div class="top col-span-1 row-span-1">
-             <div class="overlay"></div>
-             <img src="../assets/images/data.jpg" alt="">
-           </div>
-           <div class="top col-span-1">
-             <div class="overlay"></div>
-             <img src="../assets/images/cyber.jpg" alt="">
-             </div>
-           <div class="top">
-             <div class="overlay"></div>
-             <img src="../assets/images/transcode.png" alt="">
-             </div>
+            <div class="flip-card-back">
+            <p class="text-sm text-white mx-6 my-24">Centralize your organization’s live and on-demand video in a beautiful, viewing portal.                                             
+            </p>
+            </div>
+            </div>
+            </div> 
+            
+            <div  class="flip-card">
+            <div class="flip-card-inner overlay">
+            <div class="flip-card-front">
+            <img class="bg-gblue bg-blend-overlay" src="../assets/images/network.jpg" alt="">
+            </div>
+            <div class="flip-card-back">
+            <p class="text-sm text-white mx-6 my-24">Scale your video to fit virtually any audience size worldwide</p>
+            </div>
+            </div>
+            </div>
+            
+            <div  class="flip-card">
+            <div class="flip-card-inner overlay">
+            <div class="flip-card-front">
+            <img class="bg-gblue bg-blend-overlay" src="../assets/images/screen.jpg" alt="">
+            </div>
+            <div class="flip-card-back">
+            <p class="text-sm text-white mx-6 my-24">Stream live, and manage recorded video content. Cloud streaming platform for video, transcoding, encoder, to multi-platform payout, while analytics what show your viewer love watching</p>
+            </div>
+            </div>
+            </div> 
+            
+            <div  class="flip-card">
+            <div class="flip-card-inner overlay">
+            <div class="flip-card-front">
+            <img class="bg-gblue bg-blend-overlay" src="../assets/images/data.jpg" alt="">
+            </div>
+            <div class="flip-card-back">
+            <p class="text-sm text-white mx-6 my-24">Analytics show what your viewers love watching</p>
+            </div>
+            </div>
+            </div> 
+            
+            <div  class="flip-card">
+            <div class="flip-card-inner overlay">
+            <div class="flip-card-front">
+            <img class="bg-gblue bg-blend-overlay" src="../assets/images/cyber.jpg" alt="">
+            </div>
+            <div class="flip-card-back">
+            <p class="text-sm text-white mx-6 my-24">Control access with SSO, password protection, domain whitelisting and embed restrictions.</p>
+            </div>
+            </div>
+            </div>
+            
+            <div  class="flip-card">
+            <div class="flip-card-inner overlay">
+            <div class="flip-card-front">
+            <img class="bg-gblue bg-blend-overlay" src="../assets/images/transcode.png" alt="">
+            </div>
+            <div class="flip-card-back">
+            <p class="text-sm text-white mx-6 my-24">Unlock your Stream Network with White Label solution. Your logos, colors & icons. Multi lingual support numbers, checkout links & more</p>
+            </div>
+            </div>
+            </div>
       </div>
+       <button class="bg-yellow mt-10 md:mt-8 text-white lg:mx-96 md:mx-72  mx-20 font-semibold text-sm rounded-full md:py-3 py-1 focus:outline-none px-12">GET STARTED</button>
     </section>
 
     <section class="podcast">
-      <h2 class="text-center text-blue font-semibold  text-lg mt-24 mb-8 md:mb-12">OUR PODCAST PLATFORM</h2>
+      <h2 class="text-center text-blue font-semibold  text-lg mt-24 mb-8 md:mb-12">WeGO
+Network Podcast and Radio</h2>
       <div class="tag grid grid-cols-1  lg:grid-cols-2 grid-flow-row lg:grid-flow-row gap-6 md:gap-4 content-center px-4 md:px-4 lg:px-0">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
               <div class="top lg:grid hidden">
@@ -66,16 +121,11 @@
                 </div>
           </div>
           <div class="lg:ml-16 lg:mt-0 md:mt-2 ml-8">
-            <ul class="leading-10  list-inside list-disc text-gray">
-                <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, nulla!</li>
-                <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, nulla!</li>
-                <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, nulla!</li>
-                <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, nulla!</li>
-                <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, nulla!</li>
-                
-            </ul>
+            <p class="text-gray leading-10">Reach your audience everywhere with call to action on live streaming 
+            on your own personal channel or radio station
+            </p>
 
-            <button class="bg-yellow mt-10 md:mt-6 text-white md:mx-0 lg:mx-0 mx-20 font-semibold text-sm rounded-full py-3 focus:outline-none px-6">GET STARTED</button>
+            <button class="bg-yellow mt-10 md:mt-6 text-white md:mx-0 lg:mx-0 mx-20 font-semibold text-sm rounded-full md:py-3 py-1 focus:outline-none px-6">GET STARTED</button>
           </div>
       </div>
     </section>
@@ -84,8 +134,15 @@
       
     <div class="tag grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 grid-flow-row lg:grid-flow-row gap-x-16 content-center px-4 md:px-4 lg:px-0 mt-20 md:mt-48">
           <div class="md:order-none lg:order-none order-last">
-            <h2 class="text-blue font-semibold text-center md:text-left mt-8 md:mt-0 text-2xl text-lg mb-6">WeGo Client Benefits</h2>
-            <p class="text-gray leading-10">Developed to be managed under one roof, our OTT platform provides all you need to manage channels, customers, and billing. We are heavily invested in R&D, constantly updating our apps to provide you the best UX/UI for your customers. We also provide 24/7 support, so we're always by your side.</p>
+            <h2 class="text-blue font-semibold text-center md:text-left mt-8 md:mt-0 md:text-2xl text-lg mb-6">The Benefits of a WeGo Network Combined Platform</h2>
+            <p class="text-gray leading-8 text-justify mb-8">The difference between IPTV and OTT is the content that users usually watch on each. OTT tends to offer content over subscription services. Some examples are popular names who offers OTT service are   Netflix, Hulu, Amazon, Apple TV Roku and YouTube, But IPTV is much closer to traditional television subscriptions, with live TV broadcast available, as well as premium VOD content.  It is also very useful in distributing corporate content within a network, such as on shared monitors and computers on the same office network. However, for devices outside of that network, viewers will need to watch over OTT.</p>
+            
+            <p class="text-gray leading-8 text-justify mb-8">Which is Why WeGo Network has combined both service to give you the best of both world, Now you do not have to make a choice your organization can have both considered, WeGo Network a platform that give you reliable, economical, flexible and quality which is far nearer to a traditional broadcast television with live stream subscription.</p>
+            
+            <p class="text-gray leading-8 text-justify">Managed under one roof, Our platform provides all you need to manage channels, customers, and billing. We are heavily invested in R&D, constantly updating our apps to provide you the best UX/UI for your customers. We also provide 24/7 support, so we're always by your side.</p>
+
+
+
             <button class="bg-yellow md:mx-0 lg:mx-0 mx-24 rounded-full py-3 px-6 mt-6 text-white focus:outline-none font-semibold text-sm ">CONTACT US</button>
           </div>
 
@@ -159,7 +216,7 @@
   <section class="flex ml-48 lg:ml-48 lg:mx-0 md:mt-12 lg:mt-0 md:mx-24">
   <div class="bg-white py-8 md:px-20 md:mx-auto mx-4 px-10 my-auto shadow-lg">
     <h1 class="text-blue mt-6 md:mt-0 text-center md:text-left text-2xl">Get in touch</h1>
-    <form class="">
+    <form class="ml-4">
     <div class="focus-within:none">
     <input type="text" v-model="name" class="focus:outline-none focus:ring-2 focus:ring-opacity-50 mt-6 text-sm mb-6 focus:ring-blue-600 border-2 border-light-gray rounded-lg py-3 px-6 w-full" placeholder="Your name">
   </div>
@@ -225,18 +282,55 @@ export default {
 .top {
   position: relative;
 }
-.overlay{
+/* .overlay{
     width: 100%;
     height: 100%;
-    background-image:linear-gradient(to right bottom, #0080FF, #0080FF);
+    
     opacity: 0.5;
-    z-index: 0;
+    z-index: -1;
     position: absolute;
     justify-content: center;
     
+} */
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
 }
 
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
 
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  /* background-color: #bbb; */
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
 
 .contact-bar {
   background-image:linear-gradient(to right bottom, #1B3BD8, #1B3BD8, #176CE0, #0B92E7, #0BB6EB, #00E0F2, #00E0F2);

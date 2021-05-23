@@ -1,6 +1,12 @@
 <template>
   <Hero>
-    <h1 class="text-4xl tracking-wide leading-10 text-white font-semibold">Unlimited Online <br/> Radio/Podcast </h1>
+    <template v-slot:header>
+    <h1 class="md:text-3xl tracking-wide leading-10 text-3xl -mt-20 md:-mt-12 text-white font-semibold">Build a Successful Radio Station & Broadcast Your Station Worldwide </h1>
+     </template>
+
+    <template v-slot:paragraph>
+      <p class="lg:mt-4 md:mt-10 mt-10 tracking-widest leading-9 text-sm  text-white font-regular">Join 1000s of happy users. All in One Radio and Podcast Platform. High Quality Broadcasting. 24/7 Radio Automation. IPhone & Android Apps. Dedicated Support. With HTML5 Player</p>
+    </template>
   </Hero >
 
   

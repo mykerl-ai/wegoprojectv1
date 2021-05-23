@@ -19,14 +19,14 @@
           </button>
         </div>
 
-    <div class="shrink grid grid-cols-6 md:grid-cols-6 my-4 gap-4 w-full">
+    <div class="shrink grid px-4 md:px-0 grid-flow-row md:grid-cols-6 my-4 gap-4 w-full">
           
         
-        <div class="hover:transform translate-x-4 translate-y-4 col-span-1" v-for="movie in movies" :key="movie.id">
+        <div class="hover:transform translate-x-4 translate-y-4 md:col-span-1" v-for="movie in movies" :key="movie.id">
           <router-link :to="{name: 'MovieDetails', params: { image: movie.image, title: movie.title }}">
-            <img class="w-32 h-32 md:w-72 md:h-72 object-cover" :src="movie.image" alt="">
-            <p class="text-white text-base mt-4 md:text-center text-left font-semibold ">{{movie.title}}</p>
-            <p class="text-white text-xs mt-2 md:text-center text-left tracking-widest">{{movie.provider}}</p>
+            <img class="w-full h-auto md:w-72 md:h-72 object-cover" :src="movie.image" alt="">
+            <p class="text-white text-base mt-4 text-center  font-semibold ">{{movie.title}}</p>
+            <p class="text-white text-xs mt-2 text-center  tracking-widest">{{movie.provider}}</p>
           </router-link>
           </div>
         
