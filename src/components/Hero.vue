@@ -49,20 +49,20 @@
       </nav>
 
 
-       <div class="navbar mt-8 lg:hidden mr-20 md:mr-24">
+       <div class="navbar mt-8 lg:hidden mr-16 md:mr-24 z-0">
       <div class="dropdown1 transition-all duration-300">
     <button @click="showMenu" class="dropbtn focus:outline-none"><svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg> 
     </button>
-    <div v-show="menu" class="dropdown-content1 transition-all duration-300 ">
-      <router-link :to="{name: 'Home'}">Home</router-link>
-      <router-link :to="{name: 'Iptv'}">Iptv</router-link>
-      <router-link :to="{name: 'Podcast'}">Podcast</router-link>
-      <router-link :to="{name: 'Ott'}">OTT</router-link>
-      <router-link :to="{name: 'About'}">About</router-link>
-      <router-link :to="{name: 'Ott'}">FAQ</router-link>
-      <router-link :to="{name: 'Ott'}">Help</router-link>
+    <div v-show="menu" class="dropdown-content1 w-full">
+     <button class="w-full"><router-link :to="{name: 'Home'}">Home</router-link></button> 
+     <button class="w-full"><router-link :to="{name: 'Iptv'}">Iptv</router-link></button> 
+     <button class="w-full"><router-link :to="{name: 'Podcast'}">Podcast</router-link></button> 
+     <button class="w-full"><router-link :to="{name: 'Ott'}">OTT</router-link></button> 
+     <button class="w-full"><router-link :to="{name: 'About'}">About</router-link></button> 
+     <button class="w-full"><router-link :to="{name: 'Ott'}">FAQ</router-link></button> 
+     <button class="w-full"><router-link :to="{name: 'Ott'}">Help</router-link></button> 
     </div>
   </div> 
 </div>
@@ -70,7 +70,8 @@
     </Navbar>
 
     <div class="fwd mt-32 lg:mt-32 lg:ml-60 md:ml-32 md:mt-32 px-12 w-50 max-w-xl">
-      <slot name="header" class="text-center"></slot>
+
+      <slot name="header"></slot>
 
        <slot name="paragraph"></slot>
       
@@ -117,7 +118,7 @@ export default {
     } 
     .fwd {
         position: absolute;
-        z-index: 10;
+        /* z-index: 10; */
     }
     #hero > figure {
   animation: imageAnimation 30s linear infinite 0s;
@@ -227,7 +228,7 @@ nav>a, div>a {
   position: absolute;
   background-color: #0080FF;
   border-radius: 6px;
-  min-width: 160px;
+  
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -276,7 +277,6 @@ nav>a, div>a {
   max-width: 100%;
   z-index: 1;
 }
-
 
  }
 </style>
