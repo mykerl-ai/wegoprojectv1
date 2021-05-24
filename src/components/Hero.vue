@@ -9,7 +9,7 @@
        
     <Navbar class="w-full">
       <router-link :to="{name: 'Home'}">
-      <div class="w-16 md:w-20 -pl-16 md:pl-8 pt-5">
+      <div class="w-12 md:w-20 -pl-16 md:pl-8 pt-5">
           <img src="../assets/logo.png" alt="">
       </div>
 </router-link>
@@ -69,7 +69,7 @@
 
     </Navbar>
 
-    <div class="fwd mt-32 lg:mt-40 lg:ml-60 md:ml-32 md:mt-40 px-12 w-50 max-w-xl">
+    <div class="fwd mt-32 lg:mt-32 lg:ml-60 md:ml-32 md:mt-32 px-12 w-50 max-w-xl">
       <slot name="header" class="text-center"></slot>
 
        <slot name="paragraph"></slot>
