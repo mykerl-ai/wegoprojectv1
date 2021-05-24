@@ -45,16 +45,16 @@
 </div>
     </Navbar>
 
-    <h4 class="text-center text-gray font-bold text-2xl mt-8 border-b-2 shadow-xl tracking-wider py-6 border-blue">Pricing/Plan</h4>
+    <h4 class="text-center text-gray font-bold text-lg md:text-2xl mt-8 border-b-2 shadow-xl tracking-normal py-6 border-blue">PRICING/PLAN</h4>
 
   
-    <div class="grid grid-cols-2 md:grid-cols-6 grid-flow-row my-20 mx-5 md:mx-10 gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-6 grid-flow-row my-20 mx-5 md:mx-10 gap-4">
 
         <!--podcast -->
 
         <div class="col-span-4 w-full" v-if="currentRoute === '100' ||currentRoute === '236' || currentRoute === '439'">
             <h1 class="md:text-left text-center text-blue text-lg font-semibold">Your plan includes</h1>
-            <div class="flex gap-x-2 mt-10">
+            <div class="flex flex-wrap gap-y-8  gap-x-2 mt-10">
                 <div class="flex-grow">
                     <h2 class="text-deep-gray text-xl font-semibold mb-0.5 text-left">Server</h2>
                     <ul class="leading-8 list-inside list-disc text-gray text-sm">
@@ -97,7 +97,7 @@
 
 <div class="col-span-4 w-full" v-else-if="currentRoute === '9.1' ||currentRoute === '199' || currentRoute === '499'">
             <h1 class="text-left text-blue text-lg font-semibold">Your plan includes</h1>
-            <div class="flex gap-x-2 mt-10">
+            <div class="flex flex-wrap gap-y-8 gap-x-2 mt-10">
                 <div v-show="currentRoute==='9.1'" class="flex-grow">
                     <h2 class="text-deep-gray text-xl font-semibold mb-0.5 text-left">PRO</h2>
                     <ul class="leading-8 list-inside list-disc text-gray text-sm">
@@ -167,7 +167,7 @@
 
 <div class="col-span-4 w-full" v-else-if="currentRoute === '125' ||currentRoute === '250' || currentRoute === '500'">
             <h1 class="text-left text-blue text-lg font-semibold">Your plan includes</h1>
-            <div class="flex gap-x-2 mt-10">
+            <div class="flex flex-wrap gap-y-8  gap-x-2 mt-10">
                 <div class="flex-grow">
                     <h2 class="text-deep-gray text-xl font-semibold mb-0.5 text-left">Server</h2>
                     <ul class="leading-8 list-inside list-disc text-gray text-sm">
