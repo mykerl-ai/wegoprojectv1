@@ -175,7 +175,7 @@
   <section class="podcast">
     <div class="tag grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 grid-flow-row lg:grid-flow-row gap-x-16 content-center mt-24 md:mt-48 mx-6 md:mx-0">
           <div class="">
-            <h2 class="text-blue font-semibold text-2xl text-center md:text-left md:text-4xl mt-6 mb-6">Earn<br>Revenue</h2>
+            <h2 class="text-blue font-semibold text-2xl text-center md:text-left md:text-4xl mt-6 mb-6">Earn Revenue</h2>
             <div v-for="spec in specs" :key="spec.id" class="grid ml-12 md:ml-0 grid-rows-3 gap-2">
                 
                 <div class="flex">
@@ -246,7 +246,7 @@
 
 
 
-    <section class="w-full contact ml-0 h-64 mt-24 pl-0 ">
+    <section class="w-full contact -mt-20 ml-0 h-64 md:mt-24 pl-0 ">
       <div>
         <div class="w-full contact-bar flex space-x-96">
           <div class="bg-no-repeat rounded-full  bg-left-top h-24 w-24 contact-bar"></div>

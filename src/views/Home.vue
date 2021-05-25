@@ -209,9 +209,9 @@ Network Podcast and Radio</h2>
   
   <!-- form -->
 
-  <section class="flex  flex-row-reverse">
+  <section class="flex -mt-32 md:mt-0 flex-row-reverse">
 
-     <div class="bg-none py-8  mx-auto my-auto -mt-56 rounded-lg">
+  <div class="bg-none py-8  mx-auto my-auto -mt-56 rounded-lg">
   
   <section class="flex ml-48 lg:ml-48 lg:mx-0 md:mt-12 lg:mt-0 md:mx-24">
   <div class="bg-white py-8 md:px-20 md:mx-auto mx-4 px-10 my-auto shadow-lg">

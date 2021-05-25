@@ -162,7 +162,7 @@
   
     </section>
 
-    <section class="w-full contact ml-0 h-64 mt-24 pl-0 ">
+    <section class="w-full contact ml-0 h-64 -mt-20 md:mt-24 pl-0 ">
       <div>
         <div class="w-full contact-bar flex space-x-96">
           <div class="bg-no-repeat rounded-full  bg-left-top h-24 w-24 contact-bar"></div>
