@@ -131,7 +131,6 @@ export default {
     } 
     .fwd {
         position: absolute;
-        z-index: 10;
     }
     #hero > figure {
   animation: imageAnimation 30s linear infinite 0s;

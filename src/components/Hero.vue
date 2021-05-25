@@ -52,7 +52,7 @@
        <div class="navbar mt-8 lg:hidden mr-16 md:mr-24 z-0">
       <div class="dropdown1 transition-all duration-300">
     <button @click="showMenu" class="dropbtn focus:outline-none"><svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg> 
     </button>
     <div v-show="menu" class="dropdown-content1 w-full">
@@ -62,7 +62,9 @@
      <button class="w-full"><router-link :to="{name: 'Ott'}">OTT</router-link></button> 
      <button class="w-full"><router-link :to="{name: 'About'}">About</router-link></button> 
      <button class="w-full"><router-link :to="{name: 'Ott'}">FAQ</router-link></button> 
-     <button class="w-full"><router-link :to="{name: 'Ott'}">Help</router-link></button> 
+     <button class="w-full"><router-link :to="{name: 'Ott'}">Help</router-link></button>
+      <button class="w-full"><router-link :to="{name: 'Login'}">LOGIN</router-link></button>
+     <button class="w-full"><router-link :to="{name: 'Signup'}">SIGN UP</router-link></button> 
     </div>
   </div> 
 </div>
@@ -118,7 +120,6 @@ export default {
     } 
     .fwd {
         position: absolute;
-        /* z-index: 10; */
     }
     #hero > figure {
   animation: imageAnimation 30s linear infinite 0s;

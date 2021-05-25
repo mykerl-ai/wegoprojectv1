@@ -10,7 +10,7 @@
 
         
     <div class="navbar">
-      <div class="dropdown1">
+      <div class="dropdown">
     <button class="dropbtn">Platforms 
     </button>
     <div class="dropdown-content1">
@@ -22,7 +22,7 @@
 </div>
 
  <div class="navbar">
-      <div class="dropdown1">
+      <div class="dropdown">
     <button class="dropbtn">Resources 
     </button>
     <div class="dropdown-content1">
@@ -40,22 +40,7 @@
         </div>  
       </nav>
 
-
-       <div class="navbar mt-8 lg:hidden">
-      <div class="dropdown1 transition-all duration-300">
-    <button @click="showMenu" class="dropbtn focus:outline-none"><svg xmlns="http://www.w3.org/2000/svg" fill="#0080FF" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg> 
-    </button>
-    <div v-show="menu" class="dropdown-content1 transition-all duration-300">
-      <router-link :to="{name: 'Iptv'}">Home</router-link>
-      <router-link :to="{name: 'Ott'}">Platform</router-link>
-      <router-link :to="{name: 'Podcast'}">About</router-link>
-    </div>
-  </div> 
-</div>
-
-<div class="navbar mt-8 lg:hidden mr-12">
+<div class="navbar mt-8 lg:hidden mr-16 md:mr-24 z-0">
       <div class="dropdown1 transition-all duration-300">
     <button @click="showMenu" class="dropbtn focus:outline-none">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 16">
@@ -63,10 +48,16 @@
         </svg>
 
     </button>
-    <div v-show="menu" class="dropdown-content1 transition-all duration-300">
-      <router-link :to="{name: 'Iptv'}">Home</router-link>
-      <router-link :to="{name: 'Ott'}">Platform</router-link>
-      <router-link :to="{name: 'Podcast'}">About</router-link>
+    <div v-show="menu" class="dropdown-content1 w-full">
+      <button class="w-full"><router-link :to="{name: 'Home'}">Home</router-link></button> 
+     <button class="w-full"><router-link :to="{name: 'Iptv'}">Iptv</router-link></button> 
+     <button class="w-full"><router-link :to="{name: 'Podcast'}">Podcast</router-link></button> 
+     <button class="w-full"><router-link :to="{name: 'Ott'}">OTT</router-link></button> 
+     <button class="w-full"><router-link :to="{name: 'About'}">About</router-link></button> 
+     <button class="w-full"><router-link :to="{name: 'Ott'}">FAQ</router-link></button> 
+     <button class="w-full"><router-link :to="{name: 'Ott'}">Help</router-link></button>
+      <button class="w-full"><router-link :to="{name: 'Login'}">LOGIN</router-link></button>
+     <button class="w-full"><router-link :to="{name: 'Signup'}">SIGN UP</router-link></button>
     </div>
   </div> 
 </div>
@@ -209,7 +200,7 @@ export default {
   background-color: #0072E4;
 }
 
-.dropdown1:hover .dropdown-content1 {
+.dropdown:hover .dropdown-content1 {
   display: block;
 }
 
@@ -226,20 +217,7 @@ export default {
   z-index: 1;
 } */
 
- #hero > figure {
-  animation: imageAnimation 30s linear infinite 0s;
-  backface-visibility: hidden;
-  background-size: cover;
-  background-position: center center;
-  color: transparent;
-  max-height: 100%;
-  left: 0px;
-  opacity: 0;
-  position: absolute;
-  top: 0px;
-  max-width: 100%;
-  z-index: 1;
-}
+ 
 
 
  }
