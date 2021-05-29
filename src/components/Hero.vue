@@ -49,13 +49,13 @@
       </nav>
 
 
-       <div class="navbar mt-8 lg:hidden mr-16 md:mr-24 z-4">
-      <div class="dropdown1 transition-all duration-300 z-4">
+       <div class="navbar mt-8 lg:hidden mr-16 md:mr-24">
+      <div class="dropdown1 transition-all duration-300">
     <button @click="showMenu" class="dropbtn focus:outline-none"><svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg> 
     </button>
-    <div v-show="menu" class="dropdown-content1 w-full z-4">
+    <div v-show="menu" class="dropdown-content1 w-full">
      <button class="w-full"><router-link :to="{name: 'Home'}">Home</router-link></button> 
      <button class="w-full"><router-link :to="{name: 'Iptv'}">Iptv</router-link></button> 
      <button class="w-full"><router-link :to="{name: 'Podcast'}">Podcast</router-link></button> 

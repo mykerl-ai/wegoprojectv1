@@ -1,13 +1,13 @@
 <template>
   <Hero>
     <template v-slot:header>
-    <h1 class="lg:text-3xl md:8xl tracking-wide leading-10 text-2xl -mt-20 md:-mt-8 text-white font-semibold -z-1">Revolutionary <br> End-to-End IPTV/OTT Combined Platform</h1>
+    <h1 class="lg:text-3xl md:8xl tracking-wide leading-10 text-2xl -mt-20 md:-mt-8 text-white font-semibold">Revolutionary <br> End-to-End IPTV/OTT Combined Platform</h1>
     </template>
 
     <template v-slot:paragraph>
-      <p class="lg:mt-4 md:mt-10 mt-6 tracking-widest leading-9 text-sm  text-white font-regular -z-1">OTT provides your viewers access to movies and Tv shows, by sending signals directly through the internet.</p>
+      <p class="lg:mt-4 md:mt-10 mt-6 tracking-widest leading-9 text-sm  text-white font-regular">OTT provides your viewers access to movies and Tv shows, by sending signals directly through the internet.</p>
 
-      <p class="lg:mt-4 md:mt-10 mt-4 tracking-widest leading-9 text-sm  text-white font-regular -z-1">Build or Upgrade to a top-notch IPTV/OTT solution that is modern, and offers a High-end user experience across all major platforms..</p>
+      <p class="lg:mt-4 md:mt-10 mt-4 tracking-widest leading-9 text-sm  text-white font-regular">Build or Upgrade to a top-notch IPTV/OTT solution that is modern, and offers a High-end user experience across all major platforms..</p>
 
     </template>
     
