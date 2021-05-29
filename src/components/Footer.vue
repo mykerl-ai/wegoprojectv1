@@ -3,9 +3,9 @@
 
       <div class="grid grid-cols-2  lg:gap-80">
 
-         <div class="flex w-12 md:w-24 md:pl-8 md:pt-5">
-             <img  src="../assets/logo.png" alt="">
-              <p class="text-xs pt-2 text-deep-gray">All rights reserved</p>
+         <div class="flex flex-nowrap   md:pl-8 md:pt-5">
+             <img class="md:w-20 w-10"  src="../assets/logo.png" alt="">
+              <p class="text-xs pt-2 md:pt-6 text-deep-gray">All rights reserved</p>
         </div>
 
       <div class="md:flex md:space-x-8 space-x-2 hidden">

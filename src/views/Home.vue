@@ -1,7 +1,7 @@
 <template>
   <Hero>
     <template v-slot:header>
-    <h1 class="lg:text-3xl md:8xl tracking-wide leading-10 text-2xl -mt-20 md:-mt-6 text-white font-semibold z-0">Revolutionary <br> End-to-End IPTV/OTT Combined Platform</h1>
+    <h1 class="lg:text-3xl md:8xl tracking-wide leading-10 text-2xl -mt-20 md:-mt-8 text-white font-semibold z-0">Revolutionary <br> End-to-End IPTV/OTT Combined Platform</h1>
     </template>
 
     <template v-slot:paragraph>
@@ -214,7 +214,7 @@ Network Podcast and Radio</h2>
   <div class="bg-none py-8  mx-auto my-auto -mt-56 rounded-lg">
   
   <section class="flex ml-48 lg:ml-48 lg:mx-0 md:mt-12 lg:mt-0 md:mx-24">
-  <div class="bg-white py-8 md:px-20 md:mx-auto mx-4 px-10 my-auto shadow-lg">
+  <div class="bg-white py-8 md:px-20 md:mx-auto  px-10 my-auto shadow-lg">
     <h1 class="text-blue mt-6 md:mt-0 text-center md:text-left text-2xl">Get in touch</h1>
     <form class="ml-4">
     <div class="focus-within:none">
