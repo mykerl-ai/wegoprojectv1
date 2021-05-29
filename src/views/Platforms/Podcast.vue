@@ -1,7 +1,7 @@
 <template>
   <Hero>
     <template v-slot:header>
-    <h1 class="md:text-3xl tracking-wide leading-10 text-3xl -mt-20 md:-mt-12 text-white font-semibold z-0">Build a Successful Radio Station & Broadcast Your Station Worldwide </h1>
+    <h1 class="md:text-3xl tracking-wide leading-10 text-3xl -mt-20 md:-mt-6 text-white font-semibold z-0">Build a Successful Radio Station & Broadcast Your Station Worldwide </h1>
      </template>
 
     <template v-slot:paragraph>
