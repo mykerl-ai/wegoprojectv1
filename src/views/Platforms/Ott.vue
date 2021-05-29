@@ -1,7 +1,7 @@
 <template>
   <Hero>
      <template v-slot:header>
-    <h1 class="md:text-3xl tracking-wide leading-10 text-3xl -mt-20 md:-mt-12 text-white font-semibold">Monetize Your Content</h1>
+    <h1 class="md:text-3xl tracking-wide leading-10 text-3xl -mt-20 md:-mt-12 text-white font-semibold z-0">Monetize Your Content</h1>
     </template>
 
     <template v-slot:paragraph>

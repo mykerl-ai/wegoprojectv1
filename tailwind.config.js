@@ -29,7 +29,7 @@ module.exports = {
       'green': '#A1F5C3',
     },
     fontFamily: {
-      sans: ['poppins', 'helvetica'],
+      sans: ['montserrat', 'roboto'],
       serif: ['Merriweather', 'serif'],
     },
     extend: {
