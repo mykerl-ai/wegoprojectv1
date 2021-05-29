@@ -295,11 +295,11 @@
       </div>
   </section>
 
-  <section class="flex  flex-row-reverse">
+  <section class="flex mx-4 md:mx-0 -mt-32 md:mt-0 flex-row-reverse">
 
-     <div class="bg-none py-8  mx-auto my-auto -mt-44 md:-mt-32 lg:-mt-56 rounded-lg">
-    <section class="flex ml-48 lg:ml-48 md:ml-0">
-  <div class="bg-white py-8 px-12  lg:px-20 mx-auto my-auto shadow-lg">
+     <div class="bg-none py-8 mx-0 md:mx-auto my-auto -mt-56 rounded-lg">
+    <section class="flex ml-48 lg:ml-48 lg:mx-0 md:mt-12 lg:mt-0 md:mx-24">
+  <div class="bg-white py-8 md:px-20 md:mx-auto  px-10 my-auto shadow-lg">
     <h1 class="text-blue text-2xl">Get in touch</h1>
     <form class="">
     <div class="focus-within:none">

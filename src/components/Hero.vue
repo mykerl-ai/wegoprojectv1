@@ -55,7 +55,7 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg> 
     </button>
-    <div v-show="menu" class="dropdown-content1 w-full">
+    <div v-show="menu" class="dropdown-content1 w-full z-4">
      <button class="w-full"><router-link :to="{name: 'Home'}">Home</router-link></button> 
      <button class="w-full"><router-link :to="{name: 'Iptv'}">Iptv</router-link></button> 
      <button class="w-full"><router-link :to="{name: 'Podcast'}">Podcast</router-link></button> 
