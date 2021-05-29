@@ -49,7 +49,7 @@
       </nav>
 
 
-       <div class="navbar mt-8 lg:hidden mr-16 md:mr-24 z-0">
+       <div class="navbar mt-8 lg:hidden mr-16 md:mr-24 z-1">
       <div class="dropdown1 transition-all duration-300">
     <button @click="showMenu" class="dropbtn focus:outline-none"><svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -78,7 +78,7 @@
        <slot name="paragraph"></slot>
       
       
-      <div class="lg:mt-6 md:mt-10 absolute mt-4">
+      <div class="lg:mt-6 md:mt-10 absolute mt-8">
           <button class="bg-yellow  py-3 px-6  text-white font-semibold text-xs md:text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-opacity-50">Join now</button>
            <button @click="handleClick" class="border border-yellow-400 py-2 px-6 ml-6  text-white font-semibold text-xs md:text-sm rounded-full focus:outline-none">TALK TO US</button>
       </div>

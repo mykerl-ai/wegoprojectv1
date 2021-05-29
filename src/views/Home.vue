@@ -209,14 +209,14 @@ Network Podcast and Radio</h2>
   
   <!-- form -->
 
-  <section class="flex -mt-32 md:mt-0 flex-row-reverse">
+  <section class="flex mx-4 md:mx-0 -mt-32 md:mt-0 flex-row-reverse">
 
-  <div class="bg-none py-8  mx-auto my-auto -mt-56 rounded-lg">
+  <div class="bg-none py-8 mx-0 md:mx-auto my-auto -mt-56 rounded-lg">
   
   <section class="flex ml-48 lg:ml-48 lg:mx-0 md:mt-12 lg:mt-0 md:mx-24">
   <div class="bg-white py-8 md:px-20 md:mx-auto  px-10 my-auto shadow-lg">
     <h1 class="text-blue mt-6 md:mt-0 text-center md:text-left text-2xl">Get in touch</h1>
-    <form class="ml-4">
+    <form class="">
     <div class="focus-within:none">
     <input type="text" v-model="name" class="focus:outline-none focus:ring-2 focus:ring-opacity-50 mt-6 text-sm mb-6 focus:ring-blue-600 border-2 border-light-gray rounded-lg py-3 px-6 w-full" placeholder="Your name">
   </div>
