@@ -133,7 +133,7 @@ export default {
   position: absolute;
   top: 0px;
   width: 100%;
-  z-index: 1;
+  z-index: 0;
 }
 
 #hero > figure:nth-child(1) { background-image: url('../assets/images/radio.jpg'); }
