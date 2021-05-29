@@ -55,7 +55,7 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg> 
     </button>
-    <div v-show="menu" class="dropdown-content1 w-full">
+    <div v-show="menu" class="dropdown-content1 w-full ">
      <button class="w-full"><router-link :to="{name: 'Home'}">Home</router-link></button> 
      <button class="w-full"><router-link :to="{name: 'Iptv'}">Iptv</router-link></button> 
      <button class="w-full"><router-link :to="{name: 'Podcast'}">Podcast</router-link></button> 
@@ -181,7 +181,6 @@ imageAnimation {  0% {
 nav>a, div>a {
   color: white;
   font-size: 14px;
-  font-weight: 500;
 }
  .bt {
    background-color: white;
@@ -200,7 +199,7 @@ nav>a, div>a {
   font-size: 14px;
   color: white;
   text-align: center;
-  font-weight: 500;
+  
   text-decoration: none;
 }
 
@@ -227,7 +226,7 @@ nav>a, div>a {
 
 .dropdown-content1 {
   display: none;
-  position: relative;
+  position: absolute;
   background-color: #0080FF;
   border-radius: 6px;
   
@@ -242,7 +241,6 @@ nav>a, div>a {
   text-decoration: none;
   display: block;
   text-align: left;
-  font-weight: 500;
 }
 
 .dropdown-content1 a:hover {
@@ -254,7 +252,7 @@ nav>a, div>a {
 }
 
 
-@media (min-width: 768px) { 
+@media (max-width: 768px) { 
 /* .dropdown-content1 {
   display: none;
   position: absolute;
@@ -280,6 +278,14 @@ nav>a, div>a {
   max-width: 100%;
   
 }
-
+.dropdown-content1 {
+  display: none;
+  position: absolute;
+  background-color: #0080FF;
+  border-radius: 6px;
+  z-index: 999;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  
+}
  }
 </style>
