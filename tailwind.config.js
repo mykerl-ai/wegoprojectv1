@@ -50,6 +50,9 @@ module.exports = {
       'lg': '.5rem',
       'full': '9999px',
     },
+    zIndex: {
+      '-1': '-1',
+     }
       }
     },
   },

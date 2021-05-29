@@ -71,7 +71,7 @@
 
     </Navbar>
 
-    <div class="fwd mt-32 lg:mt-32 lg:ml-60 md:ml-32 md:mt-32 px-12 w-50 max-w-xl z-0">
+    <div class="fwd mt-32 lg:mt-32 lg:ml-60 md:ml-32 md:mt-32 px-12 w-50 max-w-xl -z-1">
 
       <slot name="header"></slot>
 
