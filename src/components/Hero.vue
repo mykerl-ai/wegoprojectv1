@@ -50,12 +50,12 @@
 
 
        <div class="navbar mt-8 lg:hidden mr-16 md:mr-24">
-      <div class="dropdown1 transition-all duration-300">
+      <div class="dropdown1 transition-all duration-300 ">
     <button @click="showMenu" class="dropbtn focus:outline-none"><svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg> 
     </button>
-    <div v-show="menu" class="dropdown-content1 w-full">
+    <div v-show="menu" class="dropdown-content1 w-full relative">
      <button class="w-full"><router-link :to="{name: 'Home'}">Home</router-link></button> 
      <button class="w-full"><router-link :to="{name: 'Iptv'}">Iptv</router-link></button> 
      <button class="w-full"><router-link :to="{name: 'Podcast'}">Podcast</router-link></button> 
@@ -181,6 +181,7 @@ imageAnimation {  0% {
 nav>a, div>a {
   color: white;
   font-size: 14px;
+  font-weight: 500;
 }
  .bt {
    background-color: white;
@@ -199,7 +200,7 @@ nav>a, div>a {
   font-size: 14px;
   color: white;
   text-align: center;
-  
+  font-weight: 500;
   text-decoration: none;
 }
 
@@ -241,6 +242,7 @@ nav>a, div>a {
   text-decoration: none;
   display: block;
   text-align: left;
+  font-weight: 500;
 }
 
 .dropdown-content1 a:hover {
