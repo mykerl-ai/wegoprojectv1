@@ -231,7 +231,7 @@ nav>a, div>a {
   border-radius: 6px;
   
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  
 }
 
 .dropdown-content1 a {
@@ -276,7 +276,7 @@ nav>a, div>a {
   position: absolute;
   top: 0px;
   max-width: 100%;
-  z-index: 1;
+  
 }
 
  }
