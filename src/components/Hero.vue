@@ -9,8 +9,9 @@
        
     <Navbar class="w-full">
       <router-link :to="{name: 'Home'}">
-      <div class="w-12 md:w-24 -pl-16 md:pl-8 pt-5">
-          <img src="../assets/logo.png" alt="">
+      <div >
+          <img class="w-12 md:w-24 -pl-16 md:pl-8 pt-4" src="../assets/logo.png" alt="">
+          <p class="text-center invisible md:visible text-xs text-white ml-6 -mt-4">WeGo Network</p>
       </div>
 </router-link>
       <nav class="lg:flex space-x-10 py-6 px-6 mr-20 hidden md:hidden">
@@ -284,8 +285,12 @@ nav>a, div>a {
   background-color: #0080FF;
   border-radius: 6px;
   z-index: 999;
+  width: 100vw;
+
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   
 }
+
+
  }
 </style>

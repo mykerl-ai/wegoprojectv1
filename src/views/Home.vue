@@ -108,15 +108,15 @@ Network Podcast and Radio</h2>
       <div class="tag grid grid-cols-1  lg:grid-cols-2 grid-flow-row lg:grid-flow-row gap-6 md:gap-4 content-center px-4 md:px-4 lg:px-0">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
               <div class="top lg:grid hidden">
-                <div class="overlay"></div>
+                <div class="overlay module"></div>
                 <img class="bg-gblue bg-blend-overlay" src="../assets/images/podcast2.jpg" alt="">
                 </div>
               <div class="top lg:grid hidden">
-                   <div class="overlay"></div>
+                   <div class="overlay module"></div>
                 <img class="bg-gblue bg-blend-overlay" src="../assets/images/podcast1.jpg" alt="">
                 </div>
               <div class="lg:col-span-2 col-span-1 top">
-                  <div class="overlay"></div>
+                  <div class="overlay module"></div>
                 <img class="bg-gblue bg-blend-overlay" src="../assets/images/podcast.jpg" alt="">
                 </div>
           </div>
@@ -260,6 +260,7 @@ export default {
     }
   },
 }
+
 </script>
 
 <style scoped>
