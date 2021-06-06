@@ -244,14 +244,7 @@ const router = createRouter({
   routes,
   linkActiveClass: "active",
   linkExactActiveClass: "exact-active",
-  scrollBehavior(to, from, savedPosition) {
-    if (to.hash) {
-      return {
-        el: to.hash,
-        behavior: 'smooth',
-      }
-    }
-  }
+  
 })
 
 export default router
