@@ -11,13 +11,8 @@
 
               <button class="form-btn rounded-full focus:outline-none py-3 px-6 bg-blue mt-6 block  text-sm text-white">Save</button> 
           </form>
-          <div>
-             <p id="timer">
-        <span id="timer-days">{{countDown}}</span>
-        <span id="timer-hours"></span>
-        <span id="timer-mins"></span>
-        <span id="timer-secs"></span>
-    </p>
+          <div class="mt-6">
+             <p class="text-deep-gray">Your subscription expires in <span class="text-gblue font-bold" id="timer-days">{{countDown}}</span> days</p>
           </div>
       </div>
 
@@ -141,17 +136,32 @@ export default {
       countDownTimer() {
                 if(this.countDown > 0) {
                     setTimeout(() => {
-                        Math.floor(this.countdown -newDate().getTime()/ (1000 * 60 * 60 * 24))
+                        
                         this.countDown -= 1
                         this.countDownTimer()
-                    }, 1000)
+                    }, 86400)
                 }
             }
     },
     mounted(){
         
       
-          
+      // JavaScript program to illustrate 
+    // calculation of no. of days between two date 
+  
+    // To set two dates to two variables
+    var date1 = new Date("06/06/2021");
+var date2 = new Date("07/07/2021");
+  
+// To calculate the time difference of two dates
+var Difference_In_Time = date2.getTime() - date1.getTime();
+  
+// To calculate the no. of days between two dates
+var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+
+  this.countDown = Difference_In_Days
+//To display the final no. of days (result)
+ 
     this.countDownTimer()
     // let t = endDate - now;
     
