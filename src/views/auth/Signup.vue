@@ -27,7 +27,7 @@
     <button class="dropbtn">Resources 
     </button>
     <div class="dropdown-content1">
-      <router-link :to="{name: 'Iptv'}">FAQ</router-link>
+      <router-link :to="{name: 'Faq'}">FAQ</router-link>
       <router-link :to="{name: 'Ott'}">Help & Support</router-link>
     </div>
   </div> 
@@ -54,7 +54,7 @@
      <button class="w-full"><router-link :to="{name: 'Podcast'}">Podcast</router-link></button> 
      <button class="w-full"><router-link :to="{name: 'Ott'}">OTT</router-link></button> 
      <button class="w-full"><router-link :to="{name: 'About'}">About</router-link></button> 
-     <button class="w-full"><router-link :to="{name: 'Ott'}">FAQ</router-link></button> 
+     <button class="w-full"><router-link :to="{name: 'Faq'}">FAQ</router-link></button> 
      <button class="w-full"><router-link :to="{name: 'Ott'}">Help</router-link></button>
      <button class="w-full"><router-link :to="{name: 'Login'}">LOGIN</router-link></button>
      <button class="w-full"><router-link :to="{name: 'Signup'}">SIGN UP</router-link></button>

@@ -1,14 +1,18 @@
 <template>
   <div class="w-full w-24 lg:pl-8 pt-5 md:pl-2 space-x-8 mt-40">
 
-      <div class="grid grid-cols-2  lg:gap-80">
+      <div class="grid grid-cols-2 lg:grid-cols-3 gap-0.5 md:gap-2">
 
-         <div class="flex flex-nowrap   md:pl-8 md:pt-5">
-             <img class="md:w-20 w-10"  src="../assets/logo.png" alt="">
-              <p class="text-xs pt-2 md:pt-6 text-deep-gray">All rights reserved</p>
-        </div>
+         <div class="flex flex-nowrap md:pl-8 md:pt-5">
+             <img class="md:w-20 w-10"  src="../assets/logo.png" alt=""></div>
 
-      <div class="md:flex md:space-x-8 space-x-2 hidden">
+      
+      <p class="md:text-base pt-2 md:-ml-60 hidden md:block lg:-ml-40 md:pt-12 text-blue">Copyright © WeGo Network LLC 2021. All rights reserved. Privacy Policy</p>
+
+      <p class="text-xs pt-2 md:hidden -ml-32 md:pt-12 text-blue">Copyright © WeGo Network LLC 2021.</p>
+        
+
+      <div class="md:flex md:space-x-8 mt-6 md:mx-40 lg:mx-0 space-x-2 hidden">
         
           <router-link :to="{name: 'Home'}"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 57 57">
             <g id="facebook" transform="translate(0.5 0.5)">
@@ -52,7 +56,7 @@
 
       </div>
 
-      <div class="flex md:space-x-8 space-x-2 md:hidden">
+      <div class="flex md:space-x-8 mx-20 my-8 space-x-2 md:hidden">
         
           <router-link :to="{name: 'Home'}">
             <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">

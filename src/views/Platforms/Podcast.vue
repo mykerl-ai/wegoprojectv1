@@ -1,11 +1,13 @@
 <template>
   <Hero>
     <template v-slot:header>
-    <h1 class="md:text-3xl tracking-wide leading-10 text-3xl -mt-20 md:-mt-6 text-white font-semibold z-0">Build a Successful Radio Station & Broadcast Your Station Worldwide </h1>
+    <h1 class="md:text-3xl tracking-wide leading-10 text-3xl -mt-20 md:-mt-6 text-white font-semibold z-0">A Global Online Radio & Podcast Platform</h1>
      </template>
 
     <template v-slot:paragraph>
-      <p class="lg:mt-4 md:mt-10 mt-10 tracking-widest leading-9 text-sm  text-white font-regular">Join 1000s of happy users. All in One Radio and Podcast Platform. High Quality Broadcasting. 24/7 Radio Automation. IPhone & Android Apps. Dedicated Support. With HTML5 Player</p>
+      <p class="lg:mt-4 md:mt-10 mt-10 tracking-widest leading-9 text-sm  text-white font-regular">Listen in your car, on the app, online, and at home. <br>
+Personalized Stations Powered by WeGo Network Llc.
+</p>
     </template>
   </Hero >
 
@@ -254,23 +256,23 @@ export default {
       message: '',
       pricing: [
         {
-          id: 100,
+          id: 55.1,
           desc: 'STARTER',
-          price: '$100',
+          price: '$55',
           duration: 'Per Month',
           details: 'Starter features for \n your business to grow'
         },
         {
-          id: 236,
+          id: 75.01,
           desc: 'REGULAR',
-          price: '$236',
+          price: '$75',
           duration: 'Per Month',
           details: 'Professional features for your business to grow'
         },
         {
-          id: 439,
+          id: 145,
           desc: 'PLUS',
-          price: '$439',
+          price: '$145',
           duration: 'Per Month',
           details: 'Advanced features for your business to grow'
         },

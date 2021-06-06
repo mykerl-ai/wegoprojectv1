@@ -106,7 +106,7 @@
       <h2 class="text-center text-blue font-semibold  text-lg mt-24 mb-8 md:mb-12">WeGO
 Network Podcast and Radio</h2>
       <div class="tag grid grid-cols-1  lg:grid-cols-2 grid-flow-row lg:grid-flow-row gap-6 md:gap-4 content-center px-4 md:px-4 lg:px-0">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 ">
               <div class="top lg:grid hidden">
                 <div class="overlay module"></div>
                 <img class="bg-gblue bg-blend-overlay" src="../assets/images/podcast2.jpg" alt="">
@@ -135,11 +135,12 @@ Network Podcast and Radio</h2>
     <div class="tag grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 grid-flow-row lg:grid-flow-row gap-x-16 content-center px-4 md:px-4 lg:px-0 mt-20 md:mt-48">
           <div class="md:order-none lg:order-none order-last">
             <h2 class="text-blue font-semibold text-center md:text-left mt-8 md:mt-0 md:text-2xl text-lg mb-6">The Benefits of a WeGo Network Combined Platform</h2>
-            <p class="text-gray leading-8 text-justify mb-8">The difference between IPTV and OTT is the content that users usually watch on each. OTT tends to offer content over subscription services. Some examples are popular names who offers OTT service are   Netflix, Hulu, Amazon, Apple TV Roku and YouTube, But IPTV is much closer to traditional television subscriptions, with live TV broadcast available, as well as premium VOD content.  It is also very useful in distributing corporate content within a network, such as on shared monitors and computers on the same office network. However, for devices outside of that network, viewers will need to watch over OTT.</p>
+            <p class="text-gray leading-8 text-justify mb-8">OTT tends to offer content over subscription services, examples are Netflix, Hulu, Amazon, Apple TV, Roku and YouTube. But IPTV is more like traditional television with live TV broadcast available, as well as premium VOD content over the internet and mobile devices.</p>
             
-            <p class="text-gray leading-8 text-justify mb-8">Which is Why WeGo Network has combined both service to give you the best of both world, Now you do not have to make a choice your organization can have both considered, WeGo Network a platform that give you reliable, economical, flexible and quality which is far nearer to a traditional broadcast television with live stream subscription.</p>
+            <p class="text-gray leading-8 text-justify mb-8">Distributing and monetizing content across platforms for your social media channel to your own tv channel WeGo Network give our customer flexibility, quality, reliability and economical freedom of choice for film makers, broadcasters, gamers and live events.</p>
             
-            <p class="text-gray leading-8 text-justify">Managed under one roof, Our platform provides all you need to manage channels, customers, and billing. We are heavily invested in R&D, constantly updating our apps to provide you the best UX/UI for your customers. We also provide 24/7 support, so we're always by your side.</p>
+            <p class="text-gray leading-8 text-justify">Manage it all under one roof, your billing , channels
+and customers. So Grow your business, enterprise or ministry. We update our apps to provide you the best UX/UI for ours customers experience with 24/7 support, so we're always by your side.</p>
 
 
 

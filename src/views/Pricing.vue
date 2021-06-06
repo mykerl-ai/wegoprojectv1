@@ -1,14 +1,16 @@
 <template>
   
-       <Navbar>
+       <Navbar class="w-full">
       <router-link :to="{name: 'Home'}">
-      <div class="w-24 pl-8 pt-5">
-          <img src="../assets/logo.png" alt="">
+      <div >
+          <img class="w-12 md:w-24 -pl-16 md:pl-8 pt-4" src="../assets/logo.png" alt="">
+          <p class="text-center invisible md:visible text-xs text-white ml-6 -mt-4">WeGo Network</p>
       </div>
-      </router-link>
+</router-link>
       <nav class="lg:flex space-x-10 py-6 px-6 mr-20 hidden md:hidden">
         <router-link :to="{name: 'Home'}">Home</router-link>
 
+        
     <div class="navbar">
       <div class="dropdown1">
     <button class="dropbtn">Platforms 
@@ -21,59 +23,101 @@
   </div> 
 </div>
 
+ <div class="navbar">
+      <div class="dropdown1">
+    <button class="dropbtn">Resources 
+    </button>
+    <div class="dropdown-content1">
+      <router-link :to="{name: 'Faq'}">FAQ</router-link>
+      <router-link :to="{name: 'Ott'}">Help & Support</router-link>
+    </div>
+  </div> 
+</div>
+
         
         <router-link :to="{name: 'About'}">About us</router-link>
-        <div class="space-x-6 pl-96">
+        <div class="space-x-6 lg:pl-96">
            <router-link :to="{name: 'Login'}">LOGIN</router-link>
            <router-link :to="{name: 'Signup'} " class="bt">SIGN UP</router-link> 
         </div>  
       </nav>
 
 
-<div class="navbar mt-8 lg:hidden">
-    <div class="dropdown1 transition-all duration-300">
+       <div class="navbar mt-8 lg:hidden mr-16 md:mr-24">
+      <div class="dropdown1 transition-all duration-300 ">
     <button @click="showMenu" class="dropbtn focus:outline-none"><svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg> 
     </button>
-    <div v-show="menu" class="dropdown-content1 transition-all duration-300">
-      <router-link :to="{name: 'Iptv'}">Home</router-link>
-      <router-link :to="{name: 'Ott'}">Platform</router-link>
-      <router-link :to="{name: 'Podcast'}">About</router-link>
+    <div v-show="menu" class="dropdown-content1 w-full ">
+     <button class="w-full"><router-link :to="{name: 'Home'}">Home</router-link></button> 
+     <button class="w-full"><router-link :to="{name: 'Iptv'}">Iptv</router-link></button> 
+     <button class="w-full"><router-link :to="{name: 'Podcast'}">Podcast</router-link></button> 
+     <button class="w-full"><router-link :to="{name: 'Ott'}">OTT</router-link></button> 
+     <button class="w-full"><router-link :to="{name: 'About'}">About</router-link></button> 
+     <button class="w-full"><router-link :to="{name: 'Faq'}">FAQ</router-link></button> 
+     <button class="w-full"><router-link :to="{name: 'Ott'}">Help</router-link></button>
+      <button class="w-full"><router-link :to="{name: 'Login'}">LOGIN</router-link></button>
+     <button class="w-full"><router-link :to="{name: 'Signup'}">SIGN UP</router-link></button> 
     </div>
   </div> 
 </div>
-    </Navbar>
 
+    </Navbar>
     <h4 class="text-center text-gray font-bold text-lg md:text-2xl mt-8 border-b-2 shadow-xl tracking-normal py-6 border-blue">PRICING/PLAN</h4>
 
   
-    <div class="grid grid-cols-1 md:grid-cols-6 grid-flow-row my-20 mx-5 md:mx-10 gap-4">
+    <div class="grid grid-cols-1 lg:grid-cols-6 grid-flow-row my-20 mx-5 md:mx-10 gap-4">
 
         <!--podcast -->
 
-        <div class="col-span-4 w-full" v-if="currentRoute === '100' ||currentRoute === '236' || currentRoute === '439'">
+        <div class="col-span-4 w-full" v-if="currentRoute === '5.1' ||currentRoute === '5.01' || currentRoute === '145'">
             <h1 class="md:text-left text-center text-blue text-lg font-semibold">Your plan includes</h1>
             <div class="flex flex-wrap gap-y-8  gap-x-2 mt-10">
-                <div class="flex-grow">
+                <div v-show="currentRoute==='5.1'" class="flex-grow">
                     <h2 class="text-deep-gray text-xl font-semibold mb-0.5 text-left">Server</h2>
+                    <ul class="leading-8 list-inside list-disc text-gray text-sm">
+                        <li>1000 viewers</li>
+                        <li>1000 Traffic</li>
+                        <li>Analytics</li>
+                        <li>Easy Call To Action</li>
+                        <li>Online Radio Station Automation</li>
+                        <li>Audio Stream</li>
+                        <li>Simultaneously stream to multiple endpoints</li>
+                        <li>Radio Widget</li>
+                        <li>one station</li>
+                    </ul>
+
+            </div>
+                <div v-show="currentRoute==='5.01'" class="flex-grow">
+                    <h2 class="text-deep-gray text-xl font-semibold mb-0.5 text-left">Features</h2>
+                    <ul class="leading-8 list-inside list-disc text-gray text-sm">
+                        <li>1500 Viewers</li>
+                        <li>1500 Traffic</li>
+                        <li>Live Video Stream</li>
+                        <li>Online Radio Station Automation</li>
+                        <li>Audio Stream</li>
+                        <li>Simultaneously stream to multiple endpoints</li>
+                        <li>Radio Widget</li>
+                        <li>Am and Fm 2 station</li>
+                    </ul>
+                
+                </div>
+
+                 <div v-show="currentRoute==='145'" class="flex-grow">
+                    <h2 class="text-deep-gray text-xl font-semibold mb-0.5 text-left">Features</h2>
                     <ul class="leading-8 list-inside list-disc text-gray text-sm">
                         <li>Unlimited Traffic</li>
                         <li>Unlimited Viewers</li>
                         <li>Analytics</li>
-                    </ul>
-                
-            </div>
-                <div class="flex-grow">
-                    <h2 class="text-deep-gray text-xl font-semibold mb-0.5 text-left">Features</h2>
-                    <ul class="leading-8 list-inside list-disc text-gray text-sm">
-                        <li>Easy Subscription Settings</li>
                         <li>Online Radio Station Automation</li>
-                        <li>Live Video Stream</li>
+                        <li>Audio Stream</li>
                         <li>Simultaneously stream to multiple endpoints</li>
-                        <li>Radio Player</li>
+                        <li>Radio Widget</li>
+                        <li>3 stations</li>
+                        <li>Advertise</li>
                     </ul>
-                
+
                 </div>
 
                 <div class="flex-auto">
@@ -81,6 +125,7 @@
                     <ul class="leading-8 list-inside list-disc text-gray text-sm">
                         <li>Server Downtime Monitoring</li>
                         <li>Twitter and Tunein , Alexa  Addons</li>
+                        <li>App</li>
                     </ul>
                 
                 </div>
@@ -101,15 +146,21 @@
                 <div v-show="currentRoute==='9.1'" class="flex-grow">
                     <h2 class="text-deep-gray text-xl font-semibold mb-0.5 text-left">PRO</h2>
                     <ul class="leading-8 list-inside list-disc text-gray text-sm">
-                        <li>Base Player HD</li>
-                        <li>Player calls-to-action</li>
+                        <li>Full HD streaming and cloud recording</li>
+                        <li>Stream to any virtual event platform</li>
                         <li>Privacy protection</li>
-                        <li>Video embed control</li>
+                        <li>Simultaneously stream to multiple endpoints</li>
                         <li>1 Channel</li>
-                        <li>Channel branding and password protection</li>
-                        <li>Manage recorded video content</li>
+                        <li>Channel branding</li>
+                        <li>Video Widget</li>
                         <li>Mulit-cross Platform link</li>
                         <li>User Management </li>
+                        <li>Privacy protection </li>
+                        <li>Pre-recorded and Live </li>
+                        <li>WebPlayer</li>
+                        <li>Dashboard</li>
+                        <li>Custom RTMP settings</li>
+                        <li>Calls-to-Action</li>
                     </ul>
                   </div>
 
@@ -223,7 +274,7 @@
 
                     <p class="text-lg font-bold text-gray mt-6">Total due today: <span class="ml-28">$ {{total}}</span></p>
 
-                    <button type="button" class="bg-yellow rounded rounded-lg py-1 px-2 font-bold text-sm text-white my-6 ml-24 md:ml-60 " @click="handleForm">CONTINUE</button>
+                    <button type="button" class="bg-yellow rounded rounded-lg py-1 px-2 font-bold text-sm text-white my-6 ml-24 md:ml-16 lg:ml-60 " @click="handleForm">CONTINUE</button>
                     </form>
 
                     
@@ -268,18 +319,14 @@ export default {
     computed: {
         calculateTotal(){
             this.total = parseInt( this.billingForm.cycle, 10) * this.price
-            
-           
-            
-            
-        }
+          }
     }
 
 }
 
 </script>
 
-<style>
+<style scoped>
 nav>a, div>a {
   color: #0080FF;
   font-size: 14px;
@@ -329,9 +376,9 @@ nav>a, div>a {
   position: absolute;
   background-color: #0080FF;
   border-radius: 6px;
-  min-width: 160px;
+  
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  
 }
 
 .dropdown-content1 a {
@@ -351,4 +398,31 @@ nav>a, div>a {
   display: block;
 }
 
+
+@media (max-width: 768px) { 
+/* .dropdown-content1 {
+  display: none;
+  position: absolute;
+  
+  background-color: #0080FF;
+  border-radius: 6px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+} */
+
+.dropdown-content1 {
+  display: none;
+  position: absolute;
+  background-color: #0080FF;
+  border-radius: 6px;
+  z-index: 999;
+  width: 100vw;
+
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  
+}
+
+
+ }
 </style>

@@ -17,6 +17,15 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
+
+  {
+    path: '/faq',
+    name: 'Faq',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/resources/Faq.vue')
+  },
  
   {
     path: '/iptv',
@@ -191,6 +200,25 @@ const routes = [
     props: true
   },
 
+  {
+    path: '/terms',
+    name: 'Terms',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/legal/Terms.vue'),
+  },
+
+  {
+    path: '/privacy',
+    name: 'Privacy',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/legal/Privacy.vue'),
+  },
+
+
 
   // {
   //   path: '/iptv-dashboard',
@@ -216,6 +244,14 @@ const router = createRouter({
   routes,
   linkActiveClass: "active",
   linkExactActiveClass: "exact-active",
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth',
+      }
+    }
+  }
 })
 
 export default router

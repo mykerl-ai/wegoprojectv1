@@ -11,6 +11,14 @@
 
               <button class="form-btn rounded-full focus:outline-none py-3 px-6 bg-blue mt-6 block  text-sm text-white">Save</button> 
           </form>
+          <div>
+             <p id="timer">
+        <span id="timer-days">{{countDown}}</span>
+        <span id="timer-hours"></span>
+        <span id="timer-mins"></span>
+        <span id="timer-secs"></span>
+    </p>
+          </div>
       </div>
 
       <div class="shadow-xl py-2 px-10 md:col-span-3 col-span-6">
@@ -103,6 +111,7 @@ export default {
             name: 'Administrator',
             figure: '',
             isModalVisible: false,
+            countDown: 0,
             movies: [
                 {image: image, title: 'Star wars', time: '1 minute ago', views:'29,129', id: 1},
                 {image: image, title: 'Star wars', time: '2 minutes ago', views:'129,192', id: 2},
@@ -128,8 +137,30 @@ export default {
       },
       closeModal() {
         this.isModalVisible = false;
-      }
+      },
+      countDownTimer() {
+                if(this.countDown > 0) {
+                    setTimeout(() => {
+                        Math.floor(this.countdown -newDate().getTime()/ (1000 * 60 * 60 * 24))
+                        this.countDown -= 1
+                        this.countDownTimer()
+                    }, 1000)
+                }
+            }
     },
+    mounted(){
+        
+      
+          
+    this.countDownTimer()
+    // let t = endDate - now;
+    
+    
+    
+    //     let days = Math.floor(t / (1000 * 60 * 60 * 24));
+        
+},
+    
 
     computed: {
         result(){
