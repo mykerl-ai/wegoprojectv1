@@ -1,6 +1,6 @@
 <template>
 
- <Navbar class="w-full">
+ <Navbar class="w-full shadow-md mb-6">
       <router-link :to="{name: 'Home'}">
       <div class="mb-6">
           <img class="w-12 md:w-20 -pl-16 md:-pl-32 pt-4" src="@/assets/logo.png" alt="">
@@ -123,6 +123,7 @@ export default {
 nav>a, div>a {
   color: #0080FF;
   font-size: 14px;
+  font-weight: 500;
 }
  .bt {
    background-color: #0080FF;
@@ -141,7 +142,7 @@ nav>a, div>a {
   font-size: 14px;
   color: #0080FF;
   text-align: center;
-  
+  font-weight: 500;
   text-decoration: none;
 }
 
@@ -155,6 +156,7 @@ nav>a, div>a {
   border: none;
   outline: none;
   color: #0080FF;
+  font-weight: 500;
   background-color: inherit;
   font-family: inherit;
   margin: 0;

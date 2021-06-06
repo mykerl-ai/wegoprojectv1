@@ -1,6 +1,6 @@
 <template>
 
- <Navbar class="w-full lg:-ml-40">
+ <Navbar class="w-full shadow-xl lg:-ml-40">
        <router-link :to="{name: 'Home'}">
       <div class="md:hidden">
           <img class="w-12 md:w-24 -pl-16 md:pl-8 pt-4" src="@/assets/logo.png" alt="">

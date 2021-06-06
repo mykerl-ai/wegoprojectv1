@@ -1,5 +1,5 @@
 <template>
-<Navbar>
+<Navbar class="w-full shadow-md mb-6">
     <router-link :to="{name: 'Home'}">
       <div class="w-24 pl-8 pt-5">
           <img src="@/assets/logo.png" alt="">
@@ -155,6 +155,7 @@ export default {
   nav> a, div>a {
       color: #0080FF;
       font-size: 14px;
+      font-weight: 500;
   }
 
   .bt{
@@ -174,7 +175,7 @@ export default {
   font-size: 14px;
   color: white;
   text-align: center;
-  
+  font-weight: 500;
   text-decoration: none;
 }
 
@@ -188,6 +189,7 @@ export default {
   border: none;
   outline: none;
   color: #0080FF;
+  font-weight: 500;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
@@ -210,6 +212,7 @@ export default {
 .dropdown-content1 a {
   float: none;
   color: white;
+  font-weight: 500;
   padding: 12px 16px;
   text-decoration: none;
   display: block;

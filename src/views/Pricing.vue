@@ -1,6 +1,6 @@
 <template>
   
-       <Navbar class="w-full">
+       <Navbar class="w-full shadow-md mb-6">
       <router-link :to="{name: 'Home'}">
       <div >
           <img class="w-12 md:w-24 -pl-16 md:pl-8 pt-4" src="../assets/logo.png" alt="">
