@@ -139,7 +139,7 @@ export default {
                         
                         this.countDown -= 1
                         this.countDownTimer()
-                    }, 86400)
+                    }, 86400000)
                 }
             }
     },
