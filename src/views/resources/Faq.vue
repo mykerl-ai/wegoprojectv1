@@ -3,7 +3,7 @@
  <Navbar class="w-full">
       <router-link :to="{name: 'Home'}">
       <div class="mb-6">
-          <img class="w-12 md:w-24 -pl-16 md:-pl-32 pt-4" src="@/assets/logo.png" alt="">
+          <img class="w-12 md:w-20 -pl-16 md:-pl-32 pt-4" src="@/assets/logo.png" alt="">
           <p class="text-center invisible md:visible text-xs text-blue ml-6 -mt-4">WeGo Network</p>
       </div>
 </router-link>
