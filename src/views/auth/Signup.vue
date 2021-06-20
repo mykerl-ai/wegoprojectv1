@@ -86,14 +86,29 @@
     <input type="password" required v-show="! recovery" v-model="confirm" class="focus:outline-none focus:ring-2 focus:ring-opacity-50 border-b-2 text-sm text-gray-400 mb-4 border-light-gray  py-2 px-6 w-full" placeholder="Confirm password">
   </div>
 
-   <div class="focus-within:none">
-    
-    <select type="select" required v-show="! recovery" v-model="platform" class="focus:outline-none focus:ring-2 focus:ring-opacity-50 border-b-2 text-sm text-gray-400 tracking-widest inline-block mb-4 border-light-gray  py-2 px-4 w-full">
-        <option class="text-center text-deep-gray text-sm"></option>
-        <option class="text-center text-deep-gray text-sm" value="Iptv">IPTV & Live stream</option>
+   <div v-show="! recovery" class="focus-within:none grid grid-cols-1 gap-y-2 md:grid-cols-3 my-4">
+    <div>
+      <input v-model="iptv" type="checkbox" name="IPTV" id="IPTV" value="IPTV" />
+        <label class="text-base text-deep-gray mx-4 my-6 md:mx-1" for="IPTV">IPTV</label>
+    </div>
+    <div>
+      <input v-model="ott" type="checkbox" name="OTT" id="OTT" value="OTT" />
+        <label class="text-base text-deep-gray mx-4 my-6 md:mx-1" for="OTT">OTT</label>
+    </div>
+    <div class="">
+      <input v-model="radio" type="checkbox" name="RADIO" id="RADIO" value="RADIO" />
+        <label class="text-base text-deep-gray mx-4 my-6 md:mx-1" for="RADIO">Podcast</label>
+    </div>
+    <!-- <p>{{iptv}}</p>
+    <p>{{ott}}</p>
+    <p>{{radio}}</p> -->
+    <!-- <select type="select" required v-show="! recovery" v-model="platform" class="focus:outline-none focus:ring-2 focus:ring-opacity-50 border-b-2 text-sm text-gray-400 tracking-widest inline-block mb-4 border-light-gray  py-2 px-4 w-full">
+        <option class="text-center text-deep-gray text-sm">Select</option>
+        <option class="text-center text-deep-gray text-sm" value="Iptv"><input type="checkbox" name="vehicle" id="option1" value="Iptv" />
+        <label for="option1">Platform</label></option>
         <option class="text-center text-deep-gray text-sm">OTT</option>
-        <option class="text-center text-deep-gray text-sm">Audio Podcast</option>
-    </select>
+        <option class="text-center text-deep-gray text-sm">Radio & Podcast</option>
+    </select> -->
     <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
     <svg class="w-4 h-4 px-4 fill-current" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
   </div>
@@ -120,7 +135,9 @@ export default {
       email: '',
       password: '',
       confirm: '',
-      platform: 'Iptv',
+      iptv: '',
+      ott: '',
+      radio: '',
       recovery: false,
       }
   },

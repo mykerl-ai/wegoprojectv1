@@ -1,7 +1,7 @@
 <template>
   <h1 class="text-base text-left font-medium mb-6 md:mb-0 text-deep-gray">Customize your platform</h1>
   <div  class="w-full cards grid grid-cols-3">
-      <div class="shadow-lg py-6 px-6 md:col-span-1 col-span-3">
+      <div class="shadow-lg py-6 px-6 w-full lg:col-span-1 col-span-3">
           <p class="text-sm text-deep-gray mb-8 ">{{title}}</p>
           <h2 class="text-2xl font-semibold text-blue ">{{figure}}</h2>
           <p class="text-xs text-deep-gray my-4" :class="{ activeClass: status===true, errorClass: status===false }">Status: {{status ? 'active' : 'inactive'}}</p>
@@ -10,7 +10,7 @@
 
        <!--channel-->
 
-   <div class="shadow-lg py-6 px-6 md:col-span-1 col-span-3">
+   <div class="shadow-lg py-6 px-6 lg:col-span-1 col-span-3">
           <h2 class="text-2xl font-semibold text-center text-blue mx-32 mt-4 md:mt-0 md:mx-24">
             
             <svg xmlns="http://www.w3.org/2000/svg" width="46.908" height="38.379" viewBox="0 0 46.908 38.379">

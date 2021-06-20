@@ -1,6 +1,6 @@
 <template>
   <h1 class="text-3xl text-left font-medium text-deep-gray">Set subscription fee</h1>
-  <div  class="w-full cards grid grid-cols-1 md:grid-cols-3">
+  <div  class="w-full cards grid grid-cols-1 lg:grid-cols-2">
       <div class="shadow-lg py-6 px-4">
           <form action="">
               <label for="amount" class="text-gray pb-4">Set Amount</label>
@@ -14,7 +14,7 @@
 
               </div>
 
-              <label for="subscribers"  class="text-gray pb-4">Estimate number of subscribers</label>
+              <label for="subscribers"  class="text-gray pb-4">Estimated number of subscribers</label>
               <input name="amount" type="number" v-model="subscribers"  class="border border-gray px-8 focus:outline-none mt-3 py-2">
 
               <button class="form-btn rounded-full focus:outline-none py-3 px-12 bg-blue mt-6 block  text-sm text-white">Done</button>

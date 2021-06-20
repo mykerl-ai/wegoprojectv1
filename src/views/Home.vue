@@ -14,7 +14,7 @@
   </Hero >
 
   <Slider />
-  <div class="home w-full">
+  <div class="home w-full my-20">
     
     <section class="ott w-full">
       <!-- <h2 class="text-center text-blue font-semibold text-lg mt-24">OUR OTT PLATFORM</h2> -->

@@ -11,7 +11,7 @@
       <router-link :to="{name: 'Home'}">
       <div >
           <img class="w-12 md:w-24 -pl-16 md:pl-8 pt-4" src="../assets/logo.png" alt="">
-          <p class="text-center invisible md:visible text-xs text-white ml-6 -mt-4">WeGo Network</p>
+          <p class="text-center invisible md:visible text-xs font-bold text-white ml-6 -mt-4">WeGo <br> Network</p>
       </div>
 </router-link>
       <nav class="lg:flex space-x-10 py-6 px-6 mr-20 hidden md:hidden">

@@ -1,6 +1,6 @@
 <template>
   <div class="w-full shadow-lg py-1 px-2 mt-4">
-      <h1 class="text-base text-deep-gray">Playlists</h1>
+      <h1 class="text-base text-white">Playlists</h1>
       <div class="flex gap-4 mt-2">
           <button @click="showModal" class="bg-blue text-white rounded  focus:outline-none rounded-lg py-2 px-2 mb-4 text-sm">Create Playlists</button>
         </div>

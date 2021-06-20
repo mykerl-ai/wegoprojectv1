@@ -26,7 +26,9 @@
       <h2 class="text-center text-blue font-semibold text-lg mt-24">OUR BACKGROUND</h2>
 
       <div class="my-6 mx-auto w-auto">
-      <p class="text-base mx-4 md:mx-0 text-justify text-deep-gray leading-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla eos, minus, rem consequatur facere ex illo, minima et unde perspiciatis mollitia distinctio laudantium est tempora! Veritatis voluptates asperiores perferendis iste reiciendis, nostrum magnam alias perspiciatis corporis sint rerum sunt obcaecati accusantium placeat consequatur tempora at facilis cumque, minima iusto adipisci repellendus soluta earum eius! Quos delectus rem quaerat optio! Exercitationem iusto dolores itaque impedit blanditiis molestiae atque debitis expedita. Quas et optio amet harum natus ratione tempore nisi illo ut?</p>
+      <p class="text-base mx-4 md:mx-0 text-justify text-deep-gray leading-8">In 2017, WEGO Network began its journey as a radio station broadcasting live and pre-recorded music and shows. We created a place for creative artists to have a voice and easily show off their work at  WEGO-104. WEGO network quietly started its journey by offing products and services through the internet and solving technical problems related to video streaming and solution to support HD VOD.
+      We eventually started providing products and solutions for problems other were facing with videos. We have the right mix of expertise and video technology solutions to help our customers to navigate the video landscape effortlessly and cost-effectively. Our innovative mindware software Livestream, a start-to-finish video platform for creative professionals, business organizations, and individuals offers everything they need to make impactful videos.
+</p>
       </div>
     </section>
 
@@ -34,7 +36,7 @@
       <h2 class="text-center text-blue font-semibold text-lg mt-48 md:mt-24">WHAT WE DO</h2>
 
       <div class="my-6 mx-auto">
-      <p class="text-base mx-4 md:mx-4 text-justify text-deep-gray tracking-4 leading-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla eos, minus, rem consequatur facere ex illo, minima et unde perspiciatis mollitia distinctio laudantium est tempora! Veritatis voluptates asperiores perferendis iste reiciendis, nostrum magnam alias perspiciatis corporis sint rerum sunt obcaecati accusantium placeat consequatur tempora at facilis cumque, minima iusto adipisci repellendus soluta earum eius! Quos delectus rem quaerat optio! Exercitationem iusto dolores itaque impedit blanditiis molestiae atque debitis expedita. Quas et optio amet harum natus ratione tempore nisi illo ut?</p>
+      <p class="text-base mx-4 md:mx-4 text-justify text-deep-gray tracking-4 leading-8">WEGO is a well-known name in IPTV/OTT in the ever-evolving streaming industry and maintained a leadership role in IPTV/OTT industry. To give our customers a competitive edge, we continue to invest heavily in R&D to evolve our products. We are moving fast in delivering best-in-class software, top-notch quality experience, constant innovations, and excellence in services and support. We move with customers as partners and work closely with them to create the best-customized IPTV/OTT solutions.</p>
       </div>
     </section>
 
@@ -56,7 +58,10 @@
     <div class="tag grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 grid-flow-row lg:grid-flow-row gap-x-16 content-center mt-48 mx-4 md:mx-2 lg:mx-0">
           <div class="">
             <h2 class="text-blue font-semibold text-2xl text-center md:text-left pt-6 text-lg mb-6">WeGo Client Benefits</h2>
-            <p class="text-gray leading-10">Developed to be managed under one roof, our OTT platform provides all you need to manage channels, customers, and billing. We are heavily invested in R&D, constantly updating our apps to provide you the best UX/UI for your customers. We also provide 24/7 support, so we're always by your side.</p>
+            <p class="text-gray leading-10">We help content owners to launch, manage and grow their video streaming service
+WEGO offers a solution for a complex video value chain with powerful technology for managing, storing, distributing, and monetizing film, television, and sports. Our platform empowers users to monetize their content.
+With End-to-End integration and smooth workflow, WEGO helps content owners, ISP’s and IPTV/OTT companies to excel and grow in this digital era.
+</p>
             <button class="bg-yellow focus:outline-none rounded-full py-3 px-6 mt-6 text-white font-semibold text-sm ml-24">CONTACT US</button>
           </div>
 
