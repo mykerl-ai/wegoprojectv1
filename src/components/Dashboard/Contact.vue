@@ -1,7 +1,7 @@
 <template>
 <div class="grid lg:grid-cols-2 grid-cols-1 grid-flow-row">
 <section class="flex mx-auto">
-  <div class=" py-8 md:px-20 md:mx-auto my-auto shadow-lg">
+  <div class=" py-8 md:px-20 md:mx-auto my-auto bg-white shadow-lg">
     <h1 class="text-blue text-2xl">Get in touch</h1>
     <form class="">
     <div class="focus-within:none">

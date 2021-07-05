@@ -1,7 +1,7 @@
 <template>
   <h1 class="text-xl text-left font-medium text-deep-gray">My Profile</h1>
   <div  class="w-full cards grid gap-10 grid-cols-6">
-      <div class="shadow-xl py-6 px-4 md:col-span-3 col-span-6 w-full">
+      <div class="shadow-xl bg-white py-6 px-4 md:col-span-3 col-span-6 w-full">
           <form class="w-full" action="">
               <label for="name" class="text-gray text-sm py-4 block">Name</label>
               <input name="name" type="text" v-model="name" class="border border-gray w-full px-8 block focus:outline-none py-2">
@@ -16,7 +16,7 @@
           </div>
       </div>
 
-      <div class="shadow-xl py-2 px-10 md:col-span-3 col-span-6">
+      <div class="shadow-xl bg-white py-2 px-10 md:col-span-3 col-span-6">
           <p class="text-xs text-deep-gray mb-4">Profile Image</p>
           
             <div class="border-2 border-light-gray py-6 px-6 w-72 h-72"> <svg xmlns="http://www.w3.org/2000/svg" width="253" height="253" viewBox="0 0 253 253">

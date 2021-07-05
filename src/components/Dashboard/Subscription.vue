@@ -1,7 +1,7 @@
 <template>
   <h1 class="text-3xl text-left font-medium text-deep-gray">Set subscription fee</h1>
-  <div  class="w-full cards grid grid-cols-1 lg:grid-cols-2">
-      <div class="shadow-lg py-6 px-4">
+  <div  class="w-full cards grid grid-cols-1 gap-6 lg:grid-cols-2">
+      <div class="shadow-lg bg-white py-6 px-4">
           <form action="">
               <label for="amount" class="text-gray pb-4">Set Amount</label>
               <input name="amount" type="number" v-model="amount"  class="border border-gray px-8 block focus:outline-none mt-3 py-2">
@@ -26,7 +26,7 @@
 
       </div>
 
-      <div class="shadow-lg py-6 px-4">
+      <div class="shadow-lg bg-white py-6 px-4">
           
               <p for="amount" class="text-gray pb-4">Estimated annual gross revenue</p>
               <h2  class="border border-gray px-8 focus:outline-none mt-3 py-2">$ {{result}}</h2>

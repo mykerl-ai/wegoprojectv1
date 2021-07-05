@@ -1,7 +1,7 @@
 <template>
   <h1 class="text-base text-left font-medium mb-6 md:mb-0 text-deep-gray">Customize your platform</h1>
   <div  class="w-full cards gap-4 my-4 grid grid-cols-2">
-      <div class="shadow-lg py-6 px-6 w-full lg:col-span-1 col-span-2">
+      <div class="shadow-lg py-6 px-6 w-full bg-white lg:col-span-1 col-span-2">
           <p class="text-sm text-deep-gray mb-8 ">{{title}}</p>
           <h2 class="text-2xl font-semibold text-blue ">{{figure}}</h2>
           <p class="text-xs text-deep-gray my-4" :class="{ activeClass: status===true, errorClass: status===false }">Status: {{status ? 'active' : 'inactive'}}</p>
@@ -10,7 +10,7 @@
 
        <!--channel-->
 
-   <div class="shadow-lg py-6 px-6 lg:col-span-1 col-span-3">
+   <div class="shadow-lg py-6 px-6 lg:col-span-1 bg-white col-span-3">
           <h2 class="text-2xl font-semibold text-center text-blue mx-32 mt-4 md:mt-0 md:mx-24">
             
             <svg xmlns="http://www.w3.org/2000/svg" width="46.908" height="38.379" viewBox="0 0 46.908 38.379">
@@ -30,9 +30,9 @@
 
   <div class="table grid grid-cols-6 grid-flow-row">
 
- <div class="topV col-span-6 shadow-xl py-6 px-4">
+ <div class="topV col-span-6 shadow-xl py-6 bg-white px-4">
       <p class="text-sm text-deep-gray mb-12 ">Top videos</p>
-      <div class="w-90">
+      <div class="w-90 bg-white">
       <table class="md:table-fixed table-auto w-full">
     <thead class="text-blue text-xs">
     <tr>
