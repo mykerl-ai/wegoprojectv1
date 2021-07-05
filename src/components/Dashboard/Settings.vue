@@ -1,7 +1,7 @@
 <template>
   <h1 class="text-base text-left font-medium mb-6 md:mb-0 text-deep-gray">Customize your platform</h1>
-  <div  class="w-full cards grid grid-cols-3">
-      <div class="shadow-lg py-6 px-6 w-full lg:col-span-1 col-span-3">
+  <div  class="w-full cards gap-4 my-4 grid grid-cols-2">
+      <div class="shadow-lg py-6 px-6 w-full lg:col-span-1 col-span-2">
           <p class="text-sm text-deep-gray mb-8 ">{{title}}</p>
           <h2 class="text-2xl font-semibold text-blue ">{{figure}}</h2>
           <p class="text-xs text-deep-gray my-4" :class="{ activeClass: status===true, errorClass: status===false }">Status: {{status ? 'active' : 'inactive'}}</p>

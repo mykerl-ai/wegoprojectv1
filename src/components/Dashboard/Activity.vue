@@ -1,7 +1,7 @@
 <template>
-  <h1 class="text-3xl text-left font-medium text-deep-gray">Activity</h1>
-  <div  class="w-full cards grid grid-cols-1 md:grid-cols-3">
-      <div v-for="icon in icons" :key="icon.id" class="shadow-lg py-6 px-4">
+  <h1 class="text-2xl text-left font-medium text-deep-gray">Activity</h1>
+  <div  class="w-full my-4 cards gap-4 grid grid-cols-1 md:grid-cols-3">
+      <div v-for="icon in icons" :key="icon.id" class="shadow-xl py-6 px-4">
           <svg class="mx-auto my-6" :id="icon.id" :xmlns="icon.url" :width="icon.width" :height="icon.height" :viewBox="icon.viewBox">
                 <path :id="icon.pathId" :data-name="icon.dataName" :d="icon.d" :transform="icon.transform" :fill="icon.fill"/>
                         </svg>
@@ -217,11 +217,11 @@ export default {
     data(){
         return{
             icons: [
-                {id: 'upload', url: 'http://www.w3.org/2000/svg', width: '38.07', height: '50.76', viewBox: '0 0 38.07 50.76', pathId: 'Icon_awesome-file-upload', dataName: 'Icon awesome-file-upload', d: 'M22.207,13.483V0H2.379A2.374,2.374,0,0,0,0,2.379v46A2.374,2.374,0,0,0,2.379,50.76H35.69A2.374,2.374,0,0,0,38.07,48.38V15.862H24.587A2.386,2.386,0,0,1,22.207,13.483ZM28.669,34.9H22.207V42.83a1.586,1.586,0,0,1-1.586,1.586H17.449a1.586,1.586,0,0,1-1.586-1.586V34.9H9.4a1.586,1.586,0,0,1-1.117-2.712L17.842,22.7a1.69,1.69,0,0,1,2.383,0l9.559,9.488A1.586,1.586,0,0,1,28.669,34.9ZM37.376,10.41,27.67.694A2.378,2.378,0,0,0,25.985,0h-.6V12.69H38.07v-.6A2.372,2.372,0,0,0,37.376,10.41Z', transform: 'translate(0 0)', fill: '#0080ff', title: 'Upload video'}, 
+                {id: 'upload', url: 'http://www.w3.org/2000/svg', width: '38.07', height: '50.76', viewBox: '0 0 38.07 50.76', pathId: 'Icon_awesome-file-upload', dataName: 'Icon awesome-file-upload', d: 'M22.207,13.483V0H2.379A2.374,2.374,0,0,0,0,2.379v46A2.374,2.374,0,0,0,2.379,50.76H35.69A2.374,2.374,0,0,0,38.07,48.38V15.862H24.587A2.386,2.386,0,0,1,22.207,13.483ZM28.669,34.9H22.207V42.83a1.586,1.586,0,0,1-1.586,1.586H17.449a1.586,1.586,0,0,1-1.586-1.586V34.9H9.4a1.586,1.586,0,0,1-1.117-2.712L17.842,22.7a1.69,1.69,0,0,1,2.383,0l9.559,9.488A1.586,1.586,0,0,1,28.669,34.9ZM37.376,10.41,27.67.694A2.378,2.378,0,0,0,25.985,0h-.6V12.69H38.07v-.6A2.372,2.372,0,0,0,37.376,10.41Z', transform: 'translate(0 0)', fill: '#fb8c00', title: 'Upload video'}, 
 
-                {id: 'add', url: 'http://www.w3.org/2000/svg', width: '50', height: '50.76', viewBox: '0 0 50 50.76', pathId: 'Icon_material-playlist-add', dataName: 'Icon material-playlist-add', d: 'M35.14,19.713H3V25.07H35.14ZM35.14,9H3v5.357H35.14ZM45.854,30.427V19.713H40.5V30.427H29.784v5.357H40.5V46.5h5.357V35.784H56.567V30.427ZM3,35.784H24.427V30.427H3Z', transform: 'translate(-3 -9)', fill: '#0080ff', title: 'Create playlist'},
+                {id: 'add', url: 'http://www.w3.org/2000/svg', width: '50', height: '50.76', viewBox: '0 0 50 50.76', pathId: 'Icon_material-playlist-add', dataName: 'Icon material-playlist-add', d: 'M35.14,19.713H3V25.07H35.14ZM35.14,9H3v5.357H35.14ZM45.854,30.427V19.713H40.5V30.427H29.784v5.357H40.5V46.5h5.357V35.784H56.567V30.427ZM3,35.784H24.427V30.427H3Z', transform: 'translate(-3 -9)', fill: '#43a047', title: 'Create playlist'},
 
-                {id: 'Icon_ionic-md-person-add', url: 'http://www.w3.org/2000/svg', width: '50', height: '50.76', viewBox: '0 0 50 50.76', pathId: 'Path_350', dataName: 'Path 350', d: 'M27.585,24.21a9.855,9.855,0,1,0-9.855-9.855A9.884,9.884,0,0,0,27.585,24.21Zm0,4.927c-6.529,0-19.71,3.326-19.71,9.855v4.927H47.294V38.992C47.294,32.463,34.113,29.137,27.585,29.137Z', transform: 'translate(0 3.105)', fill: '#0080ff', title: 'Add Existing customer(s)', file: 'CSV File'},
+                {id: 'Icon_ionic-md-person-add', url: 'http://www.w3.org/2000/svg', width: '50', height: '50.76', viewBox: '0 0 50 50.76', pathId: 'Path_350', dataName: 'Path 350', d: 'M27.585,24.21a9.855,9.855,0,1,0-9.855-9.855A9.884,9.884,0,0,0,27.585,24.21Zm0,4.927c-6.529,0-19.71,3.326-19.71,9.855v4.927H47.294V38.992C47.294,32.463,34.113,29.137,27.585,29.137Z', transform: 'translate(0 3.105)', fill: '#00acc1', title: 'Add Existing customer(s)', file: 'CSV File'},
                 
                 ],
             movies: [

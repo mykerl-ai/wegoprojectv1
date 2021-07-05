@@ -1,18 +1,34 @@
 <template>
-  <h1 class="text-3xl text-left font-medium text-deep-gray">Overview</h1>
-  <div  class="w-full cards grid grid-cols-3">
-      <div v-for="card in cards" :key="card.id" class="shadow-lg py-6 px-4">
-          <p class="text-xs md:text-sm text-deep-gray mb-12 ">{{card.title}}</p>
-          <h2 class="md:text-2xl text-base font-semibold text-blue ">{{card.figure}}</h2>
+  <h1 class="text-2xl text-left font-medium text-deep-gray">Overview</h1>
+  <div  class="w-full cards grid grid-cols-3 gap-6">
+      <div v-for="card in cards" :key="card.id" class="shadow-4xl rounded-lg my-6 card py-6 px-4 bg-white" :class="card.class">
+          <p class="text-xs md:text-sm text-gray mb-12 ">{{card.title}}</p>
+          <h2 class="md:text-2xl text-base font-semibold text-deep-gray ">{{card.figure}}</h2>
+          
       </div>
+      <div class="greenClass w-20 h-20 -mt-60 ml-48 rounded-md shadow-lg z-20">
+        <div class="py-4 px-4"><svg  xmlns="http://www.w3.org/2000/svg" width="38.194" height="26.297" viewBox="0 0 38.194 26.297">
+  <path id="Icon_awesome-eye" data-name="Icon awesome-eye" d="M37.963,16.648A21.216,21.216,0,0,0,19.1,4.5,21.219,21.219,0,0,0,.231,16.649a2.28,2.28,0,0,0,0,2A21.216,21.216,0,0,0,19.1,30.8,21.219,21.219,0,0,0,37.963,18.647,2.28,2.28,0,0,0,37.963,16.648ZM19.1,27.509a9.709,9.709,0,0,1-9.548-9.861A9.709,9.709,0,0,1,19.1,7.787a9.709,9.709,0,0,1,9.548,9.861A9.7,9.7,0,0,1,19.1,27.509Zm0-16.435a6.135,6.135,0,0,0-1.678.26,3.357,3.357,0,0,1-.312,4.259,3.1,3.1,0,0,1-4.124.322,6.666,6.666,0,0,0,2.591,7.165,6.189,6.189,0,0,0,7.4-.241,6.687,6.687,0,0,0,2.148-7.32A6.37,6.37,0,0,0,19.1,11.074Z" transform="translate(0 -4.5)" fill="#fff"/>
+</svg></div>
+</div>
+
+      <div class="redClass w-20 h-20 -mt-60 ml-48 rounded-md shadow-lg z-20"><div class="py-4 px-6"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <path id="Icon_material-video-library" data-name="Icon material-video-library" d="M6,9H3V30a3.009,3.009,0,0,0,3,3H27V30H6ZM30,3H12A3.009,3.009,0,0,0,9,6V24a3.009,3.009,0,0,0,3,3H30a3.009,3.009,0,0,0,3-3V6A3.009,3.009,0,0,0,30,3ZM18,21.75V8.25L27,15Z" transform="translate(-3 -3)" fill="#fff"/>
+</svg>
+</div></div>
+      <div class="blueClass w-20 h-20 -mt-60 ml-48 rounded-md shadow-lg z-20"><div class="py-4 px-6"><svg xmlns="http://www.w3.org/2000/svg" width="20.246" height="36" viewBox="0 0 20.246 36">
+  <path id="Icon_awesome-dollar-sign" data-name="Icon awesome-dollar-sign" d="M14.709,16.411,7.116,14.189A2.074,2.074,0,0,1,7.7,10.125h4.662a4.292,4.292,0,0,1,2.4.738,1.1,1.1,0,0,0,1.371-.141l2.447-2.391a1.14,1.14,0,0,0-.127-1.723A9.942,9.942,0,0,0,12.375,4.5V1.125A1.128,1.128,0,0,0,11.25,0H9A1.128,1.128,0,0,0,7.875,1.125V4.5H7.7A7.7,7.7,0,0,0,.035,12.909,8.049,8.049,0,0,0,5.927,19.7l7.207,2.109a2.074,2.074,0,0,1-.584,4.064H7.889a4.292,4.292,0,0,1-2.4-.738,1.1,1.1,0,0,0-1.371.141L1.666,27.668a1.14,1.14,0,0,0,.127,1.723A9.942,9.942,0,0,0,7.875,31.5v3.375A1.128,1.128,0,0,0,9,36h2.25a1.128,1.128,0,0,0,1.125-1.125V31.486a7.942,7.942,0,0,0,7.432-5.112,7.721,7.721,0,0,0-5.1-9.963Z" transform="translate(-0.002)" fill="#fff"/>
+</svg>
+
+</div></div>
      </div>
 
-     <div class="table grid grid-cols-6 grid-flow-row">
+     <div class="table grid grid-cols-6 gap-6 grid-flow-row bg-white">
 
          <div class="topV col-span-6 md:col-span-4 shadow-xl py-6 px-4">
-            <p class="text-sm text-deep-gray mb-12 ">Top videos</p>
+            <p class="text-sm text-white font-semibold pl-3 mb-12 redClass py-2">Top videos</p>
             <div class="w-90">
-    <table class="table-fixed w-full">
+    <table class="table-fixed w-full bg-white">
     <thead class="text-blue text-xs">
     <tr>
       <th class="w-1/2 py-2 px-2 text-left">VIDEOS</th>
@@ -102,9 +118,9 @@ export default {
     data(){
         return{
             cards: [
-                {title: 'Total views', figure: '264k', id: 'views'},
-                {title: 'Total videos', figure: 2463, id: 'videos'},
-                {title: 'Total earnings', figure: '$39k', id: 'earnings'}
+                {title: 'Total views', figure: '264k', id: 'views', class: ''},
+                {title: 'Total videos', figure: 2463, id: 'videos', class: ''},
+                {title: 'Total earnings', figure: '$39k', id: 'earnings', class: ''}
             ],
             movies: [
                 {image: image, title: 'Star wars', time: '1 minute ago', views:'29,129', id: 1},
@@ -122,5 +138,20 @@ export default {
 </script>
 
 <style>
+.redClass{
+  /* background-image: linear-gradient(to bottom right, #d06814 , #ffcdb2); */
+ background: linear-gradient(60deg, #ffa726, #fb8c00);
+  }
 
+  .blueClass{
+  background: linear-gradient(60deg, #66bb6a, #43a047);
+}
+
+.greenClass{
+   background: linear-gradient(60deg, #26c6da, #00acc1);
+}
+
+.card {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+}
 </style>

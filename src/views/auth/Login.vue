@@ -74,7 +74,8 @@
   </div>
 
   <div class="focus-within:none">
-    <input type="password" required v-show="!recovery" v-model="password" class="focus:outline-none focus:ring-2 focus:ring-opacity-50 border-b-2 text-sm text-gray-400 mb-6 border-light-gray  py-3 px-6 w-full" placeholder="password">
+    <input id="myInput2" type="password" required v-show="!recovery" v-model="password" class="focus:outline-none focus:ring-2 focus:ring-opacity-50 border-b-2 text-sm text-gray-400 mb-6 border-light-gray  py-3 px-6 w-full" placeholder="password">
+    <input class="focus:outline-none mb-4 w-3" type="checkbox" @click="myFunction"><span class="text-xs text-gray font-semibold mx-2">show password</span>
   </div>
 
   
@@ -115,7 +116,15 @@ export default {
       },
       showMenu(){
         this.menu = !this.menu
-      }
+      },
+       myFunction() {
+  var z = document.getElementById("myInput2");
+  if (z.type === "password") {
+    z.type = "text";
+  } else {
+    z.type = "password";
+  }
+},
   },
   components: {Navbar}
 

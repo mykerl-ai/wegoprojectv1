@@ -79,11 +79,12 @@
   </div>
 
   <div class="focus-within:none">
-    <input type="password" required v-show="! recovery" v-model="password" class="focus:outline-none focus:ring-2 focus:ring-opacity-50 mt-6 text-sm mb-4 focus:ring-blue-600 border-b-2 border-light-gray  py-2 px-6 w-full" placeholder="Password">
+    <input id="myInput" type="password" required v-show="! recovery" v-model="password" class="focus:outline-none focus:ring-2 focus:ring-opacity-50 mt-6 text-sm mb-4 focus:ring-blue-600 border-b-2 border-light-gray  py-2 px-6 w-full" placeholder="Password"> 
   </div>
 
   <div class="focus-within:none">
-    <input type="password" required v-show="! recovery" v-model="confirm" class="focus:outline-none focus:ring-2 focus:ring-opacity-50 border-b-2 text-sm text-gray-400 mb-4 border-light-gray  py-2 px-6 w-full" placeholder="Confirm password">
+    <input id="myInput1" type="password" required v-show="! recovery" v-model="confirm" class="focus:outline-none focus:ring-2 focus:ring-opacity-50 border-b-2 text-sm text-gray-400 mb-4 border-light-gray  py-2 px-6 w-full" placeholder="Confirm password">
+    <input class="focus:outline-none mb-4 w-3" type="checkbox" @click="myFunction"><span class="text-xs text-gray font-semibold mx-2">show password</span>
   </div>
 
    <div v-show="! recovery" class="focus-within:none grid grid-cols-1 gap-y-2 md:grid-cols-3 my-4">
@@ -152,7 +153,18 @@ export default {
       },
       showMenu(){
         this.menu = !this.menu
-      }
+      },
+      myFunction() {
+  var x = document.getElementById("myInput");
+  var y = document.getElementById("myInput1");
+  if (x.type === "password" && y.type === "password") {
+    x.type = "text";
+    y.type = "text";
+  } else {
+    x.type = "password";
+    y.type = "password";
+  }
+},
   },
   components: {Navbar}
 

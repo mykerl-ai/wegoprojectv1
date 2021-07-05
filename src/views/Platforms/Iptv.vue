@@ -1,13 +1,13 @@
 <template>
   <Hero>
     <template v-slot:header>
-    <h1 class="md:text-3xl tracking-wide leading-10 text-2xl -mt-20 md:-mt-6 text-white font-semibold z-0">Reach more people with our combined IPTV/OTT solution</h1>
+    <h1 class="lg:text-2xl md:8xl tracking-wide leading-10 text-2xl -mt-32 md:-mt-20 text-white font-semibold">Reach more people with our combined IPTV/OTT solution</h1>
      </template>
 
     <template v-slot:paragraph>
-      <p class="lg:mt-4 md:mt-10 mt-10 tracking-widest leading-9 text-sm  text-white font-regular">OTT provides your viewers access to movies and Tv shows, by sending signals directly through the internet.</p>
+      <p class="lg:mt-2 md:mt-10 mt-2 lg:tracking-wide tracking-widest lg:leading-7 leading-7 md:leading-9 md:text-sm text-xs text-white font-regular">WeGo Network LLC leading top - notch technologies, products and services, support broadcasters, content providers, and service providers throughout the world.</p>
 
-      <p class="lg:mt-4 md:mt-10 mt-4 tracking-widest leading-9 text-sm  text-white font-regular">Build or Upgrade to a top-notch IPTV/OTT solution that is modern, and offers a High-end user experience across all major platforms..</p>
+      <p class="lg:mt-2 md:mt-10 mt-2 lg:tracking-wide tracking-widest lg:leading-7 leading-7 md:leading-9 md:text-sm text-xs text-white font-regular">Our expertise and reputation in the market has brought us to expand from live Radio and Pre-recorded in our earlier days. To the latest cutting-edge, multi-screen television platforms and network technologies. We continue to drive value and innovation and trust to our customers.  "Cause are customer is the background of our success"</p>
 
     </template>
   </Hero >
@@ -16,11 +16,11 @@
   <div class="">
     <section class="iptv">
       <div  class="tag grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 grid-flow-row lg:grid-flow-row gap-8 md:gap-4 lg:gap-8 content-center justify-center mt-6">
-          <div v-for="price in pricing" :key="price.id" class="top group py-6 px-4 shadow-lg hover:bg-blue">
+          <div v-for="price in pricing" :key="price.id" class="top bg-white group py-6 px-4 shadow-lg hover:bg-blue">
             <router-link :to="{name: 'Pricing', params: {id : price.id}}">
             <p class="text-center text-base font-semibold text-deep-gray group-hover:text-white py-3">{{price.desc}}</p>
 
-            <h3 class="text-center text-5xl text-blue py-3 px-6 mb-3 group-hover:text-white break-all"> {{price.price}}</h3>
+            <h3 class="text-center text-5xl text-blue py-3 px-6 mb-3 group-hover:text-white break-all"> ${{parseInt(price.price)}}</h3>
             <p class="text-center text-sm text-deep-gray group-hover:text-white mb-3">{{price.duration}}</p>
             <p class="text-center text-sm text-deep-gray group-hover:text-white mb-6">{{price.details}}</p>
             <button class="bg-blue rounded-lg text-white text-sm ml-18 group-hover:text-blue text-white group-hover:bg-white focus:outline-none ml-32 md:ml-12 lg:ml-20 py-2 px-2">GET STARTED</button>
@@ -83,7 +83,7 @@
                 </div>
 
             </div>
-            <button class="bg-yellow  rounded-full ml-24 md:mx-0 py-3 px-3 md:px-6 mt-6 text-white font-semibold text-sm ">CONTACT US</button>
+            <button class="bg-yellow focus:outline-none rounded-full ml-24 md:mx-0 py-3 px-3 md:px-6 mt-6 text-white font-semibold text-sm ">GET STARTED</button>
           </div>
 
         <div class="order-first">
@@ -231,7 +231,7 @@
   <div class="">
       <textarea name="message" v-model="message" id="" cols="30" rows="5" placeholder="Your message" class="border-2 border-light-gray text-gray-400 text-sm mb-6 rounded-lg py-3 px-6 focus:outline-none focus:ring-2 focus:ring-opacity-50"></textarea>
   </div>
-  <button class="form-btn rounded-lg bg-blue ml-20 md:ml-0 py-3 px-4 text-sm text-white">SUBMIT</button>
+  <button class="form-btn focus:outline-none rounded-lg bg-blue ml-20 md:ml-0 py-3 px-4 text-sm text-white">SUBMIT</button>
 </form>
   </div>
   </section>
@@ -261,23 +261,23 @@ export default {
       message: '',
       pricing: [
         {
-          id: 99.1,
+          id: 99,
           desc: 'PRO',
-          price: '$99',
+          price: '99',
           duration: 'Per Month',
           details: 'Starter features for \n your business to grow'
         },
         {
           id: 199,
           desc: 'PREMIUM',
-          price: '$199',
+          price: '199',
           duration: 'Per Month',
           details: 'Professional features for your business to grow'
         },
         {
           id: 499,
           desc: 'BUSINESS',
-          price: '$499',
+          price: '499',
           duration: 'Per Month',
           details: 'Advanced features for your business to grow'
         },

@@ -71,58 +71,37 @@
 
         <!--podcast -->
 
-        <div class="col-span-4 w-full" v-if="currentRoute === '5.1' ||currentRoute === '5.01' || currentRoute === '145'">
-            <h1 class="md:text-left text-center text-blue text-lg font-semibold">Your plan includes</h1>
-            <div class="flex flex-wrap gap-y-8  gap-x-2 mt-10">
-                <div v-show="currentRoute==='5.1'" class="flex-grow">
-                    <h2 class="text-deep-gray text-xl font-semibold mb-0.5 text-left">Server</h2>
-                    <ul class="leading-8 list-inside list-disc text-gray text-sm">
+        <div class="col-span-4 w-full" v-if="currentRoute === '/35' ||currentRoute === '/45' || currentRoute === '/80'">
+            <h1 class="text-center text-gblue text-xl font-semibold">Your plan includes</h1>
+            <div class="flex flex-wrap gap-y-8  gap-x-4 mt-10">
+
+                <div v-show="currentRoute==='/35'" class="flex-grow grid grid-cols-3 gap-8">
+                  <div>
+                    <h2 class="text-red text-xl font-semibold mb-4 text-left">Server</h2>
+                    <ul class="leading-8 list-outside list-none text-gray text-sm">
                         <li>1000 viewers</li>
                         <li>1000 Traffic</li>
+                        <li>Online Radio Station Automation</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h2 class="text-red text-xl font-semibold mb-4 text-left">Features</h2>
+                    <ul class="leading-8 list-outside list-none text-gray text-sm">
                         <li>Analytics</li>
                         <li>Easy Call To Action</li>
-                        <li>Online Radio Station Automation</li>
                         <li>Audio Stream</li>
                         <li>Simultaneously stream to multiple endpoints</li>
                         <li>Radio Widget</li>
                         <li>one station</li>
                     </ul>
+                  </div>
 
-            </div>
-                <div v-show="currentRoute==='5.01'" class="flex-grow">
-                    <h2 class="text-deep-gray text-xl font-semibold mb-0.5 text-left">Features</h2>
-                    <ul class="leading-8 list-inside list-disc text-gray text-sm">
-                        <li>1500 Viewers</li>
-                        <li>1500 Traffic</li>
-                        <li>Live Video Stream</li>
-                        <li>Online Radio Station Automation</li>
-                        <li>Audio Stream</li>
-                        <li>Simultaneously stream to multiple endpoints</li>
-                        <li>Radio Widget</li>
-                        <li>Am and Fm 2 station</li>
-                    </ul>
-                
-                </div>
+                  
 
-                 <div v-show="currentRoute==='145'" class="flex-grow">
-                    <h2 class="text-deep-gray text-xl font-semibold mb-0.5 text-left">Features</h2>
-                    <ul class="leading-8 list-inside list-disc text-gray text-sm">
-                        <li>Unlimited Traffic</li>
-                        <li>Unlimited Viewers</li>
-                        <li>Analytics</li>
-                        <li>Online Radio Station Automation</li>
-                        <li>Audio Stream</li>
-                        <li>Simultaneously stream to multiple endpoints</li>
-                        <li>Radio Widget</li>
-                        <li>3 stations</li>
-                        <li>Advertise</li>
-                    </ul>
-
-                </div>
-
-                <div class="flex-auto">
-                    <h2 class="text-deep-gray text-xl font-semibold mb-0.5 text-left">Add-ons</h2>
-                    <ul class="leading-8 list-inside list-disc text-gray text-sm">
+                <div class="">
+                    <h2 class="text-red text-xl font-semibold mb-4 text-left">Add-ons</h2>
+                    <ul class="leading-8 list-outside list-none text-gray text-sm">
                         <li>Server Downtime Monitoring</li>
                         <li>Twitter and Tunein , Alexa  Addons</li>
                         <li>App</li>
@@ -130,6 +109,77 @@
                 
                 </div>
                
+
+            </div>
+                <div v-show="currentRoute==='/45'" class="flex-grow grid grid-cols-3 gap-8">
+
+                  <div>
+                    <h2 class="text-red text-xl font-semibold mb-4 text-left">Server</h2>
+                    <ul class="leading-8 list-outside list-none text-gray text-sm">
+                        <li>1500 Viewers</li>
+                        <li>1500 Traffic</li>
+                        <li>Online Radio Station Automation</li>
+                    </ul>
+                    </div>
+
+                    <div>
+                    <h2 class="text-red text-xl font-semibold mb-4 text-left">Features</h2>
+                    <ul class="leading-8 list-outside list-none text-gray text-sm">
+                        <li>Live Video Stream</li>
+                        <li>Audio Stream</li>
+                        <li>Simultaneously stream to multiple endpoints</li>
+                        <li>Radio Widget</li>
+                        <li>Am and Fm 2 station</li>
+                    </ul>
+                    </div>
+
+                     <div class="">
+                    <h2 class="text-red text-xl font-semibold mb-4 text-left">Add-ons</h2>
+                    <ul class="leading-8 list-outside list-none text-gray text-sm">
+                        <li>Server Downtime Monitoring</li>
+                        <li>Twitter and Tunein , Alexa  Addons</li>
+                        <li>App</li>
+                    </ul>
+                
+                </div>
+                
+                </div>
+
+                 <div v-show="currentRoute==='/80'" class="flex-grow grid grid-cols-3 gap-8">
+
+                   <div>
+                    <h2 class="text-red text-xl font-semibold mb-4 text-left">Server</h2>
+                    <ul class="leading-8 list-outside list-none text-gray text-sm">
+                        <li>Unlimited Traffic</li>
+                        <li>Unlimited Viewers</li>
+                        <li>Online Radio Station Automation</li>
+                    </ul>
+                    </div>
+
+                    <div>
+                    <h2 class="text-red text-xl font-semibold mb-4 text-left">Features</h2>
+                    <ul class="leading-8 list-outside list-none text-gray text-sm">
+                        <li>Analytics</li>
+                        <li>Audio Stream</li>
+                        <li>Simultaneously stream to multiple endpoints</li>
+                        <li>Radio Widget</li>
+                        <li>3 stations</li>
+                        <li>Advertise</li>
+                    </ul>
+                    </div>
+
+                     <div class="">
+                    <h2 class="text-red text-xl font-semibold mb-4 text-left">Add-ons</h2>
+                    <ul class="leading-8 list-outside list-none text-gray text-sm">
+                        <li>Server Downtime Monitoring</li>
+                        <li>Twitter and Tunein , Alexa  Addons</li>
+                        <li>App</li>
+                    </ul>
+                
+                </div>
+                
+
+                </div>
             </div>
 
         </div>
@@ -142,16 +192,18 @@
 
 <div class="col-span-4 w-full" v-else-if="currentRoute === '9.1' ||currentRoute === '199' || currentRoute === '499'">
             <h1 class="text-left text-blue text-lg font-semibold">Your plan includes</h1>
-            <div class="flex flex-wrap gap-y-8 gap-x-2 mt-10">
+            <div class="flex flex-wrap gap-y-8 gap-x-2 mt-10  grid grid-cols-2 gap-8">
                 <div v-show="currentRoute==='9.1'" class="flex-grow">
-                    <h2 class="text-deep-gray text-xl font-semibold mb-0.5 text-left">PRO</h2>
-                    <ul class="leading-8 list-inside list-disc text-gray text-sm">
+
+                  <div>
+                    <h2 class="text-deep-gray text-xl font-semibold mb-4 text-left">PRO</h2>
+                    <ul class="leading-8 list-outside list-none text-gray text-sm">
                         <li>Full HD streaming and cloud recording</li>
                         <li>Stream to any virtual event platform</li>
                         <li>Privacy protection</li>
                         <li>Simultaneously stream to multiple endpoints</li>
+                        <li>Stream directly to social media</li>
                         <li>1 Channel</li>
-                        <li>Channel branding</li>
                         <li>Video Widget</li>
                         <li>Mulit-cross Platform link</li>
                         <li>User Management </li>
@@ -162,13 +214,15 @@
                         <li>Custom RTMP settings</li>
                         <li>Calls-to-Action</li>
                     </ul>
+                    </div>
+
                   </div>
 
 
                 <div v-show="currentRoute==='199'" class="flex-grow">
-                    <h2 class="text-deep-gray text-xl font-semibold mb-0.5 text-left">PREMIUM</h2>
-                    <ul class="leading-8 list-inside list-disc text-gray text-sm">
-                        <li>Everything in Pro +</li>
+                    <h2 class="text-deep-gray text-xl font-semibold mb-4 text-left">PREMIUM</h2>
+                    <ul class="leading-8 list-outside list-none text-gray text-sm">
+                        <li class="font-bold text-red">Everything in Pro +</li>
                         <li>Video creation with custom branding</li>
                         <li>Player calls-to-action</li>
                         <li>Lead generation</li>
@@ -183,9 +237,9 @@
                 </div>
 
                 <div v-show="currentRoute==='499'" class="flex-auto">
-                    <h2 class="text-deep-gray text-xl font-semibold mb-0.5 text-left">BUSINESS</h2>
-                    <ul class="leading-8 list-inside list-disc text-gray text-sm">
-                       <li>Everything in Premium +</li>
+                    <h2 class="text-deep-gray text-xl font-semibold mb-4 text-left">BUSINESS</h2>
+                    <ul class="leading-8 list-outside list-none text-gray text-sm">
+                       <li class="font-bold text-red">Everything in Premium +</li>
                         <li>5 channels</li>
                         <li>Channel customization and password protection</li>
                         <li>custom branding</li>
@@ -194,10 +248,11 @@
                     </ul>
                 </div>
 
-                 <div class="flex-grow">
-                    <h2 class="text-deep-gray text-xl font-semibold mb-0.5 text-left">Stream To Any Platform</h2>
-                    <p class="text-sm mt-4 text-deep-gray">Studio lets you send your stream to any player that supports RTMP.</p>
-                    <ul class="leading-8 list-inside list-disc text-gray text-sm">
+                 <div class="">
+                    <h2 class="text-deep-gray text-xl font-semibold mb-4 text-left">Stream To Any Platform</h2>
+                    <p class="text-sm mt-4 "></p>
+                    <ul class="leading-8 list-outside list-none text-gray text-sm">
+                       <li class="font-bold text-blue">Studio lets you send your stream to any player that supports RTMP.</li>
                        <li>Full HD streaming and cloud recording</li>
                         <li>Stream to any virtual event platform</li>
                         <li>Simultaneously stream to multiple endpoints</li>
@@ -220,8 +275,8 @@
             <h1 class="text-left text-blue text-lg font-semibold">Your plan includes</h1>
             <div class="flex flex-wrap gap-y-8  gap-x-2 mt-10">
                 <div class="flex-grow">
-                    <h2 class="text-deep-gray text-xl font-semibold mb-0.5 text-left">Server</h2>
-                    <ul class="leading-8 list-inside list-disc text-gray text-sm">
+                    <h2 class="text-deep-gray text-xl font-semibold mb-4 text-left">Server</h2>
+                    <ul class="leading-8 list-outside list-none text-gray text-sm">
                         <li>HD view</li>
                         <li>Unlimited uploads</li>
                         <li>Channel customization</li>
@@ -229,8 +284,8 @@
                 
             </div>
                 <div class="flex-grow">
-                    <h2 class="text-deep-gray text-xl font-semibold mb-0.5 text-left">Features</h2>
-                    <ul class="leading-8 list-inside list-disc text-gray text-sm">
+                    <h2 class="text-deep-gray text-xl font-semibold mb-4 text-left">Features</h2>
+                    <ul class="leading-8 list-outside list-none text-gray text-sm">
                         <li>Online video Control Panel</li>
                         <li>Movie Stream Automation</li>
                         <li>Easy Movie Stream Connection</li>
@@ -239,8 +294,8 @@
                 </div>
 
                 <div class="flex-auto">
-                    <h2 class="text-deep-gray text-xl font-semibold mb-0.5 text-left">Add-ons</h2>
-                    <ul class="leading-8 list-inside list-disc text-gray text-sm">
+                    <h2 class="text-deep-gray text-xl font-semibold mb-4 text-left">Add-ons</h2>
+                    <ul class="leading-8 list-outside list-none text-gray text-sm">
                         <li>WebPlayer Page & Radio Player</li>
                         <li>Server Downtime Monitoring</li>
                         <li>Twitter and Tunein Addons</li>
@@ -257,10 +312,11 @@
 
 
     <div class="border-0 border-yellow shadow-2xl col-span-2 px-4 w-full py-4">
-                    <h1 class="font-bold text-center text-lg text-deep-gray mb-4">ORDER SUMMARY</h1>
-                    <p class="px-4 py-1 bg-blue text-white text-xs" v-show="currentRoute === '100' ||currentRoute === '236' || currentRoute === '439'">Radio/Podcast server - (128kbps) <span class="ml-12">$ {{id}}</span></p>
+                    <h1 class="font-bold text-left text-lg text-deep-gray mb-8">ORDER SUMMARY</h1>
+                    <p class="px-2 py-4 bg-blue text-white font-semibold text-sm" v-show="currentRoute === '/35' ||currentRoute === '/45'">Radio/Podcast server - (128kbps) <span class="ml-6">$ {{id}}</span></p>
+                    <p class="px-2 py-4 bg-blue text-white font-semibold text-sm" v-show="currentRoute === '/80'">Radio/Podcast server - (320kbps) <span class="ml-6">$ {{id}}</span></p>
 
-                    <p class="px-4 py-1 bg-blue text-white text-xs" v-show="currentRoute === '225' ||currentRoute === '350' || currentRoute === '600' || currentRoute === '125' ||currentRoute === '250' || currentRoute === '500'">IPTV/Livestream server - (128kbps) <span class="ml-12">$ {{id}}</span></p>
+                    <p class="px-2 py-4 bg-blue text-white font-semibold text-sm" v-show="currentRoute === '/99' ||currentRoute === '199' || currentRoute === '499' || currentRoute === '125' ||currentRoute === '250' || currentRoute === '500'">IPTV/Livestream server - (50Mbps) <span class="ml-6">$ {{id}}</span></p>
 
                     
 

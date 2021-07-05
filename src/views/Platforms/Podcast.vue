@@ -15,11 +15,13 @@ Personalized Stations Powered by WeGo Network Llc.
   <div class="">
     <section class="podcast">
       <div  class="tag grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 grid-flow-row lg:grid-flow-row gap-8 md:gap-4 lg:gap-8 content-center justify-center mt-6">
-          <div v-for="price in pricing" :key="price.id" class="top group py-6 px-4 shadow-lg hover:bg-blue">
+          <div v-for="price in pricing" :key="price.id" class="top bg-white group py-6 px-4 shadow-lg hover:bg-blue">
               <router-link :to="{name: 'Pricing', params: {id: price.id}}">
             <p class="text-center text-base font-semibold text-deep-gray group-hover:text-white py-3">{{price.desc}}</p>
+            
+            <h6 class="text-center line-through font-semibold text-xl text-red py-3 px-6 group-hover:text-white break-all"> ${{parseInt(price.price) + 10}}</h6>
 
-            <h3 class="text-center text-5xl text-blue py-3 px-6 mb-3 group-hover:text-white break-all"> {{price.price}}</h3>
+            <h3 class="text-center text-5xl text-blue py-3 px-6 mb-3 group-hover:text-white break-all"> ${{price.price}}</h3>
             <p class="text-center text-sm text-deep-gray group-hover:text-white mb-3">{{price.duration}}</p>
             <p class="text-center text-sm text-deep-gray group-hover:text-white mb-6">{{price.details}}</p>
             <button class="bg-blue rounded-lg text-white text-sm ml-18 group-hover:text-blue text-white group-hover:bg-white focus:outline-none ml-32 md:ml-12 lg:ml-20 py-2 px-2">GET STARTED</button>
@@ -34,7 +36,7 @@ Personalized Stations Powered by WeGo Network Llc.
     <section class="podcast">
     <div class="tag grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 grid-flow-row lg:grid-flow-row gap-x-16 content-center mt-24 md:mt-48 mx-6 md:mx-0">
           <div class="">
-            <h2 class="text-blue font-semibold text-2xl text-center md:text-left md:text-4xl mt-6 mb-6">Unlimited Radio server</h2>
+            <h2 class="text-blue font-semibold text-2xl text-center md:text-left md:text-4xl mt-6 mb-6">Create your own radio station</h2>
             <div v-for="spec in specs" :key="spec.id" class="grid grid-cols-3 gap-2">
                 
                 <div>
@@ -82,7 +84,7 @@ Personalized Stations Powered by WeGo Network Llc.
                 </div>
 
             </div>
-            <button class="bg-yellow  rounded-full ml-24 md:mx-0 py-3 px-3 md:px-6 mt-6 text-white font-semibold text-sm ">CONTACT US</button>
+            <button class="bg-yellow focus:outline-none rounded-full ml-24 md:mx-0 py-3 px-3 md:px-6 mt-6 text-white font-semibold text-sm ">GET STARTED</button>
           </div>
 
         <div class="order-first">
@@ -227,7 +229,7 @@ Personalized Stations Powered by WeGo Network Llc.
   <div class="">
       <textarea name="message" v-model="message" id="" cols="30" rows="5" placeholder="Your message" class="border-2 border-light-gray text-gray-400 text-sm mb-6 rounded-lg py-3 px-6 focus:outline-none focus:ring-2 focus:ring-opacity-50"></textarea>
   </div>
-  <button class="form-btn rounded-lg bg-blue ml-20 md:ml-0 py-3 px-4 text-sm text-white">SUBMIT</button>
+  <button class="form-btn rounded-lg bg-blue focus:outline-none ml-20 md:ml-0 py-3 px-4 text-sm text-white">SUBMIT</button>
 </form>
   </div>
   </section>
@@ -256,23 +258,23 @@ export default {
       message: '',
       pricing: [
         {
-          id: 55.1,
+          id: 35,
           desc: 'STARTER',
-          price: '$55',
+          price: '35',
           duration: 'Per Month',
           details: 'Starter features for \n your business to grow'
         },
         {
-          id: 75.01,
+          id: 45,
           desc: 'REGULAR',
-          price: '$75',
+          price: '45',
           duration: 'Per Month',
           details: 'Professional features for your business to grow'
         },
         {
-          id: 145,
+          id: 80,
           desc: 'PLUS',
-          price: '$145',
+          price: '80',
           duration: 'Per Month',
           details: 'Advanced features for your business to grow'
         },

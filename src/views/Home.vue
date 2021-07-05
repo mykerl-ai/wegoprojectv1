@@ -1,13 +1,15 @@
 <template>
   <Hero>
     <template v-slot:header>
-    <h1 class="lg:text-3xl md:8xl tracking-wide leading-10 text-2xl -mt-20 md:-mt-8 text-white font-semibold">Revolutionary <br> End-to-End IPTV/OTT Combined Platform</h1>
+    <h1 class="lg:text-2xl md:8xl tracking-wide leading-10 text-2xl -mt-32 md:-mt-20 text-white font-semibold">Revolutionary <br> End-to-End IPTV/OTT Combined Platform</h1>
     </template>
 
     <template v-slot:paragraph>
-      <p class="lg:mt-4 md:mt-10 mt-6 tracking-widest leading-9 text-sm  text-white font-regular">OTT provides your viewers access to movies and Tv shows, by sending signals directly through the internet.</p>
+      <p class="lg:mt-2 md:mt-10 mt-2 lg:tracking-wide tracking-widest lg:leading-7 leading-7 md:leading-9 md:text-sm text-xs text-white font-regular">We are specialized to deliver a complete combined End-to-End IPTV/OTT platform to help you grow your audience.</p>
 
-      <p class="lg:mt-4 md:mt-10 mt-4 tracking-widest leading-9 text-sm  text-white font-regular">Build or Upgrade to a top-notch IPTV/OTT solution that is modern, and offers a High-end user experience across all major platforms..</p>
+      <p class="lg:mt-2 md:mt-10 mt-2 lg:tracking-wide tracking-widest lg:leading-7 leading-7 md:leading-9 md:text-sm text-xs text-white font-regular">WEGO provides a flexible IPTV/OTT streaming platform that supplies a premium experience at a competitive cost. It gives the liberty to stream to Smart TVs, Android, and iPhone devices at speed, anywhere in the world. Our international OTT platform performs well during growth and scales effortlessly without losing the streaming quality. We also provide end-to-end multi-DRM security solutions between our platform and the end-user
+
+</p>
 
     </template>
     
@@ -29,7 +31,9 @@
 
     <section class="iptv">
       <h2 class="text-center text-blue font-semibold  text-lg mt-24 mb-2">OUR COMBINED PLATFORM</h2>
-       <p class="lg:mt-4 md:mt-4 mt-2 tracking-normal mx-4 leading-7  text-sm text-center mb-6 text-deep-gray font-regular">Over- The –Top intuitive way to create your own tv channel or revenue making Streaming Network. </p>
+       <p class="lg:mt-4 md:mt-4 mt-2 tracking-normal mx-4 leading-7  text-sm mb-6 text-deep-gray font-regular">At WEGO, we believe in the power of a robust and extensive partnership network to build and deliver state-of-the-art technologies for media companies around the world. <span class="font-bold"> Launch your IPTV/OTT streaming service?</span>  <br>
+
+WEGO end-to-end combined SaaS (Software) which is a one-of-a-kind all-inclusive video streaming platform that lets you launch Multi-Screen OTT/IPTV, Video on Demand (VOD), Advertise (AVOD), Subscription (SVOD)  with Live Streaming content all controlled from a single Video CMS based admin panel</p>
 
       <div class="tag mx-4 px-4 md:mx-4 lg:px-0 lg:mx-0 grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 grid-flow-row gap-2 content-center">
           <div  class="flip-card">

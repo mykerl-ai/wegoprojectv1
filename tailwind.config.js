@@ -18,6 +18,8 @@ module.exports = {
     colors: {
       'gblue' : '#1B3BD8',
       'blue' : '#0080FF',
+      'red': '#f44336',
+      'black': '#000000',
       'deep-blue' : '#0072E4',
       'yellow' : '#F8E71C',
       'light-blue' : '#FAFCFF',
