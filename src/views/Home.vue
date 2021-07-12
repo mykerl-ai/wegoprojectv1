@@ -5,9 +5,9 @@
     </template>
 
     <template v-slot:paragraph>
-      <p class="lg:mt-2 md:mt-10 mt-2 lg:tracking-wide tracking-widest lg:leading-7 leading-7 md:leading-9 md:text-sm text-xs text-white font-regular">We are specialized to deliver a complete combined End-to-End IPTV/OTT platform to help you grow your audience.</p>
+      <p class="lg:mt-2 md:mt-10 mt-2 lg:tracking-wide tracking-widest lg:leading-7 leading-7 md:leading-9 md:text-sm text-xs text-white font-regular">We are specialized in delivering a complete combined End-to-End IPTV/OTT platform to help you grow your audience.</p>
 
-      <p class="lg:mt-2 md:mt-10 mt-2 lg:tracking-wide tracking-widest lg:leading-7 leading-7 md:leading-9 md:text-sm text-xs text-white font-regular">WEGO provides a flexible IPTV/OTT streaming platform that supplies a premium experience at a competitive cost. It gives the liberty to stream to Smart TVs, Android, and iPhone devices at speed, anywhere in the world. Our international OTT platform performs well during growth and scales effortlessly without losing the streaming quality. We also provide end-to-end multi-DRM security solutions between our platform and the end-user
+      <p class="lg:mt-2 md:mt-10 mt-2 lg:tracking-wide tracking-widest lg:leading-7 leading-7 md:leading-9 md:text-sm text-xs text-white font-regular">WeGo provides a flexible IPTV/OTT streaming platform that supplies a premium experience at a competitive cost. It gives the liberty to stream to Smart TVs, Android, and iPhone devices at speed, anywhere in the world. Our international OTT platform performs well during growth and scales effortlessly without losing the streaming quality. We also provide end-to-end multi-DRM security solutions between our platform and the end-user.
 
 </p>
 
@@ -31,9 +31,9 @@
 
     <section class="iptv">
       <h2 class="text-center text-blue font-semibold  text-lg mt-24 mb-2">OUR COMBINED PLATFORM</h2>
-       <p class="lg:mt-4 md:mt-4 mt-2 tracking-normal mx-4 leading-7  text-sm mb-6 text-deep-gray font-regular">At WEGO, we believe in the power of a robust and extensive partnership network to build and deliver state-of-the-art technologies for media companies around the world. <span class="font-bold"> Launch your IPTV/OTT streaming service?</span>  <br>
+       <p class="lg:mt-4 md:mt-4 mt-2 tracking-normal mx-4 leading-7  text-sm mb-6 text-deep-gray font-regular">At WeGo, we believe in the power of a robust and extensive partnership network to build and deliver state-of-the-art technologies for media companies around the world. <span class="font-bold"> Launch your IPTV/OTT streaming service?</span>  <br>
 
-WEGO end-to-end combined SaaS (Software) which is a one-of-a-kind all-inclusive video streaming platform that lets you launch Multi-Screen OTT/IPTV, Video on Demand (VOD), Advertise (AVOD), Subscription (SVOD)  with Live Streaming content all controlled from a single Video CMS based admin panel</p>
+WeGo end-to-end combined SaaS (Software) which is a one-of-a-kind all-inclusive video streaming platform that lets you launch Multi-Screen OTT/IPTV, Video on Demand (VOD), Advertise (AVOD), Subscription (SVOD)  with Live Streaming content all controlled from a single Video CMS based admin panel</p>
 
       <div class="tag mx-4 px-4 md:mx-4 lg:px-0 lg:mx-0 grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 grid-flow-row gap-2 content-center">
           <div  class="flip-card">

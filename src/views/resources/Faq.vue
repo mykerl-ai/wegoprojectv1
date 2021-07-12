@@ -74,7 +74,7 @@
 		<div v-for="faq in faqs" :key="faq.id" class="acc-container">
 			<h3 class="acc-title">{{faq.question}}</h3>
 			<div class="acc-content">
-				<p>{{faq.answer}}</p>
+				<p class="leading-10">{{faq.answer}}</p>
 			</div><!-- acc-content -->
 		</div><!-- acc-container -->
 
@@ -93,7 +93,7 @@ export default {
             faqs: [
               {
                 id: 1,
-                question: 'What is included in a WeGo Network Llc. service plan?',
+                question: 'What is included in a WeGo service plan?',
                 answer: 'Our service plan includes: Streaming data transfer through WeGo Network’s cloud CDN and cloud storage, great service and software feature. We add new addons often, to improve and update your channel or station. Phone and email support are 24/7 just contact us – we’re here if you need us',
               },
                {
@@ -228,83 +228,4 @@ nav>a, div>a {
 
 
 
-.wrapper1 {
-	max-width: 800px;
-	margin: 80px auto;
-	padding: 20px 30px;
-	border-radius: 4px;
-	background: rgba(0,0,0,.05);
-}
-
-.accordion {
-	margin: 40px 0;
-}
-
-.acc-container {
-	margin: 0 0 10px;
-	max-width: 100%;
-	overflow: hidden;
-}
-
-	.acc-title {
-		max-width: 100%;
-		background: #0072E4;
-		color: #FFF;
-		border-radius: 4px;
-		padding: 14px 20px;
-		font-weight: normal;
-		position: relative;
-		transition: all .3s ease-in-out;
-	}
-
-		.acc-active .acc-title,
-		.acc-title:hover {
-			background: #565656;
-			cursor: pointer;
-		}
-
-		.acc-title:after {
-			content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewbox='0 0 25 25'%3E%3Cline x1='6' y1='12.5' x2='19' y2='12.5' fill='none' stroke='%23FFFFFF' stroke-width='2' stroke-linecap='round' vector-effect='non-scaling-stroke' /%3E%3Cline y1='6' x1='12.5' y2='19' x2='12.5' fill='none' stroke='%23FFFFFF' stroke-width='2' stroke-linecap='round' vector-effect='non-scaling-stroke' /%3E%3C/svg%3E"); /*Plus sign*/
-			position: absolute;
-			right: 20px;
-			top: 50%;
-			margin-top: -12.5px;
-			width: 25px;
-			height: 25px;
-			display: inline-block;
-		}
-
-		.acc-active .acc-title:after {
-			content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewbox='0 0 25 25'%3E%3Cline x1='6' y1='12.5' x2='19' y2='12.5' fill='none' stroke='%23FFFFFF' stroke-width='2' stroke-linecap='round' vector-effect='non-scaling-stroke' /%3E%3C/svg%3E"); /*Minus sign*/
-		}
-
-	.acc-content {
-		width: 100%;
-		height: auto;
-		overflow: hidden;
-		max-height: 0;
-		opacity: 0;
-		padding: 0 20px;
-		transition: all 0.2s ease-in-out;
-	}
-
-	.acc-active .acc-content {
-		padding: 20px;
-		max-height: 500px;
-		overflow-y: auto;
-		opacity: 1;
-	}
-
-/*
-Plus Sign
-<svg viewbox="0 0 25 25">
-  <line x1="6" y1="12.5" x2="19" y2="12.5" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" vector-effect="non-scaling-stroke" />
-  <line y1="6" x1="12.5" y2="19" x2="12.5" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" vector-effect="non-scaling-stroke" />
-</svg>
-
-Minus Sign
-<svg viewbox="0 0 25 25">
-  <line x1="6" y1="12.5" x2="19" y2="12.5"  fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" vector-effect="non-scaling-stroke" />
-</svg>
-*/
 </style>

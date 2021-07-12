@@ -1,5 +1,5 @@
 <template>
-  <div :style="{ background: 'linear-gradient(to right bottom, #176CE0, #0B92E7, #0072E4)' }" class="max-w-100 pb-56 h-full">
+  <!-- <div :style="{ background: 'linear-gradient(to right bottom, #176CE0, #0B92E7, #0072E4)' }" class="max-w-100 pb-56 h-full"> -->
 
       <Nav />
 
@@ -36,7 +36,7 @@
         
         
         
-  </div>
+  <!-- </div> -->
 </template>
 
 <script>
@@ -77,22 +77,24 @@ export default {
     },
 
     components: {Nav},
-//     mounted () {
-//   document.body.classList.add('user')
-// },
-// unmounted () {
-//   document.body.classList.remove('user')
-// },
+    mounted () {
+  document.body.classList.add('user')
+},
+unmounted () {
+  document.body.classList.remove('user')
+},
 
 
 }
 </script>
 
 <style>
-/* .user {
-  background: linear-gradient(to right bottom, #176CE0, #0B92E7, #0072E4);
+.user {
+  /* background: linear-gradient(to right bottom, #176CE0, #0B92E7, #0072E4); */
+  background-color: #000000;
+background-image: linear-gradient(147deg, #000000 0%, #072538 74%);
   background-repeat: no-repeat;
-} */
+}
 
 .shrink img {
 transition: 1s ease;

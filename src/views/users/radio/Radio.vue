@@ -1,87 +1,107 @@
 <template>
+  <div class="max-w-100 h-100">
 
-<Navbar>
-        
+       <Nav >
+        <div class="flex flex-wrap space-x-2 w-full mx-2">
 
-      <router-link :to="{name: 'Radio'}">
-      <div class="w-24 pl-8 pt-5">
-          <img src="../../../assets/logo.png" alt="">
+    <form method="GET">
+      <div class="relative text-gray-600 focus-within:text-gray-400">
+        <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+      <button type="submit" class="p-1 focus:outline-none focus:shadow-outline">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 35.914 35.914">
+          <g id="Icon_feather-search" data-name="Icon feather-search" transform="translate(-3 -3)">
+          <path id="Path_352" data-name="Path 352" d="M33.2,18.852A14.352,14.352,0,1,1,18.852,4.5,14.352,14.352,0,0,1,33.2,18.852Z" fill="none" stroke="#0072E4" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <path id="Path_353" data-name="Path 353" d="M32.779,32.779l-7.8-7.8" transform="translate(4.013 4.013)" fill="none" stroke="#0072E4" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          </g>
+          </svg>
+      </button>
+      </span>
+      <input type="search" name="q" class="invisible md:visible order-last py-1 px-3 text-sm text-gray pr-4 rounded-md pl-10 focus:outline-none focus:border-blue rounded-full focus:text-gray-900" placeholder="Search..." autocomplete="off">
       </div>
-      </router-link>
-      <nav class="flex space-x-10 py-6 px-6 mr-20">
-        <router-link :to="{name: 'Radio'}">Home</router-link>
-        <router-link :to="{name: 'Schedule'}">Schedule</router-link>
-        <router-link :to="{name: 'Radio'}">Playlist</router-link>
-        <router-link :to="{name: 'Radio'}">Broadcast</router-link>
-        <div class="space-x-6 pl-96">
-           <router-link :to="{name: 'Signup'} " class="bt text-white text-xs">CONTACT</router-link> 
-        </div>  
-      </nav>
-    </Navbar>
-    
-  <div id="hero" ref="hit" class="bg-hero-pattern bg-contain h-96 ">
+    </form>
+
+        <nav>
+          <div class="lg:grid grid-cols-6 justify-between gap-8 hidden">
+          <button class="focus focus:outline-none"><router-link :to="{name: 'Radio'}" class="text-sm text-white text-center font-medium">Podcast</router-link></button>
+          <button class="focus focus:outline-none"><router-link :to="{name: 'Schedule'}" class="text-sm text-white text-center font-medium">Schedule</router-link></button>
+          <button class="focus focus:outline-none"><router-link :to="{name: 'Playlist'}" class="text-sm text-white text-center font-medium">Playlist</router-link></button>
+          <button class="focus focus:outline-none"><router-link :to="{name: 'Radio'}" class="text-sm text-white text-center font-medium">Broadcast</router-link></button>
+          <button class="focus focus:outline-none"><router-link :to="{name: 'Movies'}" class="text-sm text-white text-center font-medium">Movies</router-link></button>
+          <button class="focus focus:outline-none"><router-link :to="{name: 'Shows'}" class="text-sm text-white text-center font-medium">Shows</router-link></button>
+          </div>
+
+          <div class="navbar mt-8 lg:hidden mr-16 md:mr-24">
+      <div class="dropdown1 transition-all duration-300">
+    <button @click="showMenu" class="dropbtn focus:outline-none"><svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg> 
+    </button>
+    <div v-show="menu" class="dropdown-content1 w-full">
+     <button class="w-full"><router-link :to="{name: 'Home'}">Home</router-link></button> 
+     <button class="w-full"><router-link :to="{name: 'Iptv'}">Iptv</router-link></button> 
+     <button class="w-full"><router-link :to="{name: 'Podcast'}">Podcast</router-link></button> 
+     <button class="w-full"><router-link :to="{name: 'Ott'}">OTT</router-link></button> 
+     <button class="w-full"><router-link :to="{name: 'About'}">About</router-link></button> 
+     <button class="w-full"><router-link :to="{name: 'Ott'}">FAQ</router-link></button> 
+     <button class="w-full"><router-link :to="{name: 'Ott'}">Help</router-link></button> 
+    </div>
+  </div> 
+</div>
+        </nav>
+      </div>
+
+      </Nav>
+
+      <div class="flex space-x-6 w-100 ml-20 mb-4">
+          <h1 class="text-white text-sm">Movies</h1>
+          <button class="flex">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 42.931 43">
+          <g id="Layer_32" data-name="Layer 32" transform="translate(-10.554 -10.5)">
+            <path id="Path_354" data-name="Path 354" d="M33.5,19.14V12a1.5,1.5,0,0,0-3,0v7.14a6.07,6.07,0,0,0,0,11.74V52a1.5,1.5,0,0,0,3,0V30.88C39.52,29.34,39.52,20.67,33.5,19.14Z" fill="#fff"/>
+            <path id="Path_355" data-name="Path 355" d="M48.94,26.13V12a1.5,1.5,0,1,0-3,0V26.13a6.07,6.07,0,0,0,0,11.74V52a1.5,1.5,0,0,0,3,0V37.87A6.063,6.063,0,0,0,48.94,26.13Z" fill="#fff"/>
+            <path id="Path_356" data-name="Path 356" d="M18.06,37V12a1.5,1.5,0,0,0-3,0V37a6.07,6.07,0,0,0,0,11.73V52a1.5,1.5,0,0,0,3,0V48.74a6.07,6.07,0,0,0,0-11.74Z" fill="#fff"/>
+          </g>
+          </svg>
+          <p class="text-white text-xs py-1 px-3">Filter</p>
+          </button>
+        </div>
+
+       <div id="hero" ref="hit" class="bg-hero-pattern bg-contain h-96 mx-8">
         <figure :style="{ backgroundImage: 'url(' + image0 + ')' }"></figure>
         <figure :style="{ backgroundImage: 'url(' + image1 + ')' }"></figure>
         <figure :style="{ backgroundImage: 'url(' + image2 + ')' }"></figure>
         <figure :style="{ backgroundImage: 'url(' + image1 + ')' }"> </figure>
         <figure :style="{ backgroundImage: 'url(' + image2 + ')' }"></figure>
-       
-    
 
-    <div class="fwd mt-32 ml-60 w-50 max-w-xl">
-      <slot></slot>
-      
-    </div>
   </div>
 
-   <div class="max-w-100 h-100">
-
-   
 
        
-    <div class="my-6 md:px-8">
-        <h1 class="text-base text-deep-gray font-semibold">Top Songs</h1>
+    <div class=" md:px-6">
+        
 
-    <div class="shrink grid grid-cols-6 md:grid-cols-6 my-4 gap-2 w-full">
+    <div class="shrink z-0 grid px-4 md:px-0 grid-flow-row lg:grid-cols-6 md:grid-cols-2 grid-cols-1 my-6 gap-4 w-full">
           
         
-        <div class="hover:transform translate-x-4 translate-y-4 col-span-1" v-for="movie in movies" :key="movie.id">
+        <div class="hover:transform translate-x-4 translate-y-4" v-for="movie in movies" :key="movie.id">
           <router-link :to="{name: 'MovieDetails', params: { image: movie.image, title: movie.title }}">
-            <img class="w-16 h-16 md:w-16 md:h-16 object-cover" :src="movie.image" alt="">
-            <p class="text-deep-gray text-xs mt-4 md:text-left text-left font-semibold ">{{movie.title}}</p>
-            <p class="text-deep-gray text-xs mt-2 md:text-left text-left ">{{movie.provider}}</p>
-          </router-link>
-          </div>
-        
-    </div>
-
-    <h1 class="text-base text-deep-gray mt-12 font-semibold">Top Playlist</h1>
-
-    <div class="shrink grid grid-cols-6 md:grid-cols-6 my-4 gap-4 w-full">
-          
-        
-        <div class="hover:transform translate-x-4 translate-y-4 col-span-1" v-for="movie in movies" :key="movie.id">
-          <router-link :to="{name: 'MovieDetails', params: { image: movie.image, title: movie.title }}">
-            <img class="w-20 h-20 md:w-20 md:h-20 object-cover" :src="movie.image" alt="">
-            <p class="text-deep-gray text-xs mt-4 md:text-left text-left font-semibold ">{{movie.title}}</p>
-            <p class="text-deep-gray text-xs mt-2 md:text-left text-left ">{{movie.provider}}</p>
+            <img class="w-full h-auto md:w-72 md:h-72 object-cover" :src="movie.image" alt="">
+            <p class="text-white text-base mt-4 text-center  font-semibold ">{{movie.title}}</p>
+            <p class="text-white text-xs mt-2 text-center  tracking-widest">{{movie.provider}}</p>
           </router-link>
           </div>
         
     </div>
 
   </div>
-
-  
         
         
         
   </div>
-  
 </template>
 
 <script>
-import Navbar from '@/components/Navbar.vue'
+import Nav from '@/components/user/Nav.vue'
 import image0 from '@/assets/images/radio1.jpg'
 import image1 from '@/assets/images/radio.jpg'
 import image2 from '@/assets/images/iptv.jpg'
@@ -92,39 +112,39 @@ import thirdImage from '@/assets/images/ince.jpg'
 import fourthImage from '@/assets/images/rings.jpg'
 import fifthImage from '@/assets/images/avengers.jpg'
 export default {
-    components: {Navbar},
 
     data(){
-        return{
-          image0,
+      return {
+        image0,
           image1,
           image2,
-          movies: [
+        movies: [
           {title: 'Star Wars', provider: 'CRAKES TV', image: image, id: image },
           {title: 'Wonder Woman', provider: 'CRAKES TV', image: firstImage, id: firstImage },
           {title: 'Star Wars', provider: 'CRAKES TV', image: secondImage, id: secondImage},
           {title: 'Star Wars', provider: 'CRAKES TV', image: thirdImage, id: thirdImage },
           {title: 'Star Wars', provider: 'CRAKES TV', image: fourthImage, id: fourthImage },
-          {title: 'Star Wars', provider: 'CRAKES TV', image: fifthImage, id: fifthImage }
-        ]  
-        }
-    },
-
-    methods: {
-      handleClick(){
-        this.$router.push({name: 'Contact'})
+          {title: 'Star Wars', provider: 'CRAKES TV', image: fifthImage, id: fifthImage },
+        ]
       }
     },
-   
 
-    computed: {
-        
-    }
+    components: {Nav},
+    mounted () {
+  document.body.classList.add('user')
+},
+unmounted () {
+  document.body.classList.remove('user')
+},
+
+
 }
 </script>
 
-<style scoped>
-     #hero{
+
+<style>
+
+#hero{
         /* background-image:linear-gradient(to right bottom, #1B3BD8, #176CE0, #0B92E7, #0BB6EB, #00E0F2), url(../assets/images/radio.jpg); */
         position: relative;
          
@@ -134,7 +154,7 @@ export default {
     }
     #hero > figure {
   animation: imageAnimation 30s linear infinite 0s;
-  
+  border-radius: 20px;
   background-size: cover;
   background-position: center center;
   backface-visibility: hidden;
@@ -192,33 +212,6 @@ imageAnimation {  0% {
 }
 }
 
-nav>a, div>a {
-  color: #0080FF;
-  font-size: 14px;
-}
- .bt {
-   background-color: #0080FF;
-   color:white;
-   padding: 8px;
-   border-radius: 4px;
- }
-
- .navbar {
-  overflow: hidden;
- 
-}
-
-.navbar a {
-  float: left;
-  font-size: 14px;
-  color: white;
-  text-align: center;
-  
-  text-decoration: none;
-}
-
-
-
 .shrink img {
 transition: 1s ease;
 }
@@ -229,4 +222,7 @@ transition: 1s ease;
 transform: scale(0.8);
 transition: 1s ease;
 }
+
+
+
 </style>

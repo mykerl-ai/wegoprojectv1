@@ -113,7 +113,7 @@ export default {
             headers: [
                 {
                     id: 1,
-                    topic: 'The WeGo Network Llc Terms of Use'
+                    topic: 'The WeGo Terms of Use'
                 },
                   {
                     id: 2,
@@ -171,8 +171,8 @@ export default {
         terms: [
             {
                 id: 1,
-                head: 'The WeGo Network Llc Terms of Use',
-                body: 'These terms govern your access and use of WeGo Network services, products, or channel.  WeGo is a social media and a service provider of OTT/IPTV and Live Streaming, in use through a platform for audio and video operated by WeGo Network llc. and/or its subsidiaries and affiliates that provides access to content and the services made available through WeGo Network Channel application. By accessing or using WeGo Network Channel , you are accepting these terms. If you do not agree with these terms, you may not access WeGo Network Channel(platform an or use our software. In accepting these terms, you are also agreeing that: (1) any disputes between us will be settled by binding arbitration (meaning we both give up the right to go to court), and (2) your recurring subscriptions will automatically renew and your account will continued to be charged for those subscriptions until you cancel.                                             Certain features, functionality, and content made available to you through , WeGo Network Channel  may be subject to additional terms, which will be provided to you at the time those services are offered. We reserve the right (at any time) to modify, suspend, or remove certain features, functionality, or content from WeGo Network Channel or channels at any time with out notice.'
+                head: 'The WeGoTerms of Use',
+                body: 'These terms govern your access and use of WeGo Network services, products, or channel.  WeGo is a social media and a service provider of OTT/IPTV and Live Streaming, in use through a platform for audio and video operated by WeGo and/or its subsidiaries and affiliates that provides access to content and the services made available through WeGo Network Channel application. By accessing or using WeGo Network Channel , you are accepting these terms. If you do not agree with these terms, you may not access WeGo Network Channel(platform an or use our software. In accepting these terms, you are also agreeing that: (1) any disputes between us will be settled by binding arbitration (meaning we both give up the right to go to court), and (2) your recurring subscriptions will automatically renew and your account will continued to be charged for those subscriptions until you cancel.                                             Certain features, functionality, and content made available to you through , WeGo Network Channel  may be subject to additional terms, which will be provided to you at the time those services are offered. We reserve the right (at any time) to modify, suspend, or remove certain features, functionality, or content from WeGo Network Channel or channels at any time with out notice.'
             },
             {
                 id: 2,
@@ -202,7 +202,7 @@ export default {
             {
                 id: 7,
                 head: 'WeGo Network Branded Rights  &  Trademarked',
-                body: 'WeGo Network  Channel and Trademark is to WeGo Network (and/or its licensors) and protected by copyright, trademark, and other laws of the United States and other countries. Any rights not expressly granted to you in these terms are reserved by WeGo Network llc. (or its applicable licensors). You may not remove, alter, or obscure any copyright, trademark, products or service mark or other branding rights notices incorporated in or accompanying WeGo Network Channel or from any content provided via WeGo Network Channel.'
+                body: 'WeGo Network  Channel and Trademark is to WeGo Network (and/or its licensors) and protected by copyright, trademark, and other laws of the United States and other countries. Any rights not expressly granted to you in these terms are reserved by WeGo (or its applicable licensors). You may not remove, alter, or obscure any copyright, trademark, products or service mark or other branding rights notices incorporated in or accompanying WeGo Network Channel or from any content provided via WeGo Network Channel.'
             },
             {
                 id: 8,
@@ -232,7 +232,7 @@ export default {
             {
                 id: 13,
                 head: 'General',
-                body: 'These terms are between you and  WeGo Network LLC.and no other person has any right to enforce these terms on your behalf. Your rights are not transferable. Each paragraph is intended to operate separately. If any court or relevant authority determines that any terms are invalid or unenforceable, those terms will be enforced to the maximum extent permissible and the remaining terms will remain in full force and effect. If we delay or chose not to enforce these terms, that will not mean that we have.'
+                body: 'These terms are between you and  WeGoand no other person has any right to enforce these terms on your behalf. Your rights are not transferable. Each paragraph is intended to operate separately. If any court or relevant authority determines that any terms are invalid or unenforceable, those terms will be enforced to the maximum extent permissible and the remaining terms will remain in full force and effect. If we delay or chose not to enforce these terms, that will not mean that we have.'
             },
             {
                 id: 14,

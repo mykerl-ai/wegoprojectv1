@@ -84,7 +84,7 @@
 
   <div class="focus-within:none">
     <input id="myInput1" type="password" required v-show="! recovery" v-model="confirm" class="focus:outline-none focus:ring-2 focus:ring-opacity-50 border-b-2 text-sm text-gray-400 mb-4 border-light-gray  py-2 px-6 w-full" placeholder="Confirm password">
-    <input class="focus:outline-none mb-4 w-3" type="checkbox" @click="myFunction"><span class="text-xs text-gray font-semibold mx-2">show password</span>
+    <input v-show="! recovery" class="focus:outline-none mb-4 w-3" type="checkbox" @click="myFunction"><span class="text-xs text-gray font-semibold mx-2">show password</span>
   </div>
 
    <div v-show="! recovery" class="focus-within:none grid grid-cols-1 gap-y-2 md:grid-cols-3 my-4">

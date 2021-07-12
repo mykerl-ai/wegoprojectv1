@@ -160,6 +160,7 @@
                     <h2 class="text-red text-xl font-semibold mb-4 text-left">Features</h2>
                     <ul class="leading-8 list-outside list-none text-gray text-sm">
                         <li>Analytics</li>
+                        <li>Livestream</li>
                         <li>Audio Stream</li>
                         <li>Simultaneously stream to multiple endpoints</li>
                         <li>Radio Widget</li>
@@ -190,13 +191,13 @@
 
 <!-- IPTV -->
 
-<div class="col-span-4 w-full" v-else-if="currentRoute === '9.1' ||currentRoute === '199' || currentRoute === '499'">
+<div class="col-span-4 w-full" v-else-if="currentRoute === '/99' ||currentRoute === '199' || currentRoute === '499'">
             <h1 class="text-left text-blue text-lg font-semibold">Your plan includes</h1>
             <div class="flex flex-wrap gap-y-8 gap-x-2 mt-10  grid grid-cols-2 gap-8">
-                <div v-show="currentRoute==='9.1'" class="flex-grow">
+                <div v-show="currentRoute==='/99'" class="flex-grow">
 
                   <div>
-                    <h2 class="text-deep-gray text-xl font-semibold mb-4 text-left">PRO</h2>
+                    <h2 class="text-red text-xl font-semibold mb-4 text-left">PRO</h2>
                     <ul class="leading-8 list-outside list-none text-gray text-sm">
                         <li>Full HD streaming and cloud recording</li>
                         <li>Stream to any virtual event platform</li>
@@ -220,7 +221,7 @@
 
 
                 <div v-show="currentRoute==='199'" class="flex-grow">
-                    <h2 class="text-deep-gray text-xl font-semibold mb-4 text-left">PREMIUM</h2>
+                    <h2 class="text-red text-xl font-semibold mb-4 text-left">PREMIUM</h2>
                     <ul class="leading-8 list-outside list-none text-gray text-sm">
                         <li class="font-bold text-red">Everything in Pro +</li>
                         <li>Video creation with custom branding</li>
@@ -237,7 +238,7 @@
                 </div>
 
                 <div v-show="currentRoute==='499'" class="flex-auto">
-                    <h2 class="text-deep-gray text-xl font-semibold mb-4 text-left">BUSINESS</h2>
+                    <h2 class="text-red text-xl font-semibold mb-4 text-left">BUSINESS</h2>
                     <ul class="leading-8 list-outside list-none text-gray text-sm">
                        <li class="font-bold text-red">Everything in Premium +</li>
                         <li>5 channels</li>
@@ -249,7 +250,7 @@
                 </div>
 
                  <div class="">
-                    <h2 class="text-deep-gray text-xl font-semibold mb-4 text-left">Stream To Any Platform</h2>
+                    <h2 class="text-red text-xl font-semibold mb-4 text-left">Stream To Any Platform</h2>
                     <p class="text-sm mt-4 "></p>
                     <ul class="leading-8 list-outside list-none text-gray text-sm">
                        <li class="font-bold text-blue">Studio lets you send your stream to any player that supports RTMP.</li>
@@ -275,7 +276,7 @@
             <h1 class="text-left text-blue text-lg font-semibold">Your plan includes</h1>
             <div class="flex flex-wrap gap-y-8  gap-x-2 mt-10">
                 <div class="flex-grow">
-                    <h2 class="text-deep-gray text-xl font-semibold mb-4 text-left">Server</h2>
+                    <h2 class="text-red text-xl font-semibold mb-4 text-left">Server</h2>
                     <ul class="leading-8 list-outside list-none text-gray text-sm">
                         <li>HD view</li>
                         <li>Unlimited uploads</li>
@@ -284,7 +285,7 @@
                 
             </div>
                 <div class="flex-grow">
-                    <h2 class="text-deep-gray text-xl font-semibold mb-4 text-left">Features</h2>
+                    <h2 class="text-red text-xl font-semibold mb-4 text-left">Features</h2>
                     <ul class="leading-8 list-outside list-none text-gray text-sm">
                         <li>Online video Control Panel</li>
                         <li>Movie Stream Automation</li>
@@ -294,7 +295,7 @@
                 </div>
 
                 <div class="flex-auto">
-                    <h2 class="text-deep-gray text-xl font-semibold mb-4 text-left">Add-ons</h2>
+                    <h2 class="text-red text-xl font-semibold mb-4 text-left">Add-ons</h2>
                     <ul class="leading-8 list-outside list-none text-gray text-sm">
                         <li>WebPlayer Page & Radio Player</li>
                         <li>Server Downtime Monitoring</li>
@@ -313,7 +314,13 @@
 
     <div class="border-0 border-yellow shadow-2xl col-span-2 px-4 w-full py-4">
                     <h1 class="font-bold text-left text-lg text-deep-gray mb-8">ORDER SUMMARY</h1>
-                    <p class="px-2 py-4 bg-blue text-white font-semibold text-sm" v-show="currentRoute === '/35' ||currentRoute === '/45'">Radio/Podcast server - (128kbps) <span class="ml-6">$ {{id}}</span></p>
+                    <p class="px-2 py-2 bg-blue text-white font-semibold text-sm" v-show="currentRoute === '/35'">Radio/Podcast server - (128kbps) <span class="ml-6">$ {{id}}</span></p>
+                    
+                    <p class="px-2 py-4 bg-blue text-white font-semibold text-sm" v-show="currentRoute === '/45'">Radio/Podcast server
+                    <input type="radio"> 128kbps 
+                    <input type="radio"> 320kbps
+                     <span class="ml-6">$ {{id}}</span></p>
+
                     <p class="px-2 py-4 bg-blue text-white font-semibold text-sm" v-show="currentRoute === '/80'">Radio/Podcast server - (320kbps) <span class="ml-6">$ {{id}}</span></p>
 
                     <p class="px-2 py-4 bg-blue text-white font-semibold text-sm" v-show="currentRoute === '/99' ||currentRoute === '199' || currentRoute === '499' || currentRoute === '125' ||currentRoute === '250' || currentRoute === '500'">IPTV/Livestream server - (50Mbps) <span class="ml-6">$ {{id}}</span></p>

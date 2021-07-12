@@ -5,7 +5,7 @@
      </template>
 
     <template v-slot:paragraph>
-      <p class="lg:mt-2 md:mt-10 mt-2 lg:tracking-wide tracking-widest lg:leading-7 leading-7 md:leading-9 md:text-sm text-xs text-white font-regular">WeGo Network LLC leading top - notch technologies, products and services, support broadcasters, content providers, and service providers throughout the world.</p>
+      <p class="lg:mt-2 md:mt-10 mt-2 lg:tracking-wide tracking-widest lg:leading-7 leading-7 md:leading-9 md:text-sm text-xs text-white font-regular">WeGo leading top - notch technologies, products and services, support broadcasters, content providers, and service providers throughout the world.</p>
 
       <p class="lg:mt-2 md:mt-10 mt-2 lg:tracking-wide tracking-widest lg:leading-7 leading-7 md:leading-9 md:text-sm text-xs text-white font-regular">Our expertise and reputation in the market has brought us to expand from live Radio and Pre-recorded in our earlier days. To the latest cutting-edge, multi-screen television platforms and network technologies. We continue to drive value and innovation and trust to our customers.  "Cause are customer is the background of our success"</p>
 
@@ -276,7 +276,7 @@ export default {
         },
         {
           id: 499,
-          desc: 'BUSINESS',
+          desc: 'ENTERPRISE',
           price: '499',
           duration: 'Per Month',
           details: 'Advanced features for your business to grow'

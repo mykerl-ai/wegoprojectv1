@@ -6,7 +6,7 @@
 
     <template v-slot:paragraph>
       <p class="lg:mt-4 md:mt-10 mt-10 tracking-widest leading-9 text-sm  text-white font-regular">Listen in your car, on the app, online, and at home. <br>
-Personalized Stations Powered by WeGo Network Llc.
+Personalized Stations Powered by WeGo
 </p>
     </template>
   </Hero >
@@ -36,7 +36,7 @@ Personalized Stations Powered by WeGo Network Llc.
     <section class="podcast">
     <div class="tag grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 grid-flow-row lg:grid-flow-row gap-x-16 content-center mt-24 md:mt-48 mx-6 md:mx-0">
           <div class="">
-            <h2 class="text-blue font-semibold text-2xl text-center md:text-left md:text-4xl mt-6 mb-6">Create your own radio station</h2>
+            <h2 class="text-blue font-semibold text-2xl text-center md:text-left md:text-4xl mt-6 mb-6">Create your own radio station or podcast</h2>
             <div v-for="spec in specs" :key="spec.id" class="grid grid-cols-3 gap-2">
                 
                 <div>

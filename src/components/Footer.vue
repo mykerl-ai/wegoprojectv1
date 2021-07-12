@@ -7,9 +7,9 @@
              <img class="md:w-20 w-10"  src="../assets/logo.png" alt=""></div>
 
       
-      <p class="md:text-base pt-2 md:-ml-60 hidden md:block lg:-ml-40 md:pt-12 text-blue">Copyright © WeGo Network LLC 2021. All rights reserved. Privacy Policy</p>
+      <p class="md:text-base pt-2 md:-ml-60 hidden md:block lg:-ml-40 md:pt-12 text-blue">Copyright © WeGo 2021. All rights reserved. Privacy Policy</p>
 
-      <p class="text-xs pt-2 md:hidden -ml-32 md:pt-12 text-blue">Copyright © WeGo Network LLC 2021.</p>
+      <p class="text-xs pt-2 md:hidden -ml-32 md:pt-12 text-blue">Copyright © WeGo 2021.</p>
         
 
       <div class="md:flex md:space-x-8 mt-6 md:mx-40 lg:mx-0 space-x-2 hidden">

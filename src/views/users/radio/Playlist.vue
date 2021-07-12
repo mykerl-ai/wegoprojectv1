@@ -1,30 +1,60 @@
 <template>
   <div class="w-full max-w-100 pb-56 h-full">
 
-     <Navbar class="w-full">
-        
-    <div class="flex">
-      <router-link :to="{name: 'Radio'}">
-      <div class="w-24 pl-8 mr-40 pt-5">
-          <img src="../../../assets/logo.png" alt="">
+      <Nav >
+        <div class="flex flex-wrap space-x-2 w-full mx-2">
+
+    <form method="GET">
+      <div class="relative text-gray-600 focus-within:text-gray-400">
+        <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+      <button type="submit" class="p-1 focus:outline-none focus:shadow-outline">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 35.914 35.914">
+          <g id="Icon_feather-search" data-name="Icon feather-search" transform="translate(-3 -3)">
+          <path id="Path_352" data-name="Path 352" d="M33.2,18.852A14.352,14.352,0,1,1,18.852,4.5,14.352,14.352,0,0,1,33.2,18.852Z" fill="none" stroke="#0072E4" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <path id="Path_353" data-name="Path 353" d="M32.779,32.779l-7.8-7.8" transform="translate(4.013 4.013)" fill="none" stroke="#0072E4" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          </g>
+          </svg>
+      </button>
+      </span>
+      <input type="search" name="q" class="invisible md:visible order-last py-1 px-3 text-sm text-gray pr-4 rounded-md pl-10 focus:outline-none focus:border-blue rounded-full focus:text-gray-900" placeholder="Search..." autocomplete="off">
       </div>
-      </router-link>
-      <nav class="flex space-x-10 py-10 px-2 mr-2">
-        <router-link :to="{name: 'Radio'}">Home</router-link>
-        <router-link :to="{name: 'Schedule'}">Schedule</router-link>
-        <router-link :to="{name: 'Playlist'}">Playlist</router-link>
-        <router-link :to="{name: 'Playlist'}">Broadcast</router-link>
-        <div class="space-x-6 pl-96">
-           <router-link :to="{name: 'Signup'} " class="bt text-white text-xs">CONTACT</router-link> 
-        </div>  
-      </nav>
+    </form>
+
+        <nav>
+          <div class="lg:grid grid-cols-6 justify-between gap-8 hidden">
+          <button class="focus focus:outline-none"><router-link :to="{name: 'Radio'}" class="text-sm text-white text-center font-medium">Podcast</router-link></button>
+          <button class="focus focus:outline-none"><router-link :to="{name: 'Schedule'}" class="text-sm text-white text-center font-medium">Schedule</router-link></button>
+          <button class="focus focus:outline-none"><router-link :to="{name: 'Playlist'}" class="text-sm text-white text-center font-medium">Playlist</router-link></button>
+          <button class="focus focus:outline-none"><router-link :to="{name: 'Radio'}" class="text-sm text-white text-center font-medium">Broadcast</router-link></button>
+          <button class="focus focus:outline-none"><router-link :to="{name: 'Movies'}" class="text-sm text-white text-center font-medium">Movies</router-link></button>
+          <button class="focus focus:outline-none"><router-link :to="{name: 'Shows'}" class="text-sm text-white text-center font-medium">Shows</router-link></button>
+          </div>
+
+          <div class="navbar mt-8 lg:hidden mr-16 md:mr-24">
+      <div class="dropdown1 transition-all duration-300">
+    <button @click="showMenu" class="dropbtn focus:outline-none"><svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg> 
+    </button>
+    <div v-show="menu" class="dropdown-content1 w-full">
+     <button class="w-full"><router-link :to="{name: 'Home'}">Home</router-link></button> 
+     <button class="w-full"><router-link :to="{name: 'Iptv'}">Iptv</router-link></button> 
+     <button class="w-full"><router-link :to="{name: 'Podcast'}">Podcast</router-link></button> 
+     <button class="w-full"><router-link :to="{name: 'Ott'}">OTT</router-link></button> 
+     <button class="w-full"><router-link :to="{name: 'About'}">About</router-link></button> 
+     <button class="w-full"><router-link :to="{name: 'Ott'}">FAQ</router-link></button> 
+     <button class="w-full"><router-link :to="{name: 'Ott'}">Help</router-link></button> 
+    </div>
+  </div> 
+</div>
+        </nav>
       </div>
-    </Navbar>
+
+      </Nav>
 
        
     <div class=" md:px-6">
         <div class="flex space-x-6 w-100">
-          <h1 class="text-white text-sm">Categories</h1>
           <button class="flex">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 42.931 43">
           <g id="Layer_32" data-name="Layer 32" transform="translate(-10.554 -10.5)">
@@ -83,12 +113,12 @@ export default {
     },
 
     components: {Nav},
-//     mounted () {
-//   document.body.classList.add('user')
-// },
-// unmounted () {
-//   document.body.classList.remove('user')
-// },
+    mounted () {
+  document.body.classList.add('user')
+},
+unmounted () {
+  document.body.classList.remove('user')
+},
 
 
 }
