@@ -68,22 +68,23 @@
     <h1 v-show="!recovery" class="text-blue text-2xl">Login</h1>
     <h1 v-show="recovery" class="text-blue text-2xl">Reset password</h1>
 
-    <form class="w-100 md:w-80">
+    <form class="w-100 md:w-80" @submit.prevent="">
     <div class="focus-within:none">
-    <input type="email" required v-show="!recovery" v-model="email" class="focus:outline-none focus:ring-2 focus:ring-opacity-50 mt-6 text-sm mb-6 focus:ring-blue-600 border-b-2 border-light-gray  py-3 px-6 w-full" placeholder="Your email address">
+    <input type="email" required v-show="!recovery" v-model="login.email" class="focus:outline-none focus:ring-2 focus:ring-opacity-50 mt-6 text-sm mb-6 focus:ring-blue-600 border-b-2 border-light-gray  py-3 px-6 w-full" placeholder="Your email address">
   </div>
 
   <div class="focus-within:none">
-    <input id="myInput2" type="password" required v-show="!recovery" v-model="password" class="focus:outline-none focus:ring-2 focus:ring-opacity-50 border-b-2 text-sm text-gray-400 mb-6 border-light-gray  py-3 px-6 w-full" placeholder="password">
+    <input id="myInput2" type="password" required v-show="!recovery" v-model="login.password" class="focus:outline-none focus:ring-2 focus:ring-opacity-50 border-b-2 text-sm text-gray-400 mb-6 border-light-gray  py-3 px-6 w-full" placeholder="password">
     <input v-show="! recovery" class="focus:outline-none mb-4 w-3" type="checkbox" @click="myFunction"><span v-show="! recovery" class="text-xs text-gray font-semibold mx-2">show password</span>
   </div>
 
   
 <div class="focus-within:none">
-    <input type="email" v-show="recovery" v-model="email" class="focus:outline-none focus:ring-2 focus:ring-opacity-50 mt-6 text-sm mb-6 focus:ring-blue-600 border-b-2 border-light-gray  py-3 px-6 w-full" placeholder="Your email address">
+    <input type="email" v-show="recovery" v-model="reset.email" class="focus:outline-none focus:ring-2 focus:ring-opacity-50 mt-6 text-sm mb-6 focus:ring-blue-600 border-b-2 border-light-gray  py-3 px-6 w-full" placeholder="Your email address">
   </div>
 
-    <button class="form-btn w-full mt-8  bg-blue py-3 px-4 text-sm text-center text-white">SUBMIT</button>
+    <button v-show="!recovery" @click="userLogin()" class="form-btn w-full mt-8  bg-blue py-3 px-4 text-sm text-center text-white">SUBMIT</button>
+    <button v-show="recovery" @click="resetPassword()" class="form-btn w-full mt-8  bg-blue py-3 px-4 text-sm text-center text-white">SUBMIT</button>
 </form>
 
     <button v-show="!recovery" @click="handleClick" class="bg-none text-blue  text-sm pt-4 focus:outline-none ">Forgot password?</button>
@@ -96,14 +97,21 @@
 
 <script>
 import Navbar from '@/components/Navbar.vue'
+import { useToast } from "vue-toastification";
+const toast = useToast();
 export default {
   data(){
     return{
       menu: false,
-      email: '',
-      password: '',
       recovery: false,
+      login: {
+        email: '',
+        password: '',
+      },
+      reset: {
+        email: ""
       }
+    }
   },
 
   methods: {
@@ -125,6 +133,27 @@ export default {
     z.type = "password";
   }
 },
+
+      async userLogin() {
+        let res = await this.$store.dispatch("mutate", {
+          endpoint: "Login",
+          data: { input: this.login },
+        });
+
+        if (res.success) {
+          toast.success("Login Successful");
+          localStorage.setItem("token", res.token);
+
+          this.$store.state.data.userProfile = res.data; // Setting user data.
+          this.$store.state.data.isLoggedIn = true; // User logged in.
+
+          this.$router.push({name: 'Panel'});
+        }
+      },
+
+      async resetPassword() {
+        toast.error("Feature not ready");
+      }
   },
   components: {Navbar}
 

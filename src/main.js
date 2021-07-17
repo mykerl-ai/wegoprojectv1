@@ -3,10 +3,31 @@ import App from './App.vue'
 import router from './router'
 import $ from 'jquery'
 
-
 import './index.css'
 
-createApp(App).use(router).mount('#app')
+import store from './store';
+import VueApollo from 'vue-apollo';
+import { API } from './api/api';
+import Toast, { POSITION } from "vue-toastification";
+import "vue-toastification/dist/index.css";
+
+const apolloProvider = new VueApollo({
+	defaultClient: API,
+});
+
+const toastOptions = {
+    position: POSITION.BOTTOM_RIGHT,
+    timeout: 6000
+};
+
+const app = createApp(App);
+app.use(router);
+app.use(store);
+app.use(apolloProvider);
+app.use(Toast, toastOptions);
+
+app.mount('#app');
+// createApp(App).use(router).mount('#app')
 
 // https://codepen.io/codeorum/pen/JjGzMRQ
 	// https://codeorum.com/tutorials/simple-accordion-collapsible-element-with-vanilla-js-and-simple-animation-effect

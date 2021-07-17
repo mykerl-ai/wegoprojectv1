@@ -68,22 +68,22 @@
   <div class="bg-white py-16 px-20 mx-auto my-auto shadow-lg">
     <h1 class="text-blue text-2xl mb-4">Sign up</h1>
     
-<form class="w-100 md:w-80">
+<form class="w-100 md:w-80" @submit.prevent="">
 
 <div class="focus-within:none">
-    <input type="text" required v-show="! recovery" v-model="name" class="focus:outline-none focus:ring-2 focus:ring-opacity-50  text-sm mb-4 focus:ring-blue-600 border-b-2 border-light-gray  py-2 px-6 w-full" placeholder="Full name">
+    <input type="text" required v-show="! recovery" v-model="payload.fullname" class="focus:outline-none focus:ring-2 focus:ring-opacity-50  text-sm mb-4 focus:ring-blue-600 border-b-2 border-light-gray  py-2 px-6 w-full" placeholder="Full name">
   </div>
 
   <div class="focus-within:none">
-    <input type="email" required v-show="! recovery" v-model="email" class="focus:outline-none focus:ring-2 focus:ring-opacity-50 border-b-2 text-sm text-gray-400  border-light-gray  py-2 px-6 w-full" placeholder="Email address">
+    <input type="email" required v-show="! recovery" v-model="payload.email" class="focus:outline-none focus:ring-2 focus:ring-opacity-50 border-b-2 text-sm text-gray-400  border-light-gray  py-2 px-6 w-full" placeholder="Email address">
   </div>
 
   <div class="focus-within:none">
-    <input id="myInput" type="password" required v-show="! recovery" v-model="password" class="focus:outline-none focus:ring-2 focus:ring-opacity-50 mt-6 text-sm mb-4 focus:ring-blue-600 border-b-2 border-light-gray  py-2 px-6 w-full" placeholder="Password"> 
+    <input id="myInput" type="password" required v-show="! recovery" v-model="payload.password" class="focus:outline-none focus:ring-2 focus:ring-opacity-50 mt-6 text-sm mb-4 focus:ring-blue-600 border-b-2 border-light-gray  py-2 px-6 w-full" placeholder="Password"> 
   </div>
 
   <div class="focus-within:none">
-    <input id="myInput1" type="password" required v-show="! recovery" v-model="confirm" class="focus:outline-none focus:ring-2 focus:ring-opacity-50 border-b-2 text-sm text-gray-400 mb-4 border-light-gray  py-2 px-6 w-full" placeholder="Confirm password">
+    <input id="myInput1" type="password" required v-show="! recovery" v-model="payload.confirmPassword" class="focus:outline-none focus:ring-2 focus:ring-opacity-50 border-b-2 text-sm text-gray-400 mb-4 border-light-gray  py-2 px-6 w-full" placeholder="Confirm password">
     <input v-show="! recovery" class="focus:outline-none mb-4 w-3" type="checkbox" @click="myFunction"><span class="text-xs text-gray font-semibold mx-2">show password</span>
   </div>
 
@@ -117,7 +117,7 @@
   <!-- <div>{{platform}}</div> -->
 
 
-    <button class="form-btn w-full mt-4  bg-blue py-3 px-4 text-sm text-center text-white">SUBMIT</button>
+    <button @click="registerUser()" class="form-btn w-full mt-4  bg-blue py-3 px-4 text-sm text-center text-white">SUBMIT</button>
 </form>
 
     <button v-show="recovery" @click="handleClick" class="bg-none text-blue  text-sm pt-4 focus:outline-none">Login</button>
@@ -132,15 +132,19 @@ export default {
   data(){
     return{
       menu: false,
-      name: '',
-      email: '',
-      password: '',
-      confirm: '',
       iptv: '',
       ott: '',
       radio: '',
       recovery: false,
+
+      payload:{
+        fullname: '',
+        email: '',
+        password: '',
+        confirmPassword: '',
+        products:[]
       }
+    }
   },
 
   methods: {
@@ -165,6 +169,23 @@ export default {
     y.type = "password";
   }
 },
+
+      async registerUser() {
+        // *Todo: User should be able to select multiple platforms.
+        if(this.iptv){ this.payload.products.push("IPTV") }
+        if(this.ott){ this.payload.products.push("OTT") }
+        if(this.radio){ this.payload.products.push("RADIO") }
+
+        let res = await this.$store.dispatch("mutate", {
+          endpoint: "Register",
+          data: { input: this.payload },
+        });
+
+        if (res.success) {
+          toast.success("SignUp Successful");
+          this.$router.push({ name: "Panel" });
+        }
+      }
   },
   components: {Navbar}
 

@@ -9,6 +9,10 @@
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.3.2",
+    "apollo-cache-inmemory": "^1.6.6",
+    "apollo-client": "^2.6.10",
+    "apollo-link-error": "^1.1.13",
+    "apollo-link-http": "^1.5.17",
     "bootstrap": "^4.6.0",
     "core-js": "^3.6.5",
     "express": "^4.17.1",
@@ -17,8 +21,12 @@
     "schema-utils": "^3.0.0",
     "serve-static": "^1.14.1",
     "vue": "^3.0.0",
+    "vue-apollo": "^3.0.7",
     "vue-router": "^4.0.0-0",
-    "vue3-carousel": "^0.1.15"
+    "vue-toastification": "^2.0.0-rc.1",
+    "vue3-carousel": "^0.1.15",
+    "vuex": "^4.0.0",
+    "vuex-persistedstate": "^4.0.0-beta.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss7-compat": "^2.1.2",
