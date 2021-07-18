@@ -1,6 +1,6 @@
 <template>
   <div class="w-full shadow-lg py-2 px-2 mt-16"></div>
-  <div  class="w-full cards grid grid-cols-1 lg:grid-cols-3 grid-flow-row auto-cols-auto">
+  <div  class="w-full cards grid grid-cols-1 lg:grid-cols-3 grid-flow-row gap-4 auto-cols-auto">
       <div v-for="card in cards" :key="card.id" class="shadow-lg py-6 px-4">
           <p class="text-sm text-deep-gray mb-12 ">{{card.title}}</p>
           <h2 class="text-4xl font-semibold text-blue ">{{card.figure}}</h2>

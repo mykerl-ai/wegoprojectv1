@@ -1,60 +1,10 @@
 <template>
   <div class="max-w-100 h-100">
 
-       <Nav >
-        <div class="flex flex-wrap space-x-2 w-full mx-2">
-
-    <form method="GET">
-      <div class="relative text-gray-600 focus-within:text-gray-400">
-        <span class="absolute inset-y-0 left-0 flex items-center pl-2">
-      <button type="submit" class="p-1 focus:outline-none focus:shadow-outline">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 35.914 35.914">
-          <g id="Icon_feather-search" data-name="Icon feather-search" transform="translate(-3 -3)">
-          <path id="Path_352" data-name="Path 352" d="M33.2,18.852A14.352,14.352,0,1,1,18.852,4.5,14.352,14.352,0,0,1,33.2,18.852Z" fill="none" stroke="#0072E4" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-          <path id="Path_353" data-name="Path 353" d="M32.779,32.779l-7.8-7.8" transform="translate(4.013 4.013)" fill="none" stroke="#0072E4" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-          </g>
-          </svg>
-      </button>
-      </span>
-      <input type="search" name="q" class="invisible md:visible order-last py-1 px-3 text-sm text-gray pr-4 rounded-md pl-10 focus:outline-none focus:border-blue rounded-full focus:text-gray-900" placeholder="Search..." autocomplete="off">
-      </div>
-    </form>
-
-        <nav>
-          <div class="lg:grid grid-cols-6 justify-between gap-8 hidden">
-          <button class="focus focus:outline-none"><router-link :to="{name: 'Radio'}" class="text-sm text-white text-center font-medium">Podcast</router-link></button>
-          <button class="focus focus:outline-none"><router-link :to="{name: 'Schedule'}" class="text-sm text-white text-center font-medium">Schedule</router-link></button>
-          <button class="focus focus:outline-none"><router-link :to="{name: 'Playlist'}" class="text-sm text-white text-center font-medium">Playlist</router-link></button>
-          <button class="focus focus:outline-none"><router-link :to="{name: 'Radio'}" class="text-sm text-white text-center font-medium">Broadcast</router-link></button>
-          <button class="focus focus:outline-none"><router-link :to="{name: 'Movies'}" class="text-sm text-white text-center font-medium">Movies</router-link></button>
-          <button class="focus focus:outline-none"><router-link :to="{name: 'Shows'}" class="text-sm text-white text-center font-medium">Shows</router-link></button>
-          </div>
-
-          <div class="navbar mt-8 lg:hidden mr-16 md:mr-24">
-      <div class="dropdown1 transition-all duration-300">
-    <button @click="showMenu" class="dropbtn focus:outline-none"><svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg> 
-    </button>
-    <div v-show="menu" class="dropdown-content1 w-full">
-     <button class="w-full"><router-link :to="{name: 'Home'}">Home</router-link></button> 
-     <button class="w-full"><router-link :to="{name: 'Iptv'}">Iptv</router-link></button> 
-     <button class="w-full"><router-link :to="{name: 'Podcast'}">Podcast</router-link></button> 
-     <button class="w-full"><router-link :to="{name: 'Ott'}">OTT</router-link></button> 
-     <button class="w-full"><router-link :to="{name: 'About'}">About</router-link></button> 
-     <button class="w-full"><router-link :to="{name: 'Ott'}">FAQ</router-link></button> 
-     <button class="w-full"><router-link :to="{name: 'Ott'}">Help</router-link></button> 
-    </div>
-  </div> 
-</div>
-        </nav>
-      </div>
-
-      </Nav>
-
-      <div class="flex space-x-6 w-100 ml-20 mb-4">
-          <h1 class="text-white text-sm">Movies</h1>
-          <button class="flex">
+      <PodcastNav />
+      <div class="flex space-x-6 w-100 md:ml-16 ml-4 mb-4 md:mt-0 mt-12">
+          <h1 class="text-white font-bold text-sm">Podcast</h1>
+          <button class="md:flex hidden">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 42.931 43">
           <g id="Layer_32" data-name="Layer 32" transform="translate(-10.554 -10.5)">
             <path id="Path_354" data-name="Path 354" d="M33.5,19.14V12a1.5,1.5,0,0,0-3,0v7.14a6.07,6.07,0,0,0,0,11.74V52a1.5,1.5,0,0,0,3,0V30.88C39.52,29.34,39.52,20.67,33.5,19.14Z" fill="#fff"/>
@@ -66,7 +16,7 @@
           </button>
         </div>
 
-       <div id="hero" ref="hit" class="bg-hero-pattern bg-contain h-96 mx-8">
+       <div id="hero" ref="hit" class="bg-hero-pattern bg-cover h-screen md:h-96 md:mx-8">
         <figure :style="{ backgroundImage: 'url(' + image0 + ')' }"></figure>
         <figure :style="{ backgroundImage: 'url(' + image1 + ')' }"></figure>
         <figure :style="{ backgroundImage: 'url(' + image2 + ')' }"></figure>
@@ -101,7 +51,7 @@
 </template>
 
 <script>
-import Nav from '@/components/user/Nav.vue'
+import PodcastNav from '@/components/user/PodcastNav.vue'
 import image0 from '@/assets/images/radio1.jpg'
 import image1 from '@/assets/images/radio.jpg'
 import image2 from '@/assets/images/iptv.jpg'
@@ -129,7 +79,7 @@ export default {
       }
     },
 
-    components: {Nav},
+    components: {PodcastNav},
     mounted () {
   document.body.classList.add('user')
 },
@@ -224,5 +174,12 @@ transition: 1s ease;
 }
 
 
-
+@media (max-width: 640px) {
+ #hero > figure{
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  width: 100vw;
+} 
+}
 </style>

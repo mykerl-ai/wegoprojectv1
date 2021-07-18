@@ -91,6 +91,7 @@ export default {
 
             // var id = event.target.getAttribute('data-id')
             this.id = id
+            this.sidebarOpen = false
         }
     }
 

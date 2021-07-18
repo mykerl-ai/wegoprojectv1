@@ -1,13 +1,13 @@
 <template>
   <!-- <div :style="{ background: 'linear-gradient(to right bottom, #176CE0, #0B92E7, #0072E4)' }" class="max-w-100 pb-56 h-full"> -->
 
-      <Nav />
+      <MovieNav />
 
        
     <div class=" md:px-6">
-        <div class="flex space-x-6 w-100">
-          <h1 class="text-white text-sm">Categories</h1>
-          <button class="flex">
+        <div class="flex space-x-6 w-100 md:ml-16 ml-4 mb-4 md:mt-0 mt-12">
+          <h1 class="text-white font-bold text-sm">Categories</h1>
+          <button class="md:flex hidden">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 42.931 43">
           <g id="Layer_32" data-name="Layer 32" transform="translate(-10.554 -10.5)">
             <path id="Path_354" data-name="Path 354" d="M33.5,19.14V12a1.5,1.5,0,0,0-3,0v7.14a6.07,6.07,0,0,0,0,11.74V52a1.5,1.5,0,0,0,3,0V30.88C39.52,29.34,39.52,20.67,33.5,19.14Z" fill="#fff"/>
@@ -19,14 +19,14 @@
           </button>
         </div>
 
-    <div class="shrink grid grid-rows-6 justify-start grid-flow-col md:grid-rows-6 my-4 gap-4 w-full">
+    <div class="shrink z-0 grid px-4 md:px-0 grid-flow-row lg:grid-cols-6 md:grid-cols-2 grid-cols-1 my-6 gap-4 w-full">
           
         
-        <div class="hover:transform translate-x-4 mb-6 translate-y-4 w-full" v-for="category in categories" :key="category.id">
-          <router-link :to="{name: 'CategoryDetails', params: { image: category.image, text: category.title }}">
+        <div class="hover:transform translate-x-4 mb-6 translate-y-4" v-for="category in categories" :key="category.id">
+          <router-link :to="{name: 'CategoryDetails', params: { image: category.image, title: category.title }}">
             <img class="w-full md:w-72 md:h-72 object-cover" :src="category.image" alt="">
-            <p class="text-white text-base mt-4 md:text-center text-left font-semibold ">{{category.title}}</p>
-            <p class="text-white text-xs mt-2 md:text-center text-left tracking-widest">{{category.provider}}</p>
+            <p class="text-white text-base mt-4 text-center  font-semibold ">{{category.title}}</p>
+            <p class="text-white text-xs mt-2 text-center  tracking-widest">{{category.provider}}</p>
           </router-link>
           </div>
         
@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import Nav from '@/components/user/Nav.vue'
+import MovieNav from '@/components/user/MovieNav.vue'
 import image from '@/assets/images/starwars.jpg'
 import firstImage from '@/assets/images/wick.jpg'
 import secondImage from '@/assets/images/wonderwoman.jpg'
@@ -58,25 +58,11 @@ export default {
           {title: 'Star Wars', provider: 'CRAKES TV', image: thirdImage, id: thirdImage },
           {title: 'Star Wars', provider: 'CRAKES TV', image: fourthImage, id: fourthImage },
           {title: 'Star Wars', provider: 'CRAKES TV', image: fifthImage, id: fifthImage },
-          {title: 'Star Wars', provider: 'CRAKES TV', image: fourthImage, id: fourthImage },
-          {title: 'Star Wars', provider: 'CRAKES TV', image: fourthImage, id: fourthImage },
-          {title: 'Star Wars', provider: 'CRAKES TV', image: fourthImage, id: fourthImage },
-          {title: 'Star Wars', provider: 'CRAKES TV', image: fourthImage, id: fourthImage },
-          {title: 'Star Wars', provider: 'CRAKES TV', image: fourthImage, id: fourthImage },
-          {title: 'Star Wars', provider: 'CRAKES TV', image: fourthImage, id: fourthImage },
-          {title: 'Star Wars', provider: 'CRAKES TV', image: fourthImage, id: fourthImage },
-          {title: 'Star Wars', provider: 'CRAKES TV', image: fourthImage, id: fourthImage },
-          {title: 'Star Wars', provider: 'CRAKES TV', image: fourthImage, id: fourthImage },
-          {title: 'Star Wars', provider: 'CRAKES TV', image: fourthImage, id: fourthImage },
-          {title: 'Star Wars', provider: 'CRAKES TV', image: fourthImage, id: fourthImage },
-          {title: 'Star Wars', provider: 'CRAKES TV', image: fourthImage, id: fourthImage },
-          {title: 'Star Wars', provider: 'CRAKES TV', image: fourthImage, id: fourthImage },
-          {title: 'Star Wars', provider: 'CRAKES TV', image: fifthImage, id: fifthImage }
         ]
       }
     },
 
-    components: {Nav},
+    components: {MovieNav},
     mounted () {
   document.body.classList.add('user')
 },
@@ -89,12 +75,7 @@ unmounted () {
 </script>
 
 <style>
-.user {
-  /* background: linear-gradient(to right bottom, #176CE0, #0B92E7, #0072E4); */
-  background-color: #000000;
-background-image: linear-gradient(147deg, #000000 0%, #072538 74%);
-  background-repeat: no-repeat;
-}
+
 
 .shrink img {
 transition: 1s ease;

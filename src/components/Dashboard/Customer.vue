@@ -22,10 +22,10 @@
     <div v-for="customer in customers" :key="customer.id" class="grid grid-cols-3 gap-4">
 
             <p class="text-xs text-gray mb-8 font-semibold">{{customer.name}}</p>
-            <div class="px-0 w-20 py-0 rounded-full "  :class="{ activeClass: isActive===true, errorClass: isBlocked===true }">
-            <p  >{{isActive ? status : 'inactive'}}</p></div>
+            <div class="px-0 w-20 py-0 rounded-full "  :class="{ activeClass: customer.isActive===true, errorClass: customer.isActive===false }">
+            <p  >{{customer.isActive ? status : 'inactive'}}</p></div>
             
-            <button @click="handleUser(customer.id)" :key="customer.id" class="-mt-3 focus:outline-none rounded-full h-8 w-8 px-0" :class="{activeClass: isActive===true, errorClass: isBlocked===true}">
+            <button @click="customer.isActive = !customer.isActive" :key="customer.id" class="-mt-3 focus:outline-none rounded-full h-8 w-8 px-0" :class="{activeClass: customer.isActive===true, errorClass: customer.isActive===false}">
             <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
   <path id="Icon_material-block" data-name="Icon material-block" d="M14.5,3A11.5,11.5,0,1,0,26,14.5,11.5,11.5,0,0,0,14.5,3ZM5.3,14.5a9.2,9.2,0,0,1,9.2-9.2,9.088,9.088,0,0,1,5.635,1.944L7.243,20.135A9.088,9.088,0,0,1,5.3,14.5Zm9.2,9.2a9.088,9.088,0,0,1-5.635-1.944L21.757,8.865A9.088,9.088,0,0,1,23.7,14.5,9.2,9.2,0,0,1,14.5,23.7Z" transform="translate(-3 -3)" fill="#A8A8A8"/>
 </svg>
@@ -47,25 +47,16 @@ export default {
     data(){
         return{
             customers: [
-                {name: 'John Grisham',  id: 1,},
-                {name: 'Bill Grisham', id: 2,  },
+                {name: 'John Grisham',  id: 1, isActive: true,},
+                {name: 'Bill Grisham', id: 2, isActive: false  },
             ],
             
             status: 'active',
-            isActive: true, 
-            isBlocked: false,
+          
           
         }
     },
-    methods: {
-       handleUser(){
-         
-            this.isActive = !this.isActive
-            
-            this.isBlocked = !this.isBlocked 
-            }
-    }
-  
+    
     
 
 }

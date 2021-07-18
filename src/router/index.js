@@ -94,12 +94,30 @@ const routes = [
   },
 
   {
+  path: '/user/dashboard',
+  name: 'UserDashboard',
+  // route level code-splitting
+  // this generates a separate chunk (about.[hash].js) for this route
+  // which is lazy-loaded when the route is visited.
+  component: () => import(/* webpackChunkName: "about" */ '../views/users/userProfile/Sidebar.vue')
+},
+
+  {
     path: '/panel',
     name: 'Panel',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/dashboard/RadioBar.vue')
+  },
+
+  {
+    path: '/user/panel',
+    name: 'UserPanel',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/users/userProfile/RadioBar.vue')
   },
 
   {
@@ -135,7 +153,9 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/users/Movies.vue'),
-    
+    props: {
+      menu: true
+    }
   },
   {
     path: '/movies/:image',
@@ -163,6 +183,17 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/users/ShowDetails.vue'),
     props: true
   },
+
+  {
+    path: '/shows/season/:image',
+    name: 'SeasonDetails',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/users/SeasonDetails.vue'),
+    props: true
+  },
+
   {
     path: '/movies/watchlist',
     name: 'Watchlist',

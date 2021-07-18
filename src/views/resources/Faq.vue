@@ -1,13 +1,13 @@
 <template>
 
- <Navbar class="w-full shadow-md mb-6">
+<Navbar class="w-full z-100">
       <router-link :to="{name: 'Home'}">
-      <div class="mb-6">
-          <img class="w-12 md:w-20 -pl-16 md:-pl-32 pt-4" src="@/assets/logo.png" alt="">
-          <p class="text-center invisible md:visible text-xs text-blue ml-6 -mt-4">WeGo Network</p>
+      <div >
+          <img class="w-12 md:w-24 -pl-16 md:pl-8 pt-4" src="@/assets/logo.png" alt="">
+          <p class="text-center invisible md:visible text-xs font-medium text-blue ml-6 -mt-4">WeGoNetwork</p>
       </div>
 </router-link>
-      <nav class="lg:flex space-x-10 py-6 px-6 mr-20 hidden md:hidden">
+      <nav class="lg:flex space-x-10 py-6 px-2 hidden md:hidden">
         <router-link :to="{name: 'Home'}">Home</router-link>
 
         
@@ -36,45 +36,49 @@
 
         
         <router-link :to="{name: 'About'}">About us</router-link>
-        <div class="space-x-6 lg:pl-96">
+
+        <router-link :to="{name: 'Contact'}">Contact</router-link>
+        <div class="space-x-3 lg:pl-60">
            <router-link :to="{name: 'Login'}">LOGIN</router-link>
            <router-link :to="{name: 'Signup'} " class="bt">SIGN UP</router-link> 
         </div>  
       </nav>
 
 
-       <div class="navbar mt-8 lg:hidden mr-16 md:mr-24">
-      <div class="dropdown1 transition-all duration-300 ">
-    <button @click="showMenu" class="dropbtn focus:outline-none"><svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+       <div class="navbar mt-8 lg:hidden  mr-16 md:mr-24">
+      <div class="dropdown1 transition-all duration-300" :class="{'-ml-32 md:-ml-56': menu===true}">
+    <button @click="showMenu" class="dropbtn focus:outline-none"><svg xmlns="http://www.w3.org/2000/svg" fill="#0080FF" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg> 
     </button>
-    <div v-show="menu" class="dropdown-content1 w-full ">
-     <button class="w-full"><router-link :to="{name: 'Home'}">Home</router-link></button> 
-     <button class="w-full"><router-link :to="{name: 'Iptv'}">Iptv</router-link></button> 
-     <button class="w-full"><router-link :to="{name: 'Podcast'}">Podcast</router-link></button> 
-     <button class="w-full"><router-link :to="{name: 'Ott'}">OTT</router-link></button> 
-     <button class="w-full"><router-link :to="{name: 'About'}">About</router-link></button> 
-     <button class="w-full"><router-link :to="{name: 'Faq'}">FAQ</router-link></button> 
-     <button class="w-full"><router-link :to="{name: 'Ott'}">Help</router-link></button>
-      <button class="w-full"><router-link :to="{name: 'Login'}">LOGIN</router-link></button>
-     <button class="w-full"><router-link :to="{name: 'Signup'}">SIGN UP</router-link></button> 
+    <div v-show="menu" class="dropdown-content1 w-full">
+     <button @click="$router.push({name: 'Home'})" class="w-full">Home</button> 
+     <button @click="$router.push({name: 'Iptv'})" class="w-full">Iptv</button> 
+     <button @click="$router.push({name: 'Podcast'})" class="w-full">Podcast</button> 
+     <button @click="$router.push({name: 'Ott'})" class="w-full">OTT</button> 
+     <button @click="$router.push({name: 'About'})" class="w-full">About</button> 
+     <button @click="$router.push({name: 'Faq'})" class="w-full">FAQ</button> 
+     <button @click="$router.push({name: 'Contact'})" class="w-full">Help</button>
+      <button @click="$router.push({name: 'Login'})" class="w-full">LOGIN</button>
+     <button @click="$router.push({name: 'Signup'})" class="w-full">SIGN UP</button> 
+     <button @click="$router.push({name: 'Contact'})" class="w-full">CONTACT US</button>
     </div>
   </div> 
 </div>
 
     </Navbar>
 
-  <div class="wrapper1 ">
+  <div :class="{'overlay':menu===true}"></div>
+  <div class="wrapper1 -z-1">
 	<h1>Frequently asked questions</h1>
 	
 	<!-- Accordion: Only One Item Open -->
-	<div class="accordion acc-single-open">
+	<div class="accordion acc-single-open -z-1">
 
-		<div v-for="faq in faqs" :key="faq.id" class="acc-container">
-			<h3 class="acc-title">{{faq.question}}</h3>
-			<div class="acc-content">
-				<p class="leading-10">{{faq.answer}}</p>
+		<div v-for="faq in faqs" :key="faq.id" class="acc-container -z-1">
+			<h3 class="acc-title -z-1">{{faq.question}}</h3>
+			<div class="acc-content -z-1">
+				<p class="leading-10 -z-1">{{faq.answer}}</p>
 			</div><!-- acc-content -->
 		</div><!-- acc-container -->
 
@@ -109,6 +113,7 @@ export default {
             ],
         }
     },
+
     methods: {
         showMenu(){
         this.menu = !this.menu
@@ -119,6 +124,24 @@ export default {
 </script>
 
 <style scoped>
+
+.overlay {
+background: rgba(0, 0, 0, 0.3);
+background-repeat: no-repeat;
+object-fit: fill;
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 8.5px );
+-webkit-backdrop-filter: blur( 8.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+object-fit: fill;
+position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+z-index: 1;
+}
 
 nav>a, div>a {
   color: #0080FF;
@@ -146,7 +169,7 @@ nav>a, div>a {
   text-decoration: none;
 }
 
-.dropdown1 {
+.dropdown1, .dropdown2 {
   float: left;
   overflow: hidden;
 }
@@ -179,12 +202,21 @@ nav>a, div>a {
 .dropdown-content1 a {
   float: none;
   color: white;
+    font-weight: 500;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
   text-align: left;
 }
-
+.dropdown-content1 button {
+  float: none;
+  color: white;
+  padding: 12px 12px 12px 50px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size: 1rem;
+}
 .dropdown-content1 a:hover {
   background-color: #0072E4;
 }
@@ -192,23 +224,24 @@ nav>a, div>a {
 .dropdown1:hover .dropdown-content1 {
   display: block;
 }
+@media (max-width: 640px) { 
 
+.dropdown-content1 button {
+  padding: 12px 12px 12px 50px;
+  font-size: 1rem;
+}
+
+.dropdown1, .dropdown2 {
+  
+  position: absolute;
+}
+}
 
 @media (max-width: 768px) { 
-/* .dropdown-content1 {
-  display: none;
-  position: absolute;
-  
-  background-color: #0080FF;
-  border-radius: 6px;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-} */
 
 .dropdown-content1 {
   display: none;
-  position: absolute;
+  position: relative;
   background-color: #0080FF;
   border-radius: 6px;
   z-index: 999;
@@ -218,7 +251,20 @@ nav>a, div>a {
   
 }
 
+.dropdown1, .dropdown2 {
+  
+  position: absolute;
+}
 
+.dropdown1 .dropbtn {
+  position: relative;
+ 
+}
+
+.dropdown-content1 button {
+  padding: 12px 12px 12px 70px;
+  font-size: 1rem;
+}
  }
 
 
