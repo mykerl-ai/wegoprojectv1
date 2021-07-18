@@ -52,7 +52,7 @@
 
 
        <div class="navbar mt-8 lg:hidden  mr-16 md:mr-24">
-      <div class="dropdown1 transition-all duration-300" :class="{'-ml-32 md:-ml-56': menu===true}">
+      <div class="dropdown1 transition-all duration-300" :class="{'-ml-44 md:-ml-96': menu===true}">
     <button @click="showMenu" class="dropbtn focus:outline-none"><svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg> 
@@ -75,7 +75,7 @@
     </Navbar>
       <div :class="{'overlay':menu===true}"></div>
 
-    <div class="fwd mt-32 lg:mt-32 lg:ml-60 md:ml-32 md:mt-32 px-12 w-50 max-w-xl -z-1" >
+    <div :class="{'hidden':menu===true}" class="fwd mt-32 lg:mt-32 lg:ml-60 md:ml-32 md:mt-32 px-12 w-50 max-w-xl -z-1" >
 
       <slot name="header"></slot>
 
