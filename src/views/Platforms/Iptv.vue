@@ -1,7 +1,7 @@
 <template>
   <Hero>
     <template v-slot:header>
-    <h1 class="lg:text-2xl md:text-3xl tracking-wide leading-10 text-xl -mt-12 md:-mt-20 text-white font-semibold">Reach more people with our combined IPTV/OTT solution</h1>
+    <h1 class="lg:text-2xl md:text-3xl tracking-wide 2xl:tracking-widest 2xl:text-5xl leading-10 text-xl -mt-12 md:-mt-20 text-white font-semibold">Reach more people with our combined IPTV/OTT solution</h1>
      </template>
 
     <template v-slot:paragraph>
