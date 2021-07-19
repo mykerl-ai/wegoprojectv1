@@ -75,7 +75,7 @@ export default {
     }
 
     .slide {
-        width: 1200px;
+        width: 100%;
         display: flex;
         height: 100%;
         background-size: 100%;
