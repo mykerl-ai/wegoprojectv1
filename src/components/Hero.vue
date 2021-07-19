@@ -75,7 +75,7 @@
     </Navbar>
       <div :class="{'overlay':menu===true}"></div>
 
-    <div :class="{'hidden':menu===true}" class="fwd mt-32 lg:mt-32 xl:mt-56 xl:ml-44 lg:ml-60 md:ml-32 md:mt-32 px-12 w-50 max-w-xl -z-1" >
+    <div :class="{'hidden':menu===true}" class="fwd mt-32 lg:mt-32 2xl:mt-56 2xl:ml-44 lg:ml-60 md:ml-32 md:mt-32 px-12 w-50 max-w-xl -z-1" >
 
       <slot name="header"></slot>
 
