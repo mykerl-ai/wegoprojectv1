@@ -87,6 +87,10 @@ export default {
         animation: slideshow 12s linear infinite;
 
     }
+
+    .slider{
+        position: absolute;
+    }
     
     }
 </style>
