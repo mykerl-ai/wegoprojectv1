@@ -87,10 +87,6 @@ export default {
         animation: slideshow 12s linear infinite;
 
     }
-
-     .slide img {
-         object-fit: cover;
-         
-    } 
+    
     }
 </style>
