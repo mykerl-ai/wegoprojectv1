@@ -14,6 +14,11 @@
               <img src="../assets/images/wars.jpg" alt="">
               <img src="../assets/images/wick.jpg" alt="">
               <img src="../assets/images/rings.jpg" alt="">
+              <img src="../assets/images/rings.jpg" alt="">
+              <img src="../assets/images/rings.jpg" alt="">
+              <img src="../assets/images/rings.jpg" alt="">
+              <img src="../assets/images/rings.jpg" alt="">
+              <img src="../assets/images/rings.jpg" alt="">
           </div>
            
 
@@ -82,5 +87,10 @@ export default {
         animation: slideshow 12s linear infinite;
 
     }
+
+     .slide img {
+         object-fit: cover;
+         
+    } 
     }
 </style>
