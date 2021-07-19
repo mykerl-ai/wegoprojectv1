@@ -64,7 +64,7 @@ export default {
         100% {transform: translateX(-100%);}
     }
 
-    @media (max-width: 1536px) { 
+    @media (min-width: 1536px) { 
 
         .wrapper {
         width: 100%;
@@ -75,7 +75,7 @@ export default {
     }
 
     .slide {
-        width: 1000px;
+        width: 1200px;
         display: flex;
         height: 100%;
         background-size: 100%;
