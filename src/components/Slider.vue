@@ -63,4 +63,24 @@ export default {
         0% {transform: translateX(0);}
         100% {transform: translateX(-100%);}
     }
+
+    @media (max-width: 1536px) { 
+
+        .wrapper {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .slide {
+        width: 1000px;
+        display: flex;
+        height: 100%;
+        background-size: 100%;
+        animation: slideshow 12s linear infinite;
+
+    }
+    }
 </style>
