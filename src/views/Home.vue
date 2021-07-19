@@ -1,13 +1,13 @@
 <template>
   <Hero>
     <template v-slot:header>
-    <h1 class="lg:text-2xl md:3xl tracking-wide 2xl:tracking-widest 2xl:text-5xl leading-10 text-xl -mt-12 md:-mt-20 text-white font-semibold">Revolutionary <br> End-to-End IPTV/OTT Combined Platform</h1>
+    <h1 class="lg:text-2xl md:3xl tracking-wide 2xl:text-6xl leading-10 text-xl -mt-12 md:-mt-20 text-white font-semibold">Revolutionary <br> End-to-End IPTV/OTT Combined Platform</h1>
     </template>
 
     <template v-slot:paragraph>
-      <p class="lg:mt-2 md:mt-10 mt-2 lg:tracking-wide tracking-widest lg:leading-7 leading-7 md:leading-9 md:text-sm text-xs text-white font-regular">We are specialized in delivering a complete combined End-to-End IPTV/OTT platform to help you grow your audience.</p>
+      <p class="lg:mt-2 md:mt-10 mt-2 lg:tracking-wide tracking-widest 2xl:tracking-widest lg:leading-7 leading-7 md:leading-9 md:text-sm text-xs text-white font-regular">We are specialized in delivering a complete combined End-to-End IPTV/OTT platform to help you grow your audience.</p>
 
-      <p class="lg:mt-2 md:mt-10 mt-2 lg:tracking-wide tracking-widest lg:leading-7 leading-7 md:leading-9 md:text-sm text-xs text-white font-regular md:block hidden">WeGo provides a flexible IPTV/OTT streaming platform that supplies a premium experience at a competitive cost. It gives the liberty to stream to Smart TVs, Android, and iPhone devices at speed, anywhere in the world. Our international OTT platform performs well during growth and scales effortlessly without losing the streaming quality. We also provide end-to-end multi-DRM security solutions between our platform and the end-user.
+      <p class="lg:mt-2 md:mt-10 mt-2 lg:tracking-wide tracking-widest 2xl:tracking-widest lg:leading-7 leading-7 md:leading-9 md:text-sm text-xs text-white font-regular md:block hidden">WeGo provides a flexible IPTV/OTT streaming platform that supplies a premium experience at a competitive cost. It gives the liberty to stream to Smart TVs, Android, and iPhone devices at speed, anywhere in the world. Our international OTT platform performs well during growth and scales effortlessly without losing the streaming quality. We also provide end-to-end multi-DRM security solutions between our platform and the end-user.
 
 </p>
 
