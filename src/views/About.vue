@@ -1,7 +1,7 @@
 <template>
   <Hero>
     <template v-slot:header>
-    <h1 class="md:text-3xl tracking-wide 2xl:text-6xl leading-10 text-2xl -mt-20 md:-mt-6 text-white font-semibold z-0">WeGo Network</h1>
+    <h1 class="md:text-3xl tracking-wide 2xl:text-4xl leading-10 text-2xl -mt-20 md:-mt-6 text-white font-semibold z-0">WeGo Network</h1>
      </template>
 
     <template v-slot:paragraph>
