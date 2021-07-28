@@ -1,7 +1,7 @@
 <template>
   <h1 class="text-2xl text-left font-medium text-deep-gray">Activity</h1>
   <div  class="w-full my-4 cards gap-4 grid grid-cols-1 md:grid-cols-3">
-      <div v-for="icon in icons" :key="icon.id" class="shadow-xl bg-white py-6 px-4">
+      <div @click="handleActivity(icon.id)" v-for="icon in icons" :key="icon.id" class="shadow-xl bg-white py-6 px-4 cursor-pointer">
           <svg class="mx-auto my-6" :id="icon.id" :xmlns="icon.url" :width="icon.width" :height="icon.height" :viewBox="icon.viewBox">
                 <path :id="icon.pathId" :data-name="icon.dataName" :d="icon.d" :transform="icon.transform" :fill="icon.fill"/>
                         </svg>
@@ -206,12 +206,66 @@
  
 </Modal>
 
+  <Modal v-if="uploadModal" @close="uploadModal=false">
+    <template v-slot:header>
+      Create
+    </template>
+
+    <template v-slot:body>
+      <form class="w-full" @submit.prevent="uploadVideo()">
+        <div class="focus-within:none">
+          <input
+            type="text"
+            required
+            v-model="title"
+            class="focus:outline-none focus:ring-2 focus:ring-opacity-50  text-sm mb-6  focus:ring-blue-600 border-b-2 border-light-gray py-2 px-2 w-full " placeholder="Title">
+        </div>
+
+        <div class="focus-within:none">
+          <label class="text-xs text-gray px-4 block" for="vid">Video file (Mp4)</label>
+          <input
+            id="file"
+            ref="file"
+            @change="handleFileUpload()"
+            type="file"
+            name="vid"
+            required
+            class="focus:outline-none text-sm mb-6 focus:ring-blue-600 border-b-2 border-light-gray py-2 px-2 w-full "
+            >
+        </div>
+
+        <button class="form-bt2 w-full focus:outline-none mt-4 rounded-full bg-blue py-3 px-4 text-sm text-center text-white">SUBMIT</button>
+      </form>
+    </template> 
+  </Modal>
+
 
 </template>
 
 <script>
 import image from "@/assets/images/wars.jpg"
 import Modal from "@/components/Modal.vue"
+import { useToast } from "vue-toastification";
+
+// const fs = require('fs');
+import * as fs from 'fs' 
+// const fs = require('fs-extra');
+
+import axios from 'axios'
+const AWS = require('aws-sdk');
+
+const s3 = new AWS.S3({
+    accessKeyId: "AKIA3JW3XH4SDSGTZ6A7",
+    secretAccessKey: "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",
+    region: 'eu-west-2'
+});
+const CORS = {
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Headers': 'Content-Type'
+}
+
+
+const toast = useToast();
 export default {
     components: {Modal},
     data(){
@@ -234,10 +288,51 @@ export default {
             ],
             isModalVisible: false,
             category: 'IPTV',
+
+            uploadModal: false,
+            file: "",
+            base64String: "",
             
         }
     },
     methods: {
+      handleActivity(iconId){
+        if (iconId == 'upload'){
+          this.uploadModal = true;
+        }
+      },
+      handleFileUpload() {
+        this.file = this.$refs.file.files[0];
+      },
+
+      async uploadVideo(){
+        var element = document.getElementById('file');
+        console.log(element.files[0].name, "element");
+
+        let fileName = `${Date.now()}--${this.file.name}`;
+        let fileType = this.file.type;
+
+        const s3Params = {
+          Bucket: 'wegonetwork',
+          Key: fileName,
+          ContentType: fileType,
+          ACL: 'public-read'
+        }
+        const signedRequest = await s3.getSignedUrl('putObject', s3Params);
+        console.log(signedRequest, "signedRequest")
+        console.log(this.file.type, "this.file.type")
+
+        const options = {
+          headers: {
+            "Content-Type": fileType
+          }
+        }
+        await axios.put(signedRequest, this.file, options);
+        toast.success(`File upload successful`)
+
+        this.uploadModal = false;
+      },
+
       showModal(id) {
         this.isModalVisible = true;
         this.id = id
