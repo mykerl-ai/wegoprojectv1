@@ -1,12 +1,12 @@
 <template>
  <div  class="flex overflow-x-hidden h-screen relative">
   <aside class="flex-shrink-0 w-80 md:w-64 flex flex-col border-r border-blue h-screen transition-all duration-300 sticky top-0 bottom-0" :class="{ '-ml-80 md:-ml-64' : !sidebarOpen }">
-    <div class="lg:h-64 sideBar h-1"></div>
+    <div class="lg:h-64 sideBar -mt-64 h-1"></div>
     <nav data-image="../../assets/images/screen.jpg" class="sideBar flex-1 flex flex-col pb-12 text-white">
 
-        <div v-show="sidebarOpen" class="flex px-0 mt-2 mb-0">
-          <img  class="w-20 pb-4 pt-0" src="@/assets/logo.png" alt="">
-           <p class="text-white text-sm mt-6"> WeGo Network</p>
+        <div v-show="sidebarOpen" class="flex space-x-6 px-0 mt-2 mb-4 py-4">
+          <img src="https://i.ibb.co/4JRFPvj/pexels-emmy-e-2381069.jpg" alt="" class="avatar w-20 mb-4 pt-0">
+           <p class="text-white text-sm mt-2">Bruce Phillips</p>
       </div>
      
 
@@ -28,19 +28,16 @@
         </svg>
       </button>
       <div v-show="!sidebarOpen" class="w-20 pl-8 pt-0">
-          <img src="@/assets/logo.png" alt="">
+          <img src="https://i.ibb.co/4JRFPvj/pexels-emmy-e-2381069.jpg" alt="" class="avatar w-20 mb-0 pt-0">
       </div>
-      <p v-show="!sidebarOpen"> WeGo Network</p>
+      <p v-show="!sidebarOpen">Bruce Phillips</p>
     </header>
     <main class="p-4 overflow-y-auto ">
-      <Dashboard v-if="id==='house'"/>
-      <Activity v-else-if="id==='chart-bar-32'"/>
-      <Subscription v-else-if="id==='subscription'"/>
-      <Customer v-else-if="id==='single-02'"/>
+      <Subscription v-if="id==='subscription'"/> 
+      <Account v-else-if="id==='single-02'"/>
       <Contact v-else-if="id==='support-17'"/>
       <Settings v-else-if="id==='settings-gear-64'"/>
       <Profile v-else-if="id==='profile'"/>
-      <Website v-else-if="id==='website'"/>
       <h1 v-else class=" text-blue text-center" :class="sidebarOpen ? 'text-sm' : 'text-2xl'">Welcome to your Dashboard</h1>
     </main>
   </div>
@@ -49,34 +46,34 @@
 </template>
 
 <script>
-import Dashboard from '@/components/Dashboard/Dashboard.vue'
-import Activity from '@/components/Dashboard/Activity.vue'
-import Subscription from '@/components/Dashboard/Subscription.vue'
-import Customer from '@/components/Dashboard/Customer.vue'
-import Contact from '@/components/Dashboard/Contact.vue'
-import Settings from '@/components/Dashboard/Settings.vue'
-import Profile from '@/components/Dashboard/Profile.vue'
-import Website from '@/components/Dashboard/Website.vue'
+import Subscription from '@/components/Dashboard/user/Subscription.vue'
+import Account from '@/components/Dashboard/user/Account.vue'
+import Contact from '@/components/Dashboard/user/Contact.vue'
+import Settings from '@/components/Dashboard/user/Settings.vue'
+import Profile from '@/components/Dashboard/user/Profile.vue'
+
 
 export default {
-    components: { Dashboard, Activity, Subscription, Customer, Contact, Settings, Profile, Website },
+    components: { Subscription, Account, Contact, Settings, Profile},
      data(){
         
        return{
             id: '',
              sidebarOpen: true ,
              icons: [
-                {id: 'house', url: 'http://www.w3.org/2000/svg', width: '16', height: '16', viewBox: '0 0 16 16', pathId: 'Path_99', dataName: 'Path 99', d: 'M15.581,5.186l-7-5a1,1,0,0,0-1.162,0l-7,5A1,1,0,0,0,1.581,6.814L2,6.515V15a1,1,0,0,0,1,1H13a1,1,0,0,0,1-1V6.515A1.7,1.7,0,0,0,15,7a1,1,0,0,0,.582-1.814ZM12,14H10V11a2,2,0,0,0-4,0v3H4V5.086L8,2.229l4,2.857Z', transform: 'translate(0 0)', fill: '#ffffff', title: 'Dashboard'}, 
+                // {id: 'house', url: 'http://www.w3.org/2000/svg', width: '16', height: '16', viewBox: '0 0 16 16', pathId: 'Path_99', dataName: 'Path 99', d: 'M15.581,5.186l-7-5a1,1,0,0,0-1.162,0l-7,5A1,1,0,0,0,1.581,6.814L2,6.515V15a1,1,0,0,0,1,1H13a1,1,0,0,0,1-1V6.515A1.7,1.7,0,0,0,15,7a1,1,0,0,0,.582-1.814ZM12,14H10V11a2,2,0,0,0-4,0v3H4V5.086L8,2.229l4,2.857Z', transform: 'translate(0 0)', fill: '#ffffff', title: 'Dashboard'}, 
             
-                {id: 'chart-bar-32', url: 'http://www.w3.org/2000/svg', width: '16', height: '16', viewBox: '0 0 16 16', pathId: 'Union_8', dataName: 'Union 8', d: 'M13,16a.945.945,0,0,1-1-1V6a.945.945,0,0,1,1-1h2a.945.945,0,0,1,1,1v9a.945.945,0,0,1-1,1ZM7,16a.944.944,0,0,1-1-1V1A.945.945,0,0,1,7,0H9a.945.945,0,0,1,1,1V15a.944.944,0,0,1-1,1ZM1,16a.945.945,0,0,1-1-1V11a.945.945,0,0,1,1-1H3a.946.946,0,0,1,1,1v4a.945.945,0,0,1-1,1Z',  fill: '#ffffff', title: 'Activity'},
+                // {id: 'chart-bar-32', url: 'http://www.w3.org/2000/svg', width: '16', height: '16', viewBox: '0 0 16 16', pathId: 'Union_8', dataName: 'Union 8', d: 'M13,16a.945.945,0,0,1-1-1V6a.945.945,0,0,1,1-1h2a.945.945,0,0,1,1,1v9a.945.945,0,0,1-1,1ZM7,16a.944.944,0,0,1-1-1V1A.945.945,0,0,1,7,0H9a.945.945,0,0,1,1,1V15a.944.944,0,0,1-1,1ZM1,16a.945.945,0,0,1-1-1V11a.945.945,0,0,1,1-1H3a.946.946,0,0,1,1,1v4a.945.945,0,0,1-1,1Z',  fill: '#ffffff', title: 'Activity'},
 
-                {id: 'subscription', url: 'http://www.w3.org/2000/svg', width: '20.122', height: '20.122', viewBox: '0 0 20.122 20.122', pathId: 'Icon_material-subscriptions', dataName: 'Icon material-subscriptions', d: 'M21.11,9.037H5.012V7.024h16.1ZM19.1,3H7.024V5.012H19.1Zm4.024,10.061V21.11a2.018,2.018,0,0,1-2.012,2.012H5.012A2.018,2.018,0,0,1,3,21.11V13.061a2.018,2.018,0,0,1,2.012-2.012h16.1A2.018,2.018,0,0,1,23.122,13.061Zm-6.037,4.024L11.049,13.8v6.57Z', transform: 'translate(-3 -3)', fill: '#ffffff', title: 'Subscription'}, 
+                {id: 'single-02', url: 'http://www.w3.org/2000/svg', width: '16', height: '16', viewBox: '0 0 16 16', pathId: 'Union_10', dataName: 'Union 10', d: 'M0,16a6.018,6.018,0,0,1,6-6H8a6.018,6.018,0,0,1,6,6Zm2.6-2h8.9A4.033,4.033,0,0,0,8,12H6.1A4.035,4.035,0,0,0,2.6,14ZM3,5V4a4,4,0,0,1,8,0V5A4,4,0,1,1,3,5ZM5,4V5A2,2,0,1,0,9,5V4A2,2,0,0,0,5,4Z', transform: 'translate(0 -1)', fill: '#ffffff', title: 'Account'},
 
-                {id: 'single-02', url: 'http://www.w3.org/2000/svg', width: '16', height: '16', viewBox: '0 0 16 16', pathId: 'Union_10', dataName: 'Union 10', d: 'M0,16a6.018,6.018,0,0,1,6-6H8a6.018,6.018,0,0,1,6,6Zm2.6-2h8.9A4.033,4.033,0,0,0,8,12H6.1A4.035,4.035,0,0,0,2.6,14ZM3,5V4a4,4,0,0,1,8,0V5A4,4,0,1,1,3,5ZM5,4V5A2,2,0,1,0,9,5V4A2,2,0,0,0,5,4Z', transform: 'translate(0 -1)', fill: '#ffffff', title: 'Customers'},
+               {id: 'settings-gear-64', url: 'http://www.w3.org/2000/svg', width: '16', height: '16', viewBox: '0 0 16 16', pathId: 'Path_108', dataName: 'Path 108', d: 'M13.3,5.2l1.1-2.1L13,1.7,10.9,2.8a3.582,3.582,0,0,0-1.1-.4L9,0H7L6.2,2.3a4.179,4.179,0,0,0-1,.4L3.1,1.6,1.6,3.1,2.7,5.2a4.179,4.179,0,0,0-.4,1L0,7V9l2.3.8c.1.4.3.7.4,1.1L1.6,13,3,14.4l2.1-1.1a3.582,3.582,0,0,0,1.1.4L7,16H9l.8-2.3c.4-.1.7-.3,1.1-.4L13,14.4,14.4,13l-1.1-2.1a3.582,3.582,0,0,0,.4-1.1L16,9V7l-2.3-.8A4.179,4.179,0,0,0,13.3,5.2ZM8,11A2.946,2.946,0,0,1,5,8,2.946,2.946,0,0,1,8,5a2.946,2.946,0,0,1,3,3A2.946,2.946,0,0,1,8,11Z',  fill: '#ffffff', title: 'Reset password'},
 
-                {id: 'support-17', url: 'http://www.w3.org/2000/svg', width: '16', height: '16', viewBox: '0 0 16 16', pathId: 'Path_107', dataName: 'Path 107', d: 'M8,0a8,8,0,1,0,8,8A8.024,8.024,0,0,0,8,0ZM8,10a2,2,0,1,1,2-2A2.006,2.006,0,0,1,8,10ZM8,2a5.834,5.834,0,0,1,2.6.6L9.044,4.156a3.591,3.591,0,0,0-2.089,0L5.4,2.6A5.834,5.834,0,0,1,8,2ZM2,8a5.834,5.834,0,0,1,.6-2.6L4.156,6.956a3.591,3.591,0,0,0,0,2.089L2.6,10.6A5.834,5.834,0,0,1,2,8Zm6,6a5.834,5.834,0,0,1-2.6-.6l1.556-1.556a3.591,3.591,0,0,0,2.089,0L10.6,13.4A5.834,5.834,0,0,1,8,14Zm5.4-3.4L11.844,9.044a3.591,3.591,0,0,0,0-2.089L13.4,5.4a5.933,5.933,0,0,1,0,5.2Z',  fill: '#ffffff', title: 'Help Center'},
+               {id: 'subscription', url: 'http://www.w3.org/2000/svg', width: '20.122', height: '20.122', viewBox: '0 0 20.122 20.122', pathId: 'Icon_material-subscriptions', dataName: 'Icon material-subscriptions', d: 'M21.11,9.037H5.012V7.024h16.1ZM19.1,3H7.024V5.012H19.1Zm4.024,10.061V21.11a2.018,2.018,0,0,1-2.012,2.012H5.012A2.018,2.018,0,0,1,3,21.11V13.061a2.018,2.018,0,0,1,2.012-2.012h16.1A2.018,2.018,0,0,1,23.122,13.061Zm-6.037,4.024L11.049,13.8v6.57Z', transform: 'translate(-3 -3)', fill: '#ffffff', title: 'Subscription'}, 
 
-                {id: 'settings-gear-64', url: 'http://www.w3.org/2000/svg', width: '16', height: '16', viewBox: '0 0 16 16', pathId: 'Path_108', dataName: 'Path 108', d: 'M13.3,5.2l1.1-2.1L13,1.7,10.9,2.8a3.582,3.582,0,0,0-1.1-.4L9,0H7L6.2,2.3a4.179,4.179,0,0,0-1,.4L3.1,1.6,1.6,3.1,2.7,5.2a4.179,4.179,0,0,0-.4,1L0,7V9l2.3.8c.1.4.3.7.4,1.1L1.6,13,3,14.4l2.1-1.1a3.582,3.582,0,0,0,1.1.4L7,16H9l.8-2.3c.4-.1.7-.3,1.1-.4L13,14.4,14.4,13l-1.1-2.1a3.582,3.582,0,0,0,.4-1.1L16,9V7l-2.3-.8A4.179,4.179,0,0,0,13.3,5.2ZM8,11A2.946,2.946,0,0,1,5,8,2.946,2.946,0,0,1,8,5a2.946,2.946,0,0,1,3,3A2.946,2.946,0,0,1,8,11Z',  fill: '#ffffff', title: 'Settings'},
+                {id: 'support-17', url: 'http://www.w3.org/2000/svg', width: '16', height: '16', viewBox: '0 0 16 16', pathId: 'Path_107', dataName: 'Path 107', d: 'M8,0a8,8,0,1,0,8,8A8.024,8.024,0,0,0,8,0ZM8,10a2,2,0,1,1,2-2A2.006,2.006,0,0,1,8,10ZM8,2a5.834,5.834,0,0,1,2.6.6L9.044,4.156a3.591,3.591,0,0,0-2.089,0L5.4,2.6A5.834,5.834,0,0,1,8,2ZM2,8a5.834,5.834,0,0,1,.6-2.6L4.156,6.956a3.591,3.591,0,0,0,0,2.089L2.6,10.6A5.834,5.834,0,0,1,2,8Zm6,6a5.834,5.834,0,0,1-2.6-.6l1.556-1.556a3.591,3.591,0,0,0,2.089,0L10.6,13.4A5.834,5.834,0,0,1,8,14Zm5.4-3.4L11.844,9.044a3.591,3.591,0,0,0,0-2.089L13.4,5.4a5.933,5.933,0,0,1,0,5.2Z',  fill: '#ffffff', title: 'Help center'},
+
+                
 
                 {id: 'profile', url: 'http://www.w3.org/2000/svg', width: '16', height: '16', viewBox: '0 0 60 60', pathId: 'Icon_material-person', dataName: 'Icon material-person', d: 'M36,36A15,15,0,1,0,21,21,15,15,0,0,0,36,36Zm0,7.5c-10.013,0-30,5.025-30,15V66H66V58.5C66,48.525,46.013,43.5,36,43.5Z',  transform:"translate(-6 -6)",  fill: '#ffffff', title: 'Profile'},
 
@@ -99,6 +96,14 @@ export default {
 </script>
 
 <style>
+
+  .avatar {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
 .sideBar{
   background-color: #000000;
 background-image: linear-gradient(147deg, #000000 0%, #072538 74%);

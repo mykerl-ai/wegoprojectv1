@@ -6,7 +6,7 @@
           <h2 class="text-2xl font-semibold text-blue ">{{figure}}</h2>
           <p class="text-xs text-deep-gray my-4" :class="{ activeClass: status===true, errorClass: status===false }">Status: {{status ? 'active' : 'inactive'}}</p>
           <button type="button" @click="checkSub" class="bg-none text-red focus:outline-none mt-4" :class="{ activeClass: status===true, disabled : status===false }">{{status ? 'Cancel': 'undo'}}</button>
-            <div class="mt-6">
+          <div class="mt-6">
              <p v-if="status" class="text-deep-gray">Your subscription expires in <span class="text-gblue font-bold" id="timer-days">{{countDown}}</span> days</p>
           </div>
       </div>
@@ -113,7 +113,7 @@ export default {
     data(){
         return{
              isModalVisible: false,
-              countDown: 0,
+             countDown: 0,
             movies: [
                 {image: image, title: 'm1ccdffyytllm3', time: '1 minute ago', views:'29,129', id: 1},
                 {image: image, title: 'm4ccdffyytllm7', time: '2 minutes ago', views:'129,192', id: 2},
@@ -154,7 +154,7 @@ export default {
       closeModal() {
         this.isModalVisible = false
       },
-       countDownTimer() {
+      countDownTimer() {
                 if(this.countDown > 0) {
                     setTimeout(() => {
                         
@@ -165,7 +165,7 @@ export default {
             }
     
     },
-    
+
     mounted(){
         
       
@@ -174,15 +174,15 @@ export default {
   
     // To set two dates to two variables
     var date1 = new Date("06/06/2021");
-var date2 = new Date("07/07/2021");
+    var date2 = new Date("07/07/2021");
   
 // To calculate the time difference of two dates
-var Difference_In_Time = date2.getTime() - date1.getTime();
+    var Difference_In_Time = date2.getTime() - date1.getTime();
   
 // To calculate the no. of days between two dates
-var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+    var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
 
-  this.countDown = Difference_In_Days
+    this.countDown = Difference_In_Days
 //To display the final no. of days (result)
  
     this.countDownTimer()

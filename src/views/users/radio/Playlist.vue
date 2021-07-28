@@ -1,56 +1,7 @@
 <template>
   <div class="w-full max-w-100 pb-56 h-full">
 
-      <Nav >
-        <div class="flex flex-wrap space-x-2 w-full mx-2">
-
-    <form method="GET">
-      <div class="relative text-gray-600 focus-within:text-gray-400">
-        <span class="absolute inset-y-0 left-0 flex items-center pl-2">
-      <button type="submit" class="p-1 focus:outline-none focus:shadow-outline">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 35.914 35.914">
-          <g id="Icon_feather-search" data-name="Icon feather-search" transform="translate(-3 -3)">
-          <path id="Path_352" data-name="Path 352" d="M33.2,18.852A14.352,14.352,0,1,1,18.852,4.5,14.352,14.352,0,0,1,33.2,18.852Z" fill="none" stroke="#0072E4" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-          <path id="Path_353" data-name="Path 353" d="M32.779,32.779l-7.8-7.8" transform="translate(4.013 4.013)" fill="none" stroke="#0072E4" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-          </g>
-          </svg>
-      </button>
-      </span>
-      <input type="search" name="q" class="invisible md:visible order-last py-1 px-3 text-sm text-gray pr-4 rounded-md pl-10 focus:outline-none focus:border-blue rounded-full focus:text-gray-900" placeholder="Search..." autocomplete="off">
-      </div>
-    </form>
-
-        <nav>
-          <div class="lg:grid grid-cols-6 justify-between gap-8 hidden">
-          <button class="focus focus:outline-none"><router-link :to="{name: 'Radio'}" class="text-sm text-white text-center font-medium">Podcast</router-link></button>
-          <button class="focus focus:outline-none"><router-link :to="{name: 'Schedule'}" class="text-sm text-white text-center font-medium">Schedule</router-link></button>
-          <button class="focus focus:outline-none"><router-link :to="{name: 'Playlist'}" class="text-sm text-white text-center font-medium">Playlist</router-link></button>
-          <button class="focus focus:outline-none"><router-link :to="{name: 'Radio'}" class="text-sm text-white text-center font-medium">Broadcast</router-link></button>
-          <button class="focus focus:outline-none"><router-link :to="{name: 'Movies'}" class="text-sm text-white text-center font-medium">Movies</router-link></button>
-          <button class="focus focus:outline-none"><router-link :to="{name: 'Shows'}" class="text-sm text-white text-center font-medium">Shows</router-link></button>
-          </div>
-
-          <div class="navbar mt-8 lg:hidden mr-16 md:mr-24">
-      <div class="dropdown1 transition-all duration-300">
-    <button @click="showMenu" class="dropbtn focus:outline-none"><svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg> 
-    </button>
-    <div v-show="menu" class="dropdown-content1 w-full">
-     <button class="w-full"><router-link :to="{name: 'Home'}">Home</router-link></button> 
-     <button class="w-full"><router-link :to="{name: 'Iptv'}">Iptv</router-link></button> 
-     <button class="w-full"><router-link :to="{name: 'Podcast'}">Podcast</router-link></button> 
-     <button class="w-full"><router-link :to="{name: 'Ott'}">OTT</router-link></button> 
-     <button class="w-full"><router-link :to="{name: 'About'}">About</router-link></button> 
-     <button class="w-full"><router-link :to="{name: 'Ott'}">FAQ</router-link></button> 
-     <button class="w-full"><router-link :to="{name: 'Ott'}">Help</router-link></button> 
-    </div>
-  </div> 
-</div>
-        </nav>
-      </div>
-
-      </Nav>
+      <PodcastNav />
 
        
     <div class=" md:px-6">
@@ -63,18 +14,18 @@
             <path id="Path_356" data-name="Path 356" d="M18.06,37V12a1.5,1.5,0,0,0-3,0V37a6.07,6.07,0,0,0,0,11.73V52a1.5,1.5,0,0,0,3,0V48.74a6.07,6.07,0,0,0,0-11.74Z" fill="#fff"/>
           </g>
           </svg>
-          <p class="text-white text-xs py-1 px-3">Filter</p>
+          <p class="text-white font-bold text-xl md:text-2xl my-6 text-xs py-1 px-3">Filter</p>
           </button>
         </div>
 
-    <div class="shrink grid grid-cols-1 justify-start grid-flow-row md:grid-cols-2 space-x-10 my-4 gap-4 w-full">
+    <div class="shrink grid grid-cols-1 justify-start grid-flow-row lg:grid-cols-3 md:grid-cols-2 lg:mx-6 md:mx-8 md:px-0 px-6 my-4 gap-4 w-full">
           
         
-        <div class="hover:transform translate-x-4 mb-6 translate-y-4 w-full" v-for="category in categories" :key="category.id">
-          <router-link :to="{name: 'PlaylistDetails', params: { image: category.image, text: category.title }}">
-            <img class="w-full md:w-72 md:h-72 object-cover" :src="category.image" alt="">
-            <p class="text-deep-gray text-base mt-4 md:text-left text-left font-semibold ">{{category.title}}</p>
-            <p class="text-deep-gray text-xs mt-2 md:text-left text-left tracking-widest">{{category.provider}}</p>
+        <div class="hover:transform translate-x-4 mb-6 translate-y-4 w-full" v-for="playlist in playlists" :key="playlist.id">
+          <router-link :to="{name: 'PlaylistDetails', params: { image: playlist.image, text: playlist.title }}">
+            <img class="w-full md:w-72 md:h-72 object-cover" :src="playlist.image" alt="">
+            <p class="text-white text-base mt-4 md:text-left text-center font-semibold">{{playlist.title}}</p>
+            <p class="text-white text-xs mt-2 md:text-left text-center tracking-widest">{{playlist.provider}}</p>
           </router-link>
           </div>
         
@@ -88,7 +39,7 @@
 </template>
 
 <script>
-import Nav from '@/components/user/Nav.vue'
+import PodcastNav from '@/components/user/PodcastNav.vue'
 import image from '@/assets/images/starwars.jpg'
 import firstImage from '@/assets/images/wick.jpg'
 import secondImage from '@/assets/images/wonderwoman.jpg'
@@ -99,7 +50,7 @@ export default {
 
     data(){
       return {
-        categories: [
+        playlists: [
           {title: 'Star Wars', provider: 'CRAKES TV', image: image, id: image },
           {title: 'Wonder Woman', provider: 'CRAKES TV', image: firstImage, id: firstImage },
           {title: 'Star Wars', provider: 'CRAKES TV', image: secondImage, id: secondImage},
@@ -112,7 +63,7 @@ export default {
       }
     },
 
-    components: {Nav},
+    components: {PodcastNav},
     mounted () {
   document.body.classList.add('user')
 },

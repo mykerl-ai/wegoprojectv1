@@ -19,7 +19,7 @@
       
      <div class="space-x-6 lg:pl-96">
            
-           <router-link :to="{name: 'UserSignup'} " class="bg-red text-white bt">SIGN IN</router-link> 
+           <router-link :to="{name: 'UserLogin'} " class="bg-red text-white text-sm bt">SIGN IN</router-link> 
         </div> 
 
     </Navbar>
@@ -33,12 +33,12 @@
        <p class="lg:mt-2 md:mt-10 mt-2 lg:tracking-wide tracking-widest lg:leading-7 leading-7 md:leading-9 md:text-sm text-xs text-white font-semibold">Watch Anywhere, Anytime.</p>
 
     <div class="focus-within:none mt-6">
-    <input type="email" required v-show="! recovery" v-model="name" class="focus:outline-none focus:ring-2 focus:ring-opacity-50  text-sm mb-4 focus:ring-red-600 border-b-2 border-red text-black py-2 px-6 w-full" placeholder="Enter e-mail">
+    <input type="email" required  v-model="name" class="focus:outline-none focus:ring-2 focus:ring-opacity-50  text-sm mb-4 focus:ring-red-600 border-b-2 border-red text-black py-2 px-6 w-full" placeholder="Enter e-mail">
   </div>
       
       
       <div class="lg:mt-3 md:mt-8 absolute mt-4">
-          <button class="bg-yellow  py-3 px-6  text-white font-semibold text-xs md:text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-opacity-50">SIGN UP</button>
+          <button @click="handleSignUp" class="bg-yellow  py-3 px-6  text-white font-semibold text-xs md:text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-opacity-50">SIGN UP</button>
            <button @click="handleClick" class="border border-yellow-400 py-2 px-6 ml-6  text-white font-semibold text-xs md:text-sm rounded-full focus:outline-none">TALK TO US</button>
       </div>
     </div>
@@ -61,11 +61,11 @@
           </div>
           <div class="lg:ml-16 lg:mt-12 md:mt-6 ml-8">
               <h2 class="text-right text-white font-bold  text-4xl mt-18 mb-2 md:mb-4">Enjoy on your TV</h2>
-            <p class="text-gray font-semibold text-xl text-right leading-10">Reach your audience everywhere with call to action on live streaming 
+            <p class="text-gray md:w-1/2 lg:w-full md:ml-80 md:pl-16 lg:pl-0 lg:ml-0 font-semibold text-xl text-right md:text-left lg:text-right leading-10">Reach your audience everywhere with call to action on live streaming 
             on your own personal channel or radio station
             </p>
 
-            <button class="bg-yellow mt-10 md:mt-6 text-white md:ml-48 lg:ml-64 font-semibold text-sm rounded-full md:py-3 py-1 focus:outline-none px-6">GET STARTED</button>
+            <button @click="handleSignUp" class="bg-yellow md:mx-0 lg:mx-0 lg:ml-24 md:ml-96 mx-24 rounded-full py-3 px-4 md:px-6 mt-6 text-white focus:outline-none font-semibold md:text-sm text-xs">GET STARTED</button>
           </div>
       </div>
     </section>
@@ -77,7 +77,7 @@
             <h2 class="text-white font-bold text-center md:text-left mt-8 md:mt-0 md:text-4xl text-lg mb-6">Download your shows <br> to watch offline</h2>
             <p class="text-white text-xl font-semibold leading-8 text-left mb-8">Save your favorites easily and always have something to watch.</p>
             
-            <button class="bg-yellow md:mx-0 lg:mx-0 mx-24 rounded-full py-3 px-6 mt-6 text-white focus:outline-none font-semibold text-sm ">CONTACT US</button>
+            <button @click="handleClick" class="bg-yellow md:mx-0 lg:mx-0 mx-24 rounded-full py-3 px-6 mt-6 text-white focus:outline-none font-semibold text-sm ">CONTACT US</button>
           </div>
 
         <div class="">
@@ -151,6 +151,9 @@ export default {
     methods: {
       handleClick(){
         this.$router.push({name: 'Contact'})
+      },
+      handleSignUp(){
+        this.$router.push({name: 'UserSignup'})
       },
       showMenu(){
         this.menu = !this.menu
@@ -420,6 +423,11 @@ nav>a, div>a {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   
 }
+.bt {
+   padding: 6px;
+   margin-right: 8px;
+  
+ }
 
 
  }

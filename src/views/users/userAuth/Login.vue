@@ -1,7 +1,19 @@
 <template>
-<section class="flex my-10">
-  <div class="bg-white py-12 px-20 mx-auto my-auto shadow-lg formBg">
-    <h1 v-show="!recovery" class="text-blue text-2xl">Login</h1>
+
+<Navbar class="w-full py-3">
+  <router-link :to="{name: 'UserHome'}">
+      <div >
+          <img class="w-12 md:w-16 -pl-40" src="@/assets/logo.png" alt="">
+          <p class="text-left invisible md:visible text-xs font-medium text-white  -mt-2">WeGoNetwork</p>
+      </div>
+  </router-link>
+
+    </Navbar>
+
+
+<section class="flex my-0 md:my-10">
+  <div class="bg-white py-12 px-3 md:px-20 mx-auto my-auto shadow-lg formBg">
+    <h1 v-show="!recovery" class="text-blue md:text-left text-center text-2xl">Login</h1>
     <h1 v-show="recovery" class="text-blue text-2xl">Reset password</h1>
 
     <form class="w-100 md:w-80">

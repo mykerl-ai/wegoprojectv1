@@ -7,14 +7,14 @@
         <figure></figure>
         <figure></figure>
        
-    <Navbar class="w-full">
+    <Navbar class="w-full z-100">
       <router-link :to="{name: 'Home'}">
       <div >
           <img class="w-12 md:w-24 -pl-16 md:pl-8 pt-4" src="../assets/logo.png" alt="">
           <p class="text-center invisible md:visible text-xs font-medium text-white ml-6 -mt-4">WeGoNetwork</p>
       </div>
 </router-link>
-      <nav class="lg:flex space-x-10 py-6 px-6 mr-20 hidden md:hidden">
+      <nav class="lg:flex space-x-10 py-6 px-2  hidden md:hidden">
         <router-link :to="{name: 'Home'}">Home</router-link>
 
         
@@ -43,36 +43,39 @@
 
         
         <router-link :to="{name: 'About'}">About us</router-link>
-        <div class="space-x-6 lg:pl-96">
+        <router-link :to="{name: 'Contact'}">Contact</router-link>
+        <div class="space-x-3 lg:pl-60">
            <router-link :to="{name: 'Login'}">LOGIN</router-link>
            <router-link :to="{name: 'Signup'} " class="bt">SIGN UP</router-link> 
         </div>  
       </nav>
 
 
-       <div class="navbar mt-8 lg:hidden mr-16 md:mr-24">
-      <div class="dropdown1 transition-all duration-300 ">
+       <div class="navbar mt-8 lg:hidden  mr-16 md:mr-24">
+      <div class="dropdown1 transition-all duration-300" :class="{'-ml-44 md:-ml-96': menu===true}">
     <button @click="showMenu" class="dropbtn focus:outline-none"><svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg> 
     </button>
-    <div v-show="menu" class="dropdown-content1 w-full ">
-     <button class="w-full"><router-link :to="{name: 'Home'}">Home</router-link></button> 
-     <button class="w-full"><router-link :to="{name: 'Iptv'}">Iptv</router-link></button> 
-     <button class="w-full"><router-link :to="{name: 'Podcast'}">Podcast</router-link></button> 
-     <button class="w-full"><router-link :to="{name: 'Ott'}">OTT</router-link></button> 
-     <button class="w-full"><router-link :to="{name: 'About'}">About</router-link></button> 
-     <button class="w-full"><router-link :to="{name: 'Faq'}">FAQ</router-link></button> 
-     <button class="w-full"><router-link :to="{name: 'Ott'}">Help</router-link></button>
-      <button class="w-full"><router-link :to="{name: 'Login'}">LOGIN</router-link></button>
-     <button class="w-full"><router-link :to="{name: 'Signup'}">SIGN UP</router-link></button> 
+    <div v-show="menu" class="dropdown-content1 w-full">
+     <button @click="$router.push({name: 'Home'})" class="w-full">Home</button> 
+     <button @click="$router.push({name: 'Iptv'})" class="w-full">Iptv</button> 
+     <button @click="$router.push({name: 'Podcast'})" class="w-full">Podcast</button> 
+     <button @click="$router.push({name: 'Ott'})" class="w-full">OTT</button> 
+     <button @click="$router.push({name: 'About'})" class="w-full">About</button> 
+     <button @click="$router.push({name: 'Faq'})" class="w-full">FAQ</button> 
+     <button @click="$router.push({name: 'Contact'})" class="w-full">Help</button>
+      <button @click="$router.push({name: 'Login'})" class="w-full">LOGIN</button>
+     <button @click="$router.push({name: 'Signup'})" class="w-full">SIGN UP</button> 
+     <button @click="$router.push({name: 'Contact'})" class="w-full">CONTACT US</button> 
     </div>
   </div> 
 </div>
 
     </Navbar>
+      <div :class="{'overlay':menu===true}"></div>
 
-    <div class="fwd mt-32 lg:mt-32 lg:ml-60 md:ml-32 md:mt-32 px-12 w-50 max-w-xl -z-1">
+    <div :class="{'hidden':menu===true}" class="fwd mt-32 lg:mt-32 2xl:mt-60 2xl:ml-96 lg:ml-60 md:ml-32 md:mt-32 px-12 w-50 2xl:w-full max-w-xl -z-1" >
 
       <slot name="header"></slot>
 
@@ -80,7 +83,7 @@
       
       
       <div class="lg:mt-3 md:mt-8 absolute mt-4">
-          <button class="bg-yellow  py-3 px-6  text-white font-semibold text-xs md:text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-opacity-50">Join now</button>
+          <button @click="$router.push({name: 'Signup'})" class="bg-yellow  py-3 px-6  text-white font-semibold text-xs md:text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-opacity-50">Join now</button>
            <button @click="handleClick" class="border border-yellow-400 py-2 px-6 ml-6  text-white font-semibold text-xs md:text-sm rounded-full focus:outline-none">TALK TO US</button>
       </div>
     </div>
@@ -114,6 +117,25 @@ export default {
 </script>
 
 <style scoped>
+
+    .overlay {
+background: rgba(0, 0, 0, 0.3);
+background-repeat: no-repeat;
+object-fit: fill;
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 8.5px );
+-webkit-backdrop-filter: blur( 8.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+object-fit: fill;
+position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+z-index: 1;
+}
+
      #hero{
         /* background-image:linear-gradient(to right bottom, #1B3BD8, #176CE0, #0B92E7, #0BB6EB, #00E0F2), url(../assets/images/radio.jpg); */
         position: relative;
@@ -235,6 +257,16 @@ nav>a, div>a {
   
 }
 
+.dropdown-content1 button {
+  float: none;
+  color: white;
+  padding: 12px 12px 12px 50px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size: 1rem;
+}
+
 .dropdown-content1 a {
   float: none;
   color: white;
@@ -252,6 +284,19 @@ nav>a, div>a {
   display: block;
 }
 
+
+@media (max-width: 640px) { 
+
+.dropdown-content1 button {
+  padding: 12px 12px 12px 50px;
+  font-size: 1rem;
+}
+
+.dropdown1, .dropdown2 {
+  
+  position: absolute;
+}
+}
 
 @media (max-width: 768px) { 
 /* .dropdown-content1 {
@@ -281,7 +326,7 @@ nav>a, div>a {
 }
 .dropdown-content1 {
   display: none;
-  position: absolute;
+  position: relative;
   background-color: #0080FF;
   border-radius: 6px;
   z-index: 999;
@@ -289,6 +334,21 @@ nav>a, div>a {
 
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   
+}
+
+.dropdown1, .dropdown2 {
+  
+  position: absolute;
+}
+
+.dropdown1 .dropbtn {
+  position: relative;
+ 
+}
+
+.dropdown-content1 button {
+  padding: 12px 12px 12px 70px;
+  font-size: 1rem;
 }
 
 

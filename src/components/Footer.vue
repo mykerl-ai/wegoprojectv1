@@ -1,15 +1,15 @@
 <template>
   <div class="w-full w-24 lg:pl-8 pt-5 md:pl-2 space-x-8 mt-40">
 
-      <div class="grid grid-cols-2 lg:grid-cols-3 gap-0.5 md:gap-2">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-0.5 md:gap-2">
 
-         <div class="flex flex-nowrap md:pl-8 md:pt-5">
-             <img class="md:w-20 w-10"  src="../assets/logo.png" alt=""></div>
+         <div class="flex flex-nowrap mx-0.1 md:mx-8 lg:mx-0 md:pl-8 md:pt-5">
+             <img class="md:w-20 w-10 ml-16 md:ml-0"  src="../assets/logo.png" alt=""></div>
 
       
-      <p class="md:text-base pt-2 md:-ml-60 hidden md:block lg:-ml-40 md:pt-12 text-blue">Copyright © WeGo 2021. All rights reserved. Privacy Policy</p>
+      <p class="lg:text-base md:text-lg pt-2 text-center hidden md:block lg:-ml-56 md:pt-6 lg:pt-12 text-blue font-medium">Copyright © WeGo Network LLC 2021. All rights reserved. <router-link class="text-blue font-bold" :to="{name: 'Privacy'}">Privacy Policy</router-link></p>
 
-      <p class="text-xs pt-2 md:hidden -ml-32 md:pt-12 text-blue">Copyright © WeGo 2021.</p>
+      <p class="text-sm font-medium pt-3 md:hidden text-center text-blue">Copyright © WeGo Network LLC 2021.</p>
         
 
       <div class="md:flex md:space-x-8 mt-6 md:mx-40 lg:mx-0 space-x-2 hidden">
@@ -56,7 +56,7 @@
 
       </div>
 
-      <div class="flex md:space-x-8 mx-20 my-8 space-x-2 md:hidden">
+      <div class="flex md:space-x-8 mx-32 my-8 space-x-2 md:hidden">
         
           <router-link :to="{name: 'Home'}">
             <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">

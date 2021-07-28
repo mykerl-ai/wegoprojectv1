@@ -1,10 +1,18 @@
 <template>
+<Navbar class="w-full py-3">
+  <router-link :to="{name: 'UserHome'}">
+      <div >
+          <img class="w-12 md:w-16 -pl-40" src="@/assets/logo.png" alt="">
+          <p class="text-left invisible md:visible text-xs font-medium text-white  -mt-2">WeGoNetwork</p>
+      </div>
+  </router-link>
+
+    </Navbar>
 
 
-
-<section class="flex  my-6">
-  <div class="bg-white py-8 px-20 mx-auto my-auto shadow-lg formBg">
-    <h1 class="text-blue text-2xl mb-4">Sign up</h1>
+<section class="flex md:my-6 my-0">
+  <div class="bg-white py-8 md:px-20 px-4 mx-auto my-auto shadow-lg formBg">
+    <h1 class="text-blue text-center md:text-left text-2xl mb-4">Sign up</h1>
     
 <form class="w-100 md:w-80">
 

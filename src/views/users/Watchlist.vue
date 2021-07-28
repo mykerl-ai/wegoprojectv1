@@ -1,62 +1,14 @@
 <template>
   <div class="max-w-100 h-100">
 
-      <Nav >
-        <div class="flex flex-wrap space-x-2 w-full mx-2">
-
-    <form method="GET">
-      <div class="relative text-gray-600 focus-within:text-gray-400">
-        <span class="absolute inset-y-0 left-0 flex items-center pl-2">
-      <button type="submit" class="p-1 focus:outline-none focus:shadow-outline">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 35.914 35.914">
-          <g id="Icon_feather-search" data-name="Icon feather-search" transform="translate(-3 -3)">
-          <path id="Path_352" data-name="Path 352" d="M33.2,18.852A14.352,14.352,0,1,1,18.852,4.5,14.352,14.352,0,0,1,33.2,18.852Z" fill="none" stroke="#0072E4" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-          <path id="Path_353" data-name="Path 353" d="M32.779,32.779l-7.8-7.8" transform="translate(4.013 4.013)" fill="none" stroke="#0072E4" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-          </g>
-          </svg>
-      </button>
-      </span>
-      <input type="search" name="q" class="invisible md:visible order-last py-1 px-3 text-sm text-gray pr-4 rounded-md pl-10 focus:outline-none focus:border-blue rounded-full focus:text-gray-900" placeholder="Search..." autocomplete="off">
-      </div>
-    </form>
-
-        <nav>
-          <div class="lg:grid grid-cols-5 justify-between gap-8 hidden">
-          <button class="focus focus:outline-none"><router-link :to="{name: 'Movies'}" class="text-sm text-white text-center font-medium">Movies</router-link></button>
-          <button class="focus focus:outline-none"><router-link :to="{name: 'Shows'}" class="text-sm text-white text-center font-medium">Shows</router-link></button>
-          <button class="focus focus:outline-none"><router-link :to="{name: 'Watchlist'}" class="text-sm text-white text-center font-medium">Watchlist</router-link></button>
-          <button class="focus focus:outline-none"><router-link :to="{name: 'Categories'}" class="text-sm text-white text-center font-medium">Categories</router-link></button>
-          <button class="focus focus:outline-none"><router-link :to="{name: 'Radio'}" class="text-sm text-white text-center font-medium">Podcast</router-link></button>
-          </div>
-
-          <div class="navbar mt-8 lg:hidden mr-16 md:mr-24">
-      <div class="dropdown1 transition-all duration-300">
-    <button @click="showMenu" class="dropbtn focus:outline-none"><svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg> 
-    </button>
-    <div v-show="menu" class="dropdown-content1 w-full">
-     <button class="w-full"><router-link :to="{name: 'Home'}">Home</router-link></button> 
-     <button class="w-full"><router-link :to="{name: 'Iptv'}">Iptv</router-link></button> 
-     <button class="w-full"><router-link :to="{name: 'Podcast'}">Podcast</router-link></button> 
-     <button class="w-full"><router-link :to="{name: 'Ott'}">OTT</router-link></button> 
-     <button class="w-full"><router-link :to="{name: 'About'}">About</router-link></button> 
-     <button class="w-full"><router-link :to="{name: 'Ott'}">FAQ</router-link></button> 
-     <button class="w-full"><router-link :to="{name: 'Ott'}">Help</router-link></button> 
-    </div>
-  </div> 
-</div>
-        </nav>
-      </div>
-
-      </Nav>
+      <MovieNav />
 
 
        
       <div class="w-full md:px-6">
-          <div class="flex space-x-6 w-100">
-        <h1 class="text-white text-sm">Watchlist</h1>
-        <button class="flex">
+          <div class="flex space-x-6 w-100 md:ml-16 ml-4 mb-4 md:mt-0 mt-12">
+        <h1 class="text-white font-bold text-sm">Watchlist</h1>
+        <button class="md:flex hidden">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 42.931 43">
         <g id="Layer_32" data-name="Layer 32" transform="translate(-10.554 -10.5)">
             <path id="Path_354" data-name="Path 354" d="M33.5,19.14V12a1.5,1.5,0,0,0-3,0v7.14a6.07,6.07,0,0,0,0,11.74V52a1.5,1.5,0,0,0,3,0V30.88C39.52,29.34,39.52,20.67,33.5,19.14Z" fill="#fff"/>
@@ -69,11 +21,13 @@
         
 
          </div>
-       <div class="shrink grid grid-cols-6 md:grid-cols-6 my-4 gap-4 w-full">
-        <div class="hover:transform translate-x-4 translate-y-4 col-span-1" v-for="movie in movies" :key="movie.id">
-        <img class="w-32 h-32 md:w-72 md:h-72 object-cover" :src="movie.image" alt="">
-        <p class="text-white text-base mt-4 md:text-center text-left font-semibold ">{{movie.title}}</p>
-        <p class="text-white text-xs mt-2 md:text-center text-left tracking-widest">{{movie.provider}}</p>
+       <div class="shrink z-0 grid px-4 md:px-0 grid-flow-row lg:grid-cols-6 md:grid-cols-2 grid-cols-1 my-6 gap-4 w-full">
+        <div class="hover:transform translate-x-4 translate-y-4" v-for="movie in movies" :key="movie.id">
+          <router-link :to="{name: 'MovieDetails', params: { image: movie.image, title: movie.title }}">
+        <img class="w-full h-auto md:w-72 md:h-72 object-cover" :src="movie.image" alt="">
+        <p class="text-white text-base mt-4 text-center  font-semibold ">{{movie.title}}</p>
+        <p class="text-white text-xs mt-2 text-center  tracking-widest">{{movie.provider}}</p>
+         </router-link>
         </div>
         
         </div>
@@ -87,7 +41,7 @@
 </template>
 
 <script>
-import Nav from '@/components/user/Nav.vue'
+import MovieNav from '@/components/user/MovieNav.vue'
 import image from '@/assets/images/wars.jpg'
 import firstImage from '@/assets/images/wick.jpg'
 import secondImage from '@/assets/images/woman.jpg'
@@ -108,7 +62,7 @@ export default {
         ]
       }
     },
-    components: {Nav},
+    components: {MovieNav},
     mounted () {
   document.body.classList.add('user')
 },
