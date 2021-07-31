@@ -75,7 +75,7 @@
     </Navbar>
       <div :class="{'overlay':menu===true}"></div>
 
-    <div :class="{'hidden':menu===true}" class="fwd mt-32 lg:mt-32 2xl:mt-60 2xl:ml-96 lg:ml-80 md:ml-32 md:mt-32 px-12 w-50 2xl:w-full max-w-xl -z-1" >
+    <div :class="{'hidden':menu===true}" class="fwd mt-32 lg:mt-32 2xl:mt-60 2xl:ml-96 lg:ml-80 md:ml-32 md:mt-32 px-12 w-50 2xl:w-full max-w-xl" >
 
       <slot name="header"></slot>
 
@@ -143,6 +143,7 @@ z-index: 1;
     } 
     .fwd {
         position: absolute;
+        z-index: 0;
     }
     #hero > figure {
   animation: imageAnimation 30s linear infinite 0s;
@@ -283,7 +284,7 @@ nav>a, div>a {
 .dropdown1:hover .dropdown-content1 {
   display: block;
   margin-bottom: 1200px;
-  z-index: 999;
+  z-index: 1;
 }
 
 
