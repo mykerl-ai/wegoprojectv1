@@ -283,6 +283,7 @@ nav>a, div>a {
 .dropdown1:hover .dropdown-content1 {
   display: block;
   margin-bottom: 1200px;
+  z-index: 999;
 }
 
 
