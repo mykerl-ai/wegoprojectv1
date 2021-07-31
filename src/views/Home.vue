@@ -105,7 +105,7 @@
     </section>
 
     <section class="podcast">
-      <h2 class="text-right text-red font-semibold mr-24 text-lg mt-24 mb-8 md:mb-12">WeGO
+      <h2 class="text-center lg:text-right text-red font-semibold lg:mr-24 text-lg mt-24 mb-8 md:mb-12">WeGO
 NETWORK PODCAST & RADIO</h2>
       <div class="tag grid grid-cols-1  lg:grid-cols-2 grid-flow-row lg:grid-flow-row gap-6 md:gap-4 content-center px-4 md:px-4 lg:px-0">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 ">
