@@ -2,11 +2,11 @@
 <Navbar class="w-full z-100">
       <router-link :to="{name: 'Home'}">
       <div >
-          <img class="w-12 md:w-32 -pl-16 md:pl-8 pt-4" src="@/assets/WeGo1.png" alt="">
+          <img class="w-12 md:w-24 -pl-16 pt-4" src="@/assets/WeGo1.png" alt="">
           <p class="text-center invisible md:visible text-xs font-medium text-red ml-6 -mt-1">WeGoNetwork</p>
       </div>
 </router-link>
-      <nav class="lg:flex space-x-10 py-6 px-2 hidden md:hidden">
+      <nav class="lg:flex space-x-10 py-6 hidden md:hidden">
         <router-link :to="{name: 'Home'}">Home</router-link>
 
         

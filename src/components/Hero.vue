@@ -10,11 +10,11 @@
     <Navbar class="w-full z-100">
       <router-link :to="{name: 'Home'}">
       <div >
-          <img class="w-12 md:w-32 -pl-16 md:pl-8 pt-4" src="../assets/WeGo.png" alt="">
+          <img class="w-12 md:w-24 -pl-16 md:pl-2 pt-4" src="../assets/WeGo.png" alt="">
           <p class="text-center invisible md:visible text-xs font-medium text-white ml-6 -mt-1">WeGoNetwork</p>
       </div>
 </router-link>
-      <nav class="lg:flex space-x-10 py-6 px-2  hidden md:hidden">
+      <nav class="lg:flex space-x-10 py-6   hidden md:hidden">
         <router-link :to="{name: 'Home'}">Home</router-link>
 
         
@@ -75,7 +75,7 @@
     </Navbar>
       <div :class="{'overlay':menu===true}"></div>
 
-    <div :class="{'hidden':menu===true}" class="fwd mt-32 lg:mt-32 2xl:mt-60 2xl:ml-96 lg:ml-60 md:ml-32 md:mt-32 px-12 w-50 2xl:w-full max-w-xl -z-1" >
+    <div :class="{'hidden':menu===true}" class="fwd mt-32 lg:mt-32 2xl:mt-60 2xl:ml-96 lg:ml-80 md:ml-32 md:mt-32 px-12 w-50 2xl:w-full max-w-xl -z-1" >
 
       <slot name="header"></slot>
 

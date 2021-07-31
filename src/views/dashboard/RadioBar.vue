@@ -5,8 +5,8 @@
     <nav class="flex-1 flex flex-col sideBar pb-12 text-white">
 
         <div v-show="sidebarOpen" class="flex px-0 mt-2 mb-0">
-          <img  class="w-20 pb-4 pt-0" src="@/assets/WeGo1.png" alt="">
-           <p class="text-white text-sm mt-6"> WeGo Network</p>
+          <img  class="w-20 pb-4 pt-0" src="@/assets/WeGo.png" alt="">
+           <p class="text-white text-sm mt-3"> WeGo Network</p>
       </div>
      
 
