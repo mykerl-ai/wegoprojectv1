@@ -3,8 +3,8 @@
        <Navbar class="w-full z-100">
       <router-link :to="{name: 'Home'}">
       <div >
-          <img class="w-12 md:w-24 -pl-16 md:pl-8 pt-4" src="@/assets/logo.png" alt="">
-          <p class="text-center invisible md:visible text-xs font-medium text-blue ml-6 -mt-4">WeGoNetwork</p>
+          <img class="w-12 md:w-32 -pl-16 md:pl-8 pt-4" src="@/assets/WeGo1.png" alt="">
+          <p class="text-center invisible md:visible text-xs font-medium text-red ml-6 -mt-1">WeGoNetwork</p>
       </div>
 </router-link>
       <nav class="lg:flex space-x-10 py-6 px-2 hidden md:hidden">
@@ -46,7 +46,7 @@
 
        <div class="navbar mt-8 lg:hidden  mr-16 md:mr-24">
       <div class="dropdown1 transition-all duration-300" :class="{'-ml-32 md:-ml-56': menu===true}">
-    <button @click="showMenu" class="dropbtn focus:outline-none"><svg xmlns="http://www.w3.org/2000/svg" fill="#0080FF" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+    <button @click="showMenu" class="dropbtn focus:outline-none"><svg xmlns="http://www.w3.org/2000/svg" fill="#f44336" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg> 
     </button>
@@ -75,7 +75,7 @@
         <!--podcast -->
 
         <div class="col-span-4 w-full" v-if="currentRoute === '/35' ||currentRoute === '/45' || currentRoute === '/80'">
-            <h1 class="text-center md:text-left text-gblue text-xl font-semibold">Your plan includes</h1>
+            <h1 class="text-center md:text-left text-red text-xl font-semibold">Your plan includes</h1>
             <div class="flex flex-wrap gap-y-8  gap-x-4 mt-10">
 
                 <div v-show="currentRoute==='/35'" class="flex-grow grid md:grid-cols-3 grid-cols-1 gap-8">
@@ -195,7 +195,7 @@
 <!-- IPTV -->
 
 <div class="col-span-4 w-full" v-else-if="currentRoute === '/99' ||currentRoute === '199' || currentRoute === '499'">
-            <h1 class="md:text-left text-center text-blue text-lg font-semibold">Your plan includes</h1>
+            <h1 class="md:text-left text-center text-red text-lg font-semibold">Your plan includes</h1>
             <div class="flex flex-wrap gap-y-8 gap-x-2 mt-10  grid md:grid-cols-2 grid-cols-1 gap-8">
                 <div v-show="currentRoute==='/99'" class="flex-grow">
 
@@ -256,7 +256,7 @@
                     <h2 class="text-red text-xl font-semibold mb-4 text-center md:text-left">Stream To Any Platform</h2>
                     <p class="text-sm mt-4 "></p>
                     <ul class="leading-8 list-outside list-none text-gray text-sm">
-                       <li class="font-bold text-blue">Studio lets you send your stream to any player that supports RTMP.</li>
+                       <li class="font-bold text-red">Studio lets you send your stream to any player that supports RTMP.</li>
                        <li>Full HD streaming and cloud recording</li>
                         <li>Stream to any virtual event platform</li>
                         <li>Simultaneously stream to multiple endpoints</li>
@@ -276,7 +276,7 @@
     <!--OTT -->
 
 <div class="col-span-4 w-full" v-else-if="currentRoute === '125' ||currentRoute === '250' || currentRoute === '500'">
-            <h1 class="md:text-left text-center text-blue text-lg font-semibold">Your plan includes</h1>
+            <h1 class="md:text-left text-center text-red text-lg font-semibold">Your plan includes</h1>
             <div class="flex flex-wrap gap-y-8  gap-x-2 mt-10">
                 <div class="flex-grow">
                     <h2 class="text-red text-xl font-semibold mb-4 text-center md:text-left">Server</h2>
@@ -315,7 +315,7 @@
 
 
 
-    <div class="border-0 border-yellow shadow-2xl col-span-6 md:col-span-2 px-4 w-full py-4">
+    <div class="border-0 border-red shadow-2xl col-span-6 md:col-span-2 px-4 w-full py-4">
                     <h1 class="font-bold text-left text-lg text-deep-gray mb-8">ORDER SUMMARY</h1>
                     <p class="px-2 py-2 bg-blue text-white font-semibold text-sm" v-show="currentRoute === '/35'">Radio/Podcast server - (128kbps) <span class="ml-6">$ {{id}}</span></p>
                     
@@ -332,19 +332,19 @@
 
                     <h3 class="text-deep-gray text-sm font-semibold my-4 mx-2">Billing Cycle</h3>
                     <form action="">
-                    <input type="radio" @change="calculateTotal"  value=1 name="monthly" id="monthly"  class="active:text-blue rounded mx-6 text-yellow" v-model="billingForm.cycle">
+                    <input type="radio" @change="calculateTotal"  value=1 name="monthly" id="monthly"  class="active:text-red rounded mx-6 text-red" v-model="billingForm.cycle">
                     <label for="monthly" class="text-deep-gray font-semibold text-sm">Monthly</label>
 
-                    <input type="radio" @change="calculateTotal" value="12" name="yearly" id="yearly"  class="active:text-blue rounded mx-6 text-yellow" v-model="billingForm.cycle">
+                    <input type="radio" @change="calculateTotal" value="12" name="yearly" id="yearly"  class="active:text-red rounded mx-6 text-red" v-model="billingForm.cycle">
                     <label for="yearly" class="text-deep-gray font-semibold text-sm">12 Months</label>
 
                     <p v-show="billingForm.cycle==='12'" class="text-lg font-bold text-deep-gray mt-6">Amount: <span class="ml-24">$ {{amount}}</span></p>
 
                     <p v-show="billingForm.cycle==='12'" class="text-lg font-bold text-red mt-6">discount: <span class="ml-24">$ {{discount}}</span></p>
 
-                    <p class="text-lg font-bold text-gblue mt-6">Total: <span class="ml-40 font-bold">$ {{total}}</span></p>
+                    <p class="text-lg font-bold text-red mt-6">Total: <span class="ml-40 font-bold">$ {{total}}</span></p>
 
-                    <button type="button" class="bg-yellow rounded rounded-lg py-1 px-2 font-bold text-sm text-white my-6 ml-24 md:ml-16 lg:ml-60 " @click="handleForm">CONTINUE</button>
+                    <button type="button" class="bg-red rounded rounded-lg py-1 px-2 font-bold text-sm text-white my-6 ml-24 md:ml-16 lg:ml-60 " @click="handleForm">CONTINUE</button>
                     </form>
 
                     
@@ -427,12 +427,12 @@ left: 0;
 z-index: 1;
 }
 nav>a, div>a {
-  color: #0080FF;
+  color: #f44336;
   font-size: 14px;
   font-weight: 500;
 }
  .bt {
-   background-color: #0080FF;
+   background-color: #f44336;
    color: white;
    padding: 8px;
    border-radius: 4px;
@@ -446,7 +446,7 @@ nav>a, div>a {
 .navbar a {
   float: left;
   font-size: 14px;
-  color: #0080FF;
+  color: #f44336;
   text-align: center;
   font-weight: 500;
   text-decoration: none;
@@ -461,7 +461,7 @@ nav>a, div>a {
   font-size: 14px;  
   border: none;
   outline: none;
-  color: #0080FF;
+  color: #f44336;
   font-weight: 500;
   background-color: inherit;
   font-family: inherit;
@@ -475,7 +475,7 @@ nav>a, div>a {
 .dropdown-content1 {
   display: none;
   position: absolute;
-  background-color: #0080FF;
+  background-color: #f44336;
   border-radius: 6px;
   
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -502,7 +502,7 @@ nav>a, div>a {
   font-size: 1rem;
 }
 .dropdown-content1 a:hover {
-  background-color: #0072E4;
+  background-color: #1C1A1A;
 }
 
 .dropdown1:hover .dropdown-content1 {
@@ -526,7 +526,7 @@ nav>a, div>a {
   display: none;
   position: absolute;
   
-  background-color: #0080FF;
+  background-color: #f44336;
   border-radius: 6px;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -536,7 +536,7 @@ nav>a, div>a {
 .dropdown-content1 {
   display: none;
   position: relative;
-  background-color: #0080FF;
+  background-color: #f44336;
   border-radius: 6px;
   z-index: 999;
   width: 100vw;

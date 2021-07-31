@@ -2,8 +2,8 @@
 <Navbar class="w-full z-100">
       <router-link :to="{name: 'Home'}">
       <div >
-          <img class="w-12 md:w-24 -pl-16 md:pl-8 pt-4" src="../assets/logo.png" alt="">
-          <p class="text-center invisible md:visible text-xs font-medium text-blue ml-6 -mt-4">WeGoNetwork</p>
+          <img class="w-12 md:w-32 -pl-16 md:pl-8 pt-4" src="../assets/WeGo1.png" alt="">
+          <p class="text-center invisible md:visible text-xs font-medium text-red ml-6 -mt-1">WeGoNetwork</p>
       </div>
 </router-link>
       <nav class="lg:flex space-x-10 py-6 px-2 hidden md:hidden">
@@ -70,7 +70,7 @@
 <div class="grid lg:grid-cols-2 grid-cols-1 grid-flow-row -z-1 mt-8">
 <section class="flex mx-auto">
   <div class=" py-8 px-4 md:px-20 md:mx-auto my-auto bg-white shadow-lg">
-    <h1 class="text-blue text-2xl">Get in touch</h1>
+    <h1 class="text-red text-2xl">Get in touch</h1>
     <form class="">
     <div class="focus-within:none">
     <input type="text" v-model="name" class="focus:outline-none focus:ring-2 focus:ring-opacity-50 mt-6 text-sm mb-6 focus:ring-blue-600 border-2 border-light-gray rounded-lg py-3 px-6 w-full" placeholder="Your name">
@@ -185,8 +185,7 @@ z-index: 1;
 }
 
   .form-btn {
-    background-image:linear-gradient(to right bottom, #1B3BD8, #176CE0, #0B92E7, #0BB6EB, #00E0F2);
-  } 
+background-image: linear-gradient(to right bottom, #f44334, #ed382a, #e52c1f, #de1d13, #d60505);  } 
 
   textarea:focus, input:focus {
     border: none;
@@ -194,12 +193,11 @@ z-index: 1;
   }
   
   .contact-bar {
-  background-image:linear-gradient(to right bottom, #1B3BD8, #1B3BD8, #176CE0, #0B92E7, #0BB6EB, #00E0F2, #00E0F2);
- 
-}
+background-image: linear-gradient(to right bottom, #000000, #090909, #131313, #1A1A1A, #202020);} 
+
 
   nav> a  {
-      color: #0080FF;
+      color: #f44336;
       font-size: 14px;
   }
 
@@ -231,7 +229,7 @@ div>a {
   font-size: 14px;  
   border: none;
   outline: none;
-  color: #0080FF;
+  color: #f44336;
   position: relative;
   background-color: inherit;
   font-family: inherit;
@@ -245,7 +243,7 @@ div>a {
 .dropdown-content1 {
   display: none;
   position: absolute;
-  background-color: #0080FF;
+  background-color: #f44336;
   border-radius: 6px;
  
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -281,7 +279,7 @@ div>a {
 }
 
 .dropdown-content1 a:hover {
-  background-color: #F8E71C;
+  background-color: #1C1A1A;
 }
 
 .dropdown1:hover .dropdown-content1 {
@@ -293,7 +291,7 @@ div>a {
   .dropdown-content1 {
   display: none;
   position: relative;
-  background-color: #0080FF;
+  background-color: #f44336;
   border-radius: 6px;
   z-index: 999;
   width: 100vw;
@@ -323,7 +321,7 @@ div>a {
 .dropdown-content1 {
   display: none;
   position: relative;
-  background-color: #0080FF;
+  background-color: #f44336;
   border-radius: 6px;
   z-index: 999;
   width: 100vw;

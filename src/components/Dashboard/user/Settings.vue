@@ -2,7 +2,7 @@
   <section class="flex  ">
   <div class="bg-white py-6 px-20 mx-auto my-auto shadow-lg">
 
-    <h1 class="text-blue text-2xl">Reset password</h1>
+    <h1 class="text-red text-2xl">Reset password</h1>
 
     <form class="w-100 md:w-80">
     <div class="focus-within:none">

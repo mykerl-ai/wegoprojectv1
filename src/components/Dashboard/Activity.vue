@@ -16,7 +16,7 @@
             <p class="text-sm text-deep-gray mb-12 ">Recent videos</p>
             <div class="w-90">
               <table class="table-fixed w-full">
-    <thead class="bg-white text-blue  text-xs">
+    <thead class="bg-white text-red  text-xs">
     <tr>
       <th class="w-1/2 py-2 px-2 text-left">VIDEOS</th>
       <th class="w-1/4 text-left">UPLOADED</th>
@@ -44,12 +44,12 @@
 
          <div class="details md:col-span-2 col-span-6 py-6 px-4 shadow-xl bg-white">
               <p class="text-sm text-deep-gray mb-12 ">Playlists</p>
-              <div class="bg-yellow w-full py-0.5"></div>
+              <div class="bg-red w-full py-0.5"></div>
               <div class="flex py-6">
                   <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38">
   <g id="Icon" transform="translate(-1155 -1397)">
     <path id="Icon.BG" d="M19,0A19,19,0,1,1,0,19,19,19,0,0,1,19,0Z" transform="translate(1155 1397)" fill="#e8e7ff"/>
-    <path id="Icon_material-playlist-play" data-name="Icon material-playlist-play" d="M19.057,11.825H3v2.162H19.057Zm0-4.325H3V9.662H19.057ZM3,18.312H15.279V16.149H3Zm14.168-2.162v6.487l4.723-3.243Z" transform="translate(1161.555 1401.932)" fill="#0080ff"/>
+    <path id="Icon_material-playlist-play" data-name="Icon material-playlist-play" d="M19.057,11.825H3v2.162H19.057Zm0-4.325H3V9.662H19.057ZM3,18.312H15.279V16.149H3Zm14.168-2.162v6.487l4.723-3.243Z" transform="translate(1161.555 1401.932)" fill="#f44336"/>
   </g>
 </svg>
 
@@ -63,7 +63,7 @@
                   <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38">
   <g id="Icon" transform="translate(-1155 -1397)">
     <path id="Icon.BG" d="M19,0A19,19,0,1,1,0,19,19,19,0,0,1,19,0Z" transform="translate(1155 1397)" fill="#e8e7ff"/>
-    <path id="Icon_material-playlist-play" data-name="Icon material-playlist-play" d="M19.057,11.825H3v2.162H19.057Zm0-4.325H3V9.662H19.057ZM3,18.312H15.279V16.149H3Zm14.168-2.162v6.487l4.723-3.243Z" transform="translate(1161.555 1401.932)" fill="#0080ff"/>
+    <path id="Icon_material-playlist-play" data-name="Icon material-playlist-play" d="M19.057,11.825H3v2.162H19.057Zm0-4.325H3V9.662H19.057ZM3,18.312H15.279V16.149H3Zm14.168-2.162v6.487l4.723-3.243Z" transform="translate(1161.555 1401.932)" fill="#f44336"/>
   </g>
 </svg>
 
@@ -77,7 +77,7 @@
                   <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38">
   <g id="Icon" transform="translate(-1155 -1397)">
     <path id="Icon.BG" d="M19,0A19,19,0,1,1,0,19,19,19,0,0,1,19,0Z" transform="translate(1155 1397)" fill="#e8e7ff"/>
-    <path id="Icon_material-playlist-play" data-name="Icon material-playlist-play" d="M19.057,11.825H3v2.162H19.057Zm0-4.325H3V9.662H19.057ZM3,18.312H15.279V16.149H3Zm14.168-2.162v6.487l4.723-3.243Z" transform="translate(1161.555 1401.932)" fill="#0080ff"/>
+    <path id="Icon_material-playlist-play" data-name="Icon material-playlist-play" d="M19.057,11.825H3v2.162H19.057Zm0-4.325H3V9.662H19.057ZM3,18.312H15.279V16.149H3Zm14.168-2.162v6.487l4.723-3.243Z" transform="translate(1161.555 1401.932)" fill="#f44336"/>
   </g>
 </svg>
 

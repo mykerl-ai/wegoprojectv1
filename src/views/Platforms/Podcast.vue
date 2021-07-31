@@ -15,16 +15,16 @@ Personalized Stations Powered by WeGo
   <div id="price">
     <section class="podcast">
       <div  class="tag grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 grid-flow-row lg:grid-flow-row gap-8 md:gap-4 lg:gap-8 content-center justify-center mt-6">
-          <div v-for="price in pricing" :key="price.id" class="top bg-white group py-6 px-4 mx-2 md:mx-0 shadow-lg hover:bg-blue">
+          <div v-for="price in pricing" :key="price.id" class="top bg-white group py-6 px-4 mx-2 md:mx-0 shadow-lg hover:bg-red">
               <router-link :to="{name: 'Pricing', params: {id: price.id}}">
             <p class="text-center text-base font-semibold text-deep-gray group-hover:text-white py-3">{{price.desc}}</p>
             
             <h6 class="text-center line-through font-semibold text-xl text-red py-3 px-6 group-hover:text-white break-all"> ${{parseInt(price.price) + 10}}</h6>
 
-            <h3 class="text-center text-5xl text-blue py-3 px-6 mb-3 group-hover:text-white break-all"> ${{price.price}}</h3>
+            <h3 class="text-center text-5xl text-red py-3 px-6 mb-3 group-hover:text-white break-all"> ${{price.price}}</h3>
             <p class="text-center text-sm text-deep-gray group-hover:text-white mb-3">{{price.duration}}</p>
             <p class="text-center text-sm text-deep-gray group-hover:text-white mb-6">{{price.details}}</p>
-            <button class="bg-blue rounded-lg text-white text-sm ml-18 group-hover:text-blue text-white group-hover:bg-white focus:outline-none ml-24 md:ml-12 lg:ml-20 py-2 mx-2 px-2">GET STARTED</button>
+            <button class="bg-red rounded-lg text-white text-sm ml-18 group-hover:text-red text-white group-hover:bg-white focus:outline-none ml-24 md:ml-12 lg:ml-20 py-2 mx-2 px-2">GET STARTED</button>
             </router-link>
             </div>
            
@@ -36,7 +36,7 @@ Personalized Stations Powered by WeGo
     <section class="podcast">
     <div class="tag grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 grid-flow-row lg:grid-flow-row gap-x-16 content-center mt-24 md:mt-48 mx-6 md:mx-0">
           <div class="">
-            <h2 class="text-blue font-semibold text-2xl text-center md:text-left md:text-4xl mt-6 mb-6">Create your own radio station or podcast</h2>
+            <h2 class="text-red font-semibold text-2xl text-center md:text-left md:text-4xl mt-6 mb-6">Create your own radio station or podcast</h2>
             <div v-for="spec in specs" :key="spec.id" class="grid grid-cols-3 gap-2">
                 
                 <div>
@@ -84,13 +84,13 @@ Personalized Stations Powered by WeGo
                 </div>
 
             </div>
-            <a href="#price"><button class="bg-yellow focus:outline-none rounded-full md:ml-24 ml-16 md:mx-0 py-3 px-6 md:px-6 mt-6 text-white font-semibold text-sm ">GET STARTED</button></a>
+            <a href="#price"><button class="bg-red focus:outline-none rounded-full md:ml-24 ml-16 md:mx-0 py-3 px-6 md:px-6 mt-6 text-white font-semibold text-sm ">GET STARTED</button></a>
           </div>
 
         <div class="order-first">
               <div class="top">
                 <div class="overlay"></div>
-                <img class="bg-gblue bg-blend-overlay" src="@/assets/images/Focus.jpg" alt="">
+                <img class="bg-blue bg-blend-overlay" src="@/assets/images/Focus.jpg" alt="">
                 </div>
           </div> 
 
@@ -247,7 +247,7 @@ export default {
 .overlay{
     width: 100%;
     height: 100%;
-    background-image:linear-gradient(to right bottom, #0080FF, #0080FF);
+    background-image:linear-gradient(to right bottom, #1C1A1A, #000000);
     opacity: 0.4;
     z-index: 1;
     position: absolute;

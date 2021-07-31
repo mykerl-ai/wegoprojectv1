@@ -3,7 +3,7 @@
       <h1 class="text-lg text-deep-gray">Statistics</h1>
       
         <div class="flex flex-wrap mt-6 gap-16">
-            <button @click="checkId(icon.id)"  class="flex focus:outline-none mb-6  py-2 px-6 focus:text-blue text-sm text-deep-gray focus:border-t-2 focus:border-blue" v-for="icon in icons" :key="icon.id" data-id="icon.id">
+            <button @click="checkId(icon.id)"  class="flex focus:outline-none mb-6  py-2 px-6 focus:text-red text-sm text-deep-gray focus:border-t-2 focus:border-blue" v-for="icon in icons" :key="icon.id" data-id="icon.id">
                         {{icon.title}}
             </button>
             </div>
@@ -16,8 +16,8 @@
                <div  v-show="id==='Storage'"  class="text-deep-gray text-sm mb-4">
                    Storage
                    <div class="flex gap-4">
-                   <h1 class="text-2xl text-blue my-16 font-semibold used">0GB Used</h1>
-                   <h1 class="text-2xl text-blue my-16 font-semibold available">60GB Total</h1>
+                   <h1 class="text-2xl text-red my-16 font-semibold used">0GB Used</h1>
+                   <h1 class="text-2xl text-red my-16 font-semibold available">60GB Total</h1>
                    </div>
                    </div>
                <p  v-show="id==='podcast'"  class="text-deep-gray text-sm mb-4">Podcast</p>

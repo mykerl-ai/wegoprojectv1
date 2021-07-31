@@ -1,11 +1,11 @@
 <template>
   <section class="w-full contact ml-0 h-64  mt-24 pl-0 md:block hidden">
       <div>
-        <div class="w-full contact-bar flex space-x-96">
-          <div class="bg-no-repeat rounded-full  bg-left-top h-24 w-24 contact-bar"></div>
-          <div class="bg-no-repeat rounded-full mt-56 ml-48 bg-bottom h-16 w-16 contact-bar"></div>
-          <div class="bg-no-repeat rounded-full mt-24 ml-56 bg-right-top h-8 w-8 contact-bar"></div>
-          <div class="bg-no-repeat rounded-full mt-60 ml-60 bg-bottom-right h-16 w-16 contact-bar"></div>
+        <div class="w-full user1 flex space-x-96">
+          <div class="bg-no-repeat rounded-full  bg-left-top h-24 w-24 user1"></div>
+          <div class="bg-no-repeat rounded-full mt-56 ml-48 bg-bottom h-16 w-16 user1"></div>
+          <div class="bg-no-repeat rounded-full mt-24 ml-56 bg-right-top h-8 w-8 user1"></div>
+          <div class="bg-no-repeat rounded-full mt-60 ml-60 bg-bottom-right h-16 w-16 user1"></div>
         </div>
         </div>
 
@@ -59,7 +59,7 @@
   
   <section class="flex ml-48 lg:ml-48 lg:mx-0 md:mt-12 lg:mt-0 md:mx-24">
   <div class="bg-white py-8 md:px-20 md:mx-auto  px-10 my-auto shadow-lg">
-    <h1 class="text-blue mt-6 md:mt-0 text-center md:text-left text-2xl">Get in touch</h1>
+    <h1 class="text-red mt-6 md:mt-0 text-center md:text-left text-2xl">Get in touch</h1>
     <form class="">
     <div class="focus-within:none">
     <input type="text" v-model="name" class="focus:outline-none focus:ring-2 focus:ring-opacity-50 mt-6 text-sm mb-6 focus:ring-blue-600 border-2 border-light-gray rounded-lg py-3 px-6 w-full" placeholder="Your name">
@@ -97,13 +97,10 @@ export default {
 
 <style>
 .contact-bar {
-  background-image:linear-gradient(to right bottom, #1B3BD8, #1B3BD8, #176CE0, #0B92E7, #0BB6EB, #00E0F2, #00E0F2);
- 
-}
+background-image: linear-gradient(to right bottom, #000000, #090909, #131313, #1A1A1A, #202020);}
 
 .form-btn {
-    background-image:linear-gradient(to right bottom, #1B3BD8, #176CE0, #0B92E7, #0BB6EB, #00E0F2);
-  } 
+background-image: linear-gradient(to right bottom, #f44334, #ed382a, #e52c1f, #de1d13, #d60505);  } 
 
   textarea:focus, input:focus {
     border: none;

@@ -14,9 +14,9 @@
 
     <div class="grid grid-cols-3 mt-20 gap-6">
         
-            <h1 class="text-xs text-blue mb-8 font-semibold">TYPE</h1>
-            <h1 class="text-xs text-blue mb-8 font-semibold">STATUS</h1>
-            <h1 class="text-xs text-blue mb-8 font-semibold md:text-center">ACTION</h1>
+            <h1 class="text-xs text-red mb-8 font-semibold">TYPE</h1>
+            <h1 class="text-xs text-red mb-8 font-semibold">STATUS</h1>
+            <h1 class="text-xs text-red mb-8 font-semibold md:text-center">ACTION</h1>
     </div>
 
     <div v-for="customer in customers" :key="customer.id" class="grid grid-cols-3 gap-4">

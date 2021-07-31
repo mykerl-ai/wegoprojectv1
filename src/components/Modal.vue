@@ -92,7 +92,7 @@
   .modal-header {
     position: relative;
     border-bottom: 1px solid #eeeeee;
-    color: #0080FF;
+    color: #f44336;
     justify-content: space-between;
   }
 
@@ -120,7 +120,7 @@
   }
 
   .btn-green {
-    color: #0080FF;
+    color: #f44336;
     background: none;
     font-size: 10px;
   }

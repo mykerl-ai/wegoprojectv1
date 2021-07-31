@@ -11,7 +11,7 @@
             
         </div>
 
-        <p v-show="id" class="text-xs my-12 mx-20 text-deep-gray">No playlist scheduled for this day, click <button @click="showModal" class="text-xs text-blue focus:outline-none">here</button> to schedule a playlist</p>
+        <p v-show="id" class="text-xs my-12 mx-20 text-deep-gray">No playlist scheduled for this day, click <button @click="showModal" class="text-xs text-red focus:outline-none">here</button> to schedule a playlist</p>
 
 
     </div>
@@ -45,25 +45,25 @@
 
   <div class="focus-within:none">
 
-                    <input type="checkbox"   value= "Monday" name="monthly" id="monday"  class="active:text-blue rounded mx-3 text-yellow">
+                    <input type="checkbox"   value= "Monday" name="monthly" id="monday"  class="active:text-red rounded mx-3 text-red">
                     <label for="monday" class="text-deep-gray font-semibold text-sm">Monday</label>
 
-                    <input type="checkbox"  value="Tuesday" name="yearly" id="tuesday"  class="active:text-blue rounded mx-3 text-yellow">
+                    <input type="checkbox"  value="Tuesday" name="yearly" id="tuesday"  class="active:text-red rounded mx-3 text-red">
                     <label for="tuesday" class="text-deep-gray font-semibold text-sm">Tuesday</label>
 
-                    <input type="checkbox"  value="Wednesday" name="bi-yearly" id="wednesday"  class="active:text-blue rounded mx-3 text-yellow">
+                    <input type="checkbox"  value="Wednesday" name="bi-yearly" id="wednesday"  class="active:text-red rounded mx-3 text-red">
                     <label for="wednesday" class="text-deep-gray font-semibold text-sm">Wednesday</label>
 
-                    <input type="checkbox"   value= "Thursday" name="monthly" id="thursday"  class="active:text-blue rounded mx-3 text-yellow">
+                    <input type="checkbox"   value= "Thursday" name="monthly" id="thursday"  class="active:text-red rounded mx-3 text-red">
                     <label for="thursday" class="text-deep-gray font-semibold text-sm">Thursday</label>
 
-                    <input type="checkbox"  value="Friday" name="yearly" id="friday"  class="active:text-blue rounded mx-3 text-yellow">
+                    <input type="checkbox"  value="Friday" name="yearly" id="friday"  class="active:text-red rounded mx-3 text-red">
                     <label for="friday" class="text-deep-gray font-semibold text-sm">Friday</label>
 
-                    <input type="checkbox"  value="Saturday" name="bi-yearly" id="saturday"  class="active:text-blue rounded mx-3 text-yellow">
+                    <input type="checkbox"  value="Saturday" name="bi-yearly" id="saturday"  class="active:text-red rounded mx-3 text-red">
                     <label for="saturday" class="text-deep-gray font-semibold text-sm">Saturday</label>
 
-                    <input type="checkbox"  value="Sunday" name="bi-yearly" id="sunday"  class="active:text-blue rounded mx-3 text-yellow">
+                    <input type="checkbox"  value="Sunday" name="bi-yearly" id="sunday"  class="active:text-red rounded mx-3 text-red">
                     <label for="sunday" class="text-deep-gray font-semibold text-sm">Sunday</label>
                     
 
@@ -103,13 +103,13 @@ unmounted () {
              id: '',
              folders: '',
            icons: [
-                {id: 'songs', url: 'http://www.w3.org/2000/svg', width: '20', height: '20', viewBox: '0 0 33.379 25.035', pathId: 'PIcon_awesome-folder', dataName: 'Icon awesome-folder', d: 'M30.25,8.672H17.733L13.56,4.5H3.129A3.129,3.129,0,0,0,0,7.629V26.405a3.129,3.129,0,0,0,3.129,3.129H30.25a3.129,3.129,0,0,0,3.129-3.129V11.8A3.129,3.129,0,0,0,30.25,8.672Z', transform: 'translate(0 -4.5)', fill: '#0080ff', title: 'Songs'}, 
+                {id: 'songs', url: 'http://www.w3.org/2000/svg', width: '20', height: '20', viewBox: '0 0 33.379 25.035', pathId: 'PIcon_awesome-folder', dataName: 'Icon awesome-folder', d: 'M30.25,8.672H17.733L13.56,4.5H3.129A3.129,3.129,0,0,0,0,7.629V26.405a3.129,3.129,0,0,0,3.129,3.129H30.25a3.129,3.129,0,0,0,3.129-3.129V11.8A3.129,3.129,0,0,0,30.25,8.672Z', transform: 'translate(0 -4.5)', fill: '#f44336', title: 'Songs'}, 
 
                 {id: 'commercials', url: 'http://www.w3.org/2000/svg', width: '20', height: '20', viewBox: '0 0 33.379 25.035', pathId: 'PIcon_awesome-folder', dataName: 'Icon awesome-folder', d: 'M30.25,8.672H17.733L13.56,4.5H3.129A3.129,3.129,0,0,0,0,7.629V26.405a3.129,3.129,0,0,0,3.129,3.129H30.25a3.129,3.129,0,0,0,3.129-3.129V11.8A3.129,3.129,0,0,0,30.25,8.672Z', transform: 'translate(0 -4.5)', fill: '#EC3434', title: 'Commercials'}, 
 
                 {id: 'jingles', url: 'http://www.w3.org/2000/svg', width: '20', height: '20', viewBox: '0 0 33.379 25.035', pathId: 'PIcon_awesome-folder', dataName: 'Icon awesome-folder', d: 'M30.25,8.672H17.733L13.56,4.5H3.129A3.129,3.129,0,0,0,0,7.629V26.405a3.129,3.129,0,0,0,3.129,3.129H30.25a3.129,3.129,0,0,0,3.129-3.129V11.8A3.129,3.129,0,0,0,30.25,8.672Z', transform: 'translate(0 -4.5)', fill: '#F8E71C', title: 'Jingles'}, 
 
-                {id: 'podcast', url: 'http://www.w3.org/2000/svg', width: '20', height: '20', viewBox: '0 0 33.379 25.035', pathId: 'PIcon_awesome-folder', dataName: 'Icon awesome-folder', d: 'M30.25,8.672H17.733L13.56,4.5H3.129A3.129,3.129,0,0,0,0,7.629V26.405a3.129,3.129,0,0,0,3.129,3.129H30.25a3.129,3.129,0,0,0,3.129-3.129V11.8A3.129,3.129,0,0,0,30.25,8.672Z', transform: 'translate(0 -4.5)', fill: '#0072E4', title: 'Podcast'}, 
+                {id: 'podcast', url: 'http://www.w3.org/2000/svg', width: '20', height: '20', viewBox: '0 0 33.379 25.035', pathId: 'PIcon_awesome-folder', dataName: 'Icon awesome-folder', d: 'M30.25,8.672H17.733L13.56,4.5H3.129A3.129,3.129,0,0,0,0,7.629V26.405a3.129,3.129,0,0,0,3.129,3.129H30.25a3.129,3.129,0,0,0,3.129-3.129V11.8A3.129,3.129,0,0,0,30.25,8.672Z', transform: 'translate(0 -4.5)', fill: '#1C1A1A', title: 'Podcast'}, 
             ],
             days: [
                 {day: 'Sunday', id: 1},
@@ -150,11 +150,11 @@ unmounted () {
     }
 
 nav>a, div>a {
-  color: #0080FF;
+  color: #f44336;
   font-size: 14px;
 }
  .bt {
-   background-color: #0080FF;
+   background-color: #f44336;
    color:white;
    padding: 8px;
    border-radius: 4px;

@@ -3,8 +3,8 @@
   <div  class="w-full cards grid grid-cols-1 lg:grid-cols-3 grid-flow-row gap-4 auto-cols-auto">
       <div v-for="card in cards" :key="card.id" class="shadow-lg py-6 px-4">
           <p class="text-sm text-deep-gray mb-12 ">{{card.title}}</p>
-          <h2 class="text-4xl font-semibold text-blue ">{{card.figure}}</h2>
-          <h2 class="text-sm text-blue ">{{card.details}}</h2>
+          <h2 class="text-4xl font-semibold text-red ">{{card.figure}}</h2>
+          <h2 class="text-sm text-red ">{{card.details}}</h2>
           <p class="text-xs text-deep-gray mb-4">{{card.Bitrate}}</p>
           <p class="text-xs text-deep-gray mb-4">{{card.listeners}}</p>
           <p class="text-xs text-deep-gray mb-4">{{card.data}}</p>
@@ -16,7 +16,7 @@
 
          <div class="topV col-span-6 shadow-xl py-6 px-4">
             <p class="text-base text-deep-gray mb-12 ">Auto DJ Broadcast control</p>
-            <p class="text-sm text-deep-gray mb-12 ">You don't have a playlist yet, <button class="text-blue focus:outline-none text-xs"> go to "Playlists tab to create one"</button></p>
+            <p class="text-sm text-deep-gray mb-12 ">You don't have a playlist yet, <button class="text-red focus:outline-none text-xs"> go to "Playlists tab to create one"</button></p>
         </div>
 
          

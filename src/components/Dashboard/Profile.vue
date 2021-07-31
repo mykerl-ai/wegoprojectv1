@@ -12,7 +12,7 @@
               <button class="form-btn rounded-full focus:outline-none py-3 px-6 bg-blue mt-6 block  text-sm text-white">Save</button> 
           </form>
           <div class="mt-6">
-             <p class="text-deep-gray">Your subscription expires in <span class="text-gblue font-bold" id="timer-days">{{countDown}}</span> days</p>
+             <p class="text-deep-gray">Your subscription expires in <span class="text-red font-bold" id="timer-days">{{countDown}}</span> days</p>
           </div>
       </div>
 

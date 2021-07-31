@@ -2,7 +2,7 @@
 <div class="grid lg:grid-cols-2 grid-cols-1 grid-flow-row">
 <section class="flex mx-auto">
   <div class=" py-8 px-8 md:px-20 md:mx-auto my-auto bg-white shadow-lg">
-    <h1 class="text-blue text-2xl">Get in touch</h1>
+    <h1 class="text-red text-2xl">Get in touch</h1>
     <form class="">
     <div class="focus-within:none">
     <input type="text" v-model="name" class="focus:outline-none focus:ring-2 focus:ring-opacity-50 mt-6 text-sm mb-6 focus:ring-blue-600 border-2 border-light-gray rounded-lg py-3 px-6 w-full" placeholder="Your name">
@@ -84,8 +84,7 @@ export default {
 
 <style scoped>
   .form-btn {
-    background-image:linear-gradient(to right bottom, #1B3BD8, #176CE0, #0B92E7, #0BB6EB, #00E0F2);
-  } 
+background-image: linear-gradient(to right bottom, #f44334, #ed382a, #e52c1f, #de1d13, #d60505);  } 
 
   textarea:focus, input:focus {
     border: none;
@@ -95,7 +94,7 @@ export default {
  
 
   nav> a  {
-      color: #0080FF;
+      color: #f44336;
       font-size: 14px;
   }
 
@@ -127,7 +126,7 @@ export default {
   font-size: 14px;  
   border: none;
   outline: none;
-  color: #0080FF;
+  color: #f44336;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
@@ -140,7 +139,7 @@ export default {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #0080FF;
+  background-color: #f44336;
   border-radius: 6px;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -157,7 +156,7 @@ export default {
 }
 
 .dropdown-content a:hover {
-  background-color: #F8E71C;
+  background-color: #1C1A1A;
 }
 
 .dropdown:hover .dropdown-content {

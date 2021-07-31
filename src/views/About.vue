@@ -23,7 +23,7 @@
       </div>
 
 
-      <h2 class="text-center text-blue font-semibold text-lg mt-24">OUR BACKGROUND</h2>
+      <h2 class="text-center text-red font-semibold text-lg mt-24">OUR BACKGROUND</h2>
 
       <div class="my-6 mx-auto w-auto">
       <p class="md:text-base text-sm mx-4 md:mx-0 text-justify text-deep-gray tracking-wide md:leading-8 leading-6">In 2017, WeGo Network began its journey as a radio station broadcasting live and pre-recorded music and shows. We created a place for creative artists to have a voice and easily show off their work at 104-WeGo. WeGo network quietly started its journey by offering products and services through the internet and solving technical problems related to video streaming and solution to support HD VOD.
@@ -33,7 +33,7 @@
     </section>
 
     <section class="ott ">
-      <h2 class="text-center text-blue font-semibold text-lg mt-48 md:mt-24">WHAT WE DO</h2>
+      <h2 class="text-center text-red font-semibold text-lg mt-48 md:mt-24">WHAT WE DO</h2>
 
       <div class="my-6 mx-auto w-auto">
       <p class="md:text-base text-sm mx-4 md:mx-4 text-justify text-deep-gray tracking-wide md:leading-8 leading-6">WeGo is a well-known name in IPTV/OTT in the ever-evolving streaming industry and maintained a leadership role in IPTV/OTT industry. To give our customers a competitive edge, we continue to invest heavily in R&D to evolve our products. We are moving fast in delivering best-in-class software, top-notch quality experience, constant innovations, and excellence in services and support. We move with customers as partners and work closely with them to create the best-customized IPTV/OTT solutions.</p>
@@ -41,12 +41,12 @@
     </section>
 
     <section class="iptv">
-      <h2 class="text-center text-blue font-semibold  text-lg mt-24 md:mt-24 mb-6">OUR TEAM</h2>
+      <h2 class="text-center text-red font-semibold  text-lg mt-24 md:mt-24 mb-6">OUR TEAM</h2>
       <div  class="tag grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row lg:grid-flow-row gap-4 content-center mx-4 md:mx-0">
           <div v-for="team in teams" :key="team.id" class="top">
-            <img class="bg-gblue bg-blend-overlay" :src="team.image" alt="">
+            <img class="bg-red bg-blend-overlay" :src="team.image" alt="">
             <h3 class="text-center font-semibold text-deep-gray py-3"> {{team.name}}</h3>
-            <p class="text-center text-blue">{{team.role}}</p>
+            <p class="text-center text-red">{{team.role}}</p>
             </div>
            
       </div>
@@ -57,18 +57,18 @@
     <section class="podcast">
     <div class="tag grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 grid-flow-row lg:grid-flow-row gap-x-16 content-center mt-48 mx-4 md:mx-2 lg:mx-0">
           <div class="">
-            <h2 class="text-blue font-semibold text-2xl text-center md:text-left pt-6 text-lg mb-6">WeGo Client Benefits</h2>
+            <h2 class="text-red font-semibold text-2xl text-center md:text-left pt-6 text-lg mb-6">WeGo Client Benefits</h2>
             <p class="text-gray leading-10 text-justify">We help content owners to launch, manage and grow their video streaming service
             WeGo offers a solution for a complex video value chain with powerful technology for managing, storing,        distributing, and monetizing film, television, and sports. Our platform empowers users to monetize their content.
             With End-to-End integration and smooth workflow, WeGo helps content owners, ISP’s and IPTV/OTT companies to excel and grow in this digital era.
 </p>
-            <button @click="$router.push({name: 'Contact'})" class="bg-yellow focus:outline-none rounded-full py-3 px-6 mt-6 text-white font-semibold text-sm ml-24">CONTACT US</button>
+            <button @click="$router.push({name: 'Contact'})" class="bg-red focus:outline-none rounded-full py-3 px-6 mt-6 text-white font-semibold text-sm ml-24">CONTACT US</button>
           </div>
 
         <div class="order-first">
               <div class="top">
                 <div class="overlay"></div>
-                <img class="bg-gblue bg-blend-overlay" src="../assets/images/help.jpg" alt="">
+                <img class="bg-blue bg-blend-overlay" src="../assets/images/help.jpg" alt="">
                 </div>
           </div> 
       </div>
@@ -168,7 +168,7 @@ export default {
 .overlay{
     width: 100%;
     height: 100%;
-    background-image:linear-gradient(to right bottom, #0080FF, #0080FF);
+    background-image:linear-gradient(to right bottom, #1C1A1A, #000000);
     opacity: 0.5;
     z-index: 1;
     position: absolute;

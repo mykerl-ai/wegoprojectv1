@@ -1,5 +1,5 @@
 <template>
-  <!-- <div :style="{ background: 'linear-gradient(to right bottom, #176CE0, #0B92E7, #0072E4)' }" class="max-w-100 pb-56 h-full"> -->
+  <!-- <div :style="{ background: 'linear-gradient(to right bottom, #176CE0, #0B92E7, #1C1A1A)' }" class="max-w-100 pb-56 h-full"> -->
 
       <MovieNav />
 

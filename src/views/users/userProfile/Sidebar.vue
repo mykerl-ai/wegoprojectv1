@@ -10,7 +10,7 @@
       </div>
      
 
-      <button @click="checkId(icon.id)"  class="flex focus:outline-none mb-2 focus:bg-gblue w-full py-4 px-6 active:bg-gblue" v-for="icon in icons" :key="icon.id" data-id="icon.id">
+      <button @click="checkId(icon.id)"  class="flex focus:outline-none mb-2 focus:bg-red w-full py-4 px-6 active:bg-red" v-for="icon in icons" :key="icon.id" data-id="icon.id">
         <svg :id="icon.id" :xmlns="icon.url" :width="icon.width" :height="icon.height" :viewBox="icon.viewBox">
                 <path :id="icon.pathId" :data-name="icon.dataName" :d="icon.d" :transform="icon.transform" :fill="icon.fill"/>
                         </svg>
@@ -21,9 +21,9 @@
     </nav>
   </aside>
   <div class="flex-1">
-    <header class="flex items-center p-4 font-semibold text-blue bg-gray-900">
+    <header class="flex items-center p-4 font-semibold text-red bg-gray-900">
       <button class="p-1 mr-4 focus:outline-none" @click="sidebarOpen = !sidebarOpen">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="#0080FF" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#f44336" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
@@ -38,7 +38,7 @@
       <Contact v-else-if="id==='support-17'"/>
       <Settings v-else-if="id==='settings-gear-64'"/>
       <Profile v-else-if="id==='profile'"/>
-      <h1 v-else class=" text-blue text-center" :class="sidebarOpen ? 'text-sm' : 'text-2xl'">Welcome to your Dashboard</h1>
+      <h1 v-else class=" text-red text-center" :class="sidebarOpen ? 'text-sm' : 'text-2xl'">Welcome to your Dashboard</h1>
     </main>
   </div>
 </div>

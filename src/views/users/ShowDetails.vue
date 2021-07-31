@@ -16,7 +16,7 @@
         <p class="text-white text-sm font-medium pt-4 ml-8">Director <span class="ml-8">Mike Bloomberg</span></p>
         <p class="text-white text-sm font-medium pt-4 ml-8">Genre <span class="ml-8">Fiction, Adventure, Fantasy</span></p>
         
-        <button @click="showModal" class="bg-yellow shadow-xl w-18 px-3 py-2 mt-4 mx-10 ">
+        <button @click="showModal" class="bg-red shadow-xl w-18 px-3 py-2 mt-4 mx-10 ">
 
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 29.6 37.673">
   <path id="Icon_material-play-arrow" data-name="Icon material-play-arrow" d="M12,7.5V45.173L41.6,26.336Z" transform="translate(-12 -7.5)"/>

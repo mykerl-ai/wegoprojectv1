@@ -3,21 +3,21 @@
   <div  class="w-full cards gap-4 my-4 grid grid-cols-2">
       <div class="shadow-lg py-6 px-6 w-full bg-white lg:col-span-1 col-span-2">
           <p class="text-sm text-deep-gray mb-8 ">{{title}}</p>
-          <h2 class="text-2xl font-semibold text-blue ">{{figure}}</h2>
+          <h2 class="text-2xl font-semibold text-red ">{{figure}}</h2>
           <p class="text-xs text-deep-gray my-4" :class="{ activeClass: status===true, errorClass: status===false }">Status: {{status ? 'active' : 'inactive'}}</p>
           <button type="button" @click="checkSub" class="bg-none text-red focus:outline-none mt-4" :class="{ activeClass: status===true, disabled : status===false }">{{status ? 'Cancel': 'undo'}}</button>
           <div class="mt-6">
-             <p v-if="status" class="text-deep-gray">Your subscription expires in <span class="text-gblue font-bold" id="timer-days">{{countDown}}</span> days</p>
+             <p v-if="status" class="text-deep-gray">Your subscription expires in <span class="text-red font-bold" id="timer-days">{{countDown}}</span> days</p>
           </div>
       </div>
 
        <!--channel-->
 
    <div class="shadow-lg py-6 px-6 lg:col-span-1 bg-white col-span-3">
-          <h2 class="text-2xl font-semibold text-center text-blue mx-32 mt-4 md:mt-0 md:mx-24">
+          <h2 class="text-2xl font-semibold text-center text-red mx-32 mt-4 md:mt-0 md:mx-24">
             
             <svg xmlns="http://www.w3.org/2000/svg" width="46.908" height="38.379" viewBox="0 0 46.908 38.379">
-            <path id="Icon_material-cast-connected" data-name="Icon material-cast-connected" d="M1.5,36.483v6.4H7.9A6.388,6.388,0,0,0,1.5,36.483Zm0-8.529v4.264A10.665,10.665,0,0,1,12.161,42.879h4.264A14.914,14.914,0,0,0,1.5,27.954ZM39.879,13.029H10.029V16.5A27.79,27.79,0,0,1,27.875,34.351h12ZM1.5,19.425V23.69a19.191,19.191,0,0,1,19.19,19.19h4.264A23.454,23.454,0,0,0,1.5,19.425ZM44.144,4.5H5.764A4.277,4.277,0,0,0,1.5,8.764v6.4H5.764v-6.4H44.144V38.615H29.218v4.264H44.144a4.277,4.277,0,0,0,4.264-4.264V8.764A4.277,4.277,0,0,0,44.144,4.5Z" transform="translate(-1.5 -4.5)" fill="#0080ff"/>
+            <path id="Icon_material-cast-connected" data-name="Icon material-cast-connected" d="M1.5,36.483v6.4H7.9A6.388,6.388,0,0,0,1.5,36.483Zm0-8.529v4.264A10.665,10.665,0,0,1,12.161,42.879h4.264A14.914,14.914,0,0,0,1.5,27.954ZM39.879,13.029H10.029V16.5A27.79,27.79,0,0,1,27.875,34.351h12ZM1.5,19.425V23.69a19.191,19.191,0,0,1,19.19,19.19h4.264A23.454,23.454,0,0,0,1.5,19.425ZM44.144,4.5H5.764A4.277,4.277,0,0,0,1.5,8.764v6.4H5.764v-6.4H44.144V38.615H29.218v4.264H44.144a4.277,4.277,0,0,0,4.264-4.264V8.764A4.277,4.277,0,0,0,44.144,4.5Z" transform="translate(-1.5 -4.5)" fill="#f44336"/>
           </svg>
 </h2>
           
@@ -37,7 +37,7 @@
       <p class="text-sm text-deep-gray mb-12 ">Top videos</p>
       <div class="w-90 bg-white">
       <table class="md:table-fixed table-auto w-full">
-    <thead class="text-blue text-xs">
+    <thead class="text-red text-xs">
     <tr>
       <th class="md:w-1/4 px-6 md:px-0 py-2 px-2 text-center">CHANNEL(S)</th>
       <th class="md:w-1/4 px-6 md:px-0 text-center">CREATED</th>
@@ -59,7 +59,7 @@
       <td class="text-xs text-center mx-12">{{movie.time}}</td>
       <td class="text-xs px-4 md:px-0">{{movie.views}}</td>
       <td class="text-xs invisible md:visible">wego.com/<br>{{movie.title}}</td>
-      <td class="text-xs invisible md:visible"><button @click="deleteChannel" class="bg-none focus:outline-none text-xs text-blue text-left"><p :class="{ activeClass: channel===true, errorClass: channel===false }">Delete</p> </button></td>
+      <td class="text-xs invisible md:visible"><button @click="deleteChannel" class="bg-none focus:outline-none text-xs text-red text-left"><p :class="{ activeClass: channel===true, errorClass: channel===false }">Delete</p> </button></td>
     </tr>
     
   </tbody>
