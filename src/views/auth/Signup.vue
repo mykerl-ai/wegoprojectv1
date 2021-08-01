@@ -131,6 +131,8 @@
 
 <script>
 import Navbar from '@/components/Navbar.vue'
+import { useToast } from "vue-toastification";
+const toast = useToast();
 export default {
   data(){
     return{
@@ -145,7 +147,7 @@ export default {
         email: '',
         password: '',
         confirmPassword: '',
-        products:[]
+        // products:[]
       }
     }
   },
@@ -175,9 +177,9 @@ export default {
 
       async registerUser() {
         // *Todo: User should be able to select multiple platforms.
-        if(this.iptv){ this.payload.products.push("IPTV") }
-        if(this.ott){ this.payload.products.push("OTT") }
-        if(this.radio){ this.payload.products.push("RADIO") }
+        // if(this.iptv){ this.payload.products.push("IPTV") }
+        // if(this.ott){ this.payload.products.push("OTT") }
+        // if(this.radio){ this.payload.products.push("RADIO") }
 
         let res = await this.$store.dispatch("mutate", {
           endpoint: "Register",
