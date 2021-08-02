@@ -42,7 +42,7 @@
 
      <div class="embed-responsive ">
         <video controls autoplay loop>
-          <source src="@/assets/videos/trail2.mp4" type="video/mp4">
+          <source src="https://youtu.be/I_ELk0667lo" type="video/mp4">
         </video>
       </div>
   </template>

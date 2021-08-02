@@ -3,7 +3,7 @@
     <div class="flex flex-nowrap gap-8  md:space-x-32 lg:space-x-2 w-full ">
       <router-link :to="{name: 'UserHome'}">
       <div >
-          <img class="w-12 md:w-16 lg:w-24 -mt-2 md:-pl-40 hidden md:block" src="@/assets/WeGo1.png" alt="">
+          <img class="w-12 md:w-16 lg:w-24 -mt-2 md:-pl-40 hidden md:block" src="@/assets/WeGo.png" alt="">
       </div>
   </router-link>
     <form method="GET">

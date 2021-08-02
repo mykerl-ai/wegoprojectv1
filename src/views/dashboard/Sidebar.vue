@@ -2,7 +2,7 @@
  <div  class="flex overflow-x-hidden h-screen relative">
   <aside class="flex-shrink-0 w-80 md:w-64 flex flex-col border-r border-blue h-screen transition-all duration-300 sticky top-0 bottom-0" :class="{ '-ml-80 md:-ml-64' : !sidebarOpen }">
     <div class="lg:h-64 sideBar h-1"></div>
-    <nav data-image="../../assets/images/screen.jpg" class="sideBar flex-1 flex flex-col pb-12 text-white">
+    <nav class="sideBar flex-1 flex flex-col pb-12 text-white">
 
         <div v-show="sidebarOpen" class="flex px-0 mt-2 mb-0">
           <img  class="w-20 pb-4 pt-0" src="@/assets/WeGo.png" alt="">

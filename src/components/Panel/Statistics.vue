@@ -62,7 +62,6 @@
 
 
 <script>
-import image from "@/assets/images/wars.jpg"
 import Songs from "./Folders/Songs.vue"
 import Modal from "@/components/Modal.vue"
 export default {
@@ -82,12 +81,12 @@ export default {
                
             ],
             movies: [
-                {image: image, title: 'Star wars', time: '1 minute ago', views:'29,129', id: 1},
-                {image: image, title: 'Star wars', time: '2 minutes ago', views:'129,192', id: 2},
-                {image: image, title: 'Star wars', time: '1 day ago', views:'40,000', id: 3},
-                {image: image, title: 'Star wars', time: '3 days ago', views:'250,000', id: 4},
-                {image: image, title: 'Star wars', time: '6 days ago', views:'450,000', id: 5},
-                {image: image, title: 'Star wars', time: '1 week ago', views:'500,000', id: 6},
+                {image: 'https://i.ibb.co/wcJZn7S/wars.jpg', title: 'Star wars', time: '1 minute ago', views:'29,129', id: 1},
+                {image: 'https://i.ibb.co/wcJZn7S/wars.jpg', title: 'Star wars', time: '2 minutes ago', views:'129,192', id: 2},
+                {image: 'https://i.ibb.co/wcJZn7S/wars.jpg', title: 'Star wars', time: '1 day ago', views:'40,000', id: 3},
+                {image: 'https://i.ibb.co/wcJZn7S/wars.jpg', title: 'Star wars', time: '3 days ago', views:'250,000', id: 4},
+                {image: 'https://i.ibb.co/wcJZn7S/wars.jpg', title: 'Star wars', time: '6 days ago', views:'450,000', id: 5},
+                {image: 'https://i.ibb.co/wcJZn7S/wars.jpg', title: 'Star wars', time: '1 week ago', views:'500,000', id: 6},
             ],
             id: ''
             

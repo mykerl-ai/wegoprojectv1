@@ -90,7 +90,7 @@ Personalized Stations Powered by WeGo
         <div class="order-first">
               <div class="top">
                 <div class="overlay"></div>
-                <img class="bg-blue bg-blend-overlay" src="@/assets/images/Focus.jpg" alt="">
+                <img class="bg-blue bg-blend-overlay" src="https://i.ibb.co/10v7bqR/Focus.jpg" alt="">
                 </div>
           </div> 
 

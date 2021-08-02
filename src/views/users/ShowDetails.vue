@@ -62,7 +62,7 @@
 
      <div class="embed-responsive ">
         <video controls autoplay loop>
-          <source src="@/assets/videos/trail2.mp4" type="video/mp4">
+          <source src="https://youtu.be/I_ELk0667lo" type="video/mp4">
         </video>
       </div>
   </template>
@@ -74,12 +74,6 @@
 <script>
 import MovieNav from '@/components/user/MovieNav.vue'
 import Modal from "@/components/Modal.vue"
-import image from '@/assets/images/starwars.jpg'
-import firstImage from '@/assets/images/wick.jpg'
-import secondImage from '@/assets/images/wonderwoman.jpg'
-import thirdImage from '@/assets/images/ince.jpg'
-import fourthImage from '@/assets/images/rings.jpg'
-import fifthImage from '@/assets/images/avengers.jpg'
 
 export default {
   props: ['image', 'title'],
@@ -87,14 +81,12 @@ export default {
     return{
       isModalVisible: false,
       seasons: [
-          {title: 'Season 1', provider: 'CRAKES TV', image: image, id: image },
-          {title: 'Season 2', provider: 'CRAKES TV', image: firstImage, id: firstImage },
-          {title: 'Season 3', provider: 'CRAKES TV', image: secondImage, id: secondImage},
-          {title: 'Season 4', provider: 'CRAKES TV', image: thirdImage, id: thirdImage },
-          {title: 'Season 5', provider: 'CRAKES TV', image: fourthImage, id: fourthImage },
-          {title: 'Season 6', provider: 'CRAKES TV', image: fifthImage, id: fifthImage },
-          {title: 'Season 7', provider: 'CRAKES TV', image: fourthImage, id: fourthImage },
-          {title: 'Season 8', provider: 'CRAKES TV', image: fifthImage, id: fifthImage }
+          {title: 'Season 1', provider: 'CRAKES TV', image: 'https://i.ibb.co/PQ5nQQD/starwars.jpg', id: 1 },
+          {title: 'Season 2', provider: 'CRAKES TV', image: 'https://i.ibb.co/cJjG2Sf/wick.jpg', id: 2 },
+          {title: 'Season 3', provider: 'CRAKES TV', image: 'https://i.ibb.co/7SshYMq/wonderwoman.jpg', id: 3},
+          {title: 'Season 4', provider: 'CRAKES TV', image: 'https://i.ibb.co/rGHFWnm/ince.jpg', id: 4 },
+          {title: 'Season 5', provider: 'CRAKES TV', image: 'https://i.ibb.co/GFXxYZ4/rings.jpg', id: 5 },
+          {title: 'Season 6', provider: 'CRAKES TV', image: 'https://i.ibb.co/rdC4F2c/avengers.jpg', id: 6 },
         ]
     }
   },

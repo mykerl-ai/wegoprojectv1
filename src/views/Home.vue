@@ -22,9 +22,9 @@
       <!-- <h2 class="text-center text-red font-semibold text-lg mt-24">OUR OTT PLATFORM</h2> -->
 
       <div class="embed-responsive px-4 mt-32 md:px-0 lg:px-0">
-        <video controls autoplay muted loop>
-          <source src="../assets/videos/trail2.mp4" type="video/mp4">
-        </video>
+       
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/I_ELk0667lo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       
       </div>
 
     </section>
