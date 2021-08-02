@@ -21,9 +21,9 @@
     <section class="ott w-full">
       <!-- <h2 class="text-center text-red font-semibold text-lg mt-24">OUR OTT PLATFORM</h2> -->
 
-      <div class="embed-responsive px-4 mt-32 md:px-0 lg:px-0">
+      <div class="embed-responsive relative px-4 mt-32 md:px-0 lg:px-0">
        
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/I_ELk0667lo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe class="responsive-iframe" src="https://www.youtube.com/embed/I_ELk0667lo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
        
       </div>
 
