@@ -106,7 +106,6 @@
 </template>
 
 <script>
-import image from "@/assets/images/wars.jpg"
 import Modal from "@/components/Modal.vue"
 export default {
   components: {Modal},
@@ -115,10 +114,10 @@ export default {
              isModalVisible: false,
              countDown: 0,
             movies: [
-                {image: image, title: 'm1ccdffyytllm3', time: '1 minute ago', views:'29,129', id: 1},
-                {image: image, title: 'm4ccdffyytllm7', time: '2 minutes ago', views:'129,192', id: 2},
-                {image: image, title: 'm2ccdffyytllm4', time: '1 day ago', views:'40,000', id: 3},
-                {image: image, title: 'm1ccdffyytllm3', time: '3 days ago', views:'250,000', id: 4},
+                {image: 'https://i.ibb.co/wcJZn7S/wars.jpg', title: 'm1ccdffyytllm3', time: '1 minute ago', views:'29,129', id: 1},
+                {image: 'https://i.ibb.co/wcJZn7S/wars.jpg', title: 'm4ccdffyytllm7', time: '2 minutes ago', views:'129,192', id: 2},
+                {image: 'https://i.ibb.co/wcJZn7S/wars.jpg', title: 'm2ccdffyytllm4', time: '1 day ago', views:'40,000', id: 3},
+                {image: 'https://i.ibb.co/wcJZn7S/wars.jpg', title: 'm1ccdffyytllm3', time: '3 days ago', views:'250,000', id: 4},
                 
             ],
             title: 'Subscription', 

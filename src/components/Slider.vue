@@ -2,23 +2,19 @@
   <div class="wrapper">
       <div class="slider flex">
           <div class="slide">
-              <img src="../assets/images/inception.jpg" alt="">
-              <img src="../assets/images/avengers.jpg" alt="">
-              <img src="../assets/images/woman.jpg" alt="">
-              <img src="../assets/images/wars.jpg" alt="">
-              <img src="../assets/images/wick.jpg" alt="">
-              <img src="../assets/images/rings.jpg" alt="">
-              <img src="../assets/images/inception.jpg" alt="">
-              <img src="../assets/images/avengers.jpg" alt="">
-              <img src="../assets/images/woman.jpg" alt="">
-              <img src="../assets/images/wars.jpg" alt="">
-              <img src="../assets/images/wick.jpg" alt="">
-              <img src="../assets/images/rings.jpg" alt="">
-              <img src="../assets/images/rings.jpg" alt="">
-              <img src="../assets/images/rings.jpg" alt="">
-              <img src="../assets/images/rings.jpg" alt="">
-              <img src="../assets/images/rings.jpg" alt="">
-              <img src="../assets/images/rings.jpg" alt="">
+              <img src="https://i.ibb.co/c3m1sQK/inception.jpg" alt="">
+              <img src="https://i.ibb.co/rdC4F2c/avengers.jpg" alt="">
+              <img src="https://i.ibb.co/q7dDWbd/woman.jpg" alt="">
+              <img src="https://i.ibb.co/wcJZn7S/wars.jpg" alt="">
+              <img src="https://i.ibb.co/cJjG2Sf/wick.jpg" alt="">
+              <img src="https://i.ibb.co/GFXxYZ4/rings.jpg" alt="">
+              <img src="https://i.ibb.co/c3m1sQK/inception.jpg" alt="">
+              <img src="https://i.ibb.co/rdC4F2c/avengers.jpg" alt="">
+              <img src="https://i.ibb.co/q7dDWbd/woman.jpg" alt="">
+              <img src="https://i.ibb.co/wcJZn7S/wars.jpg" alt="">
+              <img src="https://i.ibb.co/cJjG2Sf/wick.jpg" alt="">
+              <img src="https://i.ibb.co/GFXxYZ4/rings.jpg" alt="">
+              <img src="https://i.ibb.co/GFXxYZ4/rings.jpg" alt="">
           </div>
            
 

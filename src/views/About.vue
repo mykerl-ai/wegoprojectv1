@@ -16,14 +16,12 @@
   <div class="about">
     
     <section class="ott ">
-      <div class="embed-responsive ">
-        <video controls autoplay muted loop>
-          <source src="../assets/videos/trail2.mp4" type="video/mp4">
-        </video>
+      <div class="embed-responsive relative">
+         <iframe class="responsive-iframe" src="https://www.youtube.com/embed/I_ELk0667lo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
 
 
-      <h2 class="text-center text-red font-semibold text-lg mt-24">OUR BACKGROUND</h2>
+      <h2 class="text-center text-red font-semibold text-lg mt-16 md:-mt-12 lg:-mt-32">OUR BACKGROUND</h2>
 
       <div class="my-6 mx-auto w-auto">
       <p class="md:text-base text-sm mx-4 md:mx-0 text-justify text-deep-gray tracking-wide md:leading-8 leading-6">In 2017, WeGo Network began its journey as a radio station broadcasting live and pre-recorded music and shows. We created a place for creative artists to have a voice and easily show off their work at 104-WeGo. WeGo network quietly started its journey by offering products and services through the internet and solving technical problems related to video streaming and solution to support HD VOD.

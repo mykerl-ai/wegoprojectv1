@@ -40,25 +40,17 @@
 
 <script>
 import PodcastNav from '@/components/user/PodcastNav.vue'
-import image from '@/assets/images/starwars.jpg'
-import firstImage from '@/assets/images/wick.jpg'
-import secondImage from '@/assets/images/wonderwoman.jpg'
-import thirdImage from '@/assets/images/ince.jpg'
-import fourthImage from '@/assets/images/rings.jpg'
-import fifthImage from '@/assets/images/avengers.jpg'
 export default {
 
     data(){
       return {
         playlists: [
-          {title: 'Star Wars', provider: 'CRAKES TV', image: image, id: image },
-          {title: 'Wonder Woman', provider: 'CRAKES TV', image: firstImage, id: firstImage },
-          {title: 'Star Wars', provider: 'CRAKES TV', image: secondImage, id: secondImage},
-          {title: 'Star Wars', provider: 'CRAKES TV', image: thirdImage, id: thirdImage },
-          {title: 'Star Wars', provider: 'CRAKES TV', image: fourthImage, id: fourthImage },
-          {title: 'Star Wars', provider: 'CRAKES TV', image: fifthImage, id: fifthImage },
-          {title: 'Star Wars', provider: 'CRAKES TV', image: fourthImage, id: fourthImage },
-          {title: 'Star Wars', provider: 'CRAKES TV', image: fifthImage, id: fifthImage }
+          {title: 'Star Wars', provider: 'CRAKES TV', image: 'https://i.ibb.co/PQ5nQQD/starwars.jpg', id: 1 },
+          {title: 'John Wick', provider: 'CRAKES TV', image: 'https://i.ibb.co/cJjG2Sf/wick.jpg', id: 2 },
+          {title: 'Wonder Woman', provider: 'CRAKES TV', image: 'https://i.ibb.co/7SshYMq/wonderwoman.jpg', id: 3},
+          {title: 'Inception', provider: 'CRAKES TV', image: 'https://i.ibb.co/rGHFWnm/ince.jpg', id: 4 },
+          {title: 'Lord of the Rings', provider: 'CRAKES TV', image: 'https://i.ibb.co/GFXxYZ4/rings.jpg', id: 5 },
+          {title: 'Avengers', provider: 'CRAKES TV', image: 'https://i.ibb.co/rdC4F2c/avengers.jpg', id: 6 },
         ]
       }
     },

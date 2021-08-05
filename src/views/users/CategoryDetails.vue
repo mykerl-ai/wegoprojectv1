@@ -36,9 +36,7 @@
     
 
      <div class="embed-responsive ">
-        <video controls autoplay loop>
-          <source src="@/assets/videos/trail2.mp4" type="video/mp4">
-        </video>
+          <iframe  src="https://www.youtube.com/embed/I_ELk0667lo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
   </template>
  

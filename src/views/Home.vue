@@ -21,16 +21,16 @@
     <section class="ott w-full">
       <!-- <h2 class="text-center text-red font-semibold text-lg mt-24">OUR OTT PLATFORM</h2> -->
 
-      <div class="embed-responsive px-4 mt-32 md:px-0 lg:px-0">
-        <video controls autoplay muted loop>
-          <source src="../assets/videos/trail2.mp4" type="video/mp4">
-        </video>
+      <div class="embed-responsive relative px-4 mt-32 md:px-0 lg:px-0">
+       
+          <iframe class="responsive-iframe" src="https://www.youtube.com/embed/I_ELk0667lo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       
       </div>
 
     </section>
 
     <section class="iptv">
-      <h2 class="text-center text-red font-semibold  text-lg mt-24 mb-2">OUR COMBINED PLATFORM</h2>
+      <h2 class="text-center text-red font-semibold  text-lg  mt-16 md:-mt-12 lg:-mt-32 mb-2">OUR COMBINED PLATFORM</h2>
        <p class="lg:mt-4 md:mt-4 mt-2 tracking-normal mx-4 leading-7 text-justify text-sm mb-6 text-deep-gray font-regular">At WeGo, we believe in the power of a robust and extensive partnership network to build and deliver state-of-the-art technologies for media companies around the world. <span class="font-bold"> Launch your IPTV/OTT streaming service?</span>  <br> WeGo end-to-end combined SaaS (Software) which is a one-of-a-kind all-inclusive video streaming platform that lets you launch Multi-Screen OTT/IPTV, Video on Demand (VOD), Advertise (AVOD), Subscription (SVOD)  with Live Streaming content all controlled from a single Video CMS based admin panel</p>
 
       <div class="tag  md:mx-4 lg:px-0 lg:mx-0 grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 grid-flow-row gap-2">
@@ -127,7 +127,7 @@ NETWORK PODCAST & RADIO</h2>
             on your own personal channel or radio station
             </p>
 
-            <button @click="$router.push({name: 'Podcast'})" class="bg-red mt-10 md:mt-6 text-white md:mx-0 lg:mx-0 mx-20 font-semibold text-sm rounded-full md:py-3 py-1 focus:outline-none px-6">GET STARTED</button>
+            <button @click="$router.push({name: 'Podcast'})" class="bg-red mt-10 md:mt-6 text-white md:mx-80 lg:mx-0 mx-20 font-semibold text-sm rounded-full md:py-3 py-1 focus:outline-none md:px-12 lg:px-6 px-6">GET STARTED</button>
           </div>
       </div>
     </section>

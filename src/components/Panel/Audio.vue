@@ -66,7 +66,6 @@
 
 
 <script>
-import image from "@/assets/images/wars.jpg"
 import Songs from "./Folders/Songs.vue"
 import Modal from "@/components/Modal.vue"
 export default {
@@ -84,12 +83,12 @@ export default {
                 {id: 'podcast', url: 'http://www.w3.org/2000/svg', width: '20', height: '20', viewBox: '0 0 33.379 25.035', pathId: 'PIcon_awesome-folder', dataName: 'Icon awesome-folder', d: 'M30.25,8.672H17.733L13.56,4.5H3.129A3.129,3.129,0,0,0,0,7.629V26.405a3.129,3.129,0,0,0,3.129,3.129H30.25a3.129,3.129,0,0,0,3.129-3.129V11.8A3.129,3.129,0,0,0,30.25,8.672Z', transform: 'translate(0 -4.5)', fill: '#1C1A1A', title: 'Podcast'}, 
             ],
             movies: [
-                {image: image, title: 'Star wars', time: '1 minute ago', views:'29,129', id: 1},
-                {image: image, title: 'Star wars', time: '2 minutes ago', views:'129,192', id: 2},
-                {image: image, title: 'Star wars', time: '1 day ago', views:'40,000', id: 3},
-                {image: image, title: 'Star wars', time: '3 days ago', views:'250,000', id: 4},
-                {image: image, title: 'Star wars', time: '6 days ago', views:'450,000', id: 5},
-                {image: image, title: 'Star wars', time: '1 week ago', views:'500,000', id: 6},
+                {image: 'https://i.ibb.co/wcJZn7S/wars.jpg', title: 'Star wars', time: '1 minute ago', views:'29,129', id: 1},
+                {image: 'https://i.ibb.co/wcJZn7S/wars.jpg', title: 'Star wars', time: '2 minutes ago', views:'129,192', id: 2},
+                {image: 'https://i.ibb.co/wcJZn7S/wars.jpg', title: 'Star wars', time: '1 day ago', views:'40,000', id: 3},
+                {image: 'https://i.ibb.co/wcJZn7S/wars.jpg', title: 'Star wars', time: '3 days ago', views:'250,000', id: 4},
+                {image: 'https://i.ibb.co/wcJZn7S/wars.jpg', title: 'Star wars', time: '6 days ago', views:'450,000', id: 5},
+                {image: 'https://i.ibb.co/wcJZn7S/wars.jpg', title: 'Star wars', time: '1 week ago', views:'500,000', id: 6},
             ],
             id: ''
             
