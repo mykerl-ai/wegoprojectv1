@@ -3,7 +3,7 @@
 <Navbar class="w-full py-3">
   <router-link :to="{name: 'UserHome'}">
       <div >
-          <img class="w-12 md:w-16 -pl-40" src="@/assets/logo.png" alt="">
+          <img class="w-12 md:w-16 -pl-40" src="@/assets/WeGo1.png" alt="">
           <p class="text-left invisible md:visible text-xs font-medium text-white  -mt-2">WeGoNetwork</p>
       </div>
   </router-link>
@@ -13,8 +13,8 @@
 
 <section class="flex my-0 md:my-10">
   <div class="bg-white py-12 px-3 md:px-20 mx-auto my-auto shadow-lg formBg">
-    <h1 v-show="!recovery" class="text-blue md:text-left text-center text-2xl">Login</h1>
-    <h1 v-show="recovery" class="text-blue text-2xl">Reset password</h1>
+    <h1 v-show="!recovery" class="text-red md:text-left text-center text-2xl">Login</h1>
+    <h1 v-show="recovery" class="text-red text-2xl">Reset password</h1>
 
     <form class="w-100 md:w-80">
     <div class="focus-within:none">
@@ -34,10 +34,10 @@
     <button class="form-btn w-full mt-8 focus:outline-none bg-blue py-3 px-4 text-sm text-center text-white">SUBMIT</button>
 </form>
 
-    <button v-show="!recovery" @click="handleClick" class="bg-none text-blue  text-sm pt-4 focus:outline-none ">Forgot password?</button>
+    <button v-show="!recovery" @click="handleClick" class="bg-none text-red  text-sm pt-4 focus:outline-none ">Forgot password?</button>
 
-    <p v-show="recovery" class="text-sm text-gray">Back to <button  @click="handleClick" class="bg-none text-blue  text-sm pt-4 focus:outline-none">Login</button></p>
-   <p class="text-gray text-sm text-center mt-4">Not on WeGo yet? <button @click="handleSignUp" class="bg-none text-blue  text-sm pt-4 focus:outline-none">Sign Up</button></p> 
+    <p v-show="recovery" class="text-sm text-gray">Back to <button  @click="handleClick" class="bg-none text-red  text-sm pt-4 focus:outline-none">Login</button></p>
+   <p class="text-gray text-sm text-center mt-4">Not on WeGo yet? <button @click="handleSignUp" class="bg-none text-red  text-sm pt-4 focus:outline-none">Sign Up</button></p> 
   </div>
   </section>
 </template>
@@ -88,8 +88,7 @@ unmounted () {
 
 <style scoped>
   .form-btn {
-    background-image:linear-gradient(to right bottom, #1B3BD8, #176CE0, #0B92E7, #0BB6EB, #00E0F2);
-  } 
+background-image: linear-gradient(to right bottom, #f44334, #ed382a, #e52c1f, #de1d13, #d60505);  } 
 
   textarea:focus, input:focus {
     border: none;
@@ -97,13 +96,13 @@ unmounted () {
   }
 
   nav> a, div>a {
-      color: #0080FF;
+      color: #f44336;
       font-size: 14px;
       font-weight: 500;
   }
 
   .bt{
-      background-color: #0080FF;
+      background-color: #f44336;
    color: white;
    padding: 8px;
    border-radius: 4px;
@@ -132,7 +131,7 @@ unmounted () {
   font-size: 14px;  
   border: none;
   outline: none;
-  color: #0080FF;
+  color: #f44336;
   font-weight: 500;
   background-color: inherit;
   font-family: inherit;
@@ -146,7 +145,7 @@ unmounted () {
 .dropdown-content1 {
   display: none;
   position: absolute;
-  background-color: #0080FF;
+  background-color: #f44336;
   border-radius: 6px;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -164,7 +163,7 @@ unmounted () {
 }
 
 .dropdown-content1 a:hover {
-  background-color: #0072E4;
+  background-color: #1C1A1A;
 }
 
 .dropdown:hover .dropdown-content1 {
@@ -177,7 +176,7 @@ unmounted () {
   display: none;
   position: absolute;
   
-  background-color: #0080FF;
+  background-color: #f44336;
   border-radius: 6px;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);

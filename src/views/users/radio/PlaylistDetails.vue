@@ -69,16 +69,16 @@ unmounted () {
 
 <style>
 /* .user {
-  background: linear-gradient(to right bottom, #176CE0, #0B92E7, #0072E4);
+  background: linear-gradient(to right bottom, #176CE0, #0B92E7, #1C1A1A);
   background-repeat: no-repeat;
 } */
 
 nav>a, div>a {
-  color: #0080FF;
+  color: #f44336;
   font-size: 14px;
 }
  .bt {
-   background-color: #0080FF;
+   background-color: #f44336;
    color:white;
    padding: 8px;
    border-radius: 4px;

@@ -1,6 +1,6 @@
 <template>
     
-  <div id="hero" ref="hit" class="bg-hero-pattern w-full mx-0 px-0 sticky md:bg-contain md:h-screen fixed h-screen bg-blue bg-blend-overlay">
+  <div id="hero" ref="hit" class="bg-hero-pattern w-full mx-0 px-0 sticky md:bg-contain md:h-screen fixed h-screen user1 bg-blend-overlay">
         <figure></figure>
         <figure></figure>
         <figure></figure>
@@ -10,11 +10,11 @@
     <Navbar class="w-full z-100">
       <router-link :to="{name: 'Home'}">
       <div >
-          <img class="w-12 md:w-24 -pl-16 md:pl-8 pt-4" src="../assets/logo.png" alt="">
-          <p class="text-center invisible md:visible text-xs font-medium text-white ml-6 -mt-4">WeGoNetwork</p>
+          <img class="w-12 md:w-24 -pl-16 md:pl-2 pt-4" src="../assets/WeGo.png" alt="">
+          <p class="text-center invisible md:visible text-xs font-medium text-white ml-6 -mt-1">WeGoNetwork</p>
       </div>
 </router-link>
-      <nav class="lg:flex space-x-10 py-6 px-2  hidden md:hidden">
+      <nav class="lg:flex space-x-10 py-6   hidden md:hidden">
         <router-link :to="{name: 'Home'}">Home</router-link>
 
         
@@ -75,7 +75,7 @@
     </Navbar>
       <div :class="{'overlay':menu===true}"></div>
 
-    <div :class="{'hidden':menu===true}" class="fwd mt-32 lg:mt-32 2xl:mt-60 2xl:ml-96 lg:ml-60 md:ml-32 md:mt-32 px-12 w-50 2xl:w-full max-w-xl -z-1" >
+    <div :class="{'hidden':menu===true}" class="fwd mt-32 lg:mt-32 2xl:mt-60 2xl:ml-96 lg:ml-80 md:ml-32 md:mt-32 px-12 w-50 2xl:w-full max-w-xl" >
 
       <slot name="header"></slot>
 
@@ -83,8 +83,8 @@
       
       
       <div class="lg:mt-3 md:mt-8 absolute mt-4">
-          <button @click="$router.push({name: 'Signup'})" class="bg-yellow  py-3 px-6  text-white font-semibold text-xs md:text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-opacity-50">Join now</button>
-           <button @click="handleClick" class="border border-yellow-400 py-2 px-6 ml-6  text-white font-semibold text-xs md:text-sm rounded-full focus:outline-none">TALK TO US</button>
+          <button @click="$router.push({name: 'Signup'})" class="bg-red  py-3 px-6  text-white font-semibold text-xs md:text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-opacity-50">Join now</button>
+           <button @click="handleClick" class="border border-red-400 py-2 px-6 ml-6  text-white font-semibold text-xs md:text-sm rounded-full focus:outline-none">TALK TO US</button>
       </div>
     </div>
   </div>
@@ -143,6 +143,7 @@ z-index: 1;
     } 
     .fwd {
         position: absolute;
+        z-index: 0;
     }
     #hero > figure {
   animation: imageAnimation 30s linear infinite 0s;
@@ -207,7 +208,7 @@ nav>a, div>a {
 }
  .bt {
    background-color: white;
-   color: rgba(59, 130, 246, var(--tw-bg-opacity));;
+   color: #f44336;
    padding: 8px;
    border-radius: 4px;
  }
@@ -250,7 +251,7 @@ nav>a, div>a {
 .dropdown-content1 {
   display: none;
   position: absolute;
-  background-color: #0080FF;
+  background-color: #f44336;
   border-radius: 6px;
   
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -277,11 +278,13 @@ nav>a, div>a {
 }
 
 .dropdown-content1 a:hover {
-  background-color: #0072E4;
+  background-color: #1C1A1A;
 }
 
 .dropdown1:hover .dropdown-content1 {
   display: block;
+  margin-bottom: 1200px;
+  z-index: 1;
 }
 
 
@@ -303,7 +306,7 @@ nav>a, div>a {
   display: none;
   position: absolute;
   
-  background-color: #0080FF;
+  background-color: #f44336;
   border-radius: 6px;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -327,7 +330,7 @@ nav>a, div>a {
 .dropdown-content1 {
   display: none;
   position: relative;
-  background-color: #0080FF;
+  background-color: #f44336;
   border-radius: 6px;
   z-index: 999;
   width: 100vw;

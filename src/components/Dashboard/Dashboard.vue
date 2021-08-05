@@ -29,7 +29,7 @@
             <p class="text-sm text-white font-semibold pl-3 mb-12 redClass py-2">Top videos</p>
             <div class="w-90">
     <table class="table-fixed w-full bg-white">
-    <thead class="text-blue text-xs">
+    <thead class="text-red text-xs">
     <tr>
       <th class="w-1/2 py-2 px-2 text-left">VIDEOS</th>
       <th class="w-1/4 text-left">UPLOADED</th>
@@ -57,7 +57,7 @@
 
          <div class="details col-span-6 lg:col-span-2 md:col-span-6 py-6 px-4 shadow-xl">
               <p class="text-sm text-deep-gray mb-12 ">Quick details</p>
-              <div class="bg-yellow w-full py-0.5"></div>
+              <div class="bg-red w-full py-0.5"></div>
               <div class="flex py-6">
                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38" height="38" viewBox="0 0 38 38">
   <defs>

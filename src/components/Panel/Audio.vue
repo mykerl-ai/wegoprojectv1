@@ -75,13 +75,13 @@ export default {
         return{
              isModalVisible: false,
            icons: [
-                {id: 'songs', url: 'http://www.w3.org/2000/svg', width: '20', height: '20', viewBox: '0 0 33.379 25.035', pathId: 'PIcon_awesome-folder', dataName: 'Icon awesome-folder', d: 'M30.25,8.672H17.733L13.56,4.5H3.129A3.129,3.129,0,0,0,0,7.629V26.405a3.129,3.129,0,0,0,3.129,3.129H30.25a3.129,3.129,0,0,0,3.129-3.129V11.8A3.129,3.129,0,0,0,30.25,8.672Z', transform: 'translate(0 -4.5)', fill: '#0080ff', title: 'Songs'}, 
+                {id: 'songs', url: 'http://www.w3.org/2000/svg', width: '20', height: '20', viewBox: '0 0 33.379 25.035', pathId: 'PIcon_awesome-folder', dataName: 'Icon awesome-folder', d: 'M30.25,8.672H17.733L13.56,4.5H3.129A3.129,3.129,0,0,0,0,7.629V26.405a3.129,3.129,0,0,0,3.129,3.129H30.25a3.129,3.129,0,0,0,3.129-3.129V11.8A3.129,3.129,0,0,0,30.25,8.672Z', transform: 'translate(0 -4.5)', fill: '#f44336', title: 'Songs'}, 
 
                 {id: 'commercials', url: 'http://www.w3.org/2000/svg', width: '20', height: '20', viewBox: '0 0 33.379 25.035', pathId: 'PIcon_awesome-folder', dataName: 'Icon awesome-folder', d: 'M30.25,8.672H17.733L13.56,4.5H3.129A3.129,3.129,0,0,0,0,7.629V26.405a3.129,3.129,0,0,0,3.129,3.129H30.25a3.129,3.129,0,0,0,3.129-3.129V11.8A3.129,3.129,0,0,0,30.25,8.672Z', transform: 'translate(0 -4.5)', fill: '#EC3434', title: 'Commercials'}, 
 
-                {id: 'jingles', url: 'http://www.w3.org/2000/svg', width: '20', height: '20', viewBox: '0 0 33.379 25.035', pathId: 'PIcon_awesome-folder', dataName: 'Icon awesome-folder', d: 'M30.25,8.672H17.733L13.56,4.5H3.129A3.129,3.129,0,0,0,0,7.629V26.405a3.129,3.129,0,0,0,3.129,3.129H30.25a3.129,3.129,0,0,0,3.129-3.129V11.8A3.129,3.129,0,0,0,30.25,8.672Z', transform: 'translate(0 -4.5)', fill: '#F8E71C', title: 'Jingles'}, 
+                {id: 'jingles', url: 'http://www.w3.org/2000/svg', width: '20', height: '20', viewBox: '0 0 33.379 25.035', pathId: 'PIcon_awesome-folder', dataName: 'Icon awesome-folder', d: 'M30.25,8.672H17.733L13.56,4.5H3.129A3.129,3.129,0,0,0,0,7.629V26.405a3.129,3.129,0,0,0,3.129,3.129H30.25a3.129,3.129,0,0,0,3.129-3.129V11.8A3.129,3.129,0,0,0,30.25,8.672Z', transform: 'translate(0 -4.5)', fill: '#f44336', title: 'Jingles'}, 
 
-                {id: 'podcast', url: 'http://www.w3.org/2000/svg', width: '20', height: '20', viewBox: '0 0 33.379 25.035', pathId: 'PIcon_awesome-folder', dataName: 'Icon awesome-folder', d: 'M30.25,8.672H17.733L13.56,4.5H3.129A3.129,3.129,0,0,0,0,7.629V26.405a3.129,3.129,0,0,0,3.129,3.129H30.25a3.129,3.129,0,0,0,3.129-3.129V11.8A3.129,3.129,0,0,0,30.25,8.672Z', transform: 'translate(0 -4.5)', fill: '#0072E4', title: 'Podcast'}, 
+                {id: 'podcast', url: 'http://www.w3.org/2000/svg', width: '20', height: '20', viewBox: '0 0 33.379 25.035', pathId: 'PIcon_awesome-folder', dataName: 'Icon awesome-folder', d: 'M30.25,8.672H17.733L13.56,4.5H3.129A3.129,3.129,0,0,0,0,7.629V26.405a3.129,3.129,0,0,0,3.129,3.129H30.25a3.129,3.129,0,0,0,3.129-3.129V11.8A3.129,3.129,0,0,0,30.25,8.672Z', transform: 'translate(0 -4.5)', fill: '#1C1A1A', title: 'Podcast'}, 
             ],
             movies: [
                 {image: image, title: 'Star wars', time: '1 minute ago', views:'29,129', id: 1},

@@ -20,7 +20,7 @@
               <button class="form-btn rounded-full focus:outline-none py-3 px-12 bg-blue mt-6 block  text-sm text-white">Done</button>
 
 
-              <p class="text-gray text-sm text-center mt-4">Need help? <button @click="handleClick" class="bg-none text-blue  text-sm pt-4 focus:outline-none focus:ring-2 focus:ring-opacity-0">Contact us</button></p> 
+              <p class="text-gray text-sm text-center mt-4">Need help? <button @click="handleClick" class="bg-none text-red  text-sm pt-4 focus:outline-none focus:ring-2 focus:ring-opacity-0">Contact us</button></p> 
           </form>
           
 

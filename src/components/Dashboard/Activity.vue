@@ -49,7 +49,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="movie in movies" :key="movie.id">
+            <tr v-for="movie in this.$store.state.data.movies" :key="movie.id">
               <td class="flex">
                 <div class="my-4 w-16 h-16 overflow-hidden">
                   <img :src="`${movie.image}`" alt="" />

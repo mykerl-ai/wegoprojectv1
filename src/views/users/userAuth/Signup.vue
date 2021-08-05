@@ -2,7 +2,7 @@
 <Navbar class="w-full py-3">
   <router-link :to="{name: 'UserHome'}">
       <div >
-          <img class="w-12 md:w-16 -pl-40" src="@/assets/logo.png" alt="">
+          <img class="w-12 md:w-16 -pl-40" src="@/assets/WeGo1.png" alt="">
           <p class="text-left invisible md:visible text-xs font-medium text-white  -mt-2">WeGoNetwork</p>
       </div>
   </router-link>
@@ -12,7 +12,7 @@
 
 <section class="flex md:my-6 my-0">
   <div class="bg-white py-8 md:px-20 px-4 mx-auto my-auto shadow-lg formBg">
-    <h1 class="text-blue text-center md:text-left text-2xl mb-4">Sign up</h1>
+    <h1 class="text-red text-center md:text-left text-2xl mb-4">Sign up</h1>
     
 <form class="w-100 md:w-80">
 
@@ -66,8 +66,8 @@
     <button class="form-btn w-full mt-4 focus:outline-none bg-blue py-3 px-4 text-sm text-center text-white">SUBMIT</button>
 </form>
 
-    <button v-show="recovery" @click="handleClick" class="bg-none text-blue  text-sm pt-4 focus:outline-none">Login</button>
-   <p class="text-white text-sm text-center mt-4">Already a member? <button @click="handleLogin" class="bg-none text-blue  text-sm pt-4 focus:outline-none">Login</button></p> 
+    <button v-show="recovery" @click="handleClick" class="bg-none text-red  text-sm pt-4 focus:outline-none">Login</button>
+   <p class="text-white text-sm text-center mt-4">Already a member? <button @click="handleLogin" class="bg-none text-red  text-sm pt-4 focus:outline-none">Login</button></p> 
   </div>
   </section>
 </template>
@@ -128,7 +128,7 @@ unmounted () {
 
 
   .form-btn {
-    background-image:linear-gradient(to right bottom, #1B3BD8, #176CE0, #0B92E7, #0BB6EB, #00E0F2);
+    background-image: linear-gradient(to right bottom, #f44334, #ed382a, #e52c1f, #de1d13, #d60505);
   } 
 
   textarea:focus, input:focus {
@@ -137,13 +137,13 @@ unmounted () {
   }
 
   nav> a, div>a {
-      color: #0080FF;
+      color: #f44336;
       font-size: 14px;
       font-weight: 500;
   }
 
   .bt{
-      background-color: #0080FF;
+      background-color: #f44336;
    color: white;
    padding: 8px;
    border-radius: 4px;
@@ -172,7 +172,7 @@ unmounted () {
   font-size: 14px;  
   border: none;
   outline: none;
-  color: #0080FF;
+  color: #f44336;
   font-weight: 500;
   background-color: inherit;
   font-family: inherit;
@@ -186,7 +186,7 @@ unmounted () {
 .dropdown-content1 {
   display: none;
   position: absolute;
-  background-color: #0080FF;
+  background-color: #f44336;
   border-radius: 6px;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -204,7 +204,7 @@ unmounted () {
 }
 
 .dropdown-content1 a:hover {
-  background-color: #0072E4;
+  background-color: #1C1A1A;
 }
 
 .dropdown:hover .dropdown-content1 {
@@ -217,7 +217,7 @@ unmounted () {
   display: none;
   position: absolute;
   
-  background-color: #0080FF;
+  background-color: #f44336;
   border-radius: 6px;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);

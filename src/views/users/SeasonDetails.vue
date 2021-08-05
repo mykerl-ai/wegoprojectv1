@@ -34,7 +34,7 @@
             <div class="shrink">
                 <button class="py-8 focus:outline-none w-full h-auto flex flex-nowrap"><p class="text-white ml-2 font-bold text-sm ">Episode {{episode.id}}: </p>
                 <span class="font-regular flex-grow text-white">{{episode.title}}</span>
-                <button @click="showModal" class="focus:outline-none flex-end bg-yellow shadow-xl rounded-full h-9 w-9 px-2 py-2 mx-10 -mt-2">
+                <button @click="showModal" class="focus:outline-none flex-end bg-red shadow-xl rounded-full h-9 w-9 px-2 py-2 mx-10 -mt-2">
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 29.6 37.673">
                 <path id="Icon_material-play-arrow" data-name="Icon material-play-arrow" d="M12,7.5V45.173L41.6,26.336Z" transform="translate(-12 -7.5)"/>
@@ -94,16 +94,16 @@ unmounted () {
 
 <style>
 /* .user {
-  background: linear-gradient(to right bottom, #176CE0, #0B92E7, #0072E4);
+  background: linear-gradient(to right bottom, #176CE0, #0B92E7, #1C1A1A);
   background-repeat: no-repeat;
 } */
 
 nav>a, div>a {
-  color: #0080FF;
+  color: #f44336;
   font-size: 14px;
 }
  .bt {
-   background-color: #0080FF;
+   background-color: #f44336;
    color:white;
    padding: 8px;
    border-radius: 4px;

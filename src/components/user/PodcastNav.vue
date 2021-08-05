@@ -3,7 +3,7 @@
       <div class="flex flex-nowrap gap-8  md:space-x-32 lg:space-x-1 w-full ">
         <router-link :to="{name: 'UserHome'}">
       <div >
-          <img class="w-12 md:w-16 lg:w-24 -mt-2 md:-pl-40 hidden md:block" src="@/assets/logo.png" alt="">
+          <img class="w-12 md:w-16 lg:w-24 -mt-2 md:-pl-40 hidden md:block" src="@/assets/WeGo1.png" alt="">
       </div>
   </router-link>
     <form method="GET">
@@ -12,8 +12,8 @@
       <button type="submit" class="p-1 -ml-10 lg:-ml-4 md:-ml-32 focus:outline-none focus:shadow-outline">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 35.914 35.914">
           <g id="Icon_feather-search" data-name="Icon feather-search" transform="translate(-3 -3)">
-          <path id="Path_352" data-name="Path 352" d="M33.2,18.852A14.352,14.352,0,1,1,18.852,4.5,14.352,14.352,0,0,1,33.2,18.852Z" fill="none" stroke="#0072E4" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-          <path id="Path_353" data-name="Path 353" d="M32.779,32.779l-7.8-7.8" transform="translate(4.013 4.013)" fill="none" stroke="#0072E4" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <path id="Path_352" data-name="Path 352" d="M33.2,18.852A14.352,14.352,0,1,1,18.852,4.5,14.352,14.352,0,0,1,33.2,18.852Z" fill="none" stroke="#1C1A1A" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <path id="Path_353" data-name="Path 353" d="M32.779,32.779l-7.8-7.8" transform="translate(4.013 4.013)" fill="none" stroke="#1C1A1A" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
           </g>
           </svg>
       </button>
@@ -135,7 +135,7 @@ nav {
   padding: 0 2px
 }
 .bt{
-      background-color: #0080FF;
+      background-color: #f44336;
    color: white;
    padding: 8px;
    border-radius: 4px;
@@ -148,7 +148,7 @@ nav {
  nav button:hover,
  nav button.router-link-active,
  nav button.router-link-exact-active {
-   border-bottom: 1px solid #F8E71C;
+   border-bottom: 1px solid #f44336;
    
  }
  .navbar a {

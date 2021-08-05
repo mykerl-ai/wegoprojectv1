@@ -2,11 +2,11 @@
 <Navbar class="w-full z-100">
       <router-link :to="{name: 'Home'}">
       <div >
-          <img class="w-12 md:w-24 -pl-16 md:pl-8 pt-4" src="@/assets/logo.png" alt="">
-          <p class="text-center invisible md:visible text-xs font-medium text-blue ml-6 -mt-4">WeGoNetwork</p>
+          <img class="w-12 md:w-24 -pl-16 pt-4" src="@/assets/WeGo1.png" alt="">
+          <p class="text-center invisible md:visible text-xs font-medium text-red ml-6 -mt-1">WeGoNetwork</p>
       </div>
 </router-link>
-      <nav class="lg:flex space-x-10 py-6 px-2 hidden md:hidden">
+      <nav class="lg:flex space-x-10 py-6 hidden md:hidden">
         <router-link :to="{name: 'Home'}">Home</router-link>
 
         
@@ -45,7 +45,7 @@
 
        <div class="navbar mt-8 lg:hidden  mr-16 md:mr-24">
       <div class="dropdown1 transition-all duration-300" :class="{'-ml-32 md:-ml-56': menu===true}">
-    <button @click="showMenu" class="dropbtn focus:outline-none"><svg xmlns="http://www.w3.org/2000/svg" fill="#0080FF" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+    <button @click="showMenu" class="dropbtn focus:outline-none"><svg xmlns="http://www.w3.org/2000/svg" fill="#f44336" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg> 
     </button>
@@ -69,7 +69,7 @@
  <div :class="{'overlay':menu===true}"></div>
 <section class="flex -z-1 mt-8">
   <div class="bg-white py-4 px-4 md:py-16 md:px-20 mx-auto my-auto shadow-lg">
-    <h1 class="text-blue md:text-left text-center text-xl md:text-2xl mb-12 md:mb-4">Sign up</h1>
+    <h1 class="text-red md:text-left text-center text-xl md:text-2xl mb-12 md:mb-4">Sign up</h1>
     
 <form class="w-100 md:w-80" @submit.prevent="">
 
@@ -123,8 +123,8 @@
     <button @click="registerUser()" class="form-btn w-full mt-4  bg-blue py-3 px-4 text-sm text-center text-white">SUBMIT</button>
 </form>
 
-    <button v-show="recovery" @click="handleClick" class="bg-none text-blue  text-sm pt-4 focus:outline-none">Login</button>
-   <p class="text-gray text-sm text-center mt-4">Already a member? <button @click="handleLogin" class="bg-none text-blue  text-sm pt-4 focus:outline-none">Login</button></p> 
+    <button v-show="recovery" @click="handleClick" class="bg-none text-red  text-sm pt-4 focus:outline-none">Login</button>
+   <p class="text-gray text-sm text-center mt-4">Already a member? <button @click="handleLogin" class="bg-none text-red  text-sm pt-4 focus:outline-none">Login</button></p> 
   </div>
   </section>
 </template>
@@ -218,8 +218,7 @@ z-index: 1;
 }
 
   .form-btn {
-    background-image:linear-gradient(to right bottom, #1B3BD8, #176CE0, #0B92E7, #0BB6EB, #00E0F2);
-  } 
+background-image: linear-gradient(to right bottom, #f44334, #ed382a, #e52c1f, #de1d13, #d60505);  } 
 
   textarea:focus, input:focus {
     border: none;
@@ -227,13 +226,13 @@ z-index: 1;
   }
 
   nav> a, div>a {
-      color: #0080FF;
+      color: #f44336;
       font-size: 14px;
       font-weight: 500;
   }
 
   .bt{
-      background-color: #0080FF;
+      background-color: #f44336;
    color: white;
    padding: 8px;
    border-radius: 4px;
@@ -262,7 +261,7 @@ z-index: 1;
   font-size: 14px;  
   border: none;
   outline: none;
-  color: #0080FF;
+  color: #f44336;
   position: relative;
   font-weight: 500;
   background-color: inherit;
@@ -277,7 +276,7 @@ z-index: 1;
 .dropdown-content1 {
   display: none;
   position: absolute;
-  background-color: #0080FF;
+  background-color: #f44336;
   border-radius: 6px;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -312,7 +311,7 @@ z-index: 1;
   text-align: left;
 }
 .dropdown-content1 a:hover {
-  background-color: #0072E4;
+  background-color: #1C1A1A;
 }
 
 .dropdown1:hover .dropdown-content1 {
@@ -323,7 +322,7 @@ z-index: 1;
   .dropdown-content1 {
   display: none;
   position: relative;
-  background-color: #0080FF;
+  background-color: #f44336;
   border-radius: 6px;
   z-index: 999;
   width: 100vw;
@@ -352,7 +351,7 @@ z-index: 1;
 .dropdown-content1 {
   display: none;
   position: relative;
-  background-color: #0080FF;
+  background-color: #f44336;
   border-radius: 6px;
   z-index: 999;
   width: 100vw;

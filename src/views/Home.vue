@@ -19,7 +19,7 @@
   <div class="home w-full my-20">
     
     <section class="ott w-full">
-      <!-- <h2 class="text-center text-blue font-semibold text-lg mt-24">OUR OTT PLATFORM</h2> -->
+      <!-- <h2 class="text-center text-red font-semibold text-lg mt-24">OUR OTT PLATFORM</h2> -->
 
       <div class="embed-responsive px-4 mt-32 md:px-0 lg:px-0">
         <video controls autoplay muted loop>
@@ -30,14 +30,14 @@
     </section>
 
     <section class="iptv">
-      <h2 class="text-center text-blue font-semibold  text-lg mt-24 mb-2">OUR COMBINED PLATFORM</h2>
+      <h2 class="text-center text-red font-semibold  text-lg mt-24 mb-2">OUR COMBINED PLATFORM</h2>
        <p class="lg:mt-4 md:mt-4 mt-2 tracking-normal mx-4 leading-7 text-justify text-sm mb-6 text-deep-gray font-regular">At WeGo, we believe in the power of a robust and extensive partnership network to build and deliver state-of-the-art technologies for media companies around the world. <span class="font-bold"> Launch your IPTV/OTT streaming service?</span>  <br> WeGo end-to-end combined SaaS (Software) which is a one-of-a-kind all-inclusive video streaming platform that lets you launch Multi-Screen OTT/IPTV, Video on Demand (VOD), Advertise (AVOD), Subscription (SVOD)  with Live Streaming content all controlled from a single Video CMS based admin panel</p>
 
       <div class="tag  md:mx-4 lg:px-0 lg:mx-0 grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 grid-flow-row gap-2">
           <div  class="flip-card pl-8 md:pl-0">
             <div class="flip-card-inner overlay">
             <div class="flip-card-front">
-            <img class="bg-gblue bg-blend-overlay" src="../assets/images/iptv.png" alt="">
+            <img class="bg-red bg-blend-overlay" src="../assets/images/iptv.png" alt="">
             </div>
             <div class="flip-card-back">
             <p class="text-sm text-white mx-6 my-24">Centralize your organization’s live and on-demand video in a beautiful, viewing portal.                                             
@@ -49,7 +49,7 @@
             <div  class="flip-card pl-8 md:pl-0">
             <div class="flip-card-inner overlay">
             <div class="flip-card-front">
-            <img class="bg-gblue bg-blend-overlay" src="../assets/images/network.jpg" alt="">
+            <img class="bg-red bg-blend-overlay" src="../assets/images/network.jpg" alt="">
             </div>
             <div class="flip-card-back">
             <p class="text-sm text-white mx-6 my-24">Scale your video to fit virtually any audience size worldwide</p>
@@ -60,7 +60,7 @@
             <div  class="flip-card pl-8 md:pl-0">
             <div class="flip-card-inner overlay">
             <div class="flip-card-front">
-            <img class="bg-gblue bg-blend-overlay" src="../assets/images/screen.jpg" alt="">
+            <img class="bg-red bg-blend-overlay" src="../assets/images/screen.jpg" alt="">
             </div>
             <div class="flip-card-back">
             <p class="text-sm text-white mx-6 my-24">Stream live, and manage recorded video content. Cloud streaming platform for video, transcoding, encoder, to multi-platform payout, while analytics what show your viewer love watching</p>
@@ -71,7 +71,7 @@
             <div  class="flip-card pl-8 md:pl-0">
             <div class="flip-card-inner overlay">
             <div class="flip-card-front">
-            <img class="bg-gblue bg-blend-overlay" src="../assets/images/data.jpg" alt="">
+            <img class="bg-red bg-blend-overlay" src="../assets/images/data.jpg" alt="">
             </div>
             <div class="flip-card-back">
             <p class="text-sm text-white mx-6 my-24">Analytics show what your viewers love watching</p>
@@ -82,7 +82,7 @@
             <div  class="flip-card pl-8 md:pl-0">
             <div class="flip-card-inner overlay">
             <div class="flip-card-front">
-            <img class="bg-gblue bg-blend-overlay" src="../assets/images/cyber.jpg" alt="">
+            <img class="bg-red bg-blend-overlay" src="../assets/images/cyber.jpg" alt="">
             </div>
             <div class="flip-card-back">
             <p class="text-sm text-white mx-6 my-24">Control access with SSO, password protection, domain whitelisting and embed restrictions.</p>
@@ -93,7 +93,7 @@
             <div  class="flip-card pl-8 md:pl-0">
             <div class="flip-card-inner overlay">
             <div class="flip-card-front">
-            <img class="bg-gblue bg-blend-overlay" src="../assets/images/transcode.png" alt="">
+            <img class="bg-red bg-blend-overlay" src="../assets/images/transcode.png" alt="">
             </div>
             <div class="flip-card-back">
             <p class="text-sm text-white mx-6 my-24">Unlock your Stream Network with White Label solution. Your logos, colors & icons. Multi lingual support numbers, checkout links & more</p>
@@ -101,25 +101,25 @@
             </div>
             </div>
       </div>
-       <button @click="$router.push({name: 'Iptv'})" class="bg-yellow mt-10 md:mt-8 text-white lg:mx-96 md:mx-72  mx-20 font-semibold text-sm rounded-full md:py-3 py-1 focus:outline-none px-12">GET STARTED</button>
+       <button @click="$router.push({name: 'Iptv'})" class="bg-red mt-10 md:mt-8 text-white lg:mx-96 md:mx-72  mx-20 font-semibold text-sm rounded-full md:py-3 py-1 focus:outline-none px-12">GET STARTED</button>
     </section>
 
     <section class="podcast">
-      <h2 class="text-center text-blue font-semibold  text-lg mt-24 mb-8 md:mb-12">WeGO
+      <h2 class="text-center lg:text-right text-red font-semibold lg:mr-24 text-lg mt-24 mb-8 md:mb-12">WeGO
 NETWORK PODCAST & RADIO</h2>
       <div class="tag grid grid-cols-1  lg:grid-cols-2 grid-flow-row lg:grid-flow-row gap-6 md:gap-4 content-center px-4 md:px-4 lg:px-0">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 ">
               <div class="top lg:grid hidden">
                 <div class="overlay module"></div>
-                <img class="bg-gblue bg-blend-overlay" src="../assets/images/podcast2.jpg" alt="">
+                <img class="bg-red bg-blend-overlay" src="../assets/images/podcast2.jpg" alt="">
                 </div>
               <div class="top lg:grid hidden">
                    <div class="overlay module"></div>
-                <img class="bg-gblue bg-blend-overlay" src="../assets/images/podcast1.jpg" alt="">
+                <img class="bg-red bg-blend-overlay" src="../assets/images/podcast1.jpg" alt="">
                 </div>
               <div class="lg:col-span-2 col-span-1 top">
                   <div class="overlay module"></div>
-                <img class="bg-gblue bg-blend-overlay" src="../assets/images/podcast.jpg" alt="">
+                <img class="bg-red bg-blend-overlay" src="../assets/images/podcast.jpg" alt="">
                 </div>
           </div>
           <div class="lg:ml-16 lg:mt-0 md:mt-2">
@@ -127,7 +127,7 @@ NETWORK PODCAST & RADIO</h2>
             on your own personal channel or radio station
             </p>
 
-            <button @click="$router.push({name: 'Podcast'})" class="bg-yellow mt-10 md:mt-6 text-white md:mx-0 lg:mx-0 mx-20 font-semibold text-sm rounded-full md:py-3 py-1 focus:outline-none px-6">GET STARTED</button>
+            <button @click="$router.push({name: 'Podcast'})" class="bg-red mt-10 md:mt-6 text-white md:mx-0 lg:mx-0 mx-20 font-semibold text-sm rounded-full md:py-3 py-1 focus:outline-none px-6">GET STARTED</button>
           </div>
       </div>
     </section>
@@ -136,7 +136,7 @@ NETWORK PODCAST & RADIO</h2>
       
     <div class="tag grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 grid-flow-row lg:grid-flow-row gap-x-16 content-center px-4 md:px-4 lg:px-0 mt-20 md:mt-48">
           <div class="md:order-none lg:order-none order-last">
-            <h2 class="text-blue font-semibold text-center md:text-left mt-8 md:mt-0 md:text-2xl text-lg mb-6">The Benefits of a WeGo Network Combined Platform</h2>
+            <h2 class="text-red font-semibold text-center md:text-left mt-8 md:mt-0 md:text-2xl text-lg mb-6">The Benefits of a WeGo Network Combined Platform</h2>
             <p class="text-gray leading-8 text-justify mb-8">OTT tends to offer content over subscription services, examples are Netflix, Hulu, Amazon, Apple TV, Roku and YouTube. But IPTV is more like traditional television with live TV broadcast available, as well as premium VOD content over the internet and mobile devices.</p>
             
             <p class="text-gray leading-8 text-justify mb-8">Distributing and monetizing content across platforms for your social media channel to your own tv channel WeGo Network give our customer flexibility, quality, reliability and economical freedom of choice for film makers, broadcasters, gamers and live events.</p>
@@ -146,13 +146,13 @@ and customers. So Grow your business, enterprise or ministry. We update our apps
 
 
 
-            <button @click="$router.push({name: 'Contact'})" class="bg-yellow md:mx-0 lg:mx-0 mx-16 rounded-full py-1 px-12 mt-6 text-white focus:outline-none font-semibold text-sm ">CONTACT US</button>
+            <button @click="$router.push({name: 'Contact'})" class="bg-red md:mx-0 lg:mx-0 mx-16 rounded-full py-1 px-12 mt-6 text-white focus:outline-none font-semibold text-sm ">CONTACT US</button>
           </div>
 
         <div class="">
               <div class="top">
                 <div class="overlay"></div>
-                <img class="bg-gblue bg-blend-overlay" src="../assets/images/help.jpg" alt="">
+                <img class="bg-red bg-blend-overlay" src="../assets/images/help.jpg" alt="">
                 </div>
           </div> 
       </div>
@@ -253,7 +253,7 @@ export default {
 }
 
 .flip-card-back {
-  background-color: #2980b9;
+  background-color: #f44336;
   color: white;
   transform: rotateY(180deg);
 }

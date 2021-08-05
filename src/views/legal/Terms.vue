@@ -3,8 +3,8 @@
  <Navbar class="w-full shadow-xl lg:-ml-40">
        <router-link :to="{name: 'Home'}">
       <div class="md:hidden">
-          <img class="w-12 md:w-24 -pl-16 md:pl-8 pt-4" src="@/assets/logo.png" alt="">
-          <p class="text-center invisible md:visible text-xs text-white ml-6 -mt-4">WeGo Network</p>
+          <img class="w-12 md:w-24 -pl-16 pt-4" src="@/assets/WeGo1.png" alt="">
+          <p class="text-center invisible md:visible text-xs text-white ml-6 -mt-1">WeGo Network</p>
       </div>
 </router-link>
       
@@ -69,8 +69,8 @@
   <nav class="toc">
       <router-link :to="{name: 'Home'}">
       <div class="md:-mt-20 mb-6">
-          <img class="w-12 md:w-24 -pl-16 md:pl-8 pt-4" src="@/assets/logo.png" alt="">
-          <p class="text-center invisible md:visible text-xs text-white ml-6 -mt-4">WeGo Network</p>
+          <img class="w-12 md:w-32 -pl-16 md:pl-8 pt-4" src="@/assets/WeGo1.png" alt="">
+          <p class="text-center invisible md:visible text-xs text-white ml-6 -mt-1">WeGo Network</p>
       </div>
 </router-link>
 	<ul v-for="header in headers" :key="header.id">
@@ -332,11 +332,11 @@ export default {
 
 
 nav>a, div>a {
-  color: #0080FF;
+  color: #f44336;
   font-size: 14px;
 }
  .bt {
-   background-color: #0080FF;
+   background-color: #f44336;
    color: white;
    padding: 8px;
    border-radius: 4px;
@@ -350,7 +350,7 @@ nav>a, div>a {
 .navbar a {
   float: left;
   font-size: 14px;
-  color: #0080FF;
+  color: #f44336;
   text-align: center;
   
   text-decoration: none;
@@ -365,7 +365,7 @@ nav>a, div>a {
   font-size: 14px;  
   border: none;
   outline: none;
-  color: #0080FF;
+  color: #f44336;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
@@ -378,7 +378,7 @@ nav>a, div>a {
 .dropdown-content1 {
   display: none;
   position: absolute;
-  background-color: #0080FF;
+  background-color: #f44336;
   border-radius: 6px;
   
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -395,7 +395,7 @@ nav>a, div>a {
 }
 
 .dropdown-content1 a:hover {
-  background-color: #0072E4;
+  background-color: #1C1A1A;
 }
 
 .dropdown1:hover .dropdown-content1 {
@@ -408,7 +408,7 @@ nav>a, div>a {
   display: none;
   position: absolute;
   
-  background-color: #0080FF;
+  background-color: #f44336;
   border-radius: 6px;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -418,7 +418,7 @@ nav>a, div>a {
 .dropdown-content1 {
   display: none;
   position: absolute;
-  background-color: #0080FF;
+  background-color: #f44336;
   border-radius: 6px;
   z-index: 999;
   width: 100vw;

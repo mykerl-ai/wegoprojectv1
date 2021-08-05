@@ -3,11 +3,11 @@
 <Navbar class="w-full z-100">
       <router-link :to="{name: 'Home'}">
       <div >
-          <img class="w-12 md:w-24 -pl-16 md:pl-8 pt-4" src="@/assets/logo.png" alt="">
-          <p class="text-center invisible md:visible text-xs font-medium text-blue ml-6 -mt-4">WeGoNetwork</p>
+          <img class="w-12 md:w-24 -pl-16 pt-4" src="@/assets/WeGo1.png" alt="">
+          <p class="text-center invisible md:visible text-xs font-medium text-red ml-6 -mt-1">WeGoNetwork</p>
       </div>
 </router-link>
-      <nav class="lg:flex space-x-10 py-6 px-2 hidden md:hidden">
+      <nav class="lg:flex space-x-10 py-6 hidden md:hidden">
         <router-link :to="{name: 'Home'}">Home</router-link>
 
         
@@ -47,7 +47,7 @@
 
        <div class="navbar mt-8 lg:hidden  mr-16 md:mr-24">
       <div class="dropdown1 transition-all duration-300" :class="{'-ml-32 md:-ml-56': menu===true}">
-    <button @click="showMenu" class="dropbtn focus:outline-none"><svg xmlns="http://www.w3.org/2000/svg" fill="#0080FF" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+    <button @click="showMenu" class="dropbtn focus:outline-none"><svg xmlns="http://www.w3.org/2000/svg" fill="#f44336" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg> 
     </button>
@@ -144,12 +144,12 @@ z-index: 1;
 }
 
 nav>a, div>a {
-  color: #0080FF;
+  color: #f44336;
   font-size: 14px;
   font-weight: 500;
 }
  .bt {
-   background-color: #0080FF;
+   background-color: #f44336;
    color: white;
    padding: 8px;
    border-radius: 4px;
@@ -163,7 +163,7 @@ nav>a, div>a {
 .navbar a {
   float: left;
   font-size: 14px;
-  color: #0080FF;
+  color: #f44336;
   text-align: center;
   font-weight: 500;
   text-decoration: none;
@@ -178,7 +178,7 @@ nav>a, div>a {
   font-size: 14px;  
   border: none;
   outline: none;
-  color: #0080FF;
+  color: #f44336;
   font-weight: 500;
   background-color: inherit;
   font-family: inherit;
@@ -192,7 +192,7 @@ nav>a, div>a {
 .dropdown-content1 {
   display: none;
   position: absolute;
-  background-color: #0080FF;
+  background-color: #f44336;
   border-radius: 6px;
   
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -218,7 +218,7 @@ nav>a, div>a {
   font-size: 1rem;
 }
 .dropdown-content1 a:hover {
-  background-color: #0072E4;
+  background-color: #1C1A1A;
 }
 
 .dropdown1:hover .dropdown-content1 {
@@ -242,7 +242,7 @@ nav>a, div>a {
 .dropdown-content1 {
   display: none;
   position: relative;
-  background-color: #0080FF;
+  background-color: #f44336;
   border-radius: 6px;
   z-index: 999;
   width: 100vw;

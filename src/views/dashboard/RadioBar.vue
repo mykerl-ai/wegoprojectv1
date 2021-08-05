@@ -5,12 +5,12 @@
     <nav class="flex-1 flex flex-col sideBar pb-12 text-white">
 
         <div v-show="sidebarOpen" class="flex px-0 mt-2 mb-0">
-          <img  class="w-20 pb-4 pt-0" src="@/assets/logo.png" alt="">
-           <p class="text-white text-sm mt-6"> WeGo Network</p>
+          <img  class="w-20 pb-4 pt-0" src="@/assets/WeGo.png" alt="">
+           <p class="text-white text-sm mt-3"> WeGo Network</p>
       </div>
      
 
-      <button @click="checkId(icon.id)"  class="flex focus:outline-none mb-2 focus:bg-gblue w-full py-4 px-6 active:bg-gblue" v-for="icon in icons" :key="icon.id" data-id="icon.id">
+      <button @click="checkId(icon.id)"  class="flex focus:outline-none mb-2 focus:bg-red w-full py-4 px-6 active:bg-red" v-for="icon in icons" :key="icon.id" data-id="icon.id">
         <svg :id="icon.id" :xmlns="icon.url" :width="icon.width" :height="icon.height" :viewBox="icon.viewBox">
                 <path :id="icon.pathId" :data-name="icon.dataName" :d="icon.d" :transform="icon.transform" :fill="icon.fill"/>
                         </svg>
@@ -21,14 +21,14 @@
     </nav>
   </aside>
   <div class="flex-1">
-    <header class="flex items-center p-4 font-semibold text-blue bg-gray-900">
+    <header class="flex items-center p-4 font-semibold text-red bg-gray-900">
       <button class="p-1 mr-4 focus:outline-none" @click="sidebarOpen = !sidebarOpen">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="#0080FF" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#f44336" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
       <div v-show="!sidebarOpen" class="w-20 pl-8 pt-0">
-          <img src="@/assets/logo.png" alt="">
+          <img src="@/assets/WeGo1.png" alt="">
       </div>
       <p v-show="!sidebarOpen"> WeGo Network</p>
     </header>
@@ -42,7 +42,7 @@
       <Settings v-else-if="id==='settings-gear-64'"/>
       <Profile v-else-if="id==='profile'"/>
       <Website v-else-if="id==='website'"/>
-      <h1 v-else class=" text-blue text-center" :class="sidebarOpen ? 'text-sm' : 'text-2xl'">Welcome to your control panel</h1>
+      <h1 v-else class=" text-red text-center" :class="sidebarOpen ? 'text-sm' : 'text-2xl'">Welcome to your control panel</h1>
     </main>
   </div>
 </div>

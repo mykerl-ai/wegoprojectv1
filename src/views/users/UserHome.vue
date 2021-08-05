@@ -10,7 +10,7 @@
     <Navbar class="w-full py-6">
       <router-link :to="{name: 'Home'}">
       <div >
-          <img class="w-12 md:w-16 -pl-40" src="@/assets/logo.png" alt="">
+          <img class="w-12 md:w-16 -pl-40" src="@/assets/WeGo1.png" alt="">
           <p class="text-left invisible md:visible text-xs font-medium text-white  -mt-2">WeGoNetwork</p>
       </div>
 </router-link>
@@ -38,8 +38,8 @@
       
       
       <div class="lg:mt-3 md:mt-8 absolute mt-4">
-          <button @click="handleSignUp" class="bg-yellow  py-3 px-6  text-white font-semibold text-xs md:text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-opacity-50">SIGN UP</button>
-           <button @click="handleClick" class="border border-yellow-400 py-2 px-6 ml-6  text-white font-semibold text-xs md:text-sm rounded-full focus:outline-none">TALK TO US</button>
+          <button @click="handleSignUp" class="bg-red  py-3 px-6  text-white font-semibold text-xs md:text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-opacity-50">SIGN UP</button>
+           <button @click="handleClick" class="border border-red-400 py-2 px-6 ml-6  text-white font-semibold text-xs md:text-sm rounded-full focus:outline-none">TALK TO US</button>
       </div>
     </div>
   </div>
@@ -56,7 +56,7 @@
              
               <div class="lg:col-span-1 lg:mt-12 col-span-1 top">
                   <div class="overlay module"></div>
-                <img class="bg-gblue bg-blend-overlay" src="@/assets/images/iptv.jpg" alt="">
+                <img class="bg-red bg-blend-overlay" src="@/assets/images/iptv.jpg" alt="">
                 </div>
           </div>
           <div class="lg:ml-16 lg:mt-12 md:mt-6 ml-8">
@@ -65,7 +65,7 @@
             on your own personal channel or radio station
             </p>
 
-            <button @click="handleSignUp" class="bg-yellow md:mx-0 lg:mx-0 lg:ml-24 md:ml-96 mx-24 rounded-full py-3 px-4 md:px-6 mt-6 text-white focus:outline-none font-semibold md:text-sm text-xs">GET STARTED</button>
+            <button @click="handleSignUp" class="bg-red md:mx-0 lg:mx-0 lg:ml-24 md:ml-96 mx-24 rounded-full py-3 px-4 md:px-6 mt-6 text-white focus:outline-none font-semibold md:text-sm text-xs">GET STARTED</button>
           </div>
       </div>
     </section>
@@ -77,13 +77,13 @@
             <h2 class="text-white font-bold text-center md:text-left mt-8 md:mt-0 md:text-4xl text-lg mb-6">Download your shows <br> to watch offline</h2>
             <p class="text-white text-xl font-semibold leading-8 text-left mb-8">Save your favorites easily and always have something to watch.</p>
             
-            <button @click="handleClick" class="bg-yellow md:mx-0 lg:mx-0 mx-24 rounded-full py-3 px-6 mt-6 text-white focus:outline-none font-semibold text-sm ">CONTACT US</button>
+            <button @click="handleClick" class="bg-red md:mx-0 lg:mx-0 mx-24 rounded-full py-3 px-6 mt-6 text-white focus:outline-none font-semibold text-sm ">CONTACT US</button>
           </div>
 
         <div class="">
               <div class="top">
                 <div class="overlay"></div>
-                <img class="bg-gblue bg-blend-overlay" src="@/assets/images/screen.jpg" alt="">
+                <img class="bg-red bg-blend-overlay" src="@/assets/images/screen.jpg" alt="">
                 </div>
           </div> 
       </div>
@@ -287,7 +287,7 @@ nav>a, div>a {
 .dropdown-content1 {
   display: none;
   position: absolute;
-  background-color: #0080FF;
+  background-color: #f44336;
   border-radius: 6px;
   
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -304,7 +304,7 @@ nav>a, div>a {
 }
 
 .dropdown-content1 a:hover {
-  background-color: #0072E4;
+  background-color: #1C1A1A;
 }
 
 .dropdown1:hover .dropdown-content1 {
@@ -391,7 +391,7 @@ nav>a, div>a {
   display: none;
   position: absolute;
   
-  background-color: #0080FF;
+  background-color: #f44336;
   border-radius: 6px;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -415,7 +415,7 @@ nav>a, div>a {
 .dropdown-content1 {
   display: none;
   position: absolute;
-  background-color: #0080FF;
+  background-color: #f44336;
   border-radius: 6px;
   z-index: 999;
   width: 100vw;
