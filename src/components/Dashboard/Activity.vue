@@ -155,7 +155,7 @@
   </div>
   </div>
 
-  <Modal v-if="isModalVisible && id === 'upload'" @close="closeModal">
+  <Modal v-if="isModalVisible && id == 'uploadLink'" @close="closeModal">
     <template v-slot:header>
       Upload
     </template>
@@ -189,18 +189,43 @@
         </div>
 
         <div class="focus-within:none">
-          <label class="text-xs text-gray px-4 block" for="vid"
-            >Video (Mp4, H.264)</label
-          >
           <input
-            type="file"
-            name="vid"
+            type="text"
             required
             v-show="!recovery"
-            @change="video"
-            class="focus:outline-none text-sm mb-6 focus:ring-blue-600 border-b-2 border-light-gray py-2 px-2 w-full "
-            placeholder="Password"
+            v-model="title"
+            class="focus:outline-none focus:ring-2 focus:ring-opacity-50  text-sm mb-6 focus:ring-blue-600 border--b2 border-light-gray py-2 px-2 w-full "
+            placeholder="Insert Link"
           />
+        </div>
+
+           <div class="focus-within:none">
+          <select
+            type="select"
+            required
+            v-show="!recovery"
+            v-model="category"
+            class="focus:outline-none focus:ring-2 focus:ring-opacity-50 border-b-2 text-sm text-gray-400 tracking-widest inline-block mb-6 border-light-gray py-2 px-2 w-full "
+            placeholder="Choose a platform"
+          >
+            <option class="text-center text-deep-gray text-sm" value="IPTV"
+              >Source</option
+            >
+            <option class="text-center text-deep-gray text-sm">Youtube</option>
+            <option class="text-center text-deep-gray text-sm">Vimeo</option>
+            <option class="text-center text-deep-gray text-sm">WeGo</option>
+          </select>
+          <div
+            class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none"
+          >
+            <svg class="w-4 h-4 px-4 fill-current" viewBox="0 0 20 20">
+              <path
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
         </div>
 
         <div class="focus-within:none">
@@ -258,7 +283,7 @@
     </template>
   </Modal>
 
-  <Modal v-else-if="isModalVisible && id === 'add'" @close="closeModal">
+  <Modal v-if="isModalVisible && id == 'add'" @close="closeModal">
     <template v-slot:header>
       Create
     </template>
@@ -318,7 +343,7 @@
   </Modal>
 
   <Modal
-    v-else-if="isModalVisible && id === 'Icon_ionic-md-person-add'"
+    v-if="isModalVisible && id == 'Icon_ionic-md-person-add'"
     @close="closeModal"
   >
     <template v-slot:header>
@@ -368,6 +393,21 @@
           />
         </div>
 
+         <div class="focus-within:none">
+          <label class="text-xs text-gray px-4  block" for="desc"
+            >Description (pdf, word)</label
+          >
+          <input
+            type="file"
+            name="desc"
+            required
+            v-show="!recovery"
+            @change="file"
+            class="focus:outline-none mb-6 border-b-2 text-sm text-gray-400  border-light-gray py-2 px-2 w-full "
+            placeholder="Email address"
+          />
+        </div>
+
         <div class="focus-within:none">
           <label class="text-xs text-gray px-4 block" for="vid"
             >Video file (Mp4)</label
@@ -382,7 +422,7 @@
             class="focus:outline-none text-sm mb-6 focus:ring-blue-600 border-b-2 border-light-gray py-2 px-2 w-full "
           />
         </div>
-
+    
         <button
           class="form-bt2 w-full focus:outline-none mt-4 rounded-full bg-blue py-3 px-4 text-sm text-center text-white"
         >
@@ -411,6 +451,7 @@ export default {
   components: { Modal },
   data() {
     return {
+      isModalVisible: false,
       icons: [
         {
           id: "upload",
@@ -425,6 +466,21 @@ export default {
           transform: "translate(0 0)",
           fill: "#fb8c00",
           title: "Upload video",
+        },
+
+        {
+          id: "uploadLink",
+          url: "http://www.w3.org/2000/svg",
+          width: "38.07",
+          height: "50.76",
+          viewBox: "0 0 38.07 50.76",
+          pathId: "Icon_awesome-file-upload",
+          dataName: "Icon awesome-file-upload",
+          d:
+            "M22.207,13.483V0H2.379A2.374,2.374,0,0,0,0,2.379v46A2.374,2.374,0,0,0,2.379,50.76H35.69A2.374,2.374,0,0,0,38.07,48.38V15.862H24.587A2.386,2.386,0,0,1,22.207,13.483ZM28.669,34.9H22.207V42.83a1.586,1.586,0,0,1-1.586,1.586H17.449a1.586,1.586,0,0,1-1.586-1.586V34.9H9.4a1.586,1.586,0,0,1-1.117-2.712L17.842,22.7a1.69,1.69,0,0,1,2.383,0l9.559,9.488A1.586,1.586,0,0,1,28.669,34.9ZM37.376,10.41,27.67.694A2.378,2.378,0,0,0,25.985,0h-.6V12.69H38.07v-.6A2.372,2.372,0,0,0,37.376,10.41Z",
+          transform: "translate(0 0)",
+          fill: "#000000",
+          title: "Upload from channel",
         },
 
         {
@@ -508,7 +564,6 @@ export default {
           id: 6,
         },
       ],
-      isModalVisible: false,
       category: "IPTV",
 
       // File upload
@@ -571,6 +626,7 @@ export default {
     showModal(id) {
       this.isModalVisible = true;
       this.id = id;
+      console.log(this.id)
     },
     closeModal() {
       this.isModalVisible = false;
