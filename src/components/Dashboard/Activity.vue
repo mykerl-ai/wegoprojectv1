@@ -1,5 +1,6 @@
 <template>
-  <h1 class="text-2xl text-left font-medium text-deep-gray">Activity</h1>
+<h1 class="text-2xl text-left font-medium text-deep-gray">Activity</h1>
+  <div :class="blurBackground()"> 
   <div class="w-full my-4 cards gap-4 grid grid-cols-1 md:grid-cols-3">
     <div
       @click="handleActivity(icon.id)"
@@ -151,6 +152,7 @@
         <p class="ml-24 py-2 text-light-gray text-xs">1 day ago</p>
       </div>
     </div>
+  </div>
   </div>
 
   <Modal v-if="isModalVisible && id === 'upload'" @close="closeModal">
@@ -389,6 +391,11 @@
       </form>
     </template>
   </Modal>
+
+  <div class="border-double border-4 p-6 fixed top-1/3 left-1/2 z-100" v-if="showPreloader">
+    <div class="spinner"></div>
+    <div class="text-center">File upload in Progress <br> Please don't close this window. </div>  
+  </div>
 </template>
 
 <script>
@@ -396,22 +403,8 @@
 import Modal from "@/components/Modal.vue";
 import { useToast } from "vue-toastification";
 
-// const fs = require('fs');
-import * as fs from "fs";
-// const fs = require('fs-extra');
-
 import axios from "axios";
-const AWS = require("aws-sdk");
-
-const s3 = new AWS.S3({
-  accessKeyId: "AKIA3JW3XH4SDSGTZ6A7",
-  secretAccessKey: "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",
-  region: "eu-west-2",
-});
-const CORS = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "Content-Type",
-};
+import {s3} from "@/utils/awsConfig";
 
 const toast = useToast();
 export default {
@@ -467,42 +460,48 @@ export default {
       ],
       movies: [
         {
-          image: "https://wegonetwork.s3.eu-west-2.amazonaws.com/banners/starwars.jpg",
+          image:
+            "https://wegonetwork.s3.eu-west-2.amazonaws.com/banners/starwars.jpg",
           title: "Star wars",
           time: "1 minute ago",
           views: "29,129",
           id: 1,
         },
         {
-          image: "https://wegonetwork.s3.eu-west-2.amazonaws.com/banners/starwars.jpg",
+          image:
+            "https://wegonetwork.s3.eu-west-2.amazonaws.com/banners/starwars.jpg",
           title: "Star wars",
           time: "2 minutes ago",
           views: "129,192",
           id: 2,
         },
         {
-          image: "https://wegonetwork.s3.eu-west-2.amazonaws.com/banners/starwars.jpg",
+          image:
+            "https://wegonetwork.s3.eu-west-2.amazonaws.com/banners/starwars.jpg",
           title: "Star wars",
           time: "1 day ago",
           views: "40,000",
           id: 3,
         },
         {
-          image: "https://wegonetwork.s3.eu-west-2.amazonaws.com/banners/starwars.jpg",
+          image:
+            "https://wegonetwork.s3.eu-west-2.amazonaws.com/banners/starwars.jpg",
           title: "Star wars",
           time: "3 days ago",
           views: "250,000",
           id: 4,
         },
         {
-          image: "https://wegonetwork.s3.eu-west-2.amazonaws.com/banners/starwars.jpg",
+          image:
+            "https://wegonetwork.s3.eu-west-2.amazonaws.com/banners/starwars.jpg",
           title: "Star wars",
           time: "6 days ago",
           views: "450,000",
           id: 5,
         },
         {
-          image: "https://wegonetwork.s3.eu-west-2.amazonaws.com/banners/starwars.jpg",
+          image:
+            "https://wegonetwork.s3.eu-west-2.amazonaws.com/banners/starwars.jpg",
           title: "Star wars",
           time: "1 week ago",
           views: "500,000",
@@ -512,12 +511,21 @@ export default {
       isModalVisible: false,
       category: "IPTV",
 
+      // File upload
       uploadModal: false,
       file: "",
+      title: "",
       base64String: "",
+
+      showPreloader: false,
     };
   },
   methods: {
+    blurBackground(){
+      var output = '';
+      if (this.showPreloader){ output = 'filter blur-md' }
+      return output
+    },
     handleActivity(iconId) {
       if (iconId == "upload") {
         this.uploadModal = true;
@@ -531,12 +539,14 @@ export default {
       var element = document.getElementById("file");
       console.log(element.files[0].name, "element");
 
-      let fileName = `${Date.now()}--${this.file.name}`;
+      let fileName = `${Date.now()}--${this.title +
+        "." +
+        this.file.name.split(".").pop()}`; //this.file.name
       let fileType = this.file.type;
 
       const s3Params = {
         Bucket: "wegonetwork",
-        Key: fileName,
+        Key: "movies/" + fileName,
         ContentType: fileType,
         ACL: "public-read",
       };
@@ -549,10 +559,13 @@ export default {
           "Content-Type": fileType,
         },
       };
-      await axios.put(signedRequest, this.file, options);
-      toast.success(`File upload successful`);
 
+      this.showPreloader = true;
       this.uploadModal = false;
+      await axios.put(signedRequest, this.file, options);
+      toast.success(`File successfully uploaded.`);
+
+      this.showPreloader = false;
     },
 
     showModal(id) {
