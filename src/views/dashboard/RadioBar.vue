@@ -37,6 +37,7 @@
       <Audio v-else-if="id==='audio'"/>
       <Playlist v-else-if="id==='playlist'"/>
       <Schedule v-else-if="id==='schedule'"/>
+      <StreamPodcast v-else-if="id==='podcast'"/>
       <Statistics v-else-if="id==='statistics'"/>
       <Listeners v-else-if="id==='listeners'"/>
       <Settings v-else-if="id==='settings-gear-64'"/>
@@ -55,13 +56,14 @@ import Audio from '@/components/Panel/Audio.vue'
 import Playlist from '@/components/Panel/Playlist.vue'
 import Schedule from '@/components/Panel/Schedule.vue'
 import Statistics from '@/components/Panel/Statistics.vue'
+import StreamPodcast from '@/components/Panel/StreamPodcast.vue'
 import Listeners from '@/components/Panel/Listeners.vue'
 import Settings from '@/components/Panel/Settings.vue'
 import Profile from '@/components/Panel/Profile.vue'
 import Website from '@/components/Panel/Website.vue'
 
 export default {
-    components: { Panel, Audio, Playlist, Schedule, Statistics, Listeners, Settings, Profile, Website },
+    components: { Panel, Audio, Playlist, Schedule, StreamPodcast, Statistics, Listeners, Settings, Profile, Website },
      data(){
         
        return{
@@ -75,6 +77,8 @@ export default {
                 {id: 'playlist', url: 'http://www.w3.org/2000/svg', width: '20.122', height: '20.122', viewBox: '0 0 40.075 28.053', pathId: 'Icon_material-playlist-play', dataName: 'Icon material-playlist-play', d: 'M37.064,15.515H3v4.008H37.064Zm0-8.015H3v4.008H37.064ZM3,27.538H29.049V23.53H3ZM33.056,23.53V35.553l10.019-6.011Z', transform: 'translate(-3 -7.5)', fill: '#ffffff', title: 'Playlists'}, 
 
                 {id: 'schedule', url: 'http://www.w3.org/2000/svg', width: '16', height: '16', viewBox: '0 0 33.479 33.479', pathId: 'Icon_material-schedule', dataName: 'Icon material-schedule', d: 'M19.723,3A16.74,16.74,0,1,0,36.479,19.74,16.731,16.731,0,0,0,19.723,3Zm.017,30.131A13.392,13.392,0,1,1,33.131,19.74,13.388,13.388,0,0,1,19.74,33.131Zm.837-21.761H18.066V21.414l8.788,5.273,1.255-2.059-7.533-4.469Z', transform: 'translate(-3 -3)', fill: '#ffffff', title: 'Playlist schedule'},
+
+                {id: 'podcast', url: 'http://www.w3.org/2000/svg', width: '16', height: '16', viewBox: '0 0 36 36', pathId: 'Icon_simple-googleanalytics', dataName: 'Icon simple-googleanalytics', d: 'M33.111,36H2.842A2.851,2.851,0,0,1,0,33.156V26.527a2.851,2.851,0,0,1,2.842-2.844H11.37V14.211a2.849,2.849,0,0,1,2.841-2.841h9.5V2.888A2.9,2.9,0,0,1,26.594,0h6.519A2.9,2.9,0,0,1,36,2.889V33.111A2.9,2.9,0,0,1,33.111,36Z',  fill: '#ffffff', title: 'Stream Podcast'},
 
                 {id: 'statistics', url: 'http://www.w3.org/2000/svg', width: '16', height: '16', viewBox: '0 0 36 36', pathId: 'Icon_simple-googleanalytics', dataName: 'Icon simple-googleanalytics', d: 'M33.111,36H2.842A2.851,2.851,0,0,1,0,33.156V26.527a2.851,2.851,0,0,1,2.842-2.844H11.37V14.211a2.849,2.849,0,0,1,2.841-2.841h9.5V2.888A2.9,2.9,0,0,1,26.594,0h6.519A2.9,2.9,0,0,1,36,2.889V33.111A2.9,2.9,0,0,1,33.111,36Z',  fill: '#ffffff', title: 'Statistics'},
 
