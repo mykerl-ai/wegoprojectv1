@@ -495,7 +495,7 @@ export default {
             "M35.14,19.713H3V25.07H35.14ZM35.14,9H3v5.357H35.14ZM45.854,30.427V19.713H40.5V30.427H29.784v5.357H40.5V46.5h5.357V35.784H56.567V30.427ZM3,35.784H24.427V30.427H3Z",
           transform: "translate(-3 -9)",
           fill: "#43a047",
-          title: "Create playlist",
+          title: "View category",
         },
 
         {

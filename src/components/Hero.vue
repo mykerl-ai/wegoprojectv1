@@ -16,6 +16,8 @@
 </router-link>
       <nav class="lg:flex space-x-10 py-6   hidden md:hidden">
         <router-link :to="{name: 'Home'}">Home</router-link>
+        <router-link :to="{name: 'Dashboard'}">Dashboard</router-link>
+        <router-link :to="{name: 'Panel'}">Panel</router-link>
 
         
     <div class="navbar">
