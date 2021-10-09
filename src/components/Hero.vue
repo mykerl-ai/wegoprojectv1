@@ -14,10 +14,11 @@
           <p class="text-center invisible md:visible text-xs font-medium text-white ml-6 -mt-1">WeGoNetwork</p>
       </div>
 </router-link>
+
+
       <nav class="lg:flex space-x-10 py-6   hidden md:hidden">
         <router-link :to="{name: 'Home'}">Home</router-link>
-        <router-link :to="{name: 'Dashboard'}">Dashboard</router-link>
-        <router-link :to="{name: 'Panel'}">Panel</router-link>
+       
 
         
     <div class="navbar">
@@ -46,10 +47,16 @@
         
         <router-link :to="{name: 'About'}">About us</router-link>
         <router-link :to="{name: 'Contact'}">Contact</router-link>
-        <div class="space-x-3 lg:pl-60">
+
+
+        <div class="space-x-6">
+          
+         <router-link :to="{name: 'Dashboard'}">Dashboard</router-link>
+        <router-link :to="{name: 'Panel'}">Panel</router-link>
            <router-link :to="{name: 'Login'}">LOGIN</router-link>
            <router-link :to="{name: 'Signup'} " class="bt">SIGN UP</router-link> 
         </div>  
+
       </nav>
 
 

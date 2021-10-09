@@ -1,27 +1,27 @@
 <template>
   <main>
-    <div class="w-1/2 shadow-lg py-2 px-2 mt-4 cursor-pointer">
+    <div class="w-1/2 shadow-lg py-2 px-2 mt-4 cursor-pointer w-full text-red font-medium text-center">
       Start Stream
     </div>
 
-    <div id="basic" style="text-align:center;">
-      <video ref="video" autoplay="" controls></video>
+    <div id="basic" class="px-80" style="text-align:center;">
+      <video class="mt-12 w-full h-auto" ref="video" autoplay="" controls></video>
       <audio ref="audio" autoplay=""></audio>
       <div class="space-x-10">
-        <button @click="startStream()">Start</button>
-        <button class="">Hide Camera</button>
-        <button @click="stopStream()">Stop</button>
+        <button class="font-medium text-deep-gray hover:text-white focus:text-black focus:outline-none focus:bg-yellow hover:bg-gray p-4 mt-12" @click="startStream()">Start</button>
+        <button class="font-medium text-deep-gray hover:text-white focus:text-black focus:outline-none focus:bg-yellow hover:bg-gray p-4 mt-12">Hide Camera</button>
+        <button class="font-medium text-deep-gray hover:text-white focus:text-black focus:outline-none focus:bg-yellow hover:bg-gray p-4 mt-12" @click="stopStream()">Stop</button>
       </div>
     </div>
 
-    <div>
+    <!-- <div>
       <p>Demo Stream</p>
       <div>
         <video id="video2" ref="video2" autoplay="" controls></video>
         <audio id="audio2" ref="audio2" autoplay=""></audio>
         <button @click="connectStream()">Connect to Stream</button>
       </div>
-    </div>
+    </div> -->
   </main>
 </template>
 

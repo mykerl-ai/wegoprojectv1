@@ -4,7 +4,7 @@
     <div class="lg:h-64 sideBar h-1"></div>
     <nav class="sideBar flex-1 flex flex-col pb-12 text-white">
 
-        <div v-show="sidebarOpen" class="flex px-0 mt-2 mb-0">
+        <div @click="$router.push({name: 'Home'})" v-show="sidebarOpen" class="flex px-0 mt-2 mb-0">
           <img  class="w-20 pb-4 pt-0" src="@/assets/WeGo.png" alt="">
            <p class="text-white text-sm mt-6"> WeGo Network</p>
       </div>
@@ -27,9 +27,11 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
-      <div v-show="!sidebarOpen" class="w-20 pl-8 pt-0">
-          <img src="@/assets/WeGo1.png" alt="">
-      </div>
+    
+
+          <div  @click="$router.push({name: 'Home'})" v-show="!sidebarOpen" class="w-20 pl-8 pt-0">
+          <img  @click="$router.push({name: 'Home'})" src="@/assets/WeGo1.png" alt="">
+          </div>
       <p v-show="!sidebarOpen"> WeGo Network</p>
     </header>
     <main class="p-4 overflow-y-auto ">
