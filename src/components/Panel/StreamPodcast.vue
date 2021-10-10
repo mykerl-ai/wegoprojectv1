@@ -26,6 +26,8 @@
 </template>
 
 <script>
+import axios from "axios";
+const ab2str = require('arraybuffer-to-string')
 export default {
   data() {
     return {
@@ -54,7 +56,12 @@ export default {
           recorder.ondataavailable = async (event) => {
             // get the Blob from the event
             const blob = await event.data.arrayBuffer();
+            // console.log(blob, "blob");
+            // console.log(ab2str(blob), "blob");
             this.arrayOfBlobs.push(blob);
+
+            let data = {"streamId": "61630a82bfa529595832a45f", "blob":blob};
+            // axios.post('http://localhost:3000/stream/PostBlob', data)
             // console.log(blob, "blobby");
 
             // and send that blob to the server...
